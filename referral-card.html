@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KiddoKlub Referral Card</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 24px;
+}
+h2 { font-size: 14px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+p.instructions { max-width: 500px; text-align: center; color: #666; font-size: 14px; line-height: 1.6; }
+
+/* The card — designed to look great when screenshotted or shared as image */
+.card {
+  width: 500px;
+  max-width: 95vw;
+  background: linear-gradient(145deg, #FFF9F3 0%, #FFFDFB 100%);
+  border-radius: 24px;
+  padding: 40px 36px;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244,151,142,0.12), transparent 70%);
+}
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -40px;
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168,213,186,0.12), transparent 70%);
+}
+.card > * { position: relative; z-index: 1; }
+
+.logo {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+.logo .k1 { color: #F4978E; }
+.logo .k2 { color: #F0C94D; }
+.logo .k3 { color: #7BC19B; }
+.logo .k4 { color: #7BBFC9; }
+.logo .rest { color: #2D2A26; }
+
+.tagline {
+  font-size: 12px;
+  color: #8A847C;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.gift-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.headline {
+  font-size: 26px;
+  font-weight: 800;
+  color: #2D2A26;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.headline span {
+  color: #E87461;
+}
+
+.subtext {
+  font-size: 15px;
+  color: #5A554E;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #F4978E, #F0C94D, #7BC19B);
+  border-radius: 2px;
+  margin: 0 auto 24px;
+}
+
+.how {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.how-step {
+  flex: 1;
+}
+.how-num {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 8px;
+}
+.how-step:nth-child(1) .how-num { background: #F4978E; }
+.how-step:nth-child(2) .how-num { background: #F0C94D; }
+.how-step:nth-child(3) .how-num { background: #7BC19B; }
+.how-text {
+  font-size: 12px;
+  color: #5A554E;
+  line-height: 1.4;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: all 0.3s;
+}
+.whatsapp-btn:hover { background: #1EBE57; transform: scale(1.03); }
+.whatsapp-btn svg { width: 20px; height: 20px; fill: white; }
+
+.fine-print {
+  font-size: 11px;
+  color: #8A847C;
+}
+
+.dashed-border {
+  border: 2px dashed #E8DFD3;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+  background: rgba(255,255,255,0.6);
+}
+.discount-amount {
+  font-size: 42px;
+  font-weight: 900;
+  color: #E87461;
+  line-height: 1;
+}
+.discount-label {
+  font-size: 14px;
+  color: #5A554E;
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+
+<h2>KiddoKlub Referral Card</h2>
+<p class="instructions">Screenshot this card or share the page link. Customers can forward it on WhatsApp to friends. Open this file on your phone and screenshot for the best result.</p>
+
+<div class="card">
+  <div class="logo">
+    <span class="k1">k</span><span class="k2">i</span><span class="k3">d</span><span class="k4">d</span><span class="rest">oklub</span>
+  </div>
+  <div class="tagline">Soft Play Rentals &bull; Doha</div>
+
+  <div class="gift-icon">&#127873;</div>
+
+  <div class="headline">Share the Fun,<br><span>Save QAR 200</span></div>
+
+  <p class="subtext">Know a parent planning a birthday or playdate?<br>Send them this card and you BOTH save.</p>
+
+  <div class="dashed-border">
+    <div class="discount-amount">QAR 200 OFF</div>
+    <div class="discount-label">for you AND your friend</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="how">
+    <div class="how-step">
+      <div class="how-num">1</div>
+      <div class="how-text">Forward this card to a friend</div>
+    </div>
+    <div class="how-step">
+      <div class="how-num">2</div>
+      <div class="how-text">They book &amp; mention your name</div>
+    </div>
+    <div class="how-step">
+      <div class="how-num">3</div>
+      <div class="how-text">You both get QAR 200 off</div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%20was%20referred%20by%20a%20friend%20and%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20%F0%9F%8E%89" class="whatsapp-btn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.764-6.34-2.088l-.444-.332-3.09 1.036 1.036-3.09-.332-.444A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    Book on WhatsApp
+  </a>
+
+  <div class="fine-print">@kiddoklub on Instagram &bull; +974 5031 8434</div>
+</div>
+
+</body>
+</html>
