@@ -32,7 +32,7 @@
     "@type": "City",
     "name": "Doha"
   },
-  "priceRange": "QAR 750 - QAR 2100",
+  "priceRange": "QAR 1200 - QAR 2400",
   "image": "https://ivanjkruger.github.io/kiddoklub/images/white-beach-hero.jpg",
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -45,23 +45,30 @@
     "itemListElement": [
       {
         "@type": "Offer",
-        "name": "Starter Package",
-        "description": "Soft play set with slide, steps, rocker, foam mat flooring. 3m x 3m, up to 5 kids.",
-        "price": "750",
-        "priceCurrency": "QAR"
-      },
-      {
-        "@type": "Offer",
-        "name": "Party Package",
-        "description": "Full soft play set with ball pit, foam mat flooring. 4m x 4m, up to 10 kids. Includes free jumping castle.",
+        "name": "Mini Package",
+        "description": "Soft play set with slide, steps, rocker, foam mat flooring. 3x3m, up to 6 kids. 4-hour rental with delivery, setup & pickup.",
         "price": "1200",
         "priceCurrency": "QAR"
       },
       {
         "@type": "Offer",
-        "name": "Grand Package",
-        "description": "Premium soft play with ball pit, bouncy castle, foam mat flooring. 5m x 5m+, up to 15 kids.",
-        "price": "1800",
+        "name": "Small Package",
+        "description": "Full soft play set with ball pit, foam mat flooring. 4x4m, up to 8 kids. 4-hour rental with delivery, setup & pickup.",
+        "price": "1700",
+        "priceCurrency": "QAR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Medium Package",
+        "description": "Premium soft play set with ball pit, foam mat flooring. 4x5m, up to 10 kids. 4-hour rental with delivery, setup & pickup.",
+        "price": "2100",
+        "priceCurrency": "QAR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Large Package",
+        "description": "Grand soft play set with ball pit, foam mat flooring. 5x6m, up to 15 kids. 4-hour rental with delivery, setup & pickup.",
+        "price": "2400",
         "priceCurrency": "QAR"
       }
     ]
@@ -119,6 +126,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Free rescheduling up to 48 hours before your event. Cancellations more than 48 hours out get a full refund."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a deposit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is a fully refundable QAR 500 deposit to cover any damages. You get it back after the event — most families receive their full deposit back."
       }
     }
   ]
@@ -262,6 +277,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
   gap: 8px;
 }
 .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.extra-hour-note { text-align: center; color: var(--text-sub); font-size: 0.88rem; margin-top: 16px; font-weight: 500; }
 .btn-whatsapp {
   background: var(--whatsapp);
   color: white;
@@ -1322,208 +1338,242 @@ button { font-family: inherit; cursor: pointer; border: none; }
       <button class="theme-tab" onclick="switchTheme('color')">Color Pop</button>
     </div>
 
-    <!-- NEUTRAL NEST -->
+    <!-- NEUTRAL NEST (2 sizes only) -->
     <div class="theme-panel active" id="theme-neutral">
       <div class="packages-grid">
         <div class="package-card">
-          <img src="images/IMG_6722.jpg" alt="Neutral Nest Starter" class="package-image" loading="lazy">
+          <img src="images/IMG_6722.jpg" alt="Neutral Nest Mini setup" class="package-image" loading="lazy">
           <div class="package-body">
-            <h3>Starter</h3>
-            <div class="size">3m x 3m &middot; Up to 5 kids</div>
+            <h3>Mini</h3>
+            <div class="size">3x3m &middot; Up to 6 kids</div>
             <ul class="package-includes">
               <li>Soft play set (slide, steps, rocker)</li>
               <li>Foam mat flooring</li>
+              <li>Optional white fencing</li>
               <li>Delivery, setup & pickup</li>
               <li>4-hour rental</li>
-            </ul>
-            <div class="package-price">
-              <span class="amount">750</span>
-              <span class="currency">QAR</span>
-              <span class="period">/ 4 hours</span>
-            </div>
-            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20Starter%20package!" class="package-cta">Book This Package</a>
-          </div>
-        </div>
-
-        <div class="package-card featured">
-          <span class="package-badge">Most Popular</span>
-          <img src="images/neutral-indoor-balloons.jpg" alt="Neutral Nest Party" class="package-image" loading="lazy">
-          <div class="package-body">
-            <h3>Party</h3>
-            <div class="size">4m x 4m &middot; Up to 10 kids</div>
-            <ul class="package-includes">
-              <li>Full soft play set with ball pit</li>
-              <li>Foam mat flooring</li>
-              <li>Delivery, setup & pickup</li>
-              <li>4-hour rental</li>
-              <li>FREE jumping castle this week!</li>
             </ul>
             <div class="package-price">
               <span class="amount">1,200</span>
               <span class="currency">QAR</span>
               <span class="period">/ 4 hours</span>
             </div>
-            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20Party%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
-          </div>
-        </div>
-
-        <div class="package-card">
-          <img src="images/white-beach-mansion.jpg" alt="Neutral Nest Grand" class="package-image" loading="lazy">
-          <div class="package-body">
-            <h3>Grand</h3>
-            <div class="size">5m x 5m+ &middot; Up to 15 kids</div>
-            <ul class="package-includes">
-              <li>Premium soft play set with ball pit</li>
-              <li>Bouncy castle included</li>
-              <li>Foam mat flooring</li>
-              <li>Delivery, setup & pickup</li>
-              <li>6-hour rental</li>
-            </ul>
-            <div class="package-price">
-              <span class="amount">1,800</span>
-              <span class="currency">QAR</span>
-              <span class="period">/ 6 hours</span>
-            </div>
-            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20Grand%20package!" class="package-cta">Book This Package</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- WHITE WONDERLAND -->
-    <div class="theme-panel" id="theme-white">
-      <div class="packages-grid">
-        <div class="package-card">
-          <img src="images/white-detail-bunny.jpg" alt="White Wonderland Starter" class="package-image" loading="lazy">
-          <div class="package-body">
-            <h3>Starter</h3>
-            <div class="size">3m x 3m &middot; Up to 5 kids</div>
-            <ul class="package-includes">
-              <li>White soft play set (slide, steps)</li>
-              <li>White foam mat flooring</li>
-              <li>Delivery, setup & pickup</li>
-              <li>4-hour rental</li>
-            </ul>
-            <div class="package-price">
-              <span class="amount">850</span>
-              <span class="currency">QAR</span>
-              <span class="period">/ 4 hours</span>
-            </div>
-            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20Starter%20package!" class="package-cta">Book This Package</a>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20Mini%20package!" class="package-cta">Book This Package</a>
           </div>
         </div>
 
         <div class="package-card featured">
           <span class="package-badge">Most Popular</span>
-          <img src="images/white-indoor-wide.jpg" alt="White Wonderland Party" class="package-image" loading="lazy">
+          <img src="images/neutral-indoor-balloons.jpg" alt="Neutral Nest Small setup" class="package-image" loading="lazy">
           <div class="package-body">
-            <h3>Party</h3>
-            <div class="size">4m x 4m &middot; Up to 10 kids</div>
+            <h3>Small</h3>
+            <div class="size">4x4m &middot; Up to 8 kids</div>
             <ul class="package-includes">
-              <li>Full white soft play set with ball pit</li>
-              <li>White foam mat flooring</li>
+              <li>Full soft play set with ball pit</li>
+              <li>Foam mat flooring</li>
+              <li>Optional white fencing</li>
               <li>Delivery, setup & pickup</li>
               <li>4-hour rental</li>
               <li>FREE jumping castle this week!</li>
             </ul>
             <div class="package-price">
-              <span class="amount">1,400</span>
+              <span class="amount">1,700</span>
               <span class="currency">QAR</span>
               <span class="period">/ 4 hours</span>
             </div>
-            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20Party%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20Small%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
+          </div>
+        </div>
+      </div>
+      <p class="extra-hour-note">Extra hour: +150 QAR</p>
+    </div>
+
+    <!-- WHITE WONDERLAND (4 sizes) -->
+    <div class="theme-panel" id="theme-white">
+      <div class="packages-grid">
+        <div class="package-card">
+          <img src="images/white-detail-bunny.jpg" alt="White Wonderland Mini setup" class="package-image" loading="lazy">
+          <div class="package-body">
+            <h3>Mini</h3>
+            <div class="size">3x3m &middot; Up to 6 kids</div>
+            <ul class="package-includes">
+              <li>White soft play set (slide, steps)</li>
+              <li>White foam mat flooring</li>
+              <li>Optional white fencing</li>
+              <li>Delivery, setup & pickup</li>
+              <li>4-hour rental</li>
+            </ul>
+            <div class="package-price">
+              <span class="amount">1,200</span>
+              <span class="currency">QAR</span>
+              <span class="period">/ 4 hours</span>
+            </div>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20Mini%20package!" class="package-cta">Book This Package</a>
+          </div>
+        </div>
+
+        <div class="package-card featured">
+          <span class="package-badge">Most Popular</span>
+          <img src="images/white-indoor-wide.jpg" alt="White Wonderland Small setup" class="package-image" loading="lazy">
+          <div class="package-body">
+            <h3>Small</h3>
+            <div class="size">4x4m &middot; Up to 8 kids</div>
+            <ul class="package-includes">
+              <li>Full white soft play set with ball pit</li>
+              <li>White foam mat flooring</li>
+              <li>Optional white fencing</li>
+              <li>Delivery, setup & pickup</li>
+              <li>4-hour rental</li>
+              <li>FREE jumping castle this week!</li>
+            </ul>
+            <div class="package-price">
+              <span class="amount">1,700</span>
+              <span class="currency">QAR</span>
+              <span class="period">/ 4 hours</span>
+            </div>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20Small%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
           </div>
         </div>
 
         <div class="package-card">
-          <img src="images/white-outdoor-grand.jpg" alt="White Wonderland Grand" class="package-image" loading="lazy">
+          <img src="images/white-beach-aerial.jpg" alt="White Wonderland Medium setup" class="package-image" loading="lazy">
           <div class="package-body">
-            <h3>Grand</h3>
-            <div class="size">5m x 5m+ &middot; Up to 15 kids</div>
+            <h3>Medium</h3>
+            <div class="size">4x5m &middot; Up to 10 kids</div>
             <ul class="package-includes">
               <li>Premium white soft play with ball pit</li>
-              <li>White bouncy castle included</li>
               <li>White foam mat flooring</li>
+              <li>Optional white fencing</li>
               <li>Delivery, setup & pickup</li>
-              <li>6-hour rental</li>
+              <li>4-hour rental</li>
+              <li>FREE jumping castle this week!</li>
             </ul>
             <div class="package-price">
               <span class="amount">2,100</span>
               <span class="currency">QAR</span>
-              <span class="period">/ 6 hours</span>
-            </div>
-            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20Grand%20package!" class="package-cta">Book This Package</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- COLOR POP -->
-    <div class="theme-panel" id="theme-color">
-      <div class="packages-grid">
-        <div class="package-card">
-          <img src="images/color-hotel-close.jpg" alt="Color Pop Starter" class="package-image" loading="lazy">
-          <div class="package-body">
-            <h3>Starter</h3>
-            <div class="size">3m x 3m &middot; Up to 5 kids</div>
-            <ul class="package-includes">
-              <li>Colorful soft play set (slide, steps)</li>
-              <li>Foam mat flooring</li>
-              <li>Delivery, setup & pickup</li>
-              <li>4-hour rental</li>
-            </ul>
-            <div class="package-price">
-              <span class="amount">750</span>
-              <span class="currency">QAR</span>
               <span class="period">/ 4 hours</span>
             </div>
-            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20Starter%20package!" class="package-cta">Book This Package</a>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20Medium%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
           </div>
         </div>
 
-        <div class="package-card featured">
-          <span class="package-badge">Most Popular</span>
-          <img src="images/color-hotel-wide.jpg" alt="Color Pop Party" class="package-image" loading="lazy">
+        <div class="package-card">
+          <img src="images/white-outdoor-grand.jpg" alt="White Wonderland Large setup" class="package-image" loading="lazy">
           <div class="package-body">
-            <h3>Party</h3>
-            <div class="size">4m x 4m &middot; Up to 10 kids</div>
+            <h3>Large</h3>
+            <div class="size">5x6m &middot; Up to 15 kids</div>
             <ul class="package-includes">
-              <li>Full colorful soft play with ball pit</li>
-              <li>Foam mat flooring</li>
+              <li>Grand white soft play with ball pit</li>
+              <li>White foam mat flooring</li>
+              <li>Optional white fencing</li>
               <li>Delivery, setup & pickup</li>
               <li>4-hour rental</li>
               <li>FREE jumping castle this week!</li>
+            </ul>
+            <div class="package-price">
+              <span class="amount">2,400</span>
+              <span class="currency">QAR</span>
+              <span class="period">/ 4 hours</span>
+            </div>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20Large%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
+          </div>
+        </div>
+      </div>
+      <p class="extra-hour-note">Extra hour: +150 QAR</p>
+    </div>
+
+    <!-- COLOR POP (4 sizes) -->
+    <div class="theme-panel" id="theme-color">
+      <div class="packages-grid">
+        <div class="package-card">
+          <img src="images/color-hotel-close.jpg" alt="Color Pop Mini setup" class="package-image" loading="lazy">
+          <div class="package-body">
+            <h3>Mini</h3>
+            <div class="size">3x3m &middot; Up to 6 kids</div>
+            <ul class="package-includes">
+              <li>Colorful soft play set (slide, steps)</li>
+              <li>Foam mat flooring</li>
+              <li>Optional white fencing</li>
+              <li>Delivery, setup & pickup</li>
+              <li>4-hour rental</li>
             </ul>
             <div class="package-price">
               <span class="amount">1,200</span>
               <span class="currency">QAR</span>
               <span class="period">/ 4 hours</span>
             </div>
-            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20Party%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20Mini%20package!" class="package-cta">Book This Package</a>
+          </div>
+        </div>
+
+        <div class="package-card featured">
+          <span class="package-badge">Most Popular</span>
+          <img src="images/color-hotel-wide.jpg" alt="Color Pop Small setup" class="package-image" loading="lazy">
+          <div class="package-body">
+            <h3>Small</h3>
+            <div class="size">4x4m &middot; Up to 8 kids</div>
+            <ul class="package-includes">
+              <li>Full colorful soft play with ball pit</li>
+              <li>Foam mat flooring</li>
+              <li>Optional white fencing</li>
+              <li>Delivery, setup & pickup</li>
+              <li>4-hour rental</li>
+              <li>FREE jumping castle this week!</li>
+            </ul>
+            <div class="package-price">
+              <span class="amount">1,700</span>
+              <span class="currency">QAR</span>
+              <span class="period">/ 4 hours</span>
+            </div>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20Small%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
           </div>
         </div>
 
         <div class="package-card">
-          <img src="images/color-outdoor-fence.jpg" alt="Color Pop Grand" class="package-image" loading="lazy">
+          <img src="images/color-outdoor-fence.jpg" alt="Color Pop Medium setup" class="package-image" loading="lazy">
           <div class="package-body">
-            <h3>Grand</h3>
-            <div class="size">5m x 5m+ &middot; Up to 15 kids</div>
+            <h3>Medium</h3>
+            <div class="size">4x5m &middot; Up to 10 kids</div>
             <ul class="package-includes">
               <li>Premium colorful soft play with ball pit</li>
-              <li>Bouncy castle included</li>
               <li>Foam mat flooring</li>
+              <li>Optional white fencing</li>
               <li>Delivery, setup & pickup</li>
-              <li>6-hour rental</li>
+              <li>4-hour rental</li>
+              <li>FREE jumping castle this week!</li>
             </ul>
             <div class="package-price">
-              <span class="amount">1,800</span>
+              <span class="amount">2,100</span>
               <span class="currency">QAR</span>
-              <span class="period">/ 6 hours</span>
+              <span class="period">/ 4 hours</span>
             </div>
-            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20Grand%20package!" class="package-cta">Book This Package</a>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20Medium%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
+          </div>
+        </div>
+
+        <div class="package-card">
+          <img src="images/IMG_7893.jpg" alt="Color Pop Large setup" class="package-image" loading="lazy">
+          <div class="package-body">
+            <h3>Large</h3>
+            <div class="size">5x6m &middot; Up to 15 kids</div>
+            <ul class="package-includes">
+              <li>Grand colorful soft play with ball pit</li>
+              <li>Foam mat flooring</li>
+              <li>Optional white fencing</li>
+              <li>Delivery, setup & pickup</li>
+              <li>4-hour rental</li>
+              <li>FREE jumping castle this week!</li>
+            </ul>
+            <div class="package-price">
+              <span class="amount">2,400</span>
+              <span class="currency">QAR</span>
+              <span class="period">/ 4 hours</span>
+            </div>
+            <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20Large%20package%20with%20the%20free%20jumping%20castle!" class="package-cta">Book This Package</a>
           </div>
         </div>
       </div>
+      <p class="extra-hour-note">Extra hour: +150 QAR</p>
     </div>
   </div>
 </section>
@@ -1535,43 +1585,51 @@ button { font-family: inherit; cursor: pointer; border: none; }
     <p class="section-sub">Make your party even more special</p>
     <div class="addons-grid">
       <div class="addon-card addon-free">
-        <img src="images/addon-bouncy.jpg" alt="White jumping castle on rooftop" loading="lazy">
+        <img src="images/addon-bouncy.jpg" alt="White jumping castle" loading="lazy">
         <div class="addon-body">
           <h4>Jumping Castle</h4>
-          <p>Inflatable bouncy castle for the bigger kids</p>
-          <div class="addon-price">FREE this week!</div>
+          <p>Inflatable bouncy castle (2.5x2.5m)</p>
+          <div class="addon-price">FREE this week! <s style="font-size:0.8em;color:var(--text-light)">650 QAR</s></div>
         </div>
       </div>
       <div class="addon-card">
-        <img src="images/addon-honeycomb.jpg" alt="Honeycomb soft play with tunnel and blocks" loading="lazy">
+        <img src="images/white-bouncy-rooftop.jpg" alt="Jumping castle with ball pit" loading="lazy">
         <div class="addon-body">
-          <h4>Honeycomb Soft Play</h4>
-          <p>Tunnel, blocks & climbing pieces</p>
-          <div class="addon-price">+300 QAR</div>
+          <h4>Jumping Castle + Ball Pit</h4>
+          <p>Bouncy castle with attached ball pit (2.5x2.5m)</p>
+          <div class="addon-price">+750 QAR</div>
         </div>
       </div>
       <div class="addon-card">
-        <img src="images/addon-ballpit.jpg" alt="White ball pit filled with balls" loading="lazy">
+        <img src="images/addon-honeycomb.jpg" alt="Honeycomb nest climber" loading="lazy">
         <div class="addon-body">
-          <h4>Ball Pit Upgrade</h4>
-          <p>500 extra balls for maximum fun</p>
-          <div class="addon-price">+150 QAR</div>
+          <h4>Honeycomb Nest Climber</h4>
+          <p>Hexagonal climbing structure (2.3x2.3x1.6m)</p>
+          <div class="addon-price">+800 QAR</div>
         </div>
       </div>
       <div class="addon-card">
-        <img src="images/addon-extra.jpg" alt="Beachfront soft play setup" loading="lazy">
+        <img src="images/addon-ballpit.jpg" alt="Large ball pit with slide" loading="lazy">
+        <div class="addon-body">
+          <h4>Large Ball Pit with Slide</h4>
+          <p>Ball pit with slide attachment (2.5x2.5m)</p>
+          <div class="addon-price">+650 QAR</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <img src="images/addon-balloons.jpg" alt="Balloon bubble house" loading="lazy">
+        <div class="addon-body">
+          <h4>Balloon Bubble House</h4>
+          <p>Walk-in balloon experience (3x2m)</p>
+          <div class="addon-price">+750 QAR</div>
+        </div>
+      </div>
+      <div class="addon-card">
+        <img src="images/addon-extra.jpg" alt="Extra hour" loading="lazy">
         <div class="addon-body">
           <h4>Extra Hour</h4>
           <p>Extend the party fun</p>
-          <div class="addon-price">+200 QAR</div>
-        </div>
-      </div>
-      <div class="addon-card">
-        <img src="images/addon-balloons.jpg" alt="Balloon arch at outdoor party" loading="lazy">
-        <div class="addon-body">
-          <h4>Themed Balloons</h4>
-          <p>Balloon arch or bouquet</p>
-          <div class="addon-price">+250 QAR</div>
+          <div class="addon-price">+150 QAR</div>
         </div>
       </div>
     </div>
@@ -1619,17 +1677,21 @@ button { font-family: inherit; cursor: pointer; border: none; }
             <h4>Pick Your Package Size</h4>
           </div>
           <div class="qb-sizes" id="qb-sizes">
-            <button class="qb-size-btn" data-size="starter" onclick="qbSelectSize(this)">
-              Starter
-              <span class="qb-size-price" id="qb-price-starter">750 QAR</span>
+            <button class="qb-size-btn" data-size="mini" onclick="qbSelectSize(this)">
+              Mini <small>3x3m · 6 kids</small>
+              <span class="qb-size-price" id="qb-price-mini">1,200 QAR</span>
             </button>
-            <button class="qb-size-btn" data-size="party" onclick="qbSelectSize(this)">
-              Party
-              <span class="qb-size-price" id="qb-price-party">1,200 QAR</span>
+            <button class="qb-size-btn" data-size="small" onclick="qbSelectSize(this)">
+              Small <small>4x4m · 8 kids</small>
+              <span class="qb-size-price" id="qb-price-small">1,700 QAR</span>
             </button>
-            <button class="qb-size-btn" data-size="grand" onclick="qbSelectSize(this)">
-              Grand
-              <span class="qb-size-price" id="qb-price-grand">1,800 QAR</span>
+            <button class="qb-size-btn qb-size-expandable" data-size="medium" onclick="qbSelectSize(this)">
+              Medium <small>4x5m · 10 kids</small>
+              <span class="qb-size-price" id="qb-price-medium">2,100 QAR</span>
+            </button>
+            <button class="qb-size-btn qb-size-expandable" data-size="large" onclick="qbSelectSize(this)">
+              Large <small>5x6m · 15 kids</small>
+              <span class="qb-size-price" id="qb-price-large">2,400 QAR</span>
             </button>
           </div>
         </div>
@@ -1645,41 +1707,49 @@ button { font-family: inherit; cursor: pointer; border: none; }
               <input type="checkbox" data-addon="castle" data-price="0" checked>
               <div class="qb-addon-info">
                 <span>Jumping Castle</span>
-                <small>Inflatable bouncy castle</small>
+                <small>Inflatable bouncy castle (2.5x2.5m)</small>
               </div>
               <div class="qb-addon-cost free">FREE</div>
             </label>
             <label class="qb-addon-row" onclick="qbToggleAddon(this)">
-              <input type="checkbox" data-addon="honeycomb" data-price="300">
+              <input type="checkbox" data-addon="castlepit" data-price="750">
               <div class="qb-addon-info">
-                <span>Honeycomb Soft Play</span>
-                <small>Tunnel, blocks & climbing pieces</small>
+                <span>Jumping Castle + Ball Pit</span>
+                <small>Bouncy castle with attached ball pit (2.5x2.5m)</small>
               </div>
-              <div class="qb-addon-cost">+300 QAR</div>
+              <div class="qb-addon-cost">+750 QAR</div>
             </label>
             <label class="qb-addon-row" onclick="qbToggleAddon(this)">
-              <input type="checkbox" data-addon="ballpit" data-price="150">
+              <input type="checkbox" data-addon="honeycomb" data-price="800">
               <div class="qb-addon-info">
-                <span>Ball Pit Upgrade</span>
-                <small>500 extra balls</small>
+                <span>Honeycomb Nest Climber</span>
+                <small>Hexagonal climbing structure (2.3x2.3x1.6m)</small>
               </div>
-              <div class="qb-addon-cost">+150 QAR</div>
+              <div class="qb-addon-cost">+800 QAR</div>
             </label>
             <label class="qb-addon-row" onclick="qbToggleAddon(this)">
-              <input type="checkbox" data-addon="hour" data-price="200">
+              <input type="checkbox" data-addon="ballpit" data-price="650">
+              <div class="qb-addon-info">
+                <span>Large Ball Pit with Slide</span>
+                <small>Ball pit with slide attachment (2.5x2.5m)</small>
+              </div>
+              <div class="qb-addon-cost">+650 QAR</div>
+            </label>
+            <label class="qb-addon-row" onclick="qbToggleAddon(this)">
+              <input type="checkbox" data-addon="bubblehouse" data-price="750">
+              <div class="qb-addon-info">
+                <span>Balloon Bubble House</span>
+                <small>Walk-in balloon experience (3x2m)</small>
+              </div>
+              <div class="qb-addon-cost">+750 QAR</div>
+            </label>
+            <label class="qb-addon-row" onclick="qbToggleAddon(this)">
+              <input type="checkbox" data-addon="hour" data-price="150">
               <div class="qb-addon-info">
                 <span>Extra Hour</span>
                 <small>Extend the party fun</small>
               </div>
-              <div class="qb-addon-cost">+200 QAR</div>
-            </label>
-            <label class="qb-addon-row" onclick="qbToggleAddon(this)">
-              <input type="checkbox" data-addon="balloons" data-price="250">
-              <div class="qb-addon-info">
-                <span>Themed Balloons</span>
-                <small>Balloon arch or bouquet</small>
-              </div>
-              <div class="qb-addon-cost">+250 QAR</div>
+              <div class="qb-addon-cost">+150 QAR</div>
             </label>
           </div>
         </div>
@@ -1889,9 +1959,9 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 // ============ QUOTE BUILDER ============
 const qbPricing = {
-  neutral:  { starter: 750, party: 1200, grand: 1800 },
-  white:    { starter: 850, party: 1400, grand: 2100 },
-  color:    { starter: 750, party: 1200, grand: 1800 }
+  neutral:  { mini: 1200, small: 1700 },
+  white:    { mini: 1200, small: 1700, medium: 2100, large: 2400 },
+  color:    { mini: 1200, small: 1700, medium: 2100, large: 2400 }
 };
 
 let qbState = { theme: null, size: null };
@@ -1900,6 +1970,15 @@ function qbSelectTheme(btn) {
   document.querySelectorAll('.qb-theme-btn').forEach(b => b.classList.remove('selected'));
   btn.classList.add('selected');
   qbState.theme = btn.dataset.theme;
+  // Show/hide Medium + Large for Neutral Nest (only has Mini + Small)
+  const expandable = document.querySelectorAll('.qb-size-expandable');
+  const isNeutral = qbState.theme === 'neutral';
+  expandable.forEach(el => { el.style.display = isNeutral ? 'none' : ''; });
+  // If user had Medium/Large selected and switches to Neutral, deselect
+  if (isNeutral && (qbState.size === 'medium' || qbState.size === 'large')) {
+    document.querySelectorAll('.qb-size-btn').forEach(b => b.classList.remove('selected'));
+    qbState.size = null;
+  }
   qbUpdateSizePrices();
   qbUpdate();
 }
@@ -1923,9 +2002,10 @@ function qbToggleAddon(row) {
 function qbUpdateSizePrices() {
   if (!qbState.theme) return;
   const prices = qbPricing[qbState.theme];
-  document.getElementById('qb-price-starter').textContent = prices.starter.toLocaleString() + ' QAR';
-  document.getElementById('qb-price-party').textContent = prices.party.toLocaleString() + ' QAR';
-  document.getElementById('qb-price-grand').textContent = prices.grand.toLocaleString() + ' QAR';
+  document.getElementById('qb-price-mini').textContent = prices.mini.toLocaleString() + ' QAR';
+  document.getElementById('qb-price-small').textContent = prices.small.toLocaleString() + ' QAR';
+  if (prices.medium) document.getElementById('qb-price-medium').textContent = prices.medium.toLocaleString() + ' QAR';
+  if (prices.large) document.getElementById('qb-price-large').textContent = prices.large.toLocaleString() + ' QAR';
 }
 
 function qbGetTotal() {
@@ -1962,7 +2042,7 @@ function qbUpdate() {
   // Show savings if jumping castle is checked (it's free)
   const castleCb = document.querySelector('[data-addon="castle"]');
   if (castleCb && castleCb.checked && total > 0) {
-    savingsEl.textContent = 'You\u2019re saving QAR 500+ with the free Jumping Castle!';
+    savingsEl.textContent = 'You\u2019re saving QAR 650 with the free Jumping Castle!';
   } else {
     savingsEl.textContent = '';
   }
@@ -1983,7 +2063,7 @@ function qbSubmit() {
   const addons = qbGetAddons();
 
   const themeNames = { neutral: 'Neutral Nest', white: 'White Wonderland', color: 'Color Pop' };
-  const sizeNames = { starter: 'Starter', party: 'Party', grand: 'Grand' };
+  const sizeNames = { mini: 'Mini', small: 'Small', medium: 'Medium', large: 'Large' };
 
   let msg = 'Hi! I\u2019d like to book a party. Here\u2019s my quote:\n\n';
   msg += '\u2b50 *Package:* ' + themeNames[qbState.theme] + ' \u2014 ' + sizeNames[qbState.size] + '\n';
