@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KiddoKlub — Link in Bio</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', -apple-system, sans-serif;
+  background: #FBF8F3;
+  color: #2D2D2D;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 20px 48px;
+}
+.bio-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  mix-blend-mode: multiply;
+}
+.bio-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.bio-tagline {
+  font-size: 0.88rem;
+  color: #6B635A;
+  text-align: center;
+  margin-bottom: 8px;
+  max-width: 280px;
+  line-height: 1.5;
+}
+.bio-location {
+  font-size: 0.78rem;
+  color: #9A9189;
+  margin-bottom: 24px;
+}
+.bio-promo {
+  background: #A8D5D5;
+  color: #2D2D2D;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+.bio-links {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.bio-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(45,42,38,0.08);
+  border-radius: 14px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: #2D2D2D;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: all 0.2s;
+}
+.bio-link:hover { border-color: #A8D5D5; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.bio-link .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.bio-link .icon svg { width: 20px; height: 20px; }
+.icon-whatsapp { background: #25D366; }
+.icon-whatsapp svg { fill: white; }
+.icon-website { background: #A8D5D5; }
+.icon-website svg { stroke: #2D2D2D; fill: none; }
+.icon-packages { background: #E8B4B8; }
+.icon-packages svg { stroke: #2D2D2D; fill: none; }
+.icon-insta { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.icon-insta svg { fill: white; }
+.icon-phone { background: #E8C8A0; }
+.icon-phone svg { stroke: #2D2D2D; fill: none; }
+.bio-link .label { display: flex; flex-direction: column; }
+.bio-link .label small { font-weight: 400; font-size: 0.75rem; color: #9A9189; }
+
+.bio-gallery {
+  display: flex;
+  gap: 8px;
+  margin-top: 28px;
+  max-width: 360px;
+  width: 100%;
+}
+.bio-gallery img {
+  width: calc(33.33% - 5px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.bio-footer {
+  margin-top: 32px;
+  font-size: 0.72rem;
+  color: #9A9189;
+}
+</style>
+</head>
+<body>
+
+<img src="images/logo.svg" alt="KiddoKlub" class="bio-logo">
+<div class="bio-name">KiddoKlub</div>
+<div class="bio-tagline">Soft play party rentals delivered to your door anywhere in Doha</div>
+<div class="bio-location">Doha, Qatar</div>
+
+<div class="bio-promo">FREE Jumping Castle — Book This Week!</div>
+
+<div class="bio-links">
+
+  <a href="https://wa.me/97450318434?text=Hi!%20I%20saw%20your%20Instagram%20and%20I%27d%20love%20to%20book%20a%20soft%20play%20set!" class="bio-link">
+    <div class="icon icon-whatsapp">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.594-.822-6.336-2.197l-.446-.363-3.103 1.04 1.04-3.103-.363-.446A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+    </div>
+    <div class="label">Book on WhatsApp <small>Message us to book instantly</small></div>
+  </a>
+
+  <a href="index.html#packages" class="bio-link">
+    <div class="icon icon-packages">
+      <svg viewBox="0 0 24 24" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 3v18"/></svg>
+    </div>
+    <div class="label">View Packages & Prices <small>Starter from QAR 750</small></div>
+  </a>
+
+  <a href="index.html" class="bio-link">
+    <div class="icon icon-website">
+      <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+    </div>
+    <div class="label">Visit Our Website <small>See gallery, reviews & FAQs</small></div>
+  </a>
+
+  <a href="https://instagram.com/kiddoklub" class="bio-link">
+    <div class="icon icon-insta">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </div>
+    <div class="label">Follow @kiddoklub <small>See our latest setups</small></div>
+  </a>
+
+  <a href="tel:+97450318434" class="bio-link">
+    <div class="icon icon-phone">
+      <svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    </div>
+    <div class="label">Call Us <small>+974 5031 8434</small></div>
+  </a>
+
+</div>
+
+<div class="bio-gallery">
+  <img src="images/IMG_6728.jpg" alt="Soft play setup" loading="lazy">
+  <img src="images/IMG_7884.jpg" alt="Color Pop setup" loading="lazy">
+  <img src="images/IMG_7892.jpg" alt="Giraffe bouncer" loading="lazy">
+</div>
+
+<div class="bio-footer">&copy; 2025 KiddoKlub &middot; Doha, Qatar</div>
+
+</body>
+</html>
