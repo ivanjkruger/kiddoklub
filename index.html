@@ -603,42 +603,324 @@ button { font-family: inherit; cursor: pointer; border: none; }
 /* ============ ADD-ONS ============ */
 .addons-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 .addon-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
-  text-align: center;
+  overflow: hidden;
   transition: all 0.2s;
 }
-.addon-card:hover { border-color: var(--teal); box-shadow: var(--shadow-sm); }
-.addon-card .addon-icon {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
+.addon-card:hover { border-color: var(--teal); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.addon-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
-.addon-card h4 {
+.addon-body {
+  padding: 16px 20px;
+  text-align: center;
+}
+.addon-body h4 {
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 4px;
 }
-.addon-card p {
-  font-size: 0.85rem;
+.addon-body p {
+  font-size: 0.82rem;
   color: var(--text-sub);
   margin-bottom: 8px;
 }
-.addon-card .addon-price {
+.addon-body .addon-price {
   font-size: 1rem;
   font-weight: 700;
   color: var(--teal-dark);
 }
-.addon-free {
+.addon-free { border: 2px solid var(--teal); }
+.addon-free .addon-price { color: var(--whatsapp); }
+
+/* ============ QUOTE BUILDER ============ */
+.quote-builder {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.qb-header {
+  background: var(--teal);
+  padding: 28px 32px;
+  text-align: center;
+}
+.qb-header h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.qb-header p {
+  font-size: 0.88rem;
+  color: var(--text-sub);
+}
+.qb-body {
+  padding: 32px;
+}
+.qb-step {
+  margin-bottom: 28px;
+}
+.qb-step:last-child { margin-bottom: 0; }
+.qb-step-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.qb-step-num {
+  width: 28px;
+  height: 28px;
+  background: var(--teal);
+  color: var(--text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.qb-step-label h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Theme selector */
+.qb-themes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.qb-theme-btn {
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 10px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.qb-theme-btn:hover { border-color: var(--teal); }
+.qb-theme-btn.selected {
+  border-color: var(--teal);
   background: var(--teal-light);
+}
+.qb-theme-btn small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: var(--text-sub);
+  margin-top: 2px;
+}
+
+/* Size selector */
+.qb-sizes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.qb-size-btn {
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 10px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.qb-size-btn:hover { border-color: var(--teal); }
+.qb-size-btn.selected {
+  border-color: var(--teal);
+  background: var(--teal-light);
+}
+.qb-size-btn .qb-size-price {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-top: 4px;
+}
+
+/* Add-on checkboxes */
+.qb-addons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.qb-addon-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+.qb-addon-row:hover { border-color: var(--teal); }
+.qb-addon-row.checked {
+  border-color: var(--teal);
+  background: var(--teal-light);
+}
+.qb-addon-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #8BB8B8;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qb-addon-info {
+  flex: 1;
+  margin-left: 12px;
+}
+.qb-addon-info span {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.qb-addon-info small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-sub);
+}
+.qb-addon-cost {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+  white-space: nowrap;
+}
+.qb-addon-cost.free { color: var(--whatsapp); }
+
+/* Contact fields */
+.qb-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.qb-fields .full { grid-column: 1 / -1; }
+.qb-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.qb-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+.qb-field input,
+.qb-field select {
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  background: var(--bg);
+  color: var(--text);
+  transition: border-color 0.2s;
+  outline: none;
+}
+.qb-field input:focus,
+.qb-field select:focus {
   border-color: var(--teal);
 }
-.addon-free .addon-price { color: var(--whatsapp); }
+.qb-field input::placeholder { color: var(--text-light); }
+
+/* Quote total */
+.qb-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-alt);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-top: 24px;
+}
+.qb-total-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-sub);
+}
+.qb-total-label small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+.qb-total-amount {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.qb-total-amount span {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-sub);
+}
+.qb-savings {
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--whatsapp);
+  margin-top: 8px;
+  min-height: 20px;
+}
+
+/* Submit */
+.qb-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 32px;
+  background: var(--whatsapp);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 16px;
+}
+.qb-submit:hover { background: var(--whatsapp-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.qb-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+.qb-submit svg { width: 22px; height: 22px; fill: white; }
+
+.qb-disclaimer {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--text-light);
+  margin-top: 12px;
+}
+
+/* Quote builder mobile */
+@media (max-width: 600px) {
+  .qb-body { padding: 24px 20px; }
+  .qb-themes,
+  .qb-sizes { grid-template-columns: 1fr; }
+  .qb-fields { grid-template-columns: 1fr; }
+  .qb-fields .full { grid-column: 1; }
+  .qb-total { flex-direction: column; gap: 8px; text-align: center; }
+}
 
 /* ============ TESTIMONIALS ============ */
 .testimonials-grid {
@@ -878,7 +1160,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
     <a href="#" class="nav-logo">
       <img src="images/logo.svg" alt="KiddoKlub" loading="eager">
     </a>
-    <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20for%20my%20event!" class="nav-cta">Book Now</a>
+    <a href="#quote" class="nav-cta">Get a Quote</a>
   </div>
 </nav>
 
@@ -889,7 +1171,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
       <h1>Soft Play Parties,<br><span>Delivered to Your Door</span></h1>
       <p>Premium play sets delivered, set up, and picked up anywhere in Doha. Safe, clean, and perfect for ages 1&ndash;5.</p>
       <div class="hero-buttons">
-        <a href="#packages" class="btn-primary">View Packages</a>
+        <a href="#quote" class="btn-primary">Build Your Quote</a>
         <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20for%20my%20event!" class="btn-whatsapp">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.594-.822-6.336-2.197l-.446-.363-3.103 1.04 1.04-3.103-.363-.446A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
           Book on WhatsApp
@@ -1253,36 +1535,203 @@ button { font-family: inherit; cursor: pointer; border: none; }
     <p class="section-sub">Make your party even more special</p>
     <div class="addons-grid">
       <div class="addon-card addon-free">
-        <div class="addon-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal-dark)" stroke-width="2"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8V4M7 8l5-4 5 4"/></svg>
+        <img src="images/addon-bouncy.jpg" alt="White jumping castle on rooftop" loading="lazy">
+        <div class="addon-body">
+          <h4>Jumping Castle</h4>
+          <p>Inflatable bouncy castle for the bigger kids</p>
+          <div class="addon-price">FREE this week!</div>
         </div>
-        <h4>Jumping Castle</h4>
-        <p>Inflatable fun for the bigger kids</p>
-        <div class="addon-price">FREE this week!</div>
       </div>
       <div class="addon-card">
-        <div class="addon-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-sub)" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+        <img src="images/addon-honeycomb.jpg" alt="Honeycomb soft play with tunnel and blocks" loading="lazy">
+        <div class="addon-body">
+          <h4>Honeycomb Soft Play</h4>
+          <p>Tunnel, blocks & climbing pieces</p>
+          <div class="addon-price">+300 QAR</div>
         </div>
-        <h4>Ball Pit Upgrade</h4>
-        <p>500 extra balls for maximum fun</p>
-        <div class="addon-price">+150 QAR</div>
       </div>
       <div class="addon-card">
-        <div class="addon-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-sub)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <img src="images/addon-ballpit.jpg" alt="White ball pit filled with balls" loading="lazy">
+        <div class="addon-body">
+          <h4>Ball Pit Upgrade</h4>
+          <p>500 extra balls for maximum fun</p>
+          <div class="addon-price">+150 QAR</div>
         </div>
-        <h4>Extra Hour</h4>
-        <p>Extend the party fun</p>
-        <div class="addon-price">+200 QAR</div>
       </div>
       <div class="addon-card">
-        <div class="addon-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-sub)" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20 12H4l2 8h12l2-8z"/></svg>
+        <img src="images/addon-extra.jpg" alt="Beachfront soft play setup" loading="lazy">
+        <div class="addon-body">
+          <h4>Extra Hour</h4>
+          <p>Extend the party fun</p>
+          <div class="addon-price">+200 QAR</div>
         </div>
-        <h4>Themed Balloons</h4>
-        <p>Balloon arch or bouquet</p>
-        <div class="addon-price">+250 QAR</div>
+      </div>
+      <div class="addon-card">
+        <img src="images/addon-balloons.jpg" alt="Balloon arch at outdoor party" loading="lazy">
+        <div class="addon-body">
+          <h4>Themed Balloons</h4>
+          <p>Balloon arch or bouquet</p>
+          <div class="addon-price">+250 QAR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BUILDER -->
+<section class="section section-alt fade-in" id="quote">
+  <div class="container">
+    <h2 class="section-title">Build Your Package</h2>
+    <p class="section-sub">Pick your theme, size & add-ons — get an instant quote</p>
+    <div class="quote-builder">
+      <div class="qb-header">
+        <h3>Instant Quote Builder</h3>
+        <p>Customize your perfect party in 60 seconds</p>
+      </div>
+      <div class="qb-body">
+
+        <!-- Step 1: Theme -->
+        <div class="qb-step">
+          <div class="qb-step-label">
+            <div class="qb-step-num">1</div>
+            <h4>Choose Your Theme</h4>
+          </div>
+          <div class="qb-themes" id="qb-themes">
+            <button class="qb-theme-btn" data-theme="neutral" onclick="qbSelectTheme(this)">
+              Neutral Nest
+              <small>Warm beige & white tones</small>
+            </button>
+            <button class="qb-theme-btn" data-theme="white" onclick="qbSelectTheme(this)">
+              White Wonderland
+              <small>All-white premium look</small>
+            </button>
+            <button class="qb-theme-btn" data-theme="color" onclick="qbSelectTheme(this)">
+              Color Pop
+              <small>Bright & playful colors</small>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Package Size -->
+        <div class="qb-step">
+          <div class="qb-step-label">
+            <div class="qb-step-num">2</div>
+            <h4>Pick Your Package Size</h4>
+          </div>
+          <div class="qb-sizes" id="qb-sizes">
+            <button class="qb-size-btn" data-size="starter" onclick="qbSelectSize(this)">
+              Starter
+              <span class="qb-size-price" id="qb-price-starter">750 QAR</span>
+            </button>
+            <button class="qb-size-btn" data-size="party" onclick="qbSelectSize(this)">
+              Party
+              <span class="qb-size-price" id="qb-price-party">1,200 QAR</span>
+            </button>
+            <button class="qb-size-btn" data-size="grand" onclick="qbSelectSize(this)">
+              Grand
+              <span class="qb-size-price" id="qb-price-grand">1,800 QAR</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Add-ons -->
+        <div class="qb-step">
+          <div class="qb-step-label">
+            <div class="qb-step-num">3</div>
+            <h4>Add Extras</h4>
+          </div>
+          <div class="qb-addons" id="qb-addons">
+            <label class="qb-addon-row checked" onclick="qbToggleAddon(this)">
+              <input type="checkbox" data-addon="castle" data-price="0" checked>
+              <div class="qb-addon-info">
+                <span>Jumping Castle</span>
+                <small>Inflatable bouncy castle</small>
+              </div>
+              <div class="qb-addon-cost free">FREE</div>
+            </label>
+            <label class="qb-addon-row" onclick="qbToggleAddon(this)">
+              <input type="checkbox" data-addon="honeycomb" data-price="300">
+              <div class="qb-addon-info">
+                <span>Honeycomb Soft Play</span>
+                <small>Tunnel, blocks & climbing pieces</small>
+              </div>
+              <div class="qb-addon-cost">+300 QAR</div>
+            </label>
+            <label class="qb-addon-row" onclick="qbToggleAddon(this)">
+              <input type="checkbox" data-addon="ballpit" data-price="150">
+              <div class="qb-addon-info">
+                <span>Ball Pit Upgrade</span>
+                <small>500 extra balls</small>
+              </div>
+              <div class="qb-addon-cost">+150 QAR</div>
+            </label>
+            <label class="qb-addon-row" onclick="qbToggleAddon(this)">
+              <input type="checkbox" data-addon="hour" data-price="200">
+              <div class="qb-addon-info">
+                <span>Extra Hour</span>
+                <small>Extend the party fun</small>
+              </div>
+              <div class="qb-addon-cost">+200 QAR</div>
+            </label>
+            <label class="qb-addon-row" onclick="qbToggleAddon(this)">
+              <input type="checkbox" data-addon="balloons" data-price="250">
+              <div class="qb-addon-info">
+                <span>Themed Balloons</span>
+                <small>Balloon arch or bouquet</small>
+              </div>
+              <div class="qb-addon-cost">+250 QAR</div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 4: Your Details -->
+        <div class="qb-step">
+          <div class="qb-step-label">
+            <div class="qb-step-num">4</div>
+            <h4>Your Details</h4>
+          </div>
+          <div class="qb-fields">
+            <div class="qb-field">
+              <label for="qb-name">Your Name</label>
+              <input type="text" id="qb-name" placeholder="e.g. Sarah" oninput="qbUpdate()">
+            </div>
+            <div class="qb-field">
+              <label for="qb-phone">WhatsApp Number</label>
+              <input type="tel" id="qb-phone" placeholder="+974 XXXX XXXX" oninput="qbUpdate()">
+            </div>
+            <div class="qb-field">
+              <label for="qb-email">Email</label>
+              <input type="email" id="qb-email" placeholder="you@email.com" oninput="qbUpdate()">
+            </div>
+            <div class="qb-field">
+              <label for="qb-date">Preferred Date</label>
+              <input type="date" id="qb-date" oninput="qbUpdate()">
+            </div>
+            <div class="qb-field full">
+              <label for="qb-location">Location / Area in Doha</label>
+              <input type="text" id="qb-location" placeholder="e.g. West Bay, The Pearl, Al Wakra" oninput="qbUpdate()">
+            </div>
+          </div>
+        </div>
+
+        <!-- Total -->
+        <div class="qb-total">
+          <div class="qb-total-label">
+            Your Quote
+            <small>Package + add-ons</small>
+          </div>
+          <div class="qb-total-amount" id="qb-total">
+            <span>QAR</span> —
+          </div>
+        </div>
+        <div class="qb-savings" id="qb-savings"></div>
+
+        <!-- Submit -->
+        <button class="qb-submit" id="qb-submit" disabled onclick="qbSubmit()">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.594-.822-6.336-2.197l-.446-.363-3.103 1.04 1.04-3.103-.363-.446A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          Get Quote on WhatsApp
+        </button>
+        <p class="qb-disclaimer">Your quote is sent directly to our WhatsApp. No spam, no email lists. We reply within minutes.</p>
       </div>
     </div>
   </div>
@@ -1437,6 +1886,134 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ============ QUOTE BUILDER ============
+const qbPricing = {
+  neutral:  { starter: 750, party: 1200, grand: 1800 },
+  white:    { starter: 850, party: 1400, grand: 2100 },
+  color:    { starter: 750, party: 1200, grand: 1800 }
+};
+
+let qbState = { theme: null, size: null };
+
+function qbSelectTheme(btn) {
+  document.querySelectorAll('.qb-theme-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  qbState.theme = btn.dataset.theme;
+  qbUpdateSizePrices();
+  qbUpdate();
+}
+
+function qbSelectSize(btn) {
+  document.querySelectorAll('.qb-size-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  qbState.size = btn.dataset.size;
+  qbUpdate();
+}
+
+function qbToggleAddon(row) {
+  // Let the checkbox toggle naturally via label, then sync style
+  setTimeout(() => {
+    const cb = row.querySelector('input[type="checkbox"]');
+    row.classList.toggle('checked', cb.checked);
+    qbUpdate();
+  }, 0);
+}
+
+function qbUpdateSizePrices() {
+  if (!qbState.theme) return;
+  const prices = qbPricing[qbState.theme];
+  document.getElementById('qb-price-starter').textContent = prices.starter.toLocaleString() + ' QAR';
+  document.getElementById('qb-price-party').textContent = prices.party.toLocaleString() + ' QAR';
+  document.getElementById('qb-price-grand').textContent = prices.grand.toLocaleString() + ' QAR';
+}
+
+function qbGetTotal() {
+  if (!qbState.theme || !qbState.size) return 0;
+  let total = qbPricing[qbState.theme][qbState.size];
+  document.querySelectorAll('#qb-addons input[type="checkbox"]:checked').forEach(cb => {
+    total += parseInt(cb.dataset.price) || 0;
+  });
+  return total;
+}
+
+function qbGetAddons() {
+  const addons = [];
+  document.querySelectorAll('#qb-addons input[type="checkbox"]:checked').forEach(cb => {
+    const name = cb.closest('.qb-addon-row').querySelector('.qb-addon-info span').textContent;
+    const price = parseInt(cb.dataset.price) || 0;
+    addons.push({ name, price });
+  });
+  return addons;
+}
+
+function qbUpdate() {
+  const total = qbGetTotal();
+  const totalEl = document.getElementById('qb-total');
+  const savingsEl = document.getElementById('qb-savings');
+  const submitBtn = document.getElementById('qb-submit');
+
+  if (total > 0) {
+    totalEl.innerHTML = '<span>QAR</span> ' + total.toLocaleString();
+  } else {
+    totalEl.innerHTML = '<span>QAR</span> \u2014';
+  }
+
+  // Show savings if jumping castle is checked (it's free)
+  const castleCb = document.querySelector('[data-addon="castle"]');
+  if (castleCb && castleCb.checked && total > 0) {
+    savingsEl.textContent = 'You\u2019re saving QAR 500+ with the free Jumping Castle!';
+  } else {
+    savingsEl.textContent = '';
+  }
+
+  // Enable submit only when theme + size + name + phone are filled
+  const name = document.getElementById('qb-name').value.trim();
+  const phone = document.getElementById('qb-phone').value.trim();
+  submitBtn.disabled = !(qbState.theme && qbState.size && name && phone);
+}
+
+function qbSubmit() {
+  const name = document.getElementById('qb-name').value.trim();
+  const phone = document.getElementById('qb-phone').value.trim();
+  const email = document.getElementById('qb-email').value.trim();
+  const date = document.getElementById('qb-date').value;
+  const location = document.getElementById('qb-location').value.trim();
+  const total = qbGetTotal();
+  const addons = qbGetAddons();
+
+  const themeNames = { neutral: 'Neutral Nest', white: 'White Wonderland', color: 'Color Pop' };
+  const sizeNames = { starter: 'Starter', party: 'Party', grand: 'Grand' };
+
+  let msg = 'Hi! I\u2019d like to book a party. Here\u2019s my quote:\n\n';
+  msg += '\u2b50 *Package:* ' + themeNames[qbState.theme] + ' \u2014 ' + sizeNames[qbState.size] + '\n';
+  msg += '\ud83d\udcb0 *Base Price:* QAR ' + qbPricing[qbState.theme][qbState.size].toLocaleString() + '\n';
+
+  if (addons.length > 0) {
+    msg += '\n\u2795 *Add-Ons:*\n';
+    addons.forEach(a => {
+      msg += '  \u2022 ' + a.name + (a.price > 0 ? ' (+' + a.price + ' QAR)' : ' (FREE)') + '\n';
+    });
+  }
+
+  msg += '\n\ud83d\udcb5 *Total: QAR ' + total.toLocaleString() + '*\n';
+  msg += '\n\ud83d\udc64 *Name:* ' + name;
+  msg += '\n\ud83d\udcf1 *Phone:* ' + phone;
+  if (email) msg += '\n\ud83d\udce7 *Email:* ' + email;
+  if (date) msg += '\n\ud83d\udcc5 *Preferred Date:* ' + date;
+  if (location) msg += '\n\ud83d\udccd *Location:* ' + location;
+
+  window.open('https://wa.me/97450318434?text=' + encodeURIComponent(msg), '_blank');
+}
+
+// Set min date to today for the date picker
+(function() {
+  const dateInput = document.getElementById('qb-date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
+})();
 </script>
 
 </body>
