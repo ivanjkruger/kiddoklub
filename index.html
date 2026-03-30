@@ -1,959 +1,755 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KiddoKlub — Soft Play Rentals Doha | Delivered to Your Door</title>
-<meta name="description" content="Stress-free birthday magic delivered to your door. Premium soft play set rentals in Doha, Qatar. We deliver, set up, and pick up — you enjoy the smiles.">
-<meta property="og:title" content="KiddoKlub — Soft Play Rentals Doha">
-<meta property="og:description" content="Premium soft play sets delivered, set up, and picked up. Book your FREE Jumping Castle add-on today.">
+<title>KiddoKlub — Luxury Soft Play Rentals in Doha</title>
+<meta name="description" content="Premium soft play sets delivered, set up, and picked up anywhere in Doha. Luxury party rentals for birthdays, playdates, and events.">
+<meta property="og:title" content="KiddoKlub — Luxury Soft Play Rentals in Doha">
+<meta property="og:description" content="Premium soft play sets delivered to your door. Book your FREE Jumping Castle add-on today.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --cream: #FFF9F3;
-  --warm-white: #FFFDFB;
-  --coral: #E8B4B8;
-  --coral-deep: #D4949A;
+  /* Logo-derived palette */
+  --bg: #FBF8F3;
+  --bg-alt: #F5F0E8;
+  --teal: #9DC5C5;
+  --teal-light: rgba(157,197,197,0.12);
+  --pink: #E8B4B8;
+  --pink-light: rgba(232,180,184,0.10);
   --peach: #E8C8A0;
-  --peach-deep: #D4B48C;
-  --mint: #A8D5D5;
-  --mint-deep: #8CC0C0;
-  --sage: #C5CC8E;
-  --butter: #F0E0B0;
-  --butter-deep: #DDD09A;
-  --text-dark: #3A3530;
-  --text-mid: #5A554E;
-  --text-light: #8A847C;
-  --bg-cream: #F5F0E8;
+  --peach-light: rgba(232,200,160,0.12);
+  --gold: #C4A87C;
+  --gold-hover: #A8915F;
+  --gold-light: rgba(196,168,124,0.10);
+  --text: #2D2D2D;
+  --text-sub: #6B635A;
+  --text-light: #9A9189;
+  --border: rgba(45,42,38,0.08);
+  --white: #FFFFFF;
   --whatsapp: #25D366;
   --whatsapp-hover: #1EBE57;
-  --radius-sm: 12px;
-  --radius-md: 20px;
-  --radius-lg: 32px;
-  --shadow-soft: 0 4px 24px rgba(45,42,38,0.06);
-  --shadow-card: 0 8px 40px rgba(45,42,38,0.08);
-  --shadow-float: 0 12px 48px rgba(45,42,38,0.12);
+  --shadow-sm: 0 2px 12px rgba(45,42,38,0.04);
+  --shadow-md: 0 4px 24px rgba(45,42,38,0.06);
+  --shadow-lg: 0 8px 40px rgba(45,42,38,0.08);
+  --radius: 14px;
 }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Nunito', -apple-system, sans-serif;
-  background: var(--bg-cream);
-  color: var(--text-dark);
-  line-height: 1.6;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ============ PROMO BANNER ============ */
-.promo-banner {
-  background: linear-gradient(135deg, var(--mint) 0%, var(--mint-deep) 100%);
-  color: var(--text-dark);
-  text-align: center;
-  padding: 12px 20px;
-  font-weight: 700;
-  font-size: 0.92rem;
-  position: relative;
-  z-index: 100;
-  letter-spacing: 0.01em;
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
 }
-.promo-banner .promo-value {
-  background: rgba(255,255,255,0.5);
-  padding: 2px 10px;
-  border-radius: 20px;
-  margin: 0 4px;
-  font-weight: 800;
-}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
 /* ============ NAV ============ */
 .nav {
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  background: rgba(245,240,232,0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(45,42,38,0.06);
-  padding: 10px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: sticky; top: 0; z-index: 99;
+  background: rgba(251,248,243,0.90);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 28px;
+  display: flex; justify-content: space-between; align-items: center;
 }
-.nav-logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-.nav-logo img {
-  height: 44px;
-  width: auto;
-}
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo img { height: 42px; width: auto; }
 .nav-cta {
-  background: var(--whatsapp);
-  color: white;
-  padding: 10px 22px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  background: var(--gold); color: var(--white);
+  padding: 10px 28px; border-radius: 8px;
+  text-decoration: none; font-weight: 600; font-size: 0.88rem;
+  letter-spacing: 0.02em;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.3);
 }
-.nav-cta:hover { background: var(--whatsapp-hover); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
-.nav-cta svg { width: 18px; height: 18px; fill: white; }
+.nav-cta:hover { background: var(--gold-hover); }
 
 /* ============ HERO ============ */
 .hero {
-  position: relative;
-  overflow: hidden;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 60px 24px;
+  min-height: 90vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 48px;
+  padding: 80px 28px;
+  max-width: 1200px; margin: 0 auto;
 }
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg,
-    rgba(245,240,232,0.55) 0%,
-    rgba(245,240,232,0.75) 40%,
-    rgba(245,240,232,0.92) 100%
-  );
-  z-index: 1;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 640px;
-}
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(10px);
-  border: 2px solid var(--coral);
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 24px;
-  animation: fadeInDown 0.6s ease-out;
+.hero-text { max-width: 520px; }
+.hero-eyebrow {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  padding: 6px 16px;
+  border: 1.5px solid var(--gold);
+  border-radius: 4px;
 }
 .hero h1 {
-  font-family: 'Baloo 2', cursive;
-  font-size: clamp(2.2rem, 7vw, 3.6rem);
-  line-height: 1.15;
-  font-weight: 800;
-  margin-bottom: 18px;
-  animation: fadeInUp 0.7s ease-out;
-  color: var(--text-dark);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text);
 }
-.hero h1 .highlight {
-  background: linear-gradient(135deg, var(--coral) 0%, var(--peach) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
 }
 .hero-sub {
-  font-size: 1.15rem;
-  color: var(--text-mid);
-  max-width: 540px;
-  margin: 0 auto 32px;
-  line-height: 1.7;
-  animation: fadeInUp 0.8s ease-out;
+  font-size: 1.1rem; color: var(--text-sub);
+  line-height: 1.7; margin-bottom: 36px;
 }
-.hero-cta-group {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: center;
-  animation: fadeInUp 0.9s ease-out;
+.hero-ctas { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: var(--white);
+  padding: 15px 32px; border-radius: 8px;
+  text-decoration: none; font-weight: 600; font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: all 0.3s ease; border: none; cursor: pointer;
 }
-.btn-primary {
-  background: var(--whatsapp);
-  color: white;
-  padding: 16px 40px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 1.1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 28px rgba(37,211,102,0.35);
-  border: none;
-  cursor: pointer;
-}
-.btn-primary:hover { background: var(--whatsapp-hover); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(37,211,102,0.45); }
-.btn-primary svg { width: 22px; height: 22px; fill: white; }
-.btn-secondary {
-  background: transparent;
-  color: var(--text-mid);
-  padding: 12px 28px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.95rem;
-  border: 2px solid rgba(58,53,48,0.15);
+.btn-gold:hover { background: var(--gold-hover); transform: translateY(-1px); }
+.btn-gold svg { width: 20px; height: 20px; fill: currentColor; }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--text-sub);
+  padding: 15px 28px; border-radius: 8px;
+  text-decoration: none; font-weight: 600; font-size: 0.95rem;
+  border: 1.5px solid var(--border);
   transition: all 0.3s ease;
 }
-.btn-secondary:hover { border-color: var(--coral); color: var(--coral-deep); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.hero-image {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
+}
+.hero-image img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.hero-image::after {
+  content: '';
+  position: absolute; inset: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius);
+  pointer-events: none;
+}
+.hero-badge {
+  position: absolute; bottom: 16px; left: 16px;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(10px);
+  padding: 8px 16px; border-radius: 8px;
+  font-size: 0.8rem; font-weight: 600; color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
 
-/* ============ TRUST BAR ============ */
-.trust-bar {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  padding: 32px 24px;
-  background: white;
-  border-top: 1px solid rgba(45,42,38,0.04);
-  border-bottom: 1px solid rgba(45,42,38,0.04);
+/* ============ TRUST ============ */
+.trust {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  padding: 28px 0;
+}
+.trust-row {
+  display: flex; justify-content: center;
+  gap: 40px; flex-wrap: wrap;
+  max-width: 900px; margin: 0 auto; padding: 0 24px;
 }
 .trust-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-mid);
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.88rem; font-weight: 500; color: var(--text-sub);
 }
-.trust-icon {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
+.trust-dot {
+  width: 8px; height: 8px; border-radius: 50%;
 }
-.trust-icon.coral { background: rgba(232,180,184,0.2); }
-.trust-icon.mint { background: rgba(168,213,213,0.25); }
-.trust-icon.sky { background: rgba(197,204,142,0.2); }
-.trust-icon.butter { background: rgba(232,200,160,0.25); }
+.trust-dot.t { background: var(--teal); }
+.trust-dot.p { background: var(--pink); }
+.trust-dot.pe { background: var(--peach); }
+.trust-dot.g { background: var(--gold); }
 
-/* ============ PHOTO GALLERY ============ */
-.gallery-section {
-  padding: 64px 24px 48px;
-  background: var(--bg-cream);
+/* ============ GALLERY ============ */
+.gallery {
+  padding: 80px 0 60px;
 }
+.gallery .section-header { padding: 0 24px; }
 .gallery-scroll {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  display: flex; gap: 16px;
+  overflow-x: auto; scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 16px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0 24px 20px;
 }
-.gallery-scroll::-webkit-scrollbar { height: 6px; }
-.gallery-scroll::-webkit-scrollbar-track { background: transparent; }
-.gallery-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 3px; }
+.gallery-scroll::-webkit-scrollbar { height: 4px; }
+.gallery-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.08); border-radius: 2px; }
 .gallery-item {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  transition: transform 0.3s ease;
+  flex: 0 0 auto; scroll-snap-align: start;
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
-.gallery-item:hover { transform: scale(1.02); }
 .gallery-item img {
-  display: block;
-  height: 280px;
-  width: auto;
-  object-fit: cover;
+  display: block; height: 300px; width: auto; object-fit: cover;
 }
-.gallery-item.portrait img { height: 280px; }
-.gallery-item.landscape img { height: 280px; }
 
-/* ============ SECTION ============ */
-.section { padding: 64px 24px; }
-.section-title {
-  font-family: 'Baloo 2', cursive;
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
+/* ============ SECTIONS ============ */
+.section { padding: 80px 0; }
+.section.alt { background: var(--bg-alt); }
+.section.white { background: var(--white); }
+.section-header {
   text-align: center;
-  margin-bottom: 12px;
-  font-weight: 800;
+  margin-bottom: 56px;
 }
-.section-sub {
-  text-align: center;
-  color: var(--text-light);
-  font-size: 1.05rem;
-  margin-bottom: 48px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+.section-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 12px;
+}
+.section-header p {
+  font-size: 1.05rem; color: var(--text-sub);
+  max-width: 480px; margin: 0 auto;
+}
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 12px;
 }
 
 /* ============ HOW IT WORKS ============ */
-.how-it-works { background: white; }
-.steps {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  max-width: 800px;
-  margin: 0 auto;
+.steps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 32px; max-width: 900px; margin: 0 auto; padding: 0 24px;
 }
-.step {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  padding: 28px;
-  border-radius: var(--radius-md);
-  background: var(--bg-cream);
-  transition: transform 0.3s ease;
+.step-card {
+  text-align: center; padding: 32px 24px;
 }
-.step:hover { transform: translateY(-3px); }
 .step-num {
-  width: 52px; height: 52px; min-width: 52px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.4rem; font-weight: 800; color: white;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 700;
+  margin-bottom: 20px;
 }
-.step:nth-child(1) .step-num { background: linear-gradient(135deg, var(--mint), var(--mint-deep)); }
-.step:nth-child(2) .step-num { background: linear-gradient(135deg, var(--coral), var(--coral-deep)); }
-.step:nth-child(3) .step-num { background: linear-gradient(135deg, var(--peach), var(--peach-deep)); }
-.step h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
-.step p { color: var(--text-mid); font-size: 0.95rem; }
+.step-card:nth-child(1) .step-num { background: var(--teal-light); color: var(--teal); border: 1.5px solid var(--teal); }
+.step-card:nth-child(2) .step-num { background: var(--pink-light); color: var(--pink); border: 1.5px solid var(--pink); }
+.step-card:nth-child(3) .step-num { background: var(--peach-light); color: var(--peach); border: 1.5px solid var(--peach); }
+.step-card h3 {
+  font-size: 1.25rem; margin-bottom: 8px;
+}
+.step-card p {
+  font-size: 0.92rem; color: var(--text-sub); line-height: 1.6;
+}
 
 /* ============ VALUE COMPARISON ============ */
-.value-section {
-  background: var(--bg-cream);
-  padding: 64px 24px;
-}
-.value-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
 .value-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 40px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px; max-width: 900px; margin: 0 auto 40px; padding: 0 24px;
 }
 .value-card {
-  border-radius: var(--radius-md);
-  padding: 32px 28px;
-  position: relative;
+  border-radius: var(--radius); padding: 36px 28px;
+  background: var(--white);
 }
-.value-card.venue {
-  background: white;
-  border: 2px solid rgba(0,0,0,0.06);
-  opacity: 0.8;
+.value-card.venue { border: 1px solid var(--border); opacity: 0.85; }
+.value-card.kk { border: 2px solid var(--teal); box-shadow: var(--shadow-md); position: relative; }
+.value-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 16px; display: inline-block;
+  padding: 4px 12px; border-radius: 4px;
 }
-.value-card.kiddoklub {
-  background: white;
-  border: 3px solid var(--mint);
-  box-shadow: var(--shadow-card);
+.venue .value-label { background: rgba(0,0,0,0.04); color: var(--text-light); }
+.kk .value-label { background: var(--teal-light); color: var(--teal); }
+.value-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 700; margin-bottom: 4px;
 }
-.value-card .card-label {
-  display: inline-block;
-  padding: 4px 14px;
-  border-radius: 50px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 16px;
-}
-.value-card.venue .card-label { background: rgba(0,0,0,0.06); color: var(--text-light); }
-.value-card.kiddoklub .card-label { background: var(--mint); color: var(--text-dark); }
-.value-card .price-range {
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin-bottom: 4px;
-}
-.value-card .price-note {
-  font-size: 0.85rem;
-  color: var(--text-light);
-  margin-bottom: 20px;
-}
-.value-list {
-  list-style: none;
-  padding: 0;
-}
+.value-note { font-size: 0.85rem; color: var(--text-light); margin-bottom: 20px; }
+.value-list { list-style: none; }
 .value-list li {
-  padding: 8px 0;
-  font-size: 0.92rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text-mid);
+  padding: 7px 0; font-size: 0.9rem;
+  display: flex; align-items: center; gap: 10px;
+  color: var(--text-sub);
 }
-.value-list li .icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  flex-shrink: 0;
+.value-list .ico {
+  width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; flex-shrink: 0;
 }
-.venue .value-list li .icon {
-  background: rgba(200,60,60,0.08);
-  color: #c83c3c;
-}
-.kiddoklub .value-list li .icon {
-  background: rgba(37,211,102,0.12);
-  color: #25D366;
-}
-.winner-badge {
-  position: absolute;
-  top: -12px;
-  right: 20px;
-  background: var(--mint);
-  color: var(--text-dark);
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 5px 16px;
-  border-radius: 50px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+.venue .ico { background: rgba(180,60,60,0.06); color: #B03A3A; }
+.kk .ico { background: rgba(37,211,102,0.08); color: #25D366; }
+.better-badge {
+  position: absolute; top: -11px; right: 20px;
+  background: var(--teal); color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem; font-weight: 700;
+  padding: 4px 14px; border-radius: 4px;
+  letter-spacing: 0.06em; text-transform: uppercase;
 }
 .value-stack {
-  background: white;
-  border-radius: var(--radius-md);
-  padding: 32px;
-  box-shadow: var(--shadow-soft);
-  text-align: center;
+  max-width: 900px; margin: 0 auto; padding: 0 24px;
 }
-.value-stack h3 {
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
+.value-stack-inner {
+  background: var(--white); border-radius: var(--radius);
+  padding: 40px; text-align: center;
+  border: 1px solid var(--border);
 }
-.stack-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
+.value-stack h3 { font-size: 1.4rem; margin-bottom: 24px; }
+.stack-pills {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px; margin-bottom: 28px;
 }
-.stack-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--bg-cream);
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--text-dark);
+.stack-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--bg); padding: 8px 16px; border-radius: 6px;
+  font-size: 0.85rem; font-weight: 500; color: var(--text);
 }
-.stack-item .check { color: var(--mint-deep); font-weight: 800; }
-.value-stack .price-total {
-  font-family: 'Baloo 2', cursive;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--mint-deep);
+.stack-pill .ck { color: var(--teal); font-weight: 700; }
+.stack-total {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem; font-weight: 700; color: var(--gold);
 }
-.value-stack .price-total span {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
+.stack-total span {
+  font-size: 0.9rem; color: var(--text-light);
+  font-family: 'DM Sans', sans-serif; font-weight: 500;
 }
 
 /* ============ PACKAGES ============ */
-.packages { background: white; }
 .theme-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+  display: flex; justify-content: center; gap: 8px;
+  margin-bottom: 32px; flex-wrap: wrap; padding: 0 24px;
 }
 .theme-tab {
-  padding: 12px 28px;
-  border-radius: 50px;
-  border: 2px solid rgba(0,0,0,0.08);
-  background: white;
-  font-weight: 700;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Nunito', sans-serif;
-  color: var(--text-mid);
+  padding: 10px 24px; border-radius: 6px;
+  border: 1.5px solid var(--border); background: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600; font-size: 0.88rem;
+  cursor: pointer; transition: all 0.3s ease; color: var(--text-sub);
 }
-.theme-tab:hover { border-color: var(--coral); color: var(--coral-deep); }
-.theme-tab.active { background: var(--text-dark); color: white; border-color: var(--text-dark); }
+.theme-tab:hover { border-color: var(--gold); color: var(--gold); }
+.theme-tab.active { background: var(--text); color: var(--white); border-color: var(--text); }
 
-.theme-preview {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+.theme-photos {
+  display: flex; justify-content: center; gap: 16px;
+  margin-bottom: 40px; padding: 0 24px; flex-wrap: wrap;
 }
-.theme-preview-img {
-  display: none;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
+.theme-photo {
+  display: none; border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow-md);
 }
-.theme-preview-img.visible { display: block; }
-.theme-preview-img img {
-  display: block;
-  height: 200px;
-  width: auto;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-}
+.theme-photo.visible { display: block; }
+.theme-photo img { height: 200px; width: auto; object-fit: cover; display: block; }
 
-.packages-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
+.pkg-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px; max-width: 1100px; margin: 0 auto; padding: 0 24px;
 }
-.package-card {
-  background: var(--bg-cream);
-  border-radius: var(--radius-md);
-  padding: 32px 24px;
-  box-shadow: var(--shadow-soft);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  display: none;
+.pkg-card {
+  background: var(--white); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease; display: none;
+  border: 1px solid var(--border);
 }
-.package-card.visible { display: block; }
-.package-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
-.package-card.popular { border: 2px solid var(--mint); }
-.popular-badge {
-  position: absolute; top: 16px; right: 16px;
-  background: var(--mint); color: var(--text-dark);
-  font-size: 0.75rem; font-weight: 800;
-  padding: 4px 12px; border-radius: 50px;
+.pkg-card.visible { display: block; }
+.pkg-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.pkg-card.popular { border: 2px solid var(--gold); }
+.pkg-card-img {
+  height: 180px; overflow: hidden; position: relative;
+}
+.pkg-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.pop-badge {
+  position: absolute; top: 12px; right: 12px;
+  background: var(--gold); color: var(--white);
+  font-size: 0.68rem; font-weight: 700;
+  padding: 4px 10px; border-radius: 4px;
   text-transform: uppercase; letter-spacing: 0.05em;
 }
-.card-size {
-  display: inline-block;
-  background: white;
-  padding: 4px 14px; border-radius: 50px;
-  font-size: 0.8rem; font-weight: 700; color: var(--text-light);
-  margin-bottom: 12px;
+.pkg-body { padding: 24px; }
+.pkg-size {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-light); margin-bottom: 4px;
 }
-.card-dimensions { font-size: 0.85rem; color: var(--text-light); margin-bottom: 6px; }
-.card-capacity {
-  font-size: 0.95rem; color: var(--text-mid); font-weight: 600;
-  margin-bottom: 16px; display: flex; align-items: center; gap: 6px;
+.pkg-dims { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 4px; }
+.pkg-kids { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 14px; }
+.pkg-features { list-style: none; margin-bottom: 20px; }
+.pkg-features li {
+  font-size: 0.85rem; color: var(--text-sub);
+  padding: 3px 0 3px 18px; position: relative;
 }
-.card-features { list-style: none; margin-bottom: 24px; padding: 0; }
-.card-features li {
-  font-size: 0.88rem; color: var(--text-mid);
-  padding: 4px 0 4px 22px; position: relative;
-}
-.card-features li::before {
+.pkg-features li::before {
   content: ''; position: absolute; left: 0; top: 10px;
-  width: 8px; height: 8px; border-radius: 50%; background: var(--mint);
+  width: 6px; height: 6px; border-radius: 50%; background: var(--teal);
 }
-.card-price {
-  font-family: 'Baloo 2', cursive;
-  font-size: 2rem; font-weight: 800; margin-bottom: 4px;
+.pkg-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 700; margin-bottom: 2px;
 }
-.card-price span { font-size: 0.85rem; font-weight: 600; color: var(--text-light); font-family: 'Nunito', sans-serif; }
-.card-extra { font-size: 0.82rem; color: var(--text-light); margin-bottom: 20px; }
-.card-cta {
-  display: block; width: 100%; padding: 14px;
-  border-radius: 50px;
-  background: var(--text-dark); color: white;
+.pkg-price span { font-size: 0.82rem; font-weight: 500; color: var(--text-light); font-family: 'DM Sans', sans-serif; }
+.pkg-deposit { font-size: 0.78rem; color: var(--text-light); margin-bottom: 18px; }
+.pkg-cta {
+  display: block; width: 100%; padding: 12px;
+  border-radius: 8px; background: var(--text); color: var(--white);
   text-decoration: none; text-align: center;
-  font-weight: 700; font-size: 0.95rem;
+  font-weight: 600; font-size: 0.88rem;
   transition: all 0.3s ease; border: none; cursor: pointer;
 }
-.card-cta:hover { background: var(--mint-deep); transform: translateY(-1px); }
+.pkg-cta:hover { background: var(--gold); }
 
-/* ============ OFFER CALLOUT ============ */
-.offer-callout {
-  max-width: 700px;
-  margin: 40px auto 0;
-  background: linear-gradient(135deg, rgba(168,213,213,0.12) 0%, rgba(232,180,184,0.12) 100%);
-  border: 2px dashed var(--mint);
-  border-radius: var(--radius-md);
-  padding: 32px;
-  text-align: center;
+/* Offer callout */
+.offer-box {
+  max-width: 700px; margin: 48px auto 0; padding: 0 24px;
 }
-.offer-callout h3 {
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.5rem; color: var(--text-dark); margin-bottom: 8px;
+.offer-inner {
+  background: var(--white); border: 1.5px dashed var(--gold);
+  border-radius: var(--radius); padding: 36px; text-align: center;
 }
-.offer-callout p { color: var(--text-mid); font-size: 1rem; margin-bottom: 20px; }
-.offer-callout .btn-primary { font-size: 1rem; padding: 14px 36px; }
+.offer-inner h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.offer-inner p { color: var(--text-sub); margin-bottom: 24px; }
 
 /* ============ ADD-ONS ============ */
-.addons { background: var(--bg-cream); }
 .addons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  max-width: 1000px;
-  margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px; max-width: 1000px; margin: 0 auto; padding: 0 24px;
 }
-.addon-card {
-  background: white; border-radius: var(--radius-md);
-  padding: 24px; text-align: center;
-  transition: all 0.3s ease; border: 2px solid transparent;
+.addon {
+  background: var(--white); border-radius: var(--radius);
+  padding: 28px 20px; text-align: center;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
 }
-.addon-card:hover { border-color: var(--peach); transform: translateY(-3px); }
-.addon-card.free-addon {
-  border: 2px solid var(--mint);
-  background: linear-gradient(135deg, rgba(168,213,213,0.08), rgba(197,204,142,0.08));
+.addon:hover { border-color: var(--peach); transform: translateY(-2px); }
+.addon.featured {
+  border: 2px solid var(--gold);
   position: relative;
 }
-.free-tag {
+.addon-tag {
   position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
-  background: var(--mint); color: var(--text-dark);
-  font-size: 0.75rem; font-weight: 800;
-  padding: 3px 14px; border-radius: 50px; text-transform: uppercase;
-  white-space: nowrap;
+  background: var(--gold); color: var(--white);
+  font-size: 0.68rem; font-weight: 700;
+  padding: 3px 12px; border-radius: 4px;
+  text-transform: uppercase; white-space: nowrap;
+  letter-spacing: 0.05em;
 }
-.addon-emoji { font-size: 2.5rem; margin-bottom: 12px; display: block; }
-.addon-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-.addon-card .addon-size { font-size: 0.82rem; color: var(--text-light); margin-bottom: 8px; }
-.addon-price { font-family: 'Baloo 2', cursive; font-size: 1.4rem; font-weight: 700; }
-.addon-price.struck { text-decoration: line-through; color: var(--text-light); font-size: 1.1rem; }
-.addon-free-text { color: var(--mint-deep); font-weight: 800; font-size: 1.1rem; }
+.addon-icon { font-size: 2rem; margin-bottom: 12px; }
+.addon h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; margin-bottom: 4px; }
+.addon .addon-detail { font-size: 0.8rem; color: var(--text-light); margin-bottom: 10px; }
+.addon-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 700;
+}
+.addon-price.struck { text-decoration: line-through; color: var(--text-light); font-size: 1rem; }
+.addon-free { color: var(--gold); font-weight: 700; font-size: 1rem; }
 
 /* ============ TESTIMONIALS ============ */
-.testimonials { background: white; }
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px; max-width: 900px; margin: 0 auto;
+.test-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; max-width: 900px; margin: 0 auto; padding: 0 24px;
 }
-.testimonial-card {
-  background: var(--bg-cream); border-radius: var(--radius-md);
-  padding: 28px; box-shadow: var(--shadow-soft);
+.test-card {
+  background: var(--white); border-radius: var(--radius);
+  padding: 32px; border: 1px solid var(--border);
 }
-.testimonial-stars { color: #F0C94D; font-size: 1.1rem; margin-bottom: 12px; letter-spacing: 2px; }
-.testimonial-text { font-size: 0.95rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
-.testimonial-author { font-weight: 700; font-size: 0.9rem; }
-.testimonial-detail { font-size: 0.82rem; color: var(--text-light); }
+.test-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; color: var(--peach); line-height: 1; margin-bottom: 12px;
+}
+.test-text {
+  font-size: 0.95rem; color: var(--text-sub);
+  line-height: 1.7; margin-bottom: 18px; font-style: italic;
+}
+.test-author { font-weight: 600; font-size: 0.9rem; }
+.test-detail { font-size: 0.8rem; color: var(--text-light); }
 
 /* ============ FAQ ============ */
-.faq { background: var(--bg-cream); }
-.faq-list { max-width: 700px; margin: 0 auto; }
-.faq-item { border-bottom: 1px solid rgba(45,42,38,0.08); padding: 20px 0; }
+.faq-list { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+.faq-item { border-bottom: 1px solid var(--border); }
 .faq-q {
   display: flex; justify-content: space-between; align-items: center;
-  cursor: pointer; font-weight: 700; font-size: 1.05rem; gap: 16px; user-select: none;
+  cursor: pointer; font-weight: 600; font-size: 1rem;
+  padding: 22px 0; gap: 16px; user-select: none;
 }
 .faq-q::after {
-  content: '+'; font-size: 1.4rem; font-weight: 300; color: var(--mint-deep);
-  transition: transform 0.3s ease; min-width: 24px; text-align: center;
+  content: '+'; font-size: 1.2rem; font-weight: 400; color: var(--gold);
+  transition: transform 0.3s ease; min-width: 20px; text-align: center;
 }
 .faq-item.open .faq-q::after { content: '\2212'; }
 .faq-a {
   max-height: 0; overflow: hidden;
   transition: max-height 0.4s ease, padding 0.3s ease;
-  color: var(--text-mid); font-size: 0.95rem; line-height: 1.7;
+  color: var(--text-sub); font-size: 0.92rem; line-height: 1.7;
 }
-.faq-item.open .faq-a { max-height: 300px; padding-top: 12px; }
+.faq-item.open .faq-a { max-height: 300px; padding-bottom: 22px; }
 
 /* ============ REFERRAL ============ */
-.referral-section {
-  background: white;
-  padding: 64px 24px;
+.referral-inner {
+  max-width: 560px; margin: 0 auto; padding: 0 24px;
 }
 .referral-box {
-  max-width: 600px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, rgba(168,213,213,0.1), rgba(232,180,184,0.1));
-  border: 2px dashed var(--coral);
-  border-radius: var(--radius-md);
-  padding: 40px 32px;
-  text-align: center;
+  background: var(--white); border: 1.5px dashed var(--pink);
+  border-radius: var(--radius); padding: 48px 36px; text-align: center;
 }
-.referral-box .gift-icon { font-size: 3rem; margin-bottom: 16px; }
-.referral-box h3 {
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.6rem;
-  margin-bottom: 8px;
-}
-.referral-box p { color: var(--text-mid); margin-bottom: 24px; line-height: 1.6; }
+.referral-box h3 { font-size: 1.5rem; margin-bottom: 8px; }
+.referral-box p { color: var(--text-sub); margin-bottom: 24px; line-height: 1.6; }
 .referral-amount {
-  font-family: 'Baloo 2', cursive;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--coral-deep);
-  margin-bottom: 4px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem; font-weight: 700; color: var(--gold); margin-bottom: 4px;
 }
-.referral-sub { font-size: 0.9rem; color: var(--text-light); margin-bottom: 24px; }
+.referral-sub { font-size: 0.85rem; color: var(--text-light); margin-bottom: 28px; }
 
 /* ============ FINAL CTA ============ */
 .final-cta {
-  background: linear-gradient(135deg, var(--text-dark) 0%, #1a1815 100%);
-  padding: 64px 24px; text-align: center; color: white;
+  background: var(--text); color: var(--white);
+  padding: 80px 24px; text-align: center;
   position: relative; overflow: hidden;
 }
 .final-cta::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(168,213,213,0.1) 0%, transparent 60%),
-              radial-gradient(circle at 70% 50%, rgba(232,180,184,0.1) 0%, transparent 60%);
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(157,197,197,0.08) 0%, transparent 60%),
+              radial-gradient(circle at 70% 50%, rgba(232,180,184,0.06) 0%, transparent 60%);
 }
 .final-cta > * { position: relative; z-index: 1; }
-.final-cta h2 { font-family: 'Baloo 2', cursive; font-size: clamp(1.8rem, 5vw, 2.8rem); margin-bottom: 12px; font-weight: 800; }
-.final-cta p { font-size: 1.1rem; opacity: 0.8; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
-.final-cta-img {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 32px;
+.final-photos {
+  display: flex; justify-content: center; gap: 12px;
+  margin-bottom: 36px;
 }
-.final-cta-img img {
-  height: 120px;
-  border-radius: var(--radius-sm);
-  object-fit: cover;
-  opacity: 0.7;
+.final-photos img {
+  height: 100px; width: 140px; object-fit: cover;
+  border-radius: 10px; opacity: 0.6;
 }
+.final-cta h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 12px; color: var(--white);
+}
+.final-cta p {
+  font-size: 1.05rem; opacity: 0.7;
+  margin-bottom: 36px; max-width: 460px; margin-left: auto; margin-right: auto;
+}
+.btn-gold-on-dark {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--gold); color: var(--white);
+  padding: 16px 36px; border-radius: 8px;
+  text-decoration: none; font-weight: 600; font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.btn-gold-on-dark:hover { background: var(--gold-hover); }
+.btn-gold-on-dark svg { width: 20px; height: 20px; fill: currentColor; }
 
 /* ============ FOOTER ============ */
 .footer {
-  background: var(--text-dark); color: rgba(255,255,255,0.5);
-  text-align: center; padding: 32px 24px; font-size: 0.85rem;
+  background: var(--text); color: rgba(255,255,255,0.4);
+  text-align: center; padding: 28px 24px; font-size: 0.82rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
-.footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
-.footer a:hover { color: white; }
-.footer-social {
+.footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.footer a:hover { color: var(--white); }
+.footer-ig {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 8px 20px; border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 50px; margin-bottom: 16px; transition: all 0.3s ease;
+  padding: 6px 18px; border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px; margin-bottom: 12px; transition: all 0.3s;
+  font-size: 0.82rem;
 }
-.footer-social:hover { border-color: rgba(255,255,255,0.4); }
+.footer-ig:hover { border-color: rgba(255,255,255,0.3); }
 
-/* ============ FLOATING WHATSAPP ============ */
-.whatsapp-float {
+/* ============ FLOATING WA ============ */
+.wa-float {
   position: fixed; bottom: 24px; right: 24px; z-index: 999;
-  width: 64px; height: 64px;
+  width: 56px; height: 56px;
   background: var(--whatsapp); border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 6px 28px rgba(37,211,102,0.4);
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
   transition: all 0.3s ease; text-decoration: none;
-  animation: float-bounce 3s ease-in-out infinite;
 }
-.whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 36px rgba(37,211,102,0.5); animation: none; }
-.whatsapp-float svg { width: 32px; height: 32px; fill: white; }
-.whatsapp-float .pulse-ring {
-  position: absolute; width: 100%; height: 100%; border-radius: 50%;
-  background: var(--whatsapp); opacity: 0; animation: pulse-ring 2s ease-out infinite;
-}
-
-@keyframes pulse-ring { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.6); opacity: 0; } }
-@keyframes float-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeInDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+.wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
+.wa-float svg { width: 28px; height: 28px; fill: white; }
 
 /* ============ RESPONSIVE ============ */
-@media (max-width: 600px) {
-  .hero { padding: 40px 20px 36px; min-height: 420px; }
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto; padding: 48px 24px 32px;
+    gap: 32px;
+  }
+  .hero-text { order: 1; }
+  .hero-image { order: 0; aspect-ratio: 16/10; }
   .hero h1 { font-size: 2rem; }
   .hero-sub { font-size: 1rem; }
-  .nav { padding: 8px 16px; }
-  .nav-logo img { height: 36px; }
-  .nav-cta { padding: 8px 16px; font-size: 0.82rem; }
-  .nav-cta .cta-text-long { display: none; }
-  .nav-cta .cta-text-short { display: inline; }
-  .section { padding: 48px 20px; }
-  .trust-bar { gap: 18px; padding: 24px 16px; }
-  .trust-item { font-size: 0.82rem; }
-  .packages-grid { grid-template-columns: 1fr; }
-  .addons-grid { grid-template-columns: 1fr 1fr; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .step { padding: 20px; }
-  .theme-tab { padding: 10px 20px; font-size: 0.85rem; }
-  .offer-callout { padding: 24px 20px; }
-  .promo-banner { font-size: 0.85rem; padding: 10px 16px; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .btn-gold, .btn-outline { justify-content: center; }
+  .steps-grid { grid-template-columns: 1fr; gap: 16px; }
   .value-grid { grid-template-columns: 1fr; }
-  .value-section { padding: 48px 20px; }
-  .gallery-item img { height: 220px; }
-  .gallery-section { padding: 48px 20px 36px; }
-  .theme-preview-img img { height: 150px; }
-  .final-cta-img img { height: 80px; }
-  .referral-box { padding: 28px 20px; }
-}
-@media (min-width: 601px) { .nav-cta .cta-text-short { display: none; } }
-@media (min-width: 768px) {
-  .steps { grid-template-columns: repeat(3, 1fr); }
-  .step { flex-direction: column; text-align: center; align-items: center; }
+  .pkg-grid { grid-template-columns: 1fr; }
+  .addons-grid { grid-template-columns: 1fr 1fr; }
+  .test-grid { grid-template-columns: 1fr; }
+  .nav { padding: 10px 16px; }
+  .nav-logo img { height: 34px; }
+  .nav-cta { padding: 8px 18px; font-size: 0.82rem; }
+  .section { padding: 60px 0; }
+  .gallery-item img { height: 240px; }
+  .theme-photo img { height: 160px; }
+  .final-photos img { height: 70px; width: 100px; }
+  .trust-row { gap: 20px; }
+  .referral-box { padding: 32px 24px; }
 }
 </style>
 </head>
 <body>
 
-<!-- PROMO BANNER -->
-<div class="promo-banner">
-  <span>Book any package &amp; get a <span class="promo-value">FREE Jumping Castle</span> (worth QAR 650) &mdash; Limited slots!</span>
-</div>
-
 <!-- NAV -->
 <nav class="nav">
-  <a href="#" class="nav-logo">
-    <img src="images/logo.svg" alt="KiddoKlub" loading="eager">
-  </a>
-  <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20%F0%9F%8E%89%20(FREE%20Jumping%20Castle%20offer)" class="nav-cta">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.764-6.34-2.088l-.444-.332-3.09 1.036 1.036-3.09-.332-.444A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-    <span class="cta-text-long">Book on WhatsApp</span>
-    <span class="cta-text-short">Book</span>
-  </a>
+  <a href="#" class="nav-logo"><img src="images/logo.svg" alt="KiddoKlub"></a>
+  <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20%F0%9F%8E%89" class="nav-cta">Book Now</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg">
-    <img src="images/IMG_6728.jpg" alt="KiddoKlub soft play setup in a beautiful Doha villa" loading="eager">
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Doha's Premium Soft Play Rental</div>
-    <h1>Birthday Magic,<br><span class="highlight">Delivered to Your Door</span></h1>
-    <p class="hero-sub">Premium soft play sets delivered, set up, and picked up anywhere in Doha. You plan the party &mdash; we bring the play zone.</p>
-    <div class="hero-cta-group">
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20%F0%9F%8E%89%20(FREE%20Jumping%20Castle%20offer)" class="btn-primary">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.764-6.34-2.088l-.444-.332-3.09 1.036 1.036-3.09-.332-.444A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Book Now &mdash; It's Free to Enquire
+  <div class="hero-text">
+    <span class="hero-eyebrow">Doha's Premium Soft Play Rental</span>
+    <h1>Luxury Soft Play,<br><em>Delivered to Your Door</em></h1>
+    <p class="hero-sub">Premium play sets delivered, set up, and picked up anywhere in Doha. You plan the party &mdash; we bring the magic.</p>
+    <div class="hero-ctas">
+      <a href="#packages" class="btn-gold">View Our Packages</a>
+      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20%F0%9F%8E%89" class="btn-outline">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#6B635A"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.764-6.34-2.088l-.444-.332-3.09 1.036 1.036-3.09-.332-.444A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Chat on WhatsApp
       </a>
-      <a href="#packages" class="btn-secondary">View Packages &darr;</a>
     </div>
+  </div>
+  <div class="hero-image">
+    <img src="images/IMG_6728.jpg" alt="KiddoKlub neutral soft play setup in a Doha villa" loading="eager">
+    <span class="hero-badge">Real setup in Doha</span>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item"><div class="trust-icon coral">&#127880;</div><span>We Deliver &amp; Set Up</span></div>
-  <div class="trust-item"><div class="trust-icon mint">&#128155;</div><span>Safe &amp; Sanitized</span></div>
-  <div class="trust-item"><div class="trust-icon sky">&#127968;</div><span>All of Doha</span></div>
-  <div class="trust-item"><div class="trust-icon butter">&#11088;</div><span>Trusted by Families</span></div>
+<!-- TRUST -->
+<div class="trust">
+  <div class="trust-row">
+    <div class="trust-item"><span class="trust-dot t"></span> Delivery &amp; Setup Included</div>
+    <div class="trust-item"><span class="trust-dot p"></span> Sanitized Between Rentals</div>
+    <div class="trust-item"><span class="trust-dot pe"></span> Serving All of Doha</div>
+    <div class="trust-item"><span class="trust-dot g"></span> Trusted by Families</div>
+  </div>
 </div>
 
-<!-- REAL SETUP GALLERY -->
-<section class="gallery-section">
-  <h2 class="section-title">Real Setups in Real Homes</h2>
-  <p class="section-sub">See what KiddoKlub looks like in Doha villas and living rooms</p>
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="section-header">
+    <span class="section-eyebrow">Our Work</span>
+    <h2>Real Setups in Real Homes</h2>
+    <p>Premium play zones created in Doha villas and living rooms</p>
+  </div>
   <div class="gallery-scroll">
-    <div class="gallery-item landscape"><img src="images/IMG_6722.jpg" alt="Neutral soft play setup with rainbow rocker and toy car" loading="lazy"></div>
-    <div class="gallery-item landscape"><img src="images/IMG_7884.jpg" alt="Colorful soft play setup with ball pit and slides" loading="lazy"></div>
-    <div class="gallery-item portrait"><img src="images/IMG_6709.jpg" alt="Close-up of slide with cute bunny toy" loading="lazy"></div>
-    <div class="gallery-item landscape"><img src="images/IMG_7892.jpg" alt="Vibrant play zone with giraffe bouncer" loading="lazy"></div>
-    <div class="gallery-item landscape"><img src="images/IMG_6728.jpg" alt="Full neutral setup in spacious villa" loading="lazy"></div>
-    <div class="gallery-item landscape"><img src="images/IMG_7893.jpg" alt="Colorful setup close-up with building blocks" loading="lazy"></div>
-    <div class="gallery-item portrait"><img src="images/IMG_6770.jpg" alt="Toddler playing on soft play steps" loading="lazy"></div>
-    <div class="gallery-item landscape"><img src="images/IMG_7895.jpg" alt="Full colorful play zone overview" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/IMG_6722.jpg" alt="Neutral soft play with rainbow rocker" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/IMG_7884.jpg" alt="Colorful soft play setup" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/IMG_6709.jpg" alt="Slide with bunny toy" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/IMG_7892.jpg" alt="Play zone with giraffe bouncer" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/IMG_6770.jpg" alt="Toddler enjoying the play steps" loading="lazy"></div>
+    <div class="gallery-item"><img src="images/IMG_7893.jpg" alt="Colorful setup close-up" loading="lazy"></div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="section how-it-works">
-  <h2 class="section-title">How It Works</h2>
-  <p class="section-sub">Three simple steps to the perfect play zone</p>
-  <div class="steps">
-    <div class="step">
+<section class="section white">
+  <div class="section-header">
+    <span class="section-eyebrow">The Process</span>
+    <h2>How It Works</h2>
+    <p>Three simple steps to the perfect play zone</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card">
       <div class="step-num">1</div>
-      <div>
-        <h3>Pick Your Theme</h3>
-        <p>Choose Neutral Nest, White Wonderland, or Color Pop. Pick your package size based on space and kids.</p>
-      </div>
+      <h3>Choose Your Theme</h3>
+      <p>Pick from Neutral Nest, White Wonderland, or Color Pop. Select your package size based on space and number of kids.</p>
     </div>
-    <div class="step">
+    <div class="step-card">
       <div class="step-num">2</div>
-      <div>
-        <h3>We Deliver &amp; Set Up</h3>
-        <p>Our team arrives 90 minutes early. We lay the mats, build the play zone, and make it perfect.</p>
-      </div>
+      <h3>We Deliver &amp; Set Up</h3>
+      <p>Our team arrives 90 minutes early. We lay the mats, build the play zone, and make everything perfect.</p>
     </div>
-    <div class="step">
+    <div class="step-card">
       <div class="step-num">3</div>
-      <div>
-        <h3>Enjoy &amp; We Pick Up</h3>
-        <p>4 hours of play. When the fun's done, we pack up everything. Zero hassle for you.</p>
-      </div>
+      <h3>Enjoy &amp; We Pick Up</h3>
+      <p>4 hours of play. When the party's over, we pack up everything. Zero hassle for you.</p>
     </div>
   </div>
 </section>
 
-<!-- WHY KIDDOKLUB vs VENUES -->
-<section class="value-section" id="why-kiddoklub">
-  <div class="value-container">
-    <h2 class="section-title">Why KiddoKlub Beats Venue Parties</h2>
-    <p class="section-sub">Same price, 10x the experience. Here's the math.</p>
-    <div class="value-grid">
-      <div class="value-card venue">
-        <span class="card-label">Typical Doha Venue</span>
-        <div class="price-range">QAR 170-500</div>
-        <div class="price-note">per child (before extras)</div>
-        <ul class="value-list">
-          <li><span class="icon">&#10007;</span> You go to them</li>
-          <li><span class="icon">&#10007;</span> Noisy, crowded public space</li>
-          <li><span class="icon">&#10007;</span> Strict time limits (1-2 hrs)</li>
-          <li><span class="icon">&#10007;</span> Extra kids = extra cost</li>
-          <li><span class="icon">&#10007;</span> Setup is their setup</li>
-          <li><span class="icon">&#10007;</span> Food packages add up fast</li>
-        </ul>
-      </div>
-      <div class="value-card kiddoklub">
-        <span class="winner-badge">Better Value</span>
-        <span class="card-label">KiddoKlub</span>
-        <div class="price-range">QAR 160-212</div>
-        <div class="price-note">per child (everything included)</div>
-        <ul class="value-list">
-          <li><span class="icon">&#10003;</span> We come to YOUR home</li>
-          <li><span class="icon">&#10003;</span> Private, calm, your space</li>
-          <li><span class="icon">&#10003;</span> Full 4 hours included</li>
-          <li><span class="icon">&#10003;</span> Flat rate, no per-child fees</li>
-          <li><span class="icon">&#10003;</span> You pick the theme &amp; vibe</li>
-          <li><span class="icon">&#10003;</span> Serve your own food &amp; cake</li>
-        </ul>
-      </div>
+<!-- VALUE COMPARISON -->
+<section class="section" id="why-kiddoklub">
+  <div class="section-header">
+    <span class="section-eyebrow">The Smart Choice</span>
+    <h2>Why Home Beats a Venue</h2>
+    <p>Same price, better experience. Here's the comparison.</p>
+  </div>
+  <div class="value-grid">
+    <div class="value-card venue">
+      <span class="value-label">Typical Doha Venue</span>
+      <div class="value-price">QAR 170 &ndash; 500</div>
+      <div class="value-note">per child, before extras</div>
+      <ul class="value-list">
+        <li><span class="ico">&#10007;</span> You travel to them</li>
+        <li><span class="ico">&#10007;</span> Noisy, crowded public space</li>
+        <li><span class="ico">&#10007;</span> Strict time limits (1&ndash;2 hrs)</li>
+        <li><span class="ico">&#10007;</span> Extra kids = extra cost</li>
+        <li><span class="ico">&#10007;</span> Their setup, their rules</li>
+        <li><span class="ico">&#10007;</span> Food packages add up fast</li>
+      </ul>
     </div>
-    <div class="value-stack">
-      <h3>What You Get for QAR 1,700 (Small Package)</h3>
-      <div class="stack-items">
-        <span class="stack-item"><span class="check">&#10003;</span> 8+ pieces of play equipment</span>
-        <span class="stack-item"><span class="check">&#10003;</span> Full floor matting</span>
-        <span class="stack-item"><span class="check">&#10003;</span> White safety fencing</span>
-        <span class="stack-item"><span class="check">&#10003;</span> Delivery anywhere in Doha</span>
-        <span class="stack-item"><span class="check">&#10003;</span> Professional setup</span>
-        <span class="stack-item"><span class="check">&#10003;</span> 4 hours of play</span>
-        <span class="stack-item"><span class="check">&#10003;</span> Full pickup &amp; cleanup</span>
-        <span class="stack-item"><span class="check">&#10003;</span> FREE Jumping Castle</span>
+    <div class="value-card kk">
+      <span class="better-badge">Better Value</span>
+      <span class="value-label">KiddoKlub</span>
+      <div class="value-price">QAR 160 &ndash; 212</div>
+      <div class="value-note">per child, everything included</div>
+      <ul class="value-list">
+        <li><span class="ico">&#10003;</span> We come to your home</li>
+        <li><span class="ico">&#10003;</span> Private, calm, your space</li>
+        <li><span class="ico">&#10003;</span> Full 4 hours included</li>
+        <li><span class="ico">&#10003;</span> Flat rate, no per-child fees</li>
+        <li><span class="ico">&#10003;</span> Choose your theme &amp; vibe</li>
+        <li><span class="ico">&#10003;</span> Serve your own food &amp; cake</li>
+      </ul>
+    </div>
+  </div>
+  <div class="value-stack">
+    <div class="value-stack-inner">
+      <h3>What You Get for QAR 1,700</h3>
+      <div class="stack-pills">
+        <span class="stack-pill"><span class="ck">&#10003;</span> 8+ play pieces</span>
+        <span class="stack-pill"><span class="ck">&#10003;</span> Full floor matting</span>
+        <span class="stack-pill"><span class="ck">&#10003;</span> Safety fencing</span>
+        <span class="stack-pill"><span class="ck">&#10003;</span> Delivery to your door</span>
+        <span class="stack-pill"><span class="ck">&#10003;</span> Professional setup</span>
+        <span class="stack-pill"><span class="ck">&#10003;</span> 4 hours of play</span>
+        <span class="stack-pill"><span class="ck">&#10003;</span> Full pickup &amp; cleanup</span>
+        <span class="stack-pill"><span class="ck">&#10003;</span> FREE Jumping Castle</span>
       </div>
-      <div class="price-total">QAR 1,700 <span>total &mdash; not per child</span></div>
+      <div class="stack-total">QAR 1,700 <span>total &mdash; not per child</span></div>
     </div>
   </div>
 </section>
 
 <!-- PACKAGES -->
-<section class="section packages" id="packages">
-  <h2 class="section-title">Choose Your Theme &amp; Size</h2>
-  <p class="section-sub">3 stunning themes, 4 sizes each. Every package includes delivery, setup &amp; pickup.</p>
+<section class="section alt" id="packages">
+  <div class="section-header">
+    <span class="section-eyebrow">Our Packages</span>
+    <h2>Choose Your Theme &amp; Size</h2>
+    <p>Three themes, four sizes. Every package includes delivery, setup &amp; pickup.</p>
+  </div>
 
   <div class="theme-tabs">
     <button class="theme-tab active" data-theme="neutral">Neutral Nest</button>
@@ -961,405 +757,265 @@ body {
     <button class="theme-tab" data-theme="color">Color Pop</button>
   </div>
 
-  <!-- Theme photos -->
-  <div class="theme-preview">
-    <div class="theme-preview-img visible" data-theme="neutral">
-      <img src="images/IMG_6722.jpg" alt="Neutral Nest setup">
+  <div class="theme-photos">
+    <div class="theme-photo visible" data-theme="neutral"><img src="images/IMG_6722.jpg" alt="Neutral Nest"></div>
+    <div class="theme-photo visible" data-theme="neutral"><img src="images/IMG_6709.jpg" alt="Neutral Nest detail"></div>
+    <div class="theme-photo" data-theme="white"><img src="images/IMG_6728.jpg" alt="White Wonderland"></div>
+    <div class="theme-photo" data-theme="white"><img src="images/IMG_6711.jpg" alt="White Wonderland detail"></div>
+    <div class="theme-photo" data-theme="color"><img src="images/IMG_7884.jpg" alt="Color Pop"></div>
+    <div class="theme-photo" data-theme="color"><img src="images/IMG_7892.jpg" alt="Color Pop detail"></div>
+  </div>
+
+  <div class="pkg-grid">
+    <!-- NEUTRAL -->
+    <div class="pkg-card visible" data-theme="neutral">
+      <div class="pkg-card-img"><img src="images/IMG_6709.jpg" alt="Neutral Nest Mini"></div>
+      <div class="pkg-body">
+        <div class="pkg-size">Mini</div>
+        <div class="pkg-dims">2m &times; 2m</div>
+        <div class="pkg-kids">Up to 6 children</div>
+        <ul class="pkg-features"><li>Full soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul>
+        <div class="pkg-price">QAR 1,200 <span>/ 4 hrs</span></div>
+        <div class="pkg-deposit">+ QAR 500 refundable deposit</div>
+        <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20MINI%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a>
+      </div>
     </div>
-    <div class="theme-preview-img visible" data-theme="neutral">
-      <img src="images/IMG_6709.jpg" alt="Neutral Nest close-up">
+    <div class="pkg-card visible" data-theme="neutral">
+      <div class="pkg-card-img"><img src="images/IMG_6722.jpg" alt="Neutral Nest Small"></div>
+      <div class="pkg-body">
+        <div class="pkg-size">Small</div>
+        <div class="pkg-dims">3m &times; 3m</div>
+        <div class="pkg-kids">Up to 8 children</div>
+        <ul class="pkg-features"><li>Full soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul>
+        <div class="pkg-price">QAR 1,700 <span>/ 4 hrs</span></div>
+        <div class="pkg-deposit">+ QAR 500 refundable deposit</div>
+        <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20SMALL%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a>
+      </div>
     </div>
-    <div class="theme-preview-img" data-theme="white">
-      <img src="images/IMG_6728.jpg" alt="White Wonderland setup">
+    <div class="pkg-card visible popular" data-theme="neutral">
+      <div class="pkg-card-img"><img src="images/IMG_6728.jpg" alt="Neutral Nest Medium"><span class="pop-badge">Most Popular</span></div>
+      <div class="pkg-body">
+        <div class="pkg-size">Medium</div>
+        <div class="pkg-dims">4m &times; 3m</div>
+        <div class="pkg-kids">Up to 10 children</div>
+        <ul class="pkg-features"><li>Full soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul>
+        <div class="pkg-price">QAR 2,100 <span>/ 4 hrs</span></div>
+        <div class="pkg-deposit">+ QAR 500 refundable deposit</div>
+        <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20MEDIUM%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a>
+      </div>
     </div>
-    <div class="theme-preview-img" data-theme="white">
-      <img src="images/IMG_6711.jpg" alt="White Wonderland close-up">
+    <div class="pkg-card visible" data-theme="neutral">
+      <div class="pkg-card-img"><img src="images/IMG_6722.jpg" alt="Neutral Nest Large"></div>
+      <div class="pkg-body">
+        <div class="pkg-size">Large</div>
+        <div class="pkg-dims">5m &times; 4m</div>
+        <div class="pkg-kids">Up to 15 children</div>
+        <ul class="pkg-features"><li>Full soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul>
+        <div class="pkg-price">QAR 2,400 <span>/ 4 hrs</span></div>
+        <div class="pkg-deposit">+ QAR 500 refundable deposit</div>
+        <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20LARGE%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a>
+      </div>
     </div>
-    <div class="theme-preview-img" data-theme="color">
-      <img src="images/IMG_7884.jpg" alt="Color Pop setup">
+    <!-- WHITE -->
+    <div class="pkg-card" data-theme="white">
+      <div class="pkg-card-img"><img src="images/IMG_6728.jpg" alt="White Wonderland Mini"></div>
+      <div class="pkg-body"><div class="pkg-size">Mini</div><div class="pkg-dims">2m &times; 2m</div><div class="pkg-kids">Up to 6 children</div><ul class="pkg-features"><li>All-white soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul><div class="pkg-price">QAR 1,200 <span>/ 4 hrs</span></div><div class="pkg-deposit">+ QAR 500 refundable deposit</div><a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20MINI%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a></div>
     </div>
-    <div class="theme-preview-img" data-theme="color">
-      <img src="images/IMG_7892.jpg" alt="Color Pop with giraffe bouncer">
+    <div class="pkg-card" data-theme="white">
+      <div class="pkg-card-img"><img src="images/IMG_6711.jpg" alt="White Wonderland Small"></div>
+      <div class="pkg-body"><div class="pkg-size">Small</div><div class="pkg-dims">3m &times; 3m</div><div class="pkg-kids">Up to 8 children</div><ul class="pkg-features"><li>All-white soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul><div class="pkg-price">QAR 1,700 <span>/ 4 hrs</span></div><div class="pkg-deposit">+ QAR 500 refundable deposit</div><a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20SMALL%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a></div>
+    </div>
+    <div class="pkg-card popular" data-theme="white">
+      <div class="pkg-card-img"><img src="images/IMG_6728.jpg" alt="White Wonderland Medium"><span class="pop-badge">Most Popular</span></div>
+      <div class="pkg-body"><div class="pkg-size">Medium</div><div class="pkg-dims">4m &times; 3m</div><div class="pkg-kids">Up to 10 children</div><ul class="pkg-features"><li>All-white soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul><div class="pkg-price">QAR 2,100 <span>/ 4 hrs</span></div><div class="pkg-deposit">+ QAR 500 refundable deposit</div><a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20MEDIUM%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a></div>
+    </div>
+    <div class="pkg-card" data-theme="white">
+      <div class="pkg-card-img"><img src="images/IMG_6711.jpg" alt="White Wonderland Large"></div>
+      <div class="pkg-body"><div class="pkg-size">Large</div><div class="pkg-dims">5m &times; 4m</div><div class="pkg-kids">Up to 15 children</div><ul class="pkg-features"><li>All-white soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul><div class="pkg-price">QAR 2,400 <span>/ 4 hrs</span></div><div class="pkg-deposit">+ QAR 500 refundable deposit</div><a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20LARGE%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a></div>
+    </div>
+    <!-- COLOR -->
+    <div class="pkg-card" data-theme="color">
+      <div class="pkg-card-img"><img src="images/IMG_7893.jpg" alt="Color Pop Mini"></div>
+      <div class="pkg-body"><div class="pkg-size">Mini</div><div class="pkg-dims">2m &times; 2m</div><div class="pkg-kids">Up to 6 children</div><ul class="pkg-features"><li>Colorful soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul><div class="pkg-price">QAR 1,200 <span>/ 4 hrs</span></div><div class="pkg-deposit">+ QAR 500 refundable deposit</div><a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20MINI%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a></div>
+    </div>
+    <div class="pkg-card" data-theme="color">
+      <div class="pkg-card-img"><img src="images/IMG_7884.jpg" alt="Color Pop Small"></div>
+      <div class="pkg-body"><div class="pkg-size">Small</div><div class="pkg-dims">3m &times; 3m</div><div class="pkg-kids">Up to 8 children</div><ul class="pkg-features"><li>Colorful soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul><div class="pkg-price">QAR 1,700 <span>/ 4 hrs</span></div><div class="pkg-deposit">+ QAR 500 refundable deposit</div><a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20SMALL%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a></div>
+    </div>
+    <div class="pkg-card popular" data-theme="color">
+      <div class="pkg-card-img"><img src="images/IMG_7892.jpg" alt="Color Pop Medium"><span class="pop-badge">Most Popular</span></div>
+      <div class="pkg-body"><div class="pkg-size">Medium</div><div class="pkg-dims">4m &times; 3m</div><div class="pkg-kids">Up to 10 children</div><ul class="pkg-features"><li>Colorful soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul><div class="pkg-price">QAR 2,100 <span>/ 4 hrs</span></div><div class="pkg-deposit">+ QAR 500 refundable deposit</div><a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20MEDIUM%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a></div>
+    </div>
+    <div class="pkg-card" data-theme="color">
+      <div class="pkg-card-img"><img src="images/IMG_7884.jpg" alt="Color Pop Large"></div>
+      <div class="pkg-body"><div class="pkg-size">Large</div><div class="pkg-dims">5m &times; 4m</div><div class="pkg-kids">Up to 15 children</div><ul class="pkg-features"><li>Colorful soft play set</li><li>Floor matting &amp; fencing</li><li>Delivery, setup &amp; pickup</li><li>4-hour rental</li></ul><div class="pkg-price">QAR 2,400 <span>/ 4 hrs</span></div><div class="pkg-deposit">+ QAR 500 refundable deposit</div><a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20LARGE%20%F0%9F%8E%89" class="pkg-cta">Book This Package</a></div>
     </div>
   </div>
 
-  <div class="packages-grid">
-    <!-- NEUTRAL NEST -->
-    <div class="package-card visible" data-theme="neutral">
-      <span class="card-size">Mini</span>
-      <div class="card-dimensions">2m &times; 2m</div>
-      <div class="card-capacity">&#128118; Up to 6 kids</div>
-      <ul class="card-features">
-        <li>Full soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 1,200 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20MINI%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
+  <!-- OFFER -->
+  <div class="offer-box">
+    <div class="offer-inner">
+      <h3>FREE Jumping Castle with Every Booking</h3>
+      <p>Book any package and get a Jumping Castle (worth QAR 650) absolutely free. Limited availability.</p>
+      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%20want%20to%20book%20with%20the%20FREE%20Jumping%20Castle%20%F0%9F%8E%89" class="btn-gold">Claim Your Free Jumping Castle</a>
     </div>
-    <div class="package-card visible" data-theme="neutral">
-      <span class="card-size">Small</span>
-      <div class="card-dimensions">3m &times; 3m</div>
-      <div class="card-capacity">&#128118; Up to 8 kids</div>
-      <ul class="card-features">
-        <li>Full soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 1,700 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20SMALL%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-    <div class="package-card visible popular" data-theme="neutral">
-      <span class="popular-badge">Most Popular</span>
-      <span class="card-size">Medium</span>
-      <div class="card-dimensions">4m &times; 3m</div>
-      <div class="card-capacity">&#128118; Up to 10 kids</div>
-      <ul class="card-features">
-        <li>Full soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 2,100 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20MEDIUM%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-    <div class="package-card visible" data-theme="neutral">
-      <span class="card-size">Large</span>
-      <div class="card-dimensions">5m &times; 4m</div>
-      <div class="card-capacity">&#128118; Up to 15 kids</div>
-      <ul class="card-features">
-        <li>Full soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 2,400 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Neutral%20Nest%20LARGE%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-
-    <!-- WHITE WONDERLAND -->
-    <div class="package-card" data-theme="white">
-      <span class="card-size">Mini</span>
-      <div class="card-dimensions">2m &times; 2m</div>
-      <div class="card-capacity">&#128118; Up to 6 kids</div>
-      <ul class="card-features">
-        <li>All-white soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 1,200 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20MINI%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-    <div class="package-card" data-theme="white">
-      <span class="card-size">Small</span>
-      <div class="card-dimensions">3m &times; 3m</div>
-      <div class="card-capacity">&#128118; Up to 8 kids</div>
-      <ul class="card-features">
-        <li>All-white soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 1,700 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20SMALL%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-    <div class="package-card popular" data-theme="white">
-      <span class="popular-badge">Most Popular</span>
-      <span class="card-size">Medium</span>
-      <div class="card-dimensions">4m &times; 3m</div>
-      <div class="card-capacity">&#128118; Up to 10 kids</div>
-      <ul class="card-features">
-        <li>All-white soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 2,100 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20MEDIUM%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-    <div class="package-card" data-theme="white">
-      <span class="card-size">Large</span>
-      <div class="card-dimensions">5m &times; 4m</div>
-      <div class="card-capacity">&#128118; Up to 15 kids</div>
-      <ul class="card-features">
-        <li>All-white soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 2,400 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20White%20Wonderland%20LARGE%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-
-    <!-- COLOR POP -->
-    <div class="package-card" data-theme="color">
-      <span class="card-size">Mini</span>
-      <div class="card-dimensions">2m &times; 2m</div>
-      <div class="card-capacity">&#128118; Up to 6 kids</div>
-      <ul class="card-features">
-        <li>Colorful soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 1,200 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20MINI%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-    <div class="package-card" data-theme="color">
-      <span class="card-size">Small</span>
-      <div class="card-dimensions">3m &times; 3m</div>
-      <div class="card-capacity">&#128118; Up to 8 kids</div>
-      <ul class="card-features">
-        <li>Colorful soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 1,700 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20SMALL%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-    <div class="package-card popular" data-theme="color">
-      <span class="popular-badge">Most Popular</span>
-      <span class="card-size">Medium</span>
-      <div class="card-dimensions">4m &times; 3m</div>
-      <div class="card-capacity">&#128118; Up to 10 kids</div>
-      <ul class="card-features">
-        <li>Colorful soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 2,100 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20MEDIUM%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-    <div class="package-card" data-theme="color">
-      <span class="card-size">Large</span>
-      <div class="card-dimensions">5m &times; 4m</div>
-      <div class="card-capacity">&#128118; Up to 15 kids</div>
-      <ul class="card-features">
-        <li>Colorful soft play set</li>
-        <li>Floor matting &amp; fencing</li>
-        <li>Delivery, setup &amp; pickup</li>
-        <li>4-hour rental</li>
-      </ul>
-      <div class="card-price">QAR 2,400 <span>/ 4 hrs</span></div>
-      <div class="card-extra">+ QAR 500 refundable deposit</div>
-      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20the%20Color%20Pop%20LARGE%20package%20%F0%9F%8E%89" class="card-cta">Book This Package</a>
-    </div>
-  </div>
-
-  <!-- OFFER CALLOUT -->
-  <div class="offer-callout">
-    <h3>&#127873; FREE Jumping Castle with Every Booking</h3>
-    <p>Book any package today and get a Jumping Castle (worth QAR 650) absolutely free. Limited availability.</p>
-    <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%20want%20to%20book%20with%20the%20FREE%20Jumping%20Castle%20offer%20%F0%9F%8E%89" class="btn-primary">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.764-6.34-2.088l-.444-.332-3.09 1.036 1.036-3.09-.332-.444A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Claim Your Free Jumping Castle
-    </a>
   </div>
 </section>
 
 <!-- ADD-ONS -->
-<section class="section addons">
-  <h2 class="section-title">Level Up the Fun</h2>
-  <p class="section-sub">Add these to any package for the ultimate play zone</p>
+<section class="section white">
+  <div class="section-header">
+    <span class="section-eyebrow">Extras</span>
+    <h2>Level Up the Fun</h2>
+    <p>Add these to any package</p>
+  </div>
   <div class="addons-grid">
-    <div class="addon-card free-addon">
-      <span class="free-tag">FREE with any booking</span>
-      <span class="addon-emoji">&#127856;</span>
+    <div class="addon featured">
+      <span class="addon-tag">Free with any booking</span>
+      <div class="addon-icon">&#9883;</div>
       <h4>Jumping Castle</h4>
-      <div class="addon-size">2.5m &times; 2.5m</div>
+      <div class="addon-detail">2.5m &times; 2.5m</div>
       <div class="addon-price struck">QAR 650</div>
-      <div class="addon-free-text">FREE!</div>
+      <div class="addon-free">FREE</div>
     </div>
-    <div class="addon-card">
-      <span class="addon-emoji">&#127880;</span>
+    <div class="addon">
+      <div class="addon-icon">&#9711;</div>
       <h4>Balloon Bubble House</h4>
-      <div class="addon-size">2.5m &times; 2.5m</div>
+      <div class="addon-detail">2.5m &times; 2.5m</div>
       <div class="addon-price">QAR 750</div>
     </div>
-    <div class="addon-card">
-      <span class="addon-emoji">&#9917;</span>
+    <div class="addon">
+      <div class="addon-icon">&#9679;</div>
       <h4>Ball Pit with Slide</h4>
-      <div class="addon-size">2m &times; 2m</div>
+      <div class="addon-detail">2m &times; 2m</div>
       <div class="addon-price">QAR 650</div>
     </div>
-    <div class="addon-card">
-      <span class="addon-emoji">&#127936;</span>
-      <h4>Jumping Castle + Ball Pit</h4>
-      <div class="addon-size">Combo</div>
+    <div class="addon">
+      <div class="addon-icon">&#9670;</div>
+      <h4>Castle + Ball Pit Combo</h4>
+      <div class="addon-detail">Combined package</div>
       <div class="addon-price">QAR 750</div>
     </div>
-    <div class="addon-card">
-      <span class="addon-emoji">&#128029;</span>
-      <h4>Honeycomb Nest Climber</h4>
-      <div class="addon-size">Premium add-on</div>
+    <div class="addon">
+      <div class="addon-icon">&#11042;</div>
+      <h4>Honeycomb Climber</h4>
+      <div class="addon-detail">Premium add-on</div>
       <div class="addon-price">QAR 800</div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="section testimonials">
-  <h2 class="section-title">What Parents Say</h2>
-  <p class="section-sub">Real feedback from real Doha families</p>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="testimonial-text">"The setup was beautiful! The kids were so excited when they saw it. And the team was so professional with the delivery and pickup. Highly recommend!"</p>
-      <div class="testimonial-author">Sarah M.</div>
-      <div class="testimonial-detail">Birthday party &bull; West Bay</div>
+<section class="section">
+  <div class="section-header">
+    <span class="section-eyebrow">Reviews</span>
+    <h2>What Parents Say</h2>
+    <p>Real feedback from Doha families</p>
+  </div>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="test-quote">&ldquo;</div>
+      <p class="test-text">The setup was absolutely beautiful. The kids were thrilled and the team was so professional with delivery and pickup. Already booked again for next month.</p>
+      <div class="test-author">Sarah M.</div>
+      <div class="test-detail">Birthday Party &middot; West Bay</div>
     </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="testimonial-text">"So much easier than booking a venue. The kids played for hours and we didn't have to worry about anything. The Neutral Nest theme was gorgeous!"</p>
-      <div class="testimonial-author">Aisha K.</div>
-      <div class="testimonial-detail">Playdate &bull; The Pearl</div>
+    <div class="test-card">
+      <div class="test-quote">&ldquo;</div>
+      <p class="test-text">So much easier than booking a venue. The kids played for hours in our living room and we didn't have to worry about a thing. The Neutral Nest theme is gorgeous.</p>
+      <div class="test-author">Aisha K.</div>
+      <div class="test-detail">Playdate &middot; The Pearl</div>
     </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="testimonial-text">"Third time booking with KiddoKlub. The Color Pop set is my kids' favourite. Great value for money and the free jumping castle is amazing!"</p>
-      <div class="testimonial-author">Fatima R.</div>
-      <div class="testimonial-detail">Repeat customer &bull; Al Waab</div>
+    <div class="test-card">
+      <div class="test-quote">&ldquo;</div>
+      <p class="test-text">Third time booking with KiddoKlub. The Color Pop set is my kids' absolute favourite. Incredible value compared to venue parties and the free jumping castle is a bonus.</p>
+      <div class="test-author">Fatima R.</div>
+      <div class="test-detail">Repeat Customer &middot; Al Waab</div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section faq">
-  <h2 class="section-title">Questions? We've Got Answers</h2>
-  <p class="section-sub">Everything you need to know before booking</p>
+<section class="section alt">
+  <div class="section-header">
+    <span class="section-eyebrow">FAQ</span>
+    <h2>Common Questions</h2>
+  </div>
   <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q">How long is the rental?</div>
-      <div class="faq-a">All packages include 4 hours of play time. Need more? Just let us know and we can arrange extended time.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Do you deliver everywhere in Doha?</div>
-      <div class="faq-a">Yes! We deliver to all areas of Doha and surrounding areas. Delivery, setup (90 min before your event), and pickup are all included in the price.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What about the QAR 500 deposit?</div>
-      <div class="faq-a">The deposit is fully refundable. We collect it at delivery and return it at pickup, as long as all equipment is in good condition. Normal wear and tear is expected!</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is it safe for toddlers?</div>
-      <div class="faq-a">Absolutely! All our soft play equipment is designed for children ages 1-6. Everything is foam-padded, and we include full floor matting and safety fencing. We sanitize all equipment before every rental.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can I add the Jumping Castle to any package?</div>
-      <div class="faq-a">Right now it's FREE with every booking! Just mention it when you message us on WhatsApp. The jumping castle is 2.5m x 2.5m and fits perfectly alongside the soft play set.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How much space do I need?</div>
-      <div class="faq-a">Our Mini package needs just 2m x 2m. Our Large package needs 5m x 4m. Most living rooms and gardens in Doha work perfectly. Send us your space dimensions on WhatsApp and we'll recommend the best fit.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How far in advance should I book?</div>
-      <div class="faq-a">We recommend booking at least 3-5 days in advance, especially for weekends. Last-minute bookings may be possible depending on availability.</div>
-    </div>
+    <div class="faq-item"><div class="faq-q">How long is the rental?</div><div class="faq-a">All packages include 4 hours of play time. Need more? Let us know and we can arrange extended time.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you deliver everywhere in Doha?</div><div class="faq-a">Yes! We deliver to all areas of Doha. Delivery, setup (90 min before), and pickup are all included in the price.</div></div>
+    <div class="faq-item"><div class="faq-q">What about the QAR 500 deposit?</div><div class="faq-a">Fully refundable. We collect it at delivery and return it at pickup, as long as equipment is in good condition.</div></div>
+    <div class="faq-item"><div class="faq-q">Is it safe for toddlers?</div><div class="faq-a">Absolutely. All equipment is designed for ages 1&ndash;6, foam-padded, with full floor matting and safety fencing. Everything is sanitized before each rental.</div></div>
+    <div class="faq-item"><div class="faq-q">How much space do I need?</div><div class="faq-a">Mini needs 2m &times; 2m, Large needs 5m &times; 4m. Most Doha living rooms and gardens work perfectly. Send us your dimensions on WhatsApp.</div></div>
+    <div class="faq-item"><div class="faq-q">How far in advance should I book?</div><div class="faq-a">3&ndash;5 days recommended, especially for weekends. Last-minute bookings possible depending on availability.</div></div>
   </div>
 </section>
 
 <!-- REFERRAL -->
-<section class="referral-section">
-  <div class="referral-box">
-    <div class="gift-icon">&#127873;</div>
-    <h3>Share the Fun, Save Money</h3>
-    <p>Know a parent planning a birthday or playdate? Refer them and you BOTH save.</p>
-    <div class="referral-amount">QAR 200 OFF</div>
-    <div class="referral-sub">for you AND your friend on their next booking</div>
-    <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%20was%20referred%20by%20a%20friend%20and%20I%27d%20like%20to%20book%20%F0%9F%8E%89" class="btn-primary">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.764-6.34-2.088l-.444-.332-3.09 1.036 1.036-3.09-.332-.444A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Book with a Referral
-    </a>
+<section class="section white">
+  <div class="referral-inner">
+    <div class="referral-box">
+      <h3>Refer a Friend, Both Save</h3>
+      <p>Know a parent planning a birthday or playdate? Refer them and you both get a discount.</p>
+      <div class="referral-amount">QAR 200 off</div>
+      <div class="referral-sub">for you and your friend on the next booking</div>
+      <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%20was%20referred%20by%20a%20friend%20%F0%9F%8E%89" class="btn-gold">Book with a Referral</a>
+    </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="final-cta">
-  <div class="final-cta-img">
-    <img src="images/IMG_6722.jpg" alt="Soft play setup" loading="lazy">
-    <img src="images/IMG_7884.jpg" alt="Colorful play zone" loading="lazy">
-    <img src="images/IMG_7893.jpg" alt="Kids play equipment" loading="lazy">
+  <div class="final-photos">
+    <img src="images/IMG_6722.jpg" alt="Setup" loading="lazy">
+    <img src="images/IMG_7884.jpg" alt="Play zone" loading="lazy">
+    <img src="images/IMG_7893.jpg" alt="Equipment" loading="lazy">
   </div>
-  <h2>Ready to Create the Perfect Party?</h2>
-  <p>Message us on WhatsApp, pick your theme, and we'll handle the rest. It takes 30 seconds.</p>
-  <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20%F0%9F%8E%89%20(FREE%20Jumping%20Castle%20offer)" class="btn-primary">
+  <h2>Ready to Book?</h2>
+  <p>Message us on WhatsApp, pick your theme, and we handle the rest. Takes 30 seconds.</p>
+  <a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20%F0%9F%8E%89" class="btn-gold-on-dark">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.764-6.34-2.088l-.444-.332-3.09 1.036 1.036-3.09-.332-.444A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-    Book on WhatsApp &mdash; 30 Seconds
+    Book on WhatsApp
   </a>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <a href="https://www.instagram.com/kiddoklub" target="_blank" class="footer-social">
-    &#128247; @kiddoklub on Instagram
-  </a>
-  <p>&copy; 2025 KiddoKlub &bull; Doha, Qatar &bull; <a href="tel:+97450318434">+974 5031 8434</a></p>
+  <a href="https://www.instagram.com/kiddoklub" target="_blank" class="footer-ig">@kiddoklub on Instagram</a>
+  <p>&copy; 2025 KiddoKlub &middot; Doha, Qatar &middot; <a href="tel:+97450318434">+974 5031 8434</a></p>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20a%20soft%20play%20set%20%F0%9F%8E%89" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <div class="pulse-ring"></div>
+<!-- FLOATING WA -->
+<a href="https://wa.me/97450318434?text=Hi%20KiddoKlub!%20I%27d%20like%20to%20book%20%F0%9F%8E%89" class="wa-float" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.352 0-4.556-.764-6.34-2.088l-.444-.332-3.09 1.036 1.036-3.09-.332-.444A9.957 9.957 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
 
 <script>
-// Theme tab switching
+// Theme switching
 document.querySelectorAll('.theme-tab').forEach(tab => {
   tab.addEventListener('click', () => {
-    const theme = tab.dataset.theme;
-    document.querySelectorAll('.theme-tab').forEach(t => t.classList.remove('active'));
+    const t = tab.dataset.theme;
+    document.querySelectorAll('.theme-tab').forEach(b => b.classList.remove('active'));
     tab.classList.add('active');
-    document.querySelectorAll('.package-card').forEach(card => {
-      card.classList.toggle('visible', card.dataset.theme === theme);
-    });
-    document.querySelectorAll('.theme-preview-img').forEach(img => {
-      img.classList.toggle('visible', img.dataset.theme === theme);
-    });
+    document.querySelectorAll('.pkg-card').forEach(c => c.classList.toggle('visible', c.dataset.theme === t));
+    document.querySelectorAll('.theme-photo').forEach(p => p.classList.toggle('visible', p.dataset.theme === t));
   });
 });
-
-// FAQ accordion
+// FAQ
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {
     const item = q.parentElement;
-    const wasOpen = item.classList.contains('open');
+    const open = item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
+    if (!open) item.classList.add('open');
   });
 });
-
-// Scroll animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.step, .package-card, .addon-card, .testimonial-card, .value-card, .value-stack').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }});
+}, {threshold:0.08});
+document.querySelectorAll('.step-card,.pkg-card,.addon,.test-card,.value-card,.value-stack-inner').forEach(el => {
+  el.style.opacity='0'; el.style.transform='translateY(16px)';
+  el.style.transition='opacity 0.5s ease, transform 0.5s ease'; obs.observe(el);
 });
 </script>
 </body>
