@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KiddoKlub — Availability</title>
+<meta name="description" content="Check KiddoKlub's available dates for soft play party rentals in Doha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Nunito', sans-serif; background: #faf9f6; color: #2d2d2d; }
+
+.header {
+  background: #fff;
+  padding: 16px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: sticky; top: 0; z-index: 10;
+}
+.header a { text-decoration: none; }
+.logo { font-size: 1.6rem; font-weight: 800; }
+.logo span:nth-child(1) { color: #e8734a; }
+.logo span:nth-child(2) { color: #f5c242; }
+.logo span:nth-child(3) { color: #4ecdc4; }
+.logo span:nth-child(4) { color: #e8734a; }
+.logo span:nth-child(5) { color: #f5c242; }
+.logo span:nth-child(6) { color: #6ec1e4; }
+.logo span:nth-child(7) { color: #4ecdc4; }
+.logo span:nth-child(8) { color: #e8734a; }
+.logo span:nth-child(9) { color: #f5c242; }
+
+.container { max-width: 600px; margin: 0 auto; padding: 24px 16px 100px; }
+
+h1 { font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 8px; }
+.subtitle { text-align: center; color: #666; margin-bottom: 24px; font-size: 0.95rem; }
+
+.legend {
+  display: flex; gap: 16px; justify-content: center; margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; }
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.dot-available { background: #4ecdc4; }
+.dot-limited { background: #f5c242; }
+.dot-booked { background: #e8734a; }
+
+.month-block { margin-bottom: 32px; }
+.month-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #eee; }
+
+.date-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; margin-bottom: 8px;
+  background: #fff; border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.date-info { display: flex; flex-direction: column; }
+.date-day { font-weight: 700; font-size: 1rem; }
+.date-detail { font-size: 0.8rem; color: #888; }
+
+.status-badge {
+  padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.status-available { background: #e8faf8; color: #2ab5a8; }
+.status-limited { background: #fef8e8; color: #d4a017; }
+.status-booked { background: #fdeae5; color: #d4553a; }
+
+.cta-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #fff; padding: 12px 16px;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+  display: flex; gap: 10px; justify-content: center;
+}
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: 30px;
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.95rem;
+  text-decoration: none; border: none; cursor: pointer;
+}
+.cta-whatsapp { background: #25d366; color: #fff; }
+.cta-quote { background: #e8734a; color: #fff; }
+
+.update-note {
+  text-align: center; font-size: 0.75rem; color: #aaa; margin-top: 16px;
+}
+
+/* EDIT INSTRUCTIONS — hidden on page, visible in code */
+/*
+  HOW TO UPDATE THIS PAGE:
+  1. Change the dates below to the actual upcoming weekends
+  2. Change status classes:
+     - status-available = green "Available"
+     - status-limited = yellow "1 Slot Left"
+     - status-booked = red "Booked"
+  3. Update the "Last updated" date at the bottom
+  4. Commit + push to GitHub
+  Takes 5 minutes max.
+*/
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html">
+    <div class="logo">
+      <span>K</span><span>i</span><span>d</span><span>d</span><span>o</span><span>K</span><span>l</span><span>u</span><span>b</span>
+    </div>
+  </a>
+</div>
+
+<div class="container">
+  <h1>Availability</h1>
+  <p class="subtitle">See which dates are open. Book early — weekends fill fast!</p>
+
+  <div class="legend">
+    <div class="legend-item"><span class="dot dot-available"></span> Available</div>
+    <div class="legend-item"><span class="dot dot-limited"></span> 1 Slot Left</div>
+    <div class="legend-item"><span class="dot dot-booked"></span> Booked</div>
+  </div>
+
+  <!-- ============ APRIL 2026 ============ -->
+  <div class="month-block">
+    <div class="month-title">April 2026</div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Friday, April 3</span>
+        <span class="date-detail">Afternoon & Evening</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Saturday, April 4</span>
+        <span class="date-detail">Morning & Afternoon</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Friday, April 10</span>
+        <span class="date-detail">Afternoon & Evening</span>
+      </div>
+      <span class="status-badge status-limited">1 Slot Left</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Saturday, April 11</span>
+        <span class="date-detail">Morning & Afternoon</span>
+      </div>
+      <span class="status-badge status-booked">Booked</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Friday, April 17</span>
+        <span class="date-detail">Afternoon & Evening</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Saturday, April 18</span>
+        <span class="date-detail">Morning & Afternoon</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Friday, April 24</span>
+        <span class="date-detail">Afternoon & Evening</span>
+      </div>
+      <span class="status-badge status-limited">1 Slot Left</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Saturday, April 25</span>
+        <span class="date-detail">Morning & Afternoon</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+  </div>
+
+  <!-- ============ MAY 2026 ============ -->
+  <div class="month-block">
+    <div class="month-title">May 2026</div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Friday, May 1</span>
+        <span class="date-detail">Afternoon & Evening</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Saturday, May 2</span>
+        <span class="date-detail">Morning & Afternoon</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Friday, May 8</span>
+        <span class="date-detail">Afternoon & Evening</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Saturday, May 9</span>
+        <span class="date-detail">Morning & Afternoon</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Friday, May 15</span>
+        <span class="date-detail">Afternoon & Evening</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+
+    <div class="date-row">
+      <div class="date-info">
+        <span class="date-day">Saturday, May 16</span>
+        <span class="date-detail">Morning & Afternoon</span>
+      </div>
+      <span class="status-badge status-available">Available</span>
+    </div>
+  </div>
+
+  <p class="update-note">Last updated: March 31, 2026 — Update dates weekly in the HTML</p>
+</div>
+
+<div class="cta-bar">
+  <a href="https://wa.me/97450318434?text=Hi!%20I%27d%20like%20to%20book%20a%20date." class="cta-btn cta-whatsapp">💬 Book on WhatsApp</a>
+  <a href="index.html#quote-builder" class="cta-btn cta-quote">🎪 Build a Quote</a>
+</div>
+
+</body>
+</html>

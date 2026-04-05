@@ -1,0 +1,46 @@
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Node
+node_modules/
+.next/
+.nuxt/
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*.secret
+credentials.json
+
+# IDE
+.vscode/
+.idea/
+
+# Binary/Data files
+*.xlsx
+*.xls
+*.csv
+*.docx
+*.pdf
+*.zip
+*.db
+*.sqlite3
+
+# Claude Flow
+.claude/
+.claude-flow/
+.mcp.json
+
+# Logs
+*.log
+*.tmp
+*.bak
+
+# Images in /images folder (use CDN/hosting instead)
+images/*.jpg
+images/*.png
+images/*.jpeg
