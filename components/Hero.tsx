@@ -1,11 +1,21 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export function Hero() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  // Subtle parallax: image floats 5% Y, scales 1.04 across the scroll. Council 2026-04-25.
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "5%"]);
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
+
   return (
-    <section className="relative overflow-hidden">
+    <section ref={ref} className="relative overflow-hidden">
       <div className="px-6 pt-12 pb-16 md:pt-20 md:pb-24 max-w-6xl mx-auto md:grid md:grid-cols-12 md:gap-10 md:items-center">
         {/* Copy stack — left 55% on desktop, full on mobile */}
         <div className="md:col-span-7">
@@ -84,14 +94,17 @@ export function Hero() {
             className="aspect-[4/5] rounded-2xl border border-black/5 relative overflow-hidden bg-[var(--color-sand)]"
             aria-label="A KiddoKlub setup, just before guests arrive"
           >
-            <Image
-              src="/photos/setups/setup-01.jpeg"
-              alt="A KiddoKlub setup, just before guests arrive"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 45vw"
-              className="object-cover"
-            />
+            <motion.div style={{ y: heroY, scale: heroScale }} className="absolute inset-0">
+              <Image
+                src="/photos/setups/setup-01.jpeg"
+                alt="A KiddoKlub setup, just before guests arrive"
+                fill
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, 45vw"
+                className="object-cover"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
