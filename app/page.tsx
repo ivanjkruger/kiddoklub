@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { Packages } from "@/components/Packages";
@@ -37,22 +38,28 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl mb-6">Recently in The Pearl, Lusail and Al Waab</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { compound: "The Pearl", package: "Klub Classic" },
-              { compound: "Lusail Marina", package: "Klub Signature" },
-              { compound: "Al Waab", package: "Klub Classic" },
-              { compound: "West Bay Lagoon", package: "Klub Mini" },
-              { compound: "Education City", package: "Nursery Demo" },
-              { compound: "Abu Hamour", package: "Klub Classic" },
+              { src: "/photos/setups/setup-02.jpeg", label: "Klub Classic · Boho" },
+              { src: "/photos/setups/setup-05.jpeg", label: "Klub Signature · Jungle" },
+              { src: "/photos/setups/setup-04.jpeg", label: "Klub Classic · Arabic Heritage" },
+              { src: "/photos/setups/setup-07.jpeg", label: "Klub Mini · Pastel Rainbow" },
+              { src: "/photos/setups/setup-09.jpeg", label: "Klub Signature · Eid Family" },
+              { src: "/photos/setups/setup-06.jpeg", label: "Klub Classic · Princess" },
             ].map((p, i) => (
-              <div
+              <article
                 key={i}
-                className="aspect-[4/5] rounded-xl bg-[var(--color-bone)] border border-black/5 flex items-end p-4 text-sm text-[var(--color-muted)]"
+                className="aspect-[4/5] rounded-xl border border-black/5 relative overflow-hidden group"
               >
-                <div>
-                  <div className="font-medium text-[var(--color-ink)]">{p.compound}</div>
-                  <div>{p.package}</div>
+                <Image
+                  src={p.src}
+                  alt={p.label}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent flex items-end p-4 text-sm text-white">
+                  <div className="font-medium">{p.label}</div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
           <div className="mt-8 text-center">

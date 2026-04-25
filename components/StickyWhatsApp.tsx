@@ -8,7 +8,7 @@ export function StickyWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp Nadine"
-      className="fixed end-5 bottom-5 z-50 safe-bottom"
+      className="fixed end-5 bottom-5 z-50 safe-bottom md:end-8 md:bottom-8"
     >
       <motion.span
         animate={{ scale: [1, 1.06, 1] }}

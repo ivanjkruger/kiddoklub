@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
@@ -19,12 +20,15 @@ export default function AboutPage() {
           Hi, I&apos;m <span className="italic-display text-[var(--color-terracotta)]">Nadine</span>.
         </h1>
 
-        {/* Founder photo placeholder */}
-        <div
-          className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-[var(--color-sand)] to-[var(--color-pink)]/30 border border-black/5 mb-10 flex items-center justify-center text-[var(--color-muted)] italic"
-          aria-label="Founder photo placeholder"
-        >
-          (Founder portrait · ask Nadine for the shot she likes)
+        {/* Setup hero in lieu of founder portrait until Nadine picks one */}
+        <div className="aspect-[4/5] rounded-2xl border border-black/5 mb-10 relative overflow-hidden">
+          <Image
+            src="/photos/setups/setup-08.jpeg"
+            alt="A KiddoKlub setup, before guests arrive"
+            fill
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="object-cover"
+          />
         </div>
 
         <div className="space-y-5 text-lg leading-relaxed">

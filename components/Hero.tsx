@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function Hero() {
@@ -80,12 +81,17 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-[var(--color-sand)] via-[var(--color-pink)]/40 to-[var(--color-sage)]/30 border border-black/5 relative overflow-hidden"
-            aria-label="Overhead flatlay of a KiddoKlub setup"
+            className="aspect-[4/5] rounded-2xl border border-black/5 relative overflow-hidden bg-[var(--color-sand)]"
+            aria-label="A KiddoKlub setup, just before guests arrive"
           >
-            <div className="absolute inset-0 flex items-center justify-center text-[var(--color-muted)] text-sm italic">
-              (drop hero from /Photos/Setups/ — 12 ready)
-            </div>
+            <Image
+              src="/photos/setups/setup-01.jpeg"
+              alt="A KiddoKlub setup, just before guests arrive"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 45vw"
+              className="object-cover"
+            />
           </motion.div>
         </div>
       </div>
