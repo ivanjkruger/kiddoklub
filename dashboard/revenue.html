@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>KiddoKlub Revenue · Ivan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<style>
+  :root {
+    --bone: #F5EFE6;
+    --sand: #E8DCC4;
+    --sage: #A8B5A0;
+    --terracotta: #C97D60;
+    --pink: #E4B4B4;
+    --butter: #F0DC9C;
+    --ink: #1F2421;
+    --muted: #6B6F6A;
+    --green: #5C8A6E;
+    --amber: #C8A85C;
+    --red: #C45D5D;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    background: var(--bone);
+    font-family: var(--sans);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 36px;
+    margin: 0 0 4px;
+  }
+  .focus {
+    background: var(--ink);
+    color: var(--bone);
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin: 16px 0 24px;
+    font-size: 15px;
+  }
+  .focus strong { color: var(--butter); }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,.06);
+  }
+  .card h3 {
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    color: var(--muted);
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  .big {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1;
+  }
+  .sub { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .bar {
+    height: 18px; background: var(--sand); border-radius: 9px; overflow: hidden;
+    margin-top: 12px;
+  }
+  .bar > .fill { height: 100%; transition: width .4s ease; }
+  .green .fill  { background: var(--green); }
+  .amber .fill  { background: var(--amber); }
+  .red .fill    { background: var(--red); }
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    background: var(--sand);
+    color: var(--ink);
+    margin-right: 6px;
+  }
+  .stub { color: var(--muted); font-style: italic; font-size: 13px; }
+  footer {
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>KiddoKlub · Revenue</h1>
+<div class="sub" id="ts"></div>
+
+<div class="focus" id="focus">
+  <strong>Focus today:</strong> <span id="focus-text">Phase 0 unlock — confirm domain, file Nadine CR with Mohammed, open Skipcash in Nadine's name. Until then, no revenue can flow.</span>
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>MTD Revenue · target QAR 50K</h3>
+    <div class="big" id="mtd-amount">QAR 0</div>
+    <div class="sub" id="mtd-pct">0% of target</div>
+    <div class="bar red" id="mtd-bar"><div class="fill" style="width:0%"></div></div>
+  </div>
+
+  <div class="card">
+    <h3>This weekend · slots booked</h3>
+    <div class="big" id="weekend-slots">0 / 8</div>
+    <div class="sub">Fri + Sat × 4 setups</div>
+    <div class="bar amber" id="weekend-bar"><div class="fill" style="width:0%"></div></div>
+  </div>
+
+  <div class="card">
+    <h3>Next 4 weekends booked %</h3>
+    <div class="big" id="next4-pct">0%</div>
+    <div class="sub stub">populates after first booking</div>
+  </div>
+
+  <div class="card">
+    <h3>Deposits outstanding</h3>
+    <div class="big" id="deposits-count">0</div>
+    <div class="sub" id="deposits-qar">QAR 0 pending</div>
+  </div>
+
+  <div class="card">
+    <h3>Bookings this month</h3>
+    <div class="big" id="mom-bookings">0</div>
+    <div class="sub" id="mom-delta">vs last month</div>
+  </div>
+
+  <div class="card">
+    <h3>Partner referrals MTD</h3>
+    <div class="big" id="partner-refs">0</div>
+    <div class="sub stub">activates after first partner deal</div>
+  </div>
+
+  <div class="card">
+    <h3>IG reach · 7 days</h3>
+    <div class="big" id="ig-reach">—</div>
+    <div class="sub stub">Meta Graph API wires up Day 7+</div>
+  </div>
+
+  <div class="card">
+    <h3>Ad CAC</h3>
+    <div class="big" id="ad-cac">—</div>
+    <div class="sub stub">activates Week 4 (cold ads)</div>
+  </div>
+
+  <div class="card">
+    <h3>Reactivation pipeline</h3>
+    <div class="big" id="reactivation-pool">0</div>
+    <div class="sub" id="reactivation-resp">0 responded</div>
+  </div>
+
+</div>
+
+<footer>
+  KiddoKlub revenue dashboard v0 · static stub · refreshed daily 06:00<br/>
+  Wires to Supabase via anon key once <code>KIDDOKLUB_SUPABASE_*</code> Keychain secrets are seeded.<br/>
+  Source-of-truth: Supabase <code>bookings</code>, <code>payments</code>, <code>partners</code>, <code>content_log</code> tables.
+</footer>
+
+<script>
+  // Render timestamp
+  document.getElementById('ts').textContent =
+    'Last refreshed: ' + new Date().toLocaleString('en-GB', { timeZone: 'Asia/Qatar' }) + ' · Asia/Qatar';
+
+  // Live wiring placeholder — fetch from Supabase /rest/v1/ when SUPABASE_URL + ANON_KEY are wired.
+  // For now, the stub shows zero state; once wired, this script populates from:
+  //   SELECT sum(p.amount_qar) AS mtd_revenue FROM payments p
+  //     WHERE p.status='paid' AND p.kind IN ('deposit','balance')
+  //     AND p.paid_at >= date_trunc('month', now() AT TIME ZONE 'Asia/Qatar');
+  //
+  //   SELECT count(*) FROM bookings WHERE event_date BETWEEN
+  //     CURRENT_DATE + (5 - extract(dow from current_date)::int) % 7 AND ... ;
+  //
+  //   SELECT * FROM availability_v1 LIMIT 30;  // for next-4 weekend %
+  //
+  // Color thresholds:
+  //   MTD bar:  green if pct>=90, amber if >=60, red otherwise.
+  //   Weekend bar: green if 8/8 booked, amber if 4-7/8, red if 0-3/8.
+</script>
+
+</body>
+</html>

@@ -44,3 +44,12 @@ credentials.json
 images/*.jpg
 images/*.png
 images/*.jpeg
+legacy/images/
+legacy/site.zip
+
+# Phase 1 build
+.env.local
+.vercel/
+out/
+build/
+dist/

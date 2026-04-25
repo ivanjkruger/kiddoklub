@@ -1,0 +1,128 @@
+# KiddoKlub — Pricing Source of Truth
+# Read by: booking site, Cal.com event types, Supabase seed, kiddoklub-quote skill, Skipcash invoice generator
+# Update protocol: bump version, log change in ops/CHANGELOG.md, run scripts/sync_pricing.py
+
+version: 1
+currency: QAR
+updated: 2026-04-25
+
+packages:
+  - id: klub_mini
+    name: Klub Mini
+    name_ar: كلب ميني
+    public_price: 1400
+    show_price_publicly: true
+    duration_hours: 4
+    capacity_kids: 6
+    footprint_m: "3 x 3"
+    inclusions:
+      - Soft play set with slide, steps, rocker
+      - Foam mat flooring
+      - Delivery + setup + sanitization + pickup
+    role: decoy
+    notes: |
+      Anchors Klub Classic as the obvious choice. Rarely sold standalone. Used to make
+      the QAR 800 jump to Classic feel small.
+
+  - id: klub_classic
+    name: Klub Classic
+    name_ar: كلب كلاسيك
+    public_price: 2200
+    show_price_publicly: true
+    duration_hours: 4
+    capacity_kids: 10
+    footprint_m: "4 x 5"
+    inclusions:
+      - Premium soft play set with slide, climbing, rocker
+      - Foam mat flooring
+      - Pastel ball pit
+      - Bouncy castle add-on (FREE for first 10 founding bookings)
+      - Delivery + setup + sanitization + pickup
+    role: workhorse
+    notes: |
+      90% of bookings should land here. Position as "the package every Doha mom picks
+      for a 2-5yo birthday." Bouncy castle is the founding-family hook, not a permanent
+      inclusion.
+
+  - id: klub_signature
+    name: Klub Signature
+    name_ar: كلب سيجنتشر
+    public_price: null
+    public_price_label: "Starting from QAR 3,800"
+    show_price_publicly: false
+    duration_hours: 4
+    capacity_kids: 15
+    footprint_m: "5 x 6"
+    inclusions:
+      - Grand soft play set with slide, climbing, rocker, ball pit, sensory zone
+      - Foam mat flooring
+      - 90-min photographer
+      - Themed decor (Boho, Jungle, Princess, Pastel Rainbow, Arabic Heritage, Eid)
+      - Branded thank-you gift bags
+      - Delivery + setup + sanitization + pickup
+    role: anchor
+    notes: |
+      NEVER publish the exact base price. Always "starting from" + force WhatsApp.
+      Conversion in-WhatsApp is 3-5x web form. 10-15% of bookings should land here.
+      Custom themes price 1.5-2x base.
+
+addons:
+  - id: bouncy_castle
+    name: Bouncy castle
+    name_ar: قلعة نطّاطة
+    price: 400
+    margin: high
+    upsell_default: true
+    notes: "The opener. FREE on Klub Classic for first 10 founding bookings, then becomes a paid add-on."
+  - id: balloon_arch
+    name: Balloon arch
+    name_ar: قوس بالونات
+    price: 350
+    margin: high
+    upsell_default: true
+  - id: soft_serve_cart
+    name: Soft-serve / popcorn cart
+    name_ar: عربة آيس كريم / فشار
+    price: 500
+    margin: medium
+  - id: photographer_90
+    name: 90-min photographer
+    name_ar: مصوّر ٩٠ دقيقة
+    price: 600
+    margin: medium
+    notes: "Asymmetric move — costs ~QAR 300-400, signals QAR 1.5K+ value, produces UGC for content engine. Always offer."
+  - id: extra_hour
+    name: Extra rental hour
+    name_ar: ساعة إضافية
+    price: 250
+    margin: very_high
+  - id: themed_gift_bags
+    name: Themed gift bags (per kid)
+    name_ar: كيس هدايا (لكل طفل)
+    price: 35
+    margin: medium
+
+modifiers:
+  weekday_discount:
+    days: [sunday, monday, tuesday, wednesday, thursday]
+    multiplier: 0.80
+    label: "Weekday Klub - 20% off Sun-Thu"
+  rush_premium:
+    threshold_days: 7
+    multiplier: 1.15
+    label: "Inside-7-days rush"
+  founding_family:
+    active_until: 2026-06-30
+    bookings_remaining: 10
+    perk: "Bouncy castle FREE + 90-min photographer FREE on Klub Classic"
+
+deposit:
+  pct: 30
+  refundable_outside_days: 14
+  outside_14_credit_pct: 50
+  inside_14_refund_pct: 0
+
+cancellation:
+  reschedule_free_outside_days: 14
+  reschedule_count: 1
+  weather_clause: "Outdoor reschedule free; we never refund weather, we shift the date"
