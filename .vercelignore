@@ -1,0 +1,11 @@
+legacy/
+.claude/
+content/proof-pack/
+docs/
+ops/
+scripts/
+supabase/
+automations/
+dashboard/
+*.md
+!README.md

@@ -53,3 +53,4 @@ legacy/site.zip
 out/
 build/
 dist/
+.vercel
