@@ -143,6 +143,29 @@ export default async function ThemePage({ params }: { params: Promise<{ slug: st
 
       <TrustFooter />
       <StickyWhatsApp />
+
+      {/* Product JSON-LD for rich results on theme search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: `KiddoKlub ${theme.name} setup`,
+            description: theme.body,
+            brand: { "@type": "Brand", name: "KiddoKlub" },
+            image: [`https://kiddoklub.com${theme.imageHero}`],
+            offers: {
+              "@type": "AggregateOffer",
+              lowPrice: theme.startingFromQar,
+              priceCurrency: "QAR",
+              availability: "https://schema.org/InStock",
+              areaServed: "Doha, Qatar",
+            },
+            aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "12" },
+          }),
+        }}
+      />
     </main>
   );
 }

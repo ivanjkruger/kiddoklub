@@ -7,9 +7,9 @@ import { Logo } from "./Logo";
 const NAV = [
   { href: "/packages", label: "Packages" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/availability", label: "Availability" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
 ];
 
 const LANG_TOGGLE = { href: "/ar", label: "العربية" };

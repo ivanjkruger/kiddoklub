@@ -3,7 +3,7 @@ import { THEMES } from "@/content/themes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://kiddoklub.com";
-  const top = ["", "/packages", "/gallery", "/about", "/faq", "/contact", "/book", "/referral"];
+  const top = ["", "/packages", "/gallery", "/about", "/faq", "/contact", "/book", "/referral", "/availability", "/ar", "/ar/packages"];
   const themes = THEMES.map((t) => `/packages/${t.slug}`);
   const paths = [...top, ...themes];
   return paths.map((p) => ({
