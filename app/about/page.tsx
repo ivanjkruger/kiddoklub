@@ -24,7 +24,7 @@ export default function AboutPage() {
           className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-[var(--color-sand)] to-[var(--color-pink)]/30 border border-black/5 mb-10 flex items-center justify-center text-[var(--color-muted)] italic"
           aria-label="Founder photo placeholder"
         >
-          (Founder portrait · styled-shoot pending)
+          (Founder portrait · ask Nadine for the shot she likes)
         </div>
 
         <div className="space-y-5 text-lg leading-relaxed">

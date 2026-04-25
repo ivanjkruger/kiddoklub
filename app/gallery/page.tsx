@@ -111,7 +111,7 @@ export default function GalleryPage() {
           ))}
         </div>
         <p className="text-sm text-[var(--color-muted)] text-center mt-8 italic">
-          (real photography swaps in once the styled-shoot lands)
+          (live tiles wire to Drive `Photos/Setups/` and `Photos/Past-Events/` once consent is logged per family)
         </p>
       </section>
 

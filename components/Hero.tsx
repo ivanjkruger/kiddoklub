@@ -84,7 +84,7 @@ export function Hero() {
             aria-label="Overhead flatlay of a KiddoKlub setup"
           >
             <div className="absolute inset-0 flex items-center justify-center text-[var(--color-muted)] text-sm italic">
-              (overhead flatlay hero · styled-shoot pending)
+              (drop hero from /Photos/Setups/ — 12 ready)
             </div>
           </motion.div>
         </div>

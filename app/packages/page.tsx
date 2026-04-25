@@ -41,7 +41,7 @@ export default function PackagesPage() {
           ))}
         </div>
         <p className="text-sm text-[var(--color-muted)] text-center mt-6 italic">
-          (each theme gets its own /packages/[slug] page with full gallery — Phase 3)
+          (each theme gets its own /packages/[slug] page with full gallery seeded from /Photos/Setups/ — Phase 2)
         </p>
       </section>
       <TrustFooter />
