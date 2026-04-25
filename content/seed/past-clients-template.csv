@@ -1,0 +1,8 @@
+name,parent_phone,parent_email,kid_names,first_event_date,last_package,compound,language,vip,notes
+"# Fill 8-10 rows from Nadine's WA + camera roll Oct 2024 - Apr 2026.","","","","","","","","",""
+"# parent_phone is E.164 with +974, kid_names is comma-separated quoted ('layla,zayd')","","","","","","","","",""
+"# language: en | ar | mixed","","","","","","","","",""
+"# last_package: mini | classic | signature","","","","","","","","",""
+"# compound: Pearl, Lusail, West Bay, Al Waab, Abu Hamour, Education City, Al Gharrafa, etc.","","","","","","","","",""
+"# vip: TRUE if they referred others or had multiple bookings","","","","","","","","",""
+"Sample Sara Example","+97455123456","sara@example.com","layla","2024-10-19","classic","The Pearl","en",FALSE,"Found us via friend referral; loved the pastel ball pit"

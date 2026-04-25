@@ -50,7 +50,10 @@ legacy/site.zip
 # Phase 1 build
 .env.local
 .vercel/
+.vercel
 out/
 build/
 dist/
-.vercel
+tsconfig.tsbuildinfo
+*.csv
+!content/seed/*-template.csv
