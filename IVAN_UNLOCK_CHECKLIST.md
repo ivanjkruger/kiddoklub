@@ -9,17 +9,12 @@ While Claude / James / Session B handle build, scaffold, content, and Drive — 
 
 ## P0 · This week (do first)
 
-### 0.1 — Confirm domain
-- **Who:** Ivan
-- **What:** Verify the domain receipt. AskUserQuestion answer text said "KirillClub.com" which is almost certainly voice-to-text drift. Open the registrar receipt; confirm the actual registered domain spells `kiddoklub.com` (the brand we're building). Forward the receipt to `hello@kiddoklub.com` once that mailbox lands.
-- **Time:** 5 minutes
-- **Unblocks:** every DNS, Vercel, Workspace, Cal.com, Skipcash redirect URL.
+### 0.1 — ✅ Confirm domain (DONE 2026-04-25)
+- **Domain:** kiddoklub.com (confirmed by Ivan).
+- **Now needed:** point DNS + claim Workspace mailbox + connect Vercel project (handled in 0.5 + 1.4).
 
-### 0.2 — Mohammed conversation (Nadine's CR)
-- **Who:** Ivan + Mohammed
-- **What:** Explain that KiddoKlub is Nadine's separate trading entity (not Equipt). Ask Mohammed for the fastest legal route in Qatar: (a) Qatar Freelancer Permit via QFC (if available for service activities), (b) MOCI sole-proprietorship CR in Nadine's name with a Qatari local-partner setup, or (c) operate under "Nadine Kruger trading as KiddoKlub" informally for the first 10 paid bookings then file. Mohammed has done this before for Equipt — he'll know.
-- **Time:** 30 min conversation + Mohammed action
-- **Unblocks:** Skipcash merchant onboarding (needs CR), Wati WhatsApp Business API (needs CR), public liability insurance in Nadine's name (insurer prefers a registered entity), Meta + Snap verification when triggered.
+### 0.2 — ❌ DROPPED (Ivan correction 2026-04-25)
+KiddoKlub is NOT a registered company. No Mohammed conversation. No CR. No freelance permit. Operates informally under Nadine personally. Implications cascaded into 0.4 (payments) and 1.1 + 2.1 (WhatsApp).
 
 ### 0.3 — Public liability insurance (Nadine's name)
 - **Who:** Ivan
@@ -27,11 +22,11 @@ While Claude / James / Session B handle build, scaffold, content, and Drive — 
 - **Time:** 1 hour, plus 1-2 day insurer turnaround
 - **Unblocks:** any Pearl/Lusail bookings; site footer trust signal; founder-story page credibility.
 
-### 0.4 — Skipcash merchant account (Nadine's name)
+### 0.4 — Payment rail (no CR, individual-merchant or personal-IBAN path)
 - **Who:** Ivan
-- **What:** Sign up at skipcash.app/signup. Use Nadine's CR (or freelance permit) once 0.2 lands. Bank account = Wio Personal QA or QNB Personal in Nadine's name. Onboarding 5-10 days. Plan B: MyFatoorah (cleaner docs per Council 2026-04-25, mappable HMAC pattern).
-- **Time:** 30 min signup + 5-10 day approval
-- **Unblocks:** deposit collection on every booking, payment links in WhatsApp, Phase 1 booking-intake skill end-to-end test.
+- **What:** Try Skipcash individual-merchant signup; if blocked for missing CR, try MyFatoorah individual account. Fallback: collect deposits via personal bank transfer to Nadine's IBAN (Wio Personal QA or QNB Personal) + Apple Pay link from Wio personal app. Cash NEVER (deposit paper trail required).
+- **Time:** 30 min - 2 hours depending on which provider clears
+- **Unblocks:** deposit collection. Without an automated link, Phase 1 booking-intake skill collects deposit via Tier B "send Nadine's IBAN + amount" message instead of a Skipcash invoice. Slower but works without a CR.
 
 ### 0.5 — IG handle confirmation
 - **Who:** Ivan / Nadine
@@ -83,11 +78,8 @@ While Claude / James / Session B handle build, scaffold, content, and Drive — 
 
 ## P2 · Days 15-30
 
-### 2.1 — Wati WhatsApp Business API migration
-- **Who:** Ivan
-- **What:** After Nadine's CR lands (0.2), sign up for Wati at wati.io (~QAR 200-400/month). Submit utility templates for approval (Meta typically 1-4h for utility): `deposit_received_v2`, `balance_due_v2`, `party_reminder_v1`, `review_request_v1`. Verbatim wording in `docs/COUNCIL_2026_04_25.md`.
-- **Time:** 1 hour signup + 1-4h template approval per template
-- **Unblocks:** automated booking confirms, T-48h reminders, T-24h balance asks, T+24h testimonial chases. Migration retires the WA Business App for outbound automation.
+### 2.1 — ❌ Wati DROPPED (no CR available)
+WhatsApp Business API requires a registered business; we don't have one and aren't filing one. Stay on free WhatsApp Business App on Nadine's phone indefinitely. Outbound pattern: James drafts each message → Tier B Telegram approval → Nadine pastes + sends manually from her phone. Slower than templates, but reliable at our 10-setups/month volume.
 
 ### 2.2 — Photographer retainer
 - **Who:** Ivan or Nadine
@@ -131,10 +123,10 @@ While Claude / James / Session B handle build, scaffold, content, and Drive — 
 
 Tick as each lands:
 
-- [ ] 0.1 Domain confirmed
-- [ ] 0.2 Mohammed conversation done · CR route picked
+- [x] 0.1 Domain confirmed — **kiddoklub.com** (2026-04-25)
+- [x] 0.2 ❌ DROPPED — no CR, no Mohammed conversation (Ivan correction 2026-04-25)
 - [ ] 0.3 Public liability insurance bound
-- [ ] 0.4 Skipcash account opened in Nadine's name
+- [ ] 0.4 Payment rail picked (Skipcash individual / MyFatoorah individual / personal IBAN + Apple Pay)
 - [ ] 0.5 IG handle confirmed
 - [ ] 0.6 Past-client list seeded (10 contacts)
 - [ ] 1.1 WA Business App live on +974 5031 8434
@@ -142,7 +134,7 @@ Tick as each lands:
 - [ ] 1.3 Supabase project + migrations applied + secrets seeded
 - [ ] 1.4 Vercel + DNS pointing kiddoklub.com
 - [ ] 1.5 Nadine voice-note reactivation soft launch
-- [ ] 2.1 Wati signup + 4 utility templates approved
+- [x] 2.1 ❌ DROPPED — Wati needs CR; staying on free WhatsApp Business App + manual send
 - [ ] 2.2 Photographer retainer locked
 - [ ] 2.3 Meta + Snap business accounts registered
 - [ ] 2.4 Styled-shoot complete, hero stills delivered

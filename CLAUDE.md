@@ -8,10 +8,12 @@ Premium soft-play party rentals for kids 1-5 in Doha. Nadine is the founder + br
 ## Hard rules
 
 ### Legal + money
-- KiddoKlub trades under **Nadine's** name. NOT Equipt. NOT Ivan personally.
-- All payouts route to Nadine's IBAN (Wio Personal QA or QNB Personal in her name).
-- Equipt warehouse + setup team are arms-length services — internal "ops services agreement", per-event fee, clean books on both sides.
-- No Equipt logo. No Equipt CR. No Equipt bank. No Equipt invoicing. Ever.
+- KiddoKlub is **NOT a registered company**. No CR, no MOCI, no freelance permit. Operates informally as Nadine personally. Do NOT propose registering a company; do NOT propose a Mohammed conversation.
+- All payouts route to **Nadine's personal IBAN** (Wio Personal QA or QNB Personal).
+- Payment rail: try Skipcash individual-merchant; if blocked, try MyFatoorah individual; fallback = personal IBAN transfer + Apple Pay link from Wio personal.
+- WhatsApp: free **WA Business App** on Nadine's phone forever (Wati API needs a CR; not happening). Outbound = James drafts → Tier B → Nadine pastes + sends manually.
+- Equipt warehouse + setup team time logged informally; Nadine settles per event. No "ops services agreement" paperwork.
+- No Equipt logo. No Equipt bank. No Equipt invoicing. No Equipt branding on any customer surface. Ever.
 
 ### Voice (applies to ALL outbound — DM, WhatsApp, email, captions, ads, replies)
 - Warm, parent-to-parent. Never corporate. Nadine voice, not Ivan voice.
