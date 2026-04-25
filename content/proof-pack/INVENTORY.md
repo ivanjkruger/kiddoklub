@@ -30,7 +30,7 @@ Last audited: 2026-04-25 (after Session B Drive reorg).
 ## Current setup photos (own, no customer in frame)
 
 ### Mar 30, 2026 inventory shots — `Photos/Setups/`
-12 WhatsApp-image JPEGs of empty / pre-event setups:
+13 WhatsApp-image JPEGs of empty / pre-event setups:
 - WhatsApp Image 2026-03-30 at 12.55.19 PM (×3)
 - WhatsApp Image 2026-03-30 at 12.56.03 PM (×9)
 
@@ -47,7 +47,7 @@ These are **the highest-leverage stills** — empty hero shots, no customer face
 
 | Bucket | Count | Use right now? |
 |---|---|---|
-| Empty-setup stills (no faces, full rights) | **12** | ✅ Hero, packages, ad creative, Seedance amplification |
+| Empty-setup stills (no faces, full rights) | **13** | ✅ Hero, packages, ad creative, Seedance amplification |
 | Past-event stills (faces present, perm TBD) | 11 | ⏳ Internal use OK; IG only after explicit consent per family |
 | Brand logo | 1 SVG | ✅ Site, IG bio image, ad chrome |
 | Reference / rejected | 3 files | reference only |
