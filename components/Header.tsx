@@ -12,6 +12,8 @@ const NAV = [
   { href: "/contact", label: "Contact" },
 ];
 
+const LANG_TOGGLE = { href: "/ar", label: "العربية" };
+
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -39,6 +41,13 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <Link
+            href={LANG_TOGGLE.href as never}
+            className="hidden md:inline-flex text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]"
+            style={{ fontFamily: "'IBM Plex Sans Arabic', 'Tajawal', system-ui" }}
+          >
+            {LANG_TOGGLE.label}
+          </Link>
           <a
             href="https://wa.me/97450318434"
             target="_blank"

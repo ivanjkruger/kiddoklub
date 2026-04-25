@@ -35,6 +35,11 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F5EFE6" },
+    { media: "(prefers-color-scheme: dark)", color: "#1F2421" },
+  ],
+  formatDetection: { telephone: true },
 };
 
 export default function RootLayout({
@@ -47,6 +52,44 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "@id": "https://kiddoklub.com/#business",
+              name: "KiddoKlub",
+              description:
+                "Premium soft-play party rentals delivered, set up, and collected anywhere in Doha. Birthday parties, playdates and events for kids 1-5.",
+              url: "https://kiddoklub.com",
+              telephone: "+97450318434",
+              email: "hello@kiddoklub.com",
+              priceRange: "QAR 1,400 - QAR 5,500",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Doha",
+                addressCountry: "QA",
+              },
+              areaServed: [
+                "The Pearl, Doha",
+                "Lusail Marina",
+                "West Bay, Doha",
+                "Al Waab, Doha",
+                "Abu Hamour, Doha",
+                "Education City, Doha",
+                "Al Gharrafa, Doha",
+              ],
+              image: "https://kiddoklub.com/photos/setups/setup-01.jpeg",
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5.0",
+                reviewCount: "12",
+              },
+              sameAs: ["https://instagram.com/kiddoklub"],
+            }),
+          }}
+        />
       </body>
     </html>
   );

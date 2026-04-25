@@ -1,47 +1,47 @@
-import Link from "next/link";
+import { QuoteBuilder } from "@/components/QuoteBuilder";
+import { TrustFooter } from "@/components/TrustFooter";
+import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 
 export const metadata = {
-  title: "Book — KiddoKlub",
+  title: "Build a quote — KiddoKlub",
   description:
-    "Pick your date. Pay 30% deposit. We confirm by WhatsApp within 30 minutes.",
+    "Pick your theme, pick your size, add what you want. Instant WhatsApp quote with Nadine, reply within 30 minutes during the day.",
 };
 
-export default function BookPage({
-  searchParams,
-}: {
-  searchParams: { package?: string };
-}) {
-  const pkg = searchParams.package ?? "classic";
-
+export default function BookPage() {
   return (
-    <main className="min-h-screen px-6 py-16 max-w-3xl mx-auto">
-      <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3">
-        Step 1 of 3 · Pick a date
-      </p>
-      <h1 className="text-4xl md:text-5xl mb-3">
-        Let&apos;s find your perfect <span className="italic-display text-[var(--color-terracotta)]">Saturday</span>
-      </h1>
-      <p className="text-[var(--color-muted)] mb-10 max-w-xl">
-        Pick a date below. We&apos;ll lock the slot with a 30% deposit. Balance is due the day before. Reschedule anytime up to 14 days before for free.
-      </p>
-
-      {/* Cal.com embed placeholder — wire up after Phase 0.4 + 1.2 */}
-      <div className="rounded-2xl bg-white border border-black/5 p-10 text-center">
-        <p className="text-[var(--color-muted)] italic mb-6">
-          (Cal.com embed for <code>kiddoklub-{pkg}</code> · activates after Phase 1.2 lands)
+    <main className="min-h-screen">
+      <section className="px-6 pt-14 pb-2 max-w-3xl mx-auto">
+        <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3">
+          Quote · book · done
         </p>
-        <Link
-          href="https://wa.me/97450318434"
-          className="inline-block rounded-full bg-[var(--color-terracotta)] text-white px-7 py-3 font-medium"
-        >
-          For now, WhatsApp Nadine
-        </Link>
-      </div>
+        <h1 className="text-4xl md:text-6xl leading-[1.05] mb-4">
+          Build your party in <span className="italic-display text-[var(--color-terracotta)]">90 seconds</span>.
+        </h1>
+        <p className="text-[var(--color-muted)] text-lg max-w-xl">
+          Three steps. Click send and your quote opens in WhatsApp with Nadine. We reply within 30 minutes during the day.
+        </p>
+      </section>
 
-      {/* Trust line */}
-      <p className="mt-8 text-sm text-[var(--color-muted)] text-center">
-        QAR 1M public liability cover · Skipcash deposit · we ask before we post any photos.
-      </p>
+      <QuoteBuilder />
+
+      <section className="px-6 py-12 max-w-3xl mx-auto text-center">
+        <p className="text-sm text-[var(--color-muted)]">
+          Want to talk first?{" "}
+          <a
+            href="https://wa.me/97450318434"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-terracotta)] underline-offset-4 hover:underline"
+          >
+            WhatsApp Nadine directly
+          </a>
+          .
+        </p>
+      </section>
+
+      <TrustFooter />
+      <StickyWhatsApp />
     </main>
   );
 }

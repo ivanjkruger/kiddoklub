@@ -1,12 +1,15 @@
 import type { MetadataRoute } from "next";
+import { THEMES } from "@/content/themes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://kiddoklub.com";
-  const paths = ["", "/packages", "/gallery", "/about", "/faq", "/contact", "/book"];
+  const top = ["", "/packages", "/gallery", "/about", "/faq", "/contact", "/book", "/referral"];
+  const themes = THEMES.map((t) => `/packages/${t.slug}`);
+  const paths = [...top, ...themes];
   return paths.map((p) => ({
     url: `${base}${p}`,
     lastModified: new Date(),
     changeFrequency: p === "" ? "weekly" : "monthly",
-    priority: p === "" ? 1 : 0.7,
+    priority: p === "" ? 1 : p.startsWith("/packages") ? 0.9 : 0.7,
   }));
 }
