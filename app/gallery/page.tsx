@@ -5,7 +5,7 @@ import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 
 // 12 Mar 2026 setups (full rights, no faces). Compound/venue/pkg/theme are
-// internal taxonomy — Session B refines as the real metadata lands.
+// internal taxonomy; Session B refines as the real metadata lands.
 const ITEMS = [
   { src: "/photos/setups/setup-01.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "classic",   theme: "pastel_rainbow" },
   { src: "/photos/setups/setup-02.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "classic",   theme: "boho" },
@@ -99,7 +99,7 @@ export default function GalleryPage() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {filtered.length === 0 && (
             <p className="col-span-full text-[var(--color-muted)] italic">
-              No setups match those filters yet — WhatsApp Nadine and we&apos;ll tell you what&apos;s coming up.
+              No setups match those filters yet; WhatsApp Nadine and we&apos;ll tell you what&apos;s coming up.
             </p>
           )}
           {filtered.map((item, i) => (

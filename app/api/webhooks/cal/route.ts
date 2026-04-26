@@ -40,8 +40,8 @@ export async function POST(req: NextRequest) {
   const body = JSON.parse(raw);
 
   // TODO Phase 1:
-  //   1. INSERT idempotency_keys ON CONFLICT DO NOTHING — return cached result if replay
-  //   2. SELECT try_lock_slot($eventStartISO) — 409 if false
+  //   1. INSERT idempotency_keys ON CONFLICT DO NOTHING; return cached result if replay
+  //   2. SELECT try_lock_slot($eventStartISO); 409 if false
   //   3. Upsert clients by phone, insert booking row (status='pending_deposit')
   //   4. Insert payments row (kind='deposit'), create Skipcash invoice
   //   5. Enqueue outbox: Wati deposit_received_v2 + Resend confirm + Telegram card

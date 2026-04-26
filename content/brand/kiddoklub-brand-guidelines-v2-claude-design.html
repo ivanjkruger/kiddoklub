@@ -1,0 +1,1681 @@
+<!DOCTYPE html><html lang="en"><head>
+<style data-omelette-injected="">html,body{background:transparent}</style><script data-omelette-injected="">(()=>{var A=["https://claude.ai","https://preview.claude.ai","https://eap-omelette.claude.ai"];var L=30000;var u=3000;document.addEventListener("DOMContentLoaded",()=>{const V=window.Babel;const $="om-src-id";if(V&&V.registerPlugin&&!(V.availablePlugins&&V.availablePlugins[$])){V.registerPlugin($,({types:Q})=>({visitor:{JSXOpeningElement(W,X){const K=W.node;if(K.name&&K.name.type==="JSXMemberExpression")return;for(let J=0;J<K.attributes.length;J++){const w=K.attributes[J];if(w.type==="JSXAttribute"&&w.name&&w.name.name==="data-om-id")return}const z=X.file&&X.file.opts&&X.file.opts.filename||"?";const k=K.loc&&K.loc.start;const C=`jsx:${z}:${K.start??0}:${k?k.line:0}:${k?k.column+1:0}`;K.attributes.push(Q.jsxAttribute(Q.jsxIdentifier("data-om-id"),Q.stringLiteral(C)))}}}))}const Z=["transform-react-jsx-source",$];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Q,W)=>{const X=Q.getAttribute("data-plugins")||"";const K=Z.filter((z)=>X.indexOf(z)<0);if(K.length){Q.setAttribute("data-plugins",X?`${X},${K.join(",")}`:K.join(","))}if(!Q.hasAttribute("data-filename")){Q.setAttribute("data-filename",Q.getAttribute("src")||`inline-${W}`)}})});var b=window.parent;if(b&&b!==window){const V=(z,k)=>{try{b.postMessage({__omelette_log:true,type:z,data:k},"*")}catch{}};["log","warn","error"].forEach((z)=>{const k=console[z];console[z]=(...C)=>{const J=C.map((w)=>{try{return typeof w==="object"?JSON.stringify(w):String(w)}catch{try{return String(w)}catch{return"[unstringifiable]"}}}).join(" ");V(z,J);k.apply(console,C)}});window.addEventListener("error",(z)=>{const k=z.target;if(k&&k!==window&&k.tagName){const C=k.src||k.href||"";V("resource_error",`${k.tagName} failed to load: ${C}`)}else{V("error",`${z.message||"Unknown error"} at ${z.filename||"?"}:${z.lineno||0}:${z.colno||0}`)}},true);window.addEventListener("unhandledrejection",(z)=>{const k=z.reason;const C=k instanceof Error?`${k.message} ${k.stack}`:String(k);V("error",`Unhandled rejection: ${C}`)});const $=()=>{try{b.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")$();else window.addEventListener("load",$);if(window.ResizeObserver)new ResizeObserver($).observe(document.documentElement);const Z={};let Q=0;window.claude={complete(z){return new Promise((k,C)=>{if(!A.length){C(new Error("claude.complete: no parent origin"));return}const J=`c${++Q}`;const w=()=>setTimeout(()=>{delete Z[J];C(new Error(`claude.complete: no data for ${L/1000}s`))},L);const Y=w();Z[J]={resolve:k,reject:C,text:"",t:Y,arm:w};try{for(const F of A){b.postMessage({__om_api:true,id:J,body:z},F)}}catch(F){clearTimeout(Y);delete Z[J];C(F)}})}};const W={};let X=0;window.omelette={writeFile:(z,k)=>new Promise((C,J)=>{if(!A.length){C();return}const w=`f${++X}`;const Y=setTimeout(()=>{delete W[w];C()},u);W[w]={resolve:C,reject:J,t:Y};try{for(const F of A){b.postMessage({__om_file:true,id:w,op:"write",path:z,content:k},F)}}catch{clearTimeout(Y);delete W[w];C()}})};const K=(z)=>{try{return JSON.stringify(z)}catch{return JSON.stringify(String(z))}};window.addEventListener("message",(z)=>{if(A.indexOf(z.origin)<0)return;if(z.source!==b)return;const k=z.data;if(!k)return;if(k.__om_file_r){const w=W[k.id];if(!w)return;clearTimeout(w.t);delete W[k.id];if(k.ok)w.resolve();else w.reject(new Error(k.error||"write failed"));return}if(k.__om_api_r){const w=Z[k.id];if(!w)return;if(k.error!=null){clearTimeout(w.t);delete Z[k.id];w.reject(new Error(k.error));return}if(k.chunk!=null){clearTimeout(w.t);w.t=w.arm();w.text+=k.chunk;return}if(k.done){clearTimeout(w.t);delete Z[k.id];w.resolve(k.text!=null?k.text:w.text);return}return}if(!k.__om_eval)return;const C=k;const J=(w)=>{z.source.postMessage({...w,__om_eval_r:1,id:C.id},z.origin)};try{const w=(0,eval)(C.code);if(w&&typeof w.then==="function"){w.then((Y)=>J({ok:1,v:K(Y)}),(Y)=>J({ok:0,e:String(Y)}))}else{J({ok:1,v:K(w)})}}catch(w){J({ok:0,e:String(w)})}})}})();
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KiddoKlub · Brand Guidelines v2</title>
+<meta name="description" content="KiddoKlub brand guidelines: voice, palette, type, photography, themes, bilingual rules. Doha villa parties by Nadine.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Noto+Naskh+Arabic:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+<style>
+:root {
+  /* Bone family — surfaces */
+  --bone:    #FAF7F3;
+  --cream:   #DDDCD9;
+  --sand:    #D6D9DD;
+  --mist:    #CFD5D2;
+
+  /* Sage family — calm trust accent */
+  --sage:        #B7E2B9;
+  --olive:       #968E70;
+  --deep-sage:   #4A4F32;
+
+  /* Wood / honey / terracotta — warm accents */
+  --honey:        #D28A29;
+  --wood:         #AF8F55;
+  --terracotta:   #D9A965;
+  --cinnamon:    #9A6126;
+
+  /* Stone / ink — type only */
+  --stone:  #6A6051;
+  --ink:    #1E1E19;
+
+  /* Theme accents */
+  --pink:    #F0CFCB;
+  --butter:  #F4E4B0;
+
+  /* Tokens */
+  --bg: var(--bone);
+  --surface: #FCF9F4;
+  --surface-2: #F5F0E8;
+  --text: var(--ink);
+  --muted: var(--stone);
+  --line: rgba(106, 96, 81, 0.18);
+  --line-soft: rgba(106, 96, 81, 0.10);
+  --accent: var(--honey);
+
+  --gutter: clamp(20px, 4vw, 56px);
+  --section: clamp(80px, 11vw, 144px);
+
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+.serif {
+  font-family: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  font-weight: 380;
+  font-variation-settings: "SOFT" 100, "opsz" 144;
+}
+.serif-it {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 380;
+}
+.it { font-family: 'Fraunces', serif; font-style: italic; font-weight: 380; color: var(--cinnamon); font-variation-settings: "SOFT" 100, "opsz" 144; }
+
+h1, h2, h3 { margin: 0 0 0.4em; font-weight: 600; letter-spacing: -0.015em; }
+h1 { font-size: clamp(40px, 5.4vw, 72px); line-height: 1.05; font-family: 'Manrope', sans-serif; font-weight: 500; letter-spacing: -0.025em; }
+h2 { font-size: clamp(28px, 3.6vw, 46px); line-height: 1.08; font-family: 'Manrope', sans-serif; font-weight: 500; letter-spacing: -0.02em; }
+h3 { font-size: 21px; line-height: 1.25; font-weight: 600; }
+
+p { margin: 0 0 1em; max-width: 64ch; }
+.lede { font-size: 19px; color: var(--muted); max-width: 60ch; line-height: 1.55; }
+.eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 600; color: var(--cinnamon); margin-bottom: 14px; display: inline-block; }
+.mono { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0; }
+.tnum { font-feature-settings: "tnum"; }
+
+/* Layout */
+.shell { display: grid; grid-template-columns: 240px minmax(0, 1fr); }
+@media (max-width: 960px) { .shell { grid-template-columns: 1fr; } }
+
+.rail {
+  position: sticky; top: 0; align-self: start; height: 100vh;
+  border-inline-end: 1px solid var(--line);
+  padding: 28px 22px 28px 28px;
+  background: linear-gradient(180deg, var(--bone) 0%, var(--surface-2) 100%);
+  display: flex; flex-direction: column; gap: 22px;
+  font-size: 13px;
+}
+@media (max-width: 960px) { .rail { position: static; height: auto; border-inline-end: none; border-block-end: 1px solid var(--line); } }
+.rail .mark { font-family: 'Fraunces', serif; font-size: 28px; line-height: 0.95; letter-spacing: -0.02em; font-weight: 380; }
+.rail .mark .it { color: var(--honey); }
+.rail .meta { color: var(--muted); font-size: 11.5px; line-height: 1.55; }
+.rail nav { display: flex; flex-direction: column; gap: 1px; margin-top: 6px; }
+.rail nav a {
+  color: var(--text); text-decoration: none; font-weight: 500;
+  padding: 7px 10px 7px 12px;
+  display: flex; align-items: baseline; gap: 10px;
+  border-inline-start: 2px solid transparent;
+  margin-inline-start: -14px;
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  transition: color .2s, border-color .2s, background .2s;
+  font-size: 13.5px;
+}
+.rail nav a:hover { color: var(--cinnamon); background: rgba(210, 138, 41, 0.06); }
+.rail nav a.active { color: var(--cinnamon); border-inline-start-color: var(--honey); background: rgba(210, 138, 41, 0.08); }
+.rail nav a .num { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--olive); width: 18px; }
+.rail nav a.active .num { color: var(--honey); }
+
+main { padding: 0; min-width: 0; }
+section.s {
+  padding: var(--section) var(--gutter);
+  border-block-end: 1px solid var(--line-soft);
+  position: relative;
+}
+section.s.tinted { background: var(--surface-2); }
+.section-head { margin-bottom: 56px; max-width: 1000px; }
+.section-head .num { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--olive); margin-bottom: 16px; display: inline-block; letter-spacing: 0.05em; }
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(8px); transition: opacity .35s ease, transform .35s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Hero */
+.hero {
+  padding: clamp(80px, 14vh, 160px) var(--gutter) clamp(72px, 10vh, 120px);
+  position: relative; overflow: hidden;
+  border-block-end: 1px solid var(--line-soft);
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 20%, rgba(244, 228, 176, 0.55), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 78% 80%, rgba(183, 226, 185, 0.40), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(210, 138, 41, 0.10), transparent 70%),
+    var(--bone);
+}
+.hero .grid {
+  display: grid; grid-template-columns: 1fr; gap: 48px; align-items: end;
+  max-width: 1320px;
+}
+@media (min-width: 1000px) { .hero .grid { grid-template-columns: 1.05fr 1fr; gap: 72px; } }
+.hero h1.kicker {
+  font-family: 'Fraunces', serif; font-weight: 320;
+  font-size: clamp(48px, 8vw, 108px);
+  line-height: 0.98; letter-spacing: -0.025em;
+  font-variation-settings: "SOFT" 100, "opsz" 144;
+  margin: 0;
+}
+.hero h1 .it { font-style: italic; color: var(--honey); }
+.hero .sub { color: var(--muted); font-size: 18px; max-width: 48ch; margin-top: 28px; line-height: 1.6; }
+.hero .stamps { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 32px; }
+
+.hero-flat {
+  aspect-ratio: 4/5;
+  border-radius: var(--r-lg);
+  position: relative; overflow: hidden;
+  box-shadow: 0 30px 70px -40px rgba(154, 97, 38, .35), 0 8px 20px -10px rgba(74, 79, 50, .15);
+  background:
+    radial-gradient(ellipse 50% 40% at 35% 30%, rgba(255, 255, 255, 0.45), transparent 65%),
+    radial-gradient(circle at 70% 70%, rgba(74, 79, 50, 0.10), transparent 60%),
+    linear-gradient(135deg, #F5E9D5 0%, #E8D7B8 50%, #C9B891 100%);
+}
+.hero-flat .props { position: absolute; inset: 0; }
+.hero-flat .p { position: absolute; filter: drop-shadow(0 8px 14px rgba(74, 79, 50, .15)); }
+.hero-flat .label {
+  position: absolute; inset-block-end: 14px; inset-inline-start: 14px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  background: rgba(30, 30, 25, .80); color: var(--bone);
+  padding: 8px 12px; border-radius: var(--r-sm); letter-spacing: 0.02em;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 24px; border-radius: var(--r-pill);
+  font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 15px;
+  text-decoration: none; border: 1px solid transparent; cursor: pointer;
+  transition: transform .15s ease, background .2s, color .2s, border-color .2s, box-shadow .2s;
+  letter-spacing: 0;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--honey); color: var(--bone); box-shadow: 0 6px 16px -8px rgba(210, 138, 41, .55); }
+.btn-primary:hover { background: var(--cinnamon); }
+.btn-secondary { background: transparent; color: var(--ink); border-color: var(--stone); }
+.btn-secondary:hover { border-color: var(--ink); background: rgba(106, 96, 81, .04); }
+.btn-ghost { background: transparent; color: var(--cinnamon); padding: 10px 0; }
+.btn-ghost:hover { color: var(--honey); }
+.btn-sm { padding: 10px 18px; font-size: 13.5px; }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg);
+  padding: 28px;
+}
+
+.grid-2, .grid-3, .grid-4 { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 740px) {
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Logo stage */
+.logo-stage {
+  border-radius: var(--r-lg); padding: 56px 36px; min-height: 220px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; border: 1px solid var(--line-soft);
+}
+.logo-stage .tag {
+  position: absolute; inset-block-start: 14px; inset-inline-start: 16px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--olive);
+}
+.logo-stage.bone { background: var(--bone); }
+.logo-stage.cream { background: var(--cream); }
+.logo-stage.sage { background: var(--sage); }
+.logo-stage.honey { background: var(--honey); }
+.logo-stage.deep { background: var(--deep-sage); }
+.logo-stage.honey .tag, .logo-stage.deep .tag { color: rgba(250, 247, 243, 0.7); }
+
+.wordmark {
+  font-family: 'Fraunces', serif; font-weight: 360;
+  font-size: 56px; letter-spacing: -0.025em; line-height: 1;
+  font-variation-settings: "SOFT" 100, "opsz" 144;
+  color: var(--ink);
+}
+.wordmark .it { font-style: italic; color: var(--honey); font-weight: 360; }
+.honey .wordmark, .deep .wordmark { color: var(--bone); }
+.honey .wordmark .it, .deep .wordmark .it { color: var(--bone); }
+
+.clearspace {
+  position: relative; display: inline-block;
+  padding: 28px 32px;
+  outline: 1px dashed var(--olive);
+}
+.clearspace .x {
+  position: absolute; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: var(--olive);
+}
+
+/* Swatches */
+.swatches { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+@media (min-width: 720px) { .swatches { grid-template-columns: repeat(4, 1fr); } }
+.swatch {
+  border-radius: var(--r-md); overflow: hidden;
+  border: 1px solid var(--line-soft);
+  background: var(--surface);
+}
+.swatch .chip {
+  height: 124px; display: flex; align-items: flex-end; padding: 14px;
+  font-family: 'Fraunces', serif; font-style: italic; font-size: 22px;
+  letter-spacing: -0.015em;
+}
+.swatch .meta { padding: 14px; display: flex; flex-direction: column; gap: 3px; }
+.swatch .name { font-weight: 600; font-size: 14px; }
+.swatch .hex { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); }
+.swatch .role { font-size: 11.5px; color: var(--olive); margin-top: 2px; }
+
+.fam-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--cinnamon); margin: 28px 0 14px; font-weight: 500;
+}
+
+/* Ratio bar */
+.ratiobar {
+  height: 56px; border-radius: var(--r-pill); overflow: hidden;
+  display: flex; border: 1px solid var(--line-soft);
+}
+.ratiobar > div {
+  display: flex; align-items: center; padding: 0 18px;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  color: var(--ink); white-space: nowrap;
+}
+.ratiobar .seg-bone { background: var(--bone); flex: 60; }
+.ratiobar .seg-sage { background: var(--sage); flex: 18; }
+.ratiobar .seg-wood { background: var(--wood); flex: 12; color: var(--bone); }
+.ratiobar .seg-honey { background: var(--honey); color: var(--bone); flex: 7; }
+.ratiobar .seg-ink { background: var(--ink); color: var(--bone); flex: 3; }
+
+/* Specimens */
+.specimen-row {
+  display: grid; grid-template-columns: 130px 1fr; gap: 28px;
+  padding: 22px 0; border-block-start: 1px solid var(--line-soft);
+  align-items: baseline;
+}
+.specimen-row:last-child { border-block-end: 1px solid var(--line-soft); }
+.specimen-row .meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--olive); line-height: 1.6; }
+.specimen-row .sample { line-height: 1.05; letter-spacing: -0.02em; }
+
+.ar-block {
+  background: var(--surface); border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg); padding: 36px 32px; margin-top: 24px;
+}
+.ar { font-family: '29LT Bukra', 'Bukra', 'Noto Naskh Arabic', 'Geeza Pro', system-ui, sans-serif; }
+.ar.display { font-size: clamp(36px, 5vw, 64px); line-height: 1.4; font-weight: 500; letter-spacing: 0; }
+.ar.body { font-size: 19px; line-height: 1.95; color: var(--text); }
+.ar.small { font-size: 14px; color: var(--muted); }
+[dir="rtl"] { text-align: right; }
+
+/* Voice */
+.voice-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 880px) { .voice-grid { grid-template-columns: 1fr 1fr; } }
+.voice-card {
+  background: var(--surface); border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg); padding: 26px 28px;
+}
+.voice-card.pos { border-inline-start: 3px solid var(--sage); }
+.voice-card.neg { border-inline-start: 3px solid var(--honey); }
+.voice-card h4 {
+  margin: 0 0 14px; font-size: 12px; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--olive); font-weight: 600;
+}
+.voice-card ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.voice-card li { font-size: 15px; line-height: 1.5; }
+.voice-card.pos li::before { content: '✓'; color: var(--deep-sage); margin-inline-end: 10px; font-weight: 700; }
+.voice-card.neg li::before { content: '✕'; color: var(--cinnamon); margin-inline-end: 10px; font-weight: 700; }
+
+.example {
+  background: var(--surface); border: 1px solid var(--line-soft);
+  border-radius: var(--r-md); padding: 22px 24px;
+}
+.example .label {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--olive);
+  margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+}
+.example p { margin: 0; font-size: 17px; line-height: 1.5; }
+.example.ar p { font-family: '29LT Bukra', 'Noto Naskh Arabic', sans-serif; font-size: 19px; line-height: 1.85; }
+
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--line);
+  padding: 8px 14px; border-radius: var(--r-pill);
+  font-size: 13px; color: var(--text); font-weight: 500;
+}
+.pill .x { color: var(--cinnamon); font-weight: 700; }
+
+/* Photography */
+.photo {
+  position: relative; aspect-ratio: 4/5;
+  border-radius: var(--r-md); overflow: hidden;
+  background: var(--cream); border: 1px solid var(--line-soft);
+}
+.photo .verdict {
+  position: absolute; inset-block-start: 12px; inset-inline-start: 12px;
+  font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  padding: 5px 12px; border-radius: var(--r-pill);
+}
+.photo .verdict.yes { background: var(--sage); color: var(--deep-sage); }
+.photo .verdict.no  { background: var(--ink); color: var(--bone); }
+.photo .annot {
+  position: absolute; inset-block-end: 12px; inset-inline-start: 12px; inset-inline-end: 12px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+  background: rgba(30, 30, 25, .82); color: var(--bone);
+  padding: 8px 11px; border-radius: var(--r-sm);
+  letter-spacing: 0.02em; line-height: 1.45;
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Real-photo flatlay (warm, sampled palette) */
+.flat-warm {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 50% 40% at 32% 28%, rgba(255, 250, 235, 0.55), transparent 60%),
+    radial-gradient(circle 18% at 68% 38%, rgba(210, 138, 41, 0.30), transparent 70%),
+    radial-gradient(circle 22% at 30% 70%, rgba(183, 226, 185, 0.45), transparent 70%),
+    radial-gradient(circle 14% at 75% 78%, rgba(240, 207, 203, 0.55), transparent 70%),
+    linear-gradient(135deg, #F5E9D5 0%, #E8D7B8 60%, #C9B891 100%);
+}
+.flat-warm .props { position: absolute; inset: 0; }
+.flat-warm .pp { position: absolute; border-radius: 50%; filter: drop-shadow(0 6px 12px rgba(74, 79, 50, .15)); }
+.flat-warm .pr { position: absolute; border-radius: 8px; filter: drop-shadow(0 6px 12px rgba(74, 79, 50, .15)); }
+.flat-warm .pa { position: absolute; border-radius: 50% 50% 6px 6px; filter: drop-shadow(0 6px 12px rgba(74, 79, 50, .15)); }
+
+/* Cool / wrong placeholders */
+.flat-wrong-cool {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #6B7AB3 0%, #2A3A5C 100%);
+}
+.flat-wrong-rainbow {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, #FF4757 0%, #FFA502 25%, #2ED573 50%, #1E90FF 75%, #5352ED 100%);
+}
+.flat-wrong-action {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 50% 60%, rgba(255,255,255,.5), transparent 30%),
+    linear-gradient(160deg, #4A4F32 0%, #1E1E19 80%);
+}
+.flat-wrong-action::after {
+  content: 'BLUR'; position: absolute; left: 30%; top: 50%; transform: translateY(-50%);
+  color: rgba(255, 255, 255, .25); font-family: 'JetBrains Mono', monospace; font-size: 14px;
+  letter-spacing: 0.5em;
+}
+
+.do-pair {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+}
+.do-pair .label-row {
+  grid-column: 1 / -1; display: flex; justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: var(--olive); text-transform: uppercase; letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+/* Trust */
+.badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-pill); padding: 9px 16px 9px 12px;
+  font-size: 13px; font-weight: 600; color: var(--text);
+}
+.badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); flex: 0 0 8px; }
+.badge .dot.honey { background: var(--honey); }
+.badge .dot.wood { background: var(--wood); }
+
+.seal {
+  width: 142px; height: 142px; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 14px;
+  font-family: 'Fraunces', serif; font-style: italic; font-size: 14px;
+  line-height: 1.2; position: relative;
+  font-variation-settings: "SOFT" 100, "opsz" 144;
+}
+.seal .tiny {
+  font-family: 'Manrope', sans-serif; font-style: normal; font-size: 9.5px;
+  text-transform: uppercase; letter-spacing: 0.16em; margin-block-start: 6px; font-weight: 600;
+}
+.seal.bone { background: var(--bone); border: 1px solid var(--olive); color: var(--ink); }
+.seal.bone .tiny { color: var(--olive); }
+.seal.honey { background: var(--honey); color: var(--bone); }
+.seal.honey .tiny { color: rgba(250, 247, 243, .85); }
+.seal.sage { background: var(--sage); color: var(--deep-sage); }
+.seal.sage .tiny { color: var(--deep-sage); opacity: .75; }
+
+/* Testimonial */
+.testi {
+  background: var(--surface); border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg); padding: 28px 30px;
+  display: flex; flex-direction: column; gap: 18px; position: relative;
+}
+.testi .qmark {
+  font-family: 'Fraunces', serif; font-style: italic; font-size: 60px;
+  line-height: 0.6; color: var(--honey); margin: 4px 0 -8px;
+}
+.testi blockquote {
+  margin: 0; font-family: 'Fraunces', serif; font-weight: 360;
+  font-size: 21px; line-height: 1.4; letter-spacing: -0.005em;
+  font-variation-settings: "SOFT" 100, "opsz" 144;
+}
+.testi .who { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); }
+.testi .who .ava {
+  width: 38px; height: 38px; border-radius: 50%; flex: 0 0 38px;
+  background: linear-gradient(135deg, var(--pink), var(--butter));
+}
+.testi .who strong { color: var(--ink); font-weight: 600; }
+
+/* Package */
+.pkg {
+  border: 1px solid var(--line); border-radius: var(--r-lg);
+  background: var(--surface); padding: 32px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.pkg .name { font-family: 'Fraunces', serif; font-weight: 380; font-size: 28px; letter-spacing: -0.015em; font-variation-settings: "SOFT" 100, "opsz" 144; }
+.pkg .name .it { font-style: italic; color: var(--honey); }
+.pkg .from { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--olive); text-transform: uppercase; letter-spacing: 0.08em; }
+.pkg .price { font-family: 'Fraunces', serif; font-style: italic; font-size: 30px; font-weight: 380; color: var(--ink); margin-top: -4px; }
+.pkg .price .qar { font-family: 'Manrope', sans-serif; font-style: normal; font-size: 13px; font-weight: 600; color: var(--olive); margin-inline-end: 6px; letter-spacing: 0.06em; text-transform: uppercase; vertical-align: 6px; }
+.pkg ul { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 9px; font-size: 14.5px; }
+.pkg ul li { display: flex; gap: 10px; }
+.pkg ul li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--sage); margin-top: 9px; flex: 0 0 6px; }
+.pkg.feat { background: var(--deep-sage); color: var(--bone); border-color: var(--deep-sage); }
+.pkg.feat .price { color: var(--bone); }
+.pkg.feat .from { color: rgba(250, 247, 243, .65); }
+.pkg.feat .name .it { color: var(--terracotta); }
+.pkg.feat ul li { color: rgba(250, 247, 243, .88); }
+.pkg.feat ul li::before { background: var(--honey); }
+.pkg.feat .name { color: var(--bone); }
+
+/* Comparison */
+.compare {
+  display: grid; grid-template-columns: 1fr; gap: 0;
+  border-radius: var(--r-lg); overflow: hidden;
+  border: 1px solid var(--line-soft);
+  background: var(--surface);
+}
+@media (min-width: 800px) { .compare { grid-template-columns: 1.1fr auto 1fr; } }
+.compare .col { padding: 32px 28px; }
+.compare .col.home { background: var(--surface); }
+.compare .col.venue { background: var(--surface-2); color: var(--muted); }
+.compare .col h4 {
+  font-family: 'Fraunces', serif; font-weight: 380; font-style: italic;
+  font-size: 24px; letter-spacing: -0.015em; margin: 0 0 14px;
+  font-variation-settings: "SOFT" 100, "opsz" 144;
+}
+.compare .col.home h4 { color: var(--cinnamon); }
+.compare .col ul { padding: 0; margin: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.compare .col li { display: flex; gap: 10px; font-size: 15px; line-height: 1.45; }
+.compare .col li::before { font-weight: 700; flex: 0 0 14px; }
+.compare .col.home li::before { content: '✓'; color: var(--deep-sage); }
+.compare .col.venue li::before { content: '·'; color: var(--olive); font-size: 22px; line-height: .8; }
+.compare .vs {
+  display: flex; align-items: center; justify-content: center;
+  padding: 12px;
+  border-block-start: 1px solid var(--line-soft);
+  border-block-end: 1px solid var(--line-soft);
+  font-family: 'Fraunces', serif; font-style: italic; font-size: 22px; color: var(--olive);
+  font-variation-settings: "SOFT" 100, "opsz" 144;
+}
+@media (min-width: 800px) {
+  .compare .vs { border: none; border-inline-start: 1px solid var(--line-soft); border-inline-end: 1px solid var(--line-soft); padding: 0 18px; }
+}
+
+/* Theme tile */
+.theme-tile {
+  border-radius: var(--r-lg); overflow: hidden;
+  border: 1px solid var(--line-soft);
+  display: flex; flex-direction: column;
+  background: var(--surface);
+}
+.theme-tile .moodboard {
+  display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr;
+  gap: 4px; height: 280px; padding: 4px;
+  background: var(--surface-2);
+}
+.theme-tile .tile { border-radius: 8px; position: relative; overflow: hidden; }
+.theme-tile .tile.lg { grid-row: 1 / span 2; }
+.theme-tile .body { padding: 24px 26px 28px; }
+.theme-tile h3 { margin: 0 0 4px; font-size: 24px; font-family: 'Fraunces', serif; font-weight: 380; font-variation-settings: "SOFT" 100, "opsz" 144; letter-spacing: -0.015em; }
+.theme-tile h3 .it { font-style: italic; color: var(--honey); }
+.theme-tile .palette-row { display: flex; gap: 6px; margin: 14px 0; }
+.theme-tile .palette-row span { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line-soft); }
+.theme-tile dl { margin: 0; font-size: 13px; color: var(--text); display: grid; grid-template-columns: 90px 1fr; gap: 8px 14px; }
+.theme-tile dt { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; padding-top: 2px; color: var(--olive); }
+.theme-tile dd { margin: 0; line-height: 1.5; }
+
+/* Compounds */
+.compounds { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 24px; margin-top: 8px; padding: 0; }
+@media (min-width: 720px) { .compounds { grid-template-columns: repeat(3, 1fr); } }
+.compounds li {
+  list-style: none; font-size: 14px; padding: 10px 0;
+  border-block-end: 1px solid var(--line-soft);
+  display: flex; justify-content: space-between; gap: 12px;
+}
+.compounds li .area { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--olive); }
+
+/* Motion demo */
+.motion-demo {
+  position: relative; height: 360px; border-radius: var(--r-lg);
+  overflow: hidden; background: var(--deep-sage);
+  border: 1px solid var(--line-soft);
+  display: flex; align-items: center; justify-content: center;
+}
+.motion-demo .layer-bg, .motion-demo .layer-fg { position: absolute; inset: 0; will-change: transform; }
+.motion-demo .layer-bg {
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(244, 228, 176, .35), transparent 60%),
+    radial-gradient(ellipse at 70% 75%, rgba(210, 138, 41, .35), transparent 60%);
+}
+.motion-demo .layer-fg {
+  background: radial-gradient(circle at 50% 55%, rgba(250, 247, 243, .85), rgba(250, 247, 243, 0) 28%);
+  mix-blend-mode: screen;
+}
+.motion-demo .copy {
+  position: relative; z-index: 2; text-align: center;
+  color: var(--bone);
+  font-family: 'Fraunces', serif; font-style: italic;
+  font-size: clamp(30px, 4.4vw, 54px); letter-spacing: -0.015em; line-height: 1.1;
+  font-variation-settings: "SOFT" 100, "opsz" 144;
+}
+.motion-demo .copy .h { color: var(--terracotta); }
+.motion-demo .meta {
+  position: absolute; inset-block-end: 16px; inset-inline-start: 16px;
+  color: rgba(250, 247, 243, .7); font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+/* Don't list */
+.dont-list { display: grid; gap: 0; border-block-start: 1px solid var(--line-soft); }
+.dont-list .row {
+  display: grid; grid-template-columns: 28px 1fr; gap: 14px;
+  padding: 18px 0; border-block-end: 1px solid var(--line-soft);
+  align-items: baseline;
+}
+.dont-list .x { color: var(--cinnamon); font-weight: 700; font-size: 16px; }
+.dont-list .row p { margin: 0; font-size: 16px; }
+.dont-list .row .why { display: block; color: var(--olive); font-size: 13px; margin-top: 4px; }
+
+/* Footer */
+footer.foot {
+  padding: 80px var(--gutter) 60px;
+  background: var(--deep-sage); color: var(--bone);
+}
+footer.foot .row { display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap; align-items: end; }
+footer.foot .mark { font-family: 'Fraunces', serif; font-size: 56px; line-height: 1; letter-spacing: -0.025em; font-weight: 380; font-variation-settings: "SOFT" 100, "opsz" 144; }
+footer.foot .mark .it { font-style: italic; color: var(--terracotta); }
+footer.foot .meta { color: rgba(250, 247, 243, .65); font-size: 13px; line-height: 1.6; max-width: 38ch; }
+footer.foot .meta strong { color: var(--bone); font-weight: 600; }
+
+/* Utilities */
+.row-flex { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.divider { height: 1px; background: var(--line-soft); margin: 56px 0; }
+.note {
+  font-family: 'JetBrains Mono', monospace; font-size: 11.5px;
+  color: var(--olive); line-height: 1.7;
+  background: rgba(183, 226, 185, .18);
+  border-inline-start: 2px solid var(--sage);
+  padding: 12px 16px; border-radius: 0 var(--r-sm) var(--r-sm) 0;
+}
+.kbd {
+  display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10.5px;
+  background: var(--bone); border: 1px solid var(--line); border-radius: 4px;
+  padding: 1px 6px; color: var(--ink);
+}
+
+/* Tables */
+table.contrast { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+table.contrast thead th {
+  text-align: start; padding: 12px 0; border-block-end: 1px solid var(--line);
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; color: var(--olive);
+}
+table.contrast thead th:nth-child(2), table.contrast thead th:nth-child(3) { text-align: end; }
+table.contrast tbody td {
+  padding: 14px 0; border-block-end: 1px solid var(--line-soft);
+}
+table.contrast tbody td:nth-child(2), table.contrast tbody td:nth-child(3) { text-align: end; }
+table.contrast tbody tr:last-child td { border-block-end: none; }
+
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ════════ RAIL ════════ -->
+  <aside class="rail">
+    <div>
+      <div class="mark">Kiddo<span class="it">Klub</span></div>
+      <div class="meta" style="margin-top:8px;">Brand Guidelines · v2<br>Doha, Qatar<br>Operated by Nadine</div>
+    </div>
+    <nav id="rail-nav">
+      <a href="#essence"><span class="num">01</span> Essence</a>
+      <a href="#logo"><span class="num">02</span> Logo</a>
+      <a href="#color"><span class="num">03</span> Color</a>
+      <a href="#type"><span class="num">04</span> Type</a>
+      <a href="#voice"><span class="num">05</span> Voice</a>
+      <a href="#photo"><span class="num">06</span> Photo</a>
+      <a href="#motion"><span class="num">07</span> Motion</a>
+      <a href="#ui"><span class="num">08</span> UI</a>
+      <a href="#themes"><span class="num">09</span> Themes</a>
+      <a href="#trust"><span class="num">10</span> Trust</a>
+      <a href="#bilingual"><span class="num">11</span> Bilingual</a>
+      <a href="#dont"><span class="num">12</span> Don't</a>
+    </nav>
+    <div class="meta" style="margin-top:auto; font-size: 10.5px;">
+      v2.0 · April 2026<br>
+      Informal under Nadine; no CR, no LLC.
+    </div>
+  </aside>
+
+  <!-- ════════ MAIN ════════ -->
+  <main>
+
+    <!-- ════════ HERO ════════ -->
+    <section class="hero" aria-label="Cover">
+      <div class="grid">
+        <div class="reveal in">
+          <div class="eyebrow">Brand Guidelines · v2 · 2026</div>
+          <h1 class="kicker">Parties your child will <span class="it">remember</span>.<br>Setups your guests will <span class="it">photograph</span>.</h1>
+          <p class="sub">A premium soft-play rental built mom to mom in Doha; warm bone, sage, wood, and honey, for the first five birthdays at home.</p>
+          <div class="stamps">
+            <span class="badge"><span class="dot"></span> Doha · QA</span>
+            <span class="badge"><span class="dot honey"></span> Ages 1 to 5</span>
+            <span class="badge"><span class="dot wood"></span> EN · AR</span>
+            <span class="badge"><span class="dot"></span> QAR 1M cover</span>
+          </div>
+        </div>
+        <div class="hero-flat reveal in" id="hero-flat" aria-hidden="true" style="transform: translateY(0px) scale(1);">
+          <div class="props">
+            <div class="p" style="left:14%; top:18%; width:36%; height:36%; background: radial-gradient(circle at 40% 35%, #FCFAF5 0%, #DDDCD9 70%, #C9B891 100%); border-radius: 50%;"></div>
+            <div class="p" style="left:54%; top:24%; width:14%; height:14%; background: #B7E2B9; border-radius: 50%;"></div>
+            <div class="p" style="left:72%; top:18%; width:12%; height:12%; background: #F0CFCB; border-radius: 50%;"></div>
+            <div class="p" style="left:62%; top:46%; width:24%; height:32%; background: linear-gradient(180deg, #D28A29, #AF8F55); border-radius: 50% 50% 12px 12px;"></div>
+            <div class="p" style="left:14%; top:60%; width:46%; height:24%; background: linear-gradient(135deg, #FAF7F3, #DDDCD9); border-radius: 12px;"></div>
+            <div class="p" style="left:18%; top:66%; width:8%; height:8%; background: #F4E4B0; border-radius: 50%;"></div>
+            <div class="p" style="left:36%; top:74%; width:8%; height:8%; background: #D9A965; border-radius: 50%;"></div>
+            <div class="p" style="left:78%; top:80%; width:10%; height:6%; background: #4A4F32; border-radius: 4px;"></div>
+          </div>
+          <div class="label">Hero · overhead flatlay · before guests · sunlight 10 o'clock</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════ 01 ESSENCE ════════ -->
+    <section class="s" id="essence">
+      <div class="section-head reveal">
+        <span class="num">01</span>
+        <h2>Brand <span class="it">essence</span>.</h2>
+        <p class="lede">A soft-play rental for the first five birthdays; built by Nadine personally, for mothers in Doha villas and Pearl, Lusail, West Bay, and Al Dafna compounds.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card reveal">
+          <span class="eyebrow">Promise</span>
+          <h3>Setups your guests will photograph.</h3>
+          <p style="margin-top:12px; color:var(--muted); font-size:15px;">The hero is the room you walk into; the reveal is the flatlay before any child arrives.</p>
+        </div>
+        <div class="card reveal">
+          <span class="eyebrow">Voice</span>
+          <h3>Mom to mom; warm, exact, never cartoon.</h3>
+          <p style="margin-top:12px; color:var(--muted); font-size:15px;">We write the way Nadine speaks on WhatsApp; bottom line first, no fluff, no marketing verbs.</p>
+        </div>
+        <div class="card reveal">
+          <span class="eyebrow">Standard</span>
+          <h3>Sanitised after every event; QAR 1M cover.</h3>
+          <p style="margin-top:12px; color:var(--muted); font-size:15px;">Trust comes before aesthetics; we surface the seal and the cover number on every quote.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="grid-2 reveal">
+        <div>
+          <span class="eyebrow">In one line</span>
+          <h2 class="serif" style="font-size: clamp(28px, 3.6vw, 44px); font-family:'Fraunces', serif; font-weight: 360; line-height: 1.15; letter-spacing: -0.02em; max-width: 22ch;">
+            Same premium soft-play. <em class="serif-it" style="color: var(--honey)">Your home.</em> Your photos. <em class="serif-it" style="color: var(--honey)">No drive.</em>
+          </h2>
+          <p style="margin-top:18px; color:var(--muted); font-size:15px; max-width:46ch;">The legacy site says it; we keep it. Setup before guests arrive, sanitised, collected the same evening; the photos stay in the family chat.</p>
+        </div>
+        <div class="card" style="background: var(--deep-sage); color: var(--bone); border-color: var(--deep-sage);">
+          <span class="eyebrow" style="color: var(--terracotta)">Operating frame</span>
+          <p style="margin: 4px 0 16px; font-family: 'Fraunces', serif; font-style: italic; font-size: 24px; line-height: 1.35; color: var(--bone); font-weight: 360; font-variation-settings: 'SOFT' 100, 'opsz' 144;">
+            KiddoKlub is operated by Nadine personally; not as a CR-registered company, not as an LLC, not under a MOCI listing.
+          </p>
+          <p style="margin: 0; color: rgba(250, 247, 243, .7); font-size: 13.5px; line-height: 1.6;">
+            Bookings, quotes, payments, and follow-up sit in one WhatsApp thread with Nadine; that informality is the brand, not a gap to hide.
+          </p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">Why home beats a venue</span>
+        <h3 style="font-size: 22px; max-width: 52ch;">The legacy comparison; salvaged, kept verbatim.</h3>
+        <div class="compare" style="margin-top: 24px;">
+          <div class="col home">
+            <h4>Your home</h4>
+            <ul>
+              <li>Setup completed before the first guest arrives</li>
+              <li>Same premium soft-play; sanitised, collected the same evening</li>
+              <li>Your living room; your photos; the lighting you already love</li>
+              <li>No drive across town with a tired toddler</li>
+              <li>Naps and nap schedules respected; the room resets when you're done</li>
+            </ul>
+          </div>
+          <div class="vs"><em>vs.</em></div>
+          <div class="col venue">
+            <h4>A venue</h4>
+            <ul>
+              <li>A queue at reception; a different family in the same room before yours</li>
+              <li>Strip lights; vinyl floors; the photos look like everyone else's</li>
+              <li>Drive there, drive back; one parent on host duty all day</li>
+              <li>Time slot ends the moment your toddler finally settles in</li>
+              <li>Cake table where the venue puts it, not where you would</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════ 02 LOGO ════════ -->
+    <section class="s tinted" id="logo">
+      <div class="section-head reveal">
+        <span class="num">02</span>
+        <h2>Logo <span class="it">system</span>.</h2>
+        <p class="lede">A typographic wordmark; Fraunces, lowercase, italic on the second syllable. The italic carries the warmth that the rest of the system rests on.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="logo-stage bone reveal"><span class="tag">Primary · on bone</span><div class="wordmark">Kiddo<span class="it">Klub</span></div></div>
+        <div class="logo-stage cream reveal"><span class="tag">Default surface · on cream</span><div class="wordmark">Kiddo<span class="it">Klub</span></div></div>
+        <div class="logo-stage sage reveal"><span class="tag">Calm · on sage</span><div class="wordmark" style="color: var(--deep-sage);">Kiddo<span class="it" style="color: var(--cinnamon);">Klub</span></div></div>
+        <div class="logo-stage honey reveal"><span class="tag">Accent · on honey</span><div class="wordmark">Kiddo<span class="it">Klub</span></div></div>
+        <div class="logo-stage deep reveal" style="grid-column: span 1;"><span class="tag">Reverse · on deep sage</span><div class="wordmark">Kiddo<span class="it" style="color: var(--terracotta);">Klub</span></div></div>
+        <div class="logo-stage bone reveal"><span class="tag">Mono · single tone</span><div class="wordmark" style="color: var(--ink);">Kiddo<span style="font-style:italic; font-family:'Fraunces',serif;">Klub</span></div></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="grid-3 reveal">
+        <div class="card">
+          <span class="eyebrow">Construction</span>
+          <h3>Fraunces, opsz 144, weight 360.</h3>
+          <p style="font-size:14px; color:var(--muted); margin-top:10px;">SOFT axis at 100; tracking <span class="mono">-25</span>; italic only on "Klub", set in honey or terracotta. Never both syllables in italic.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Clear space</span>
+          <div style="margin: 10px 0 6px;">
+            <div class="clearspace">
+              <div class="wordmark" style="font-size: 28px;">Kiddo<span class="it">Klub</span></div>
+              <span class="x" style="left: 50%; top: 8px; transform: translateX(-50%);">x</span>
+              <span class="x" style="left: 50%; bottom: 8px; transform: translateX(-50%);">x</span>
+              <span class="x" style="top: 50%; left: 8px; transform: translateY(-50%);">x</span>
+              <span class="x" style="top: 50%; right: 8px; transform: translateY(-50%);">x</span>
+            </div>
+          </div>
+          <p style="font-size:13px; color:var(--muted); margin-top:14px;">Clear space equals the cap-height of the K on every side; never breached, including by photo edges.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Minimum size</span>
+          <div style="display:flex; flex-direction:column; gap:14px; align-items:flex-start; margin-top: 6px;">
+            <div class="wordmark" style="font-size: 24px;">Kiddo<span class="it">Klub</span></div>
+            <div class="mono" style="color:var(--olive)">24px digital · 14mm print</div>
+            <div class="wordmark" style="font-size: 14px;">Kiddo<span class="it">Klub</span></div>
+            <div class="mono" style="color:var(--olive)">14px floor; below this, drop the italic, set in one tone</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">On photography</span>
+        <h3>Placement on a flatlay.</h3>
+        <p style="color:var(--muted); font-size:15px; max-width:60ch;">On image, set the wordmark in bone at 4 percent of the longest edge; bottom-left, on a calm corner of the rug. Never centre frame; never on a busy zone of the props.</p>
+      </div>
+    </section>
+
+
+    <!-- ════════ 03 COLOR ════════ -->
+    <section class="s" id="color">
+      <div class="section-head reveal">
+        <span class="num">03</span>
+        <h2>Color <span class="it">system</span>.</h2>
+        <p class="lede">Sampled HEX values from real KiddoKlub setup photographs; bone holds the room, sage and wood share the accent layer, honey is the call-to-action. No pure white, no pure black, no editorial gray.</p>
+      </div>
+
+      <div class="reveal">
+        <div class="fam-label">Bone family · the dominant surface · 60 to 70 percent of every layout</div>
+        <div class="swatches">
+          <div class="swatch"><div class="chip" style="background: #FAF7F3; color: var(--ink);">Bone</div><div class="meta"><span class="name">Bone</span><span class="hex">#FAF7F3</span><span class="role">Page background, paper, the room</span></div></div>
+          <div class="swatch"><div class="chip" style="background: #DDDCD9; color: var(--ink);">Cream</div><div class="meta"><span class="name">Cream</span><span class="hex">#DDDCD9</span><span class="role">Cards, secondary surface</span></div></div>
+          <div class="swatch"><div class="chip" style="background: #D6D9DD; color: var(--ink);">Sand</div><div class="meta"><span class="name">Sand</span><span class="hex">#D6D9DD</span><span class="role">Tertiary surface, soft tile</span></div></div>
+          <div class="swatch"><div class="chip" style="background: #CFD5D2; color: var(--ink);">Mist</div><div class="meta"><span class="name">Mist</span><span class="hex">#CFD5D2</span><span class="role">Cool corner, prop neutral</span></div></div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="fam-label">Sage family · the calm trust accent · runs on the legacy site already</div>
+        <div class="swatches" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="swatch"><div class="chip" style="background: #B7E2B9; color: var(--deep-sage);">Sage</div><div class="meta"><span class="name">Sage</span><span class="hex">#B7E2B9</span><span class="role">Trust dot, soft accent, sage cushion</span></div></div>
+          <div class="swatch"><div class="chip" style="background: #968E70; color: var(--bone);">Olive</div><div class="meta"><span class="name">Olive</span><span class="hex">#968E70</span><span class="role">Captions, metadata, navigation</span></div></div>
+          <div class="swatch"><div class="chip" style="background: #4A4F32; color: var(--bone);">Deep sage</div><div class="meta"><span class="name">Deep sage</span><span class="hex">#4A4F32</span><span class="role">Featured surface, footer, headline plane</span></div></div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="fam-label">Wood, honey, terracotta · the warm accent · pulled from real wood arches and balloon tones</div>
+        <div class="swatches">
+          <div class="swatch"><div class="chip" style="background: #D28A29; color: var(--bone);">Honey</div><div class="meta"><span class="name">Honey</span><span class="hex">#D28A29</span><span class="role">Call to action, primary accent</span></div></div>
+          <div class="swatch"><div class="chip" style="background: #AF8F55; color: var(--bone);">Wood</div><div class="meta"><span class="name">Wood</span><span class="hex">#AF8F55</span><span class="role">Wood props, frames, arches</span></div></div>
+          <div class="swatch"><div class="chip" style="background: #D9A965; color: var(--ink);">Soft terracotta</div><div class="meta"><span class="name">Soft terracotta</span><span class="hex">#D9A965</span><span class="role">Italic on dark, balloon highlight</span></div></div>
+          <div class="swatch"><div class="chip" style="background: #9A6126; color: var(--bone);">Cinnamon</div><div class="meta"><span class="name">Cinnamon</span><span class="hex">#9A6126</span><span class="role">Eyebrow, link, italic on light</span></div></div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="fam-label">Stone &amp; ink · typography only · never as a surface</div>
+        <div class="swatches" style="grid-template-columns: repeat(2, 1fr); max-width: 540px;">
+          <div class="swatch"><div class="chip" style="background: #6A6051; color: var(--bone);">Stone</div><div class="meta"><span class="name">Stone</span><span class="hex">#6A6051</span><span class="role">Body type secondary, button outline</span></div></div>
+          <div class="swatch"><div class="chip" style="background: #1E1E19; color: var(--bone);">Ink</div><div class="meta"><span class="name">Ink</span><span class="hex">#1E1E19</span><span class="role">Headlines, body text on bone</span></div></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="grid-2 reveal">
+        <div>
+          <span class="eyebrow">Default ratio</span>
+          <h3>60 / 18 / 12 / 7 / 3.</h3>
+          <p style="color: var(--muted); font-size: 15px; max-width: 48ch;">Bone leads the room; sage softens; wood warms; honey signals a click; ink does the reading.</p>
+          <div class="ratiobar" style="margin-top: 22px;">
+            <div class="seg-bone">Bone · 60%</div>
+            <div class="seg-sage">Sage · 18%</div>
+            <div class="seg-wood">Wood · 12%</div>
+            <div class="seg-honey">Honey · 7%</div>
+            <div class="seg-ink">Ink · 3%</div>
+          </div>
+          <p class="note" style="margin-top: 18px;">Color Pop replaces 8 percent of bone with pink and butter; Neutral Nest leaves bone untouched; White Wonderland increases bone to 75 percent and removes wood entirely.</p>
+        </div>
+
+        <div>
+          <span class="eyebrow">Contrast (WCAG)</span>
+          <h3>Tested key pairs.</h3>
+          <table class="contrast" style="margin-top: 12px;">
+            <thead>
+              <tr><th>Foreground · background</th><th>Ratio</th><th>Verdict</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="mono">Ink</span> on <span class="mono">Bone</span></td><td class="mono">15.2 : 1</td><td><span class="badge"><span class="dot"></span>AAA</span></td></tr>
+              <tr><td><span class="mono">Stone</span> on <span class="mono">Bone</span></td><td class="mono">5.6 : 1</td><td><span class="badge"><span class="dot"></span>AA</span></td></tr>
+              <tr><td><span class="mono">Cinnamon</span> on <span class="mono">Bone</span></td><td class="mono">5.4 : 1</td><td><span class="badge"><span class="dot"></span>AA</span></td></tr>
+              <tr><td><span class="mono">Bone</span> on <span class="mono">Honey</span></td><td class="mono">3.4 : 1</td><td><span class="badge"><span class="dot honey"></span>AA Large</span></td></tr>
+              <tr><td><span class="mono">Bone</span> on <span class="mono">Deep sage</span></td><td class="mono">10.8 : 1</td><td><span class="badge"><span class="dot"></span>AAA</span></td></tr>
+              <tr><td><span class="mono">Deep sage</span> on <span class="mono">Sage</span></td><td class="mono">7.1 : 1</td><td><span class="badge"><span class="dot"></span>AAA</span></td></tr>
+            </tbody>
+          </table>
+          <p class="note" style="margin-top: 18px;">Honey only carries Bone text at 24px and up; for body and small print, set Ink or Stone on Bone.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════ 04 TYPE ════════ -->
+    <section class="s tinted" id="type">
+      <div class="section-head reveal">
+        <span class="num">04</span>
+        <h2>Type <span class="it">system</span>.</h2>
+        <p class="lede">Manrope is the conversation; Fraunces is the warmth, used for hero italics and section openers only; 29LT Bukra is how we speak Arabic, never Tajawal.</p>
+      </div>
+
+      <div class="grid-2 reveal">
+        <div class="card">
+          <span class="eyebrow">Body &amp; UI · Manrope</span>
+          <div style="font-family: 'Manrope', sans-serif; font-size: 96px; line-height: 0.95; letter-spacing: -0.04em; font-weight: 500;">
+            Aa <span style="font-weight:700">Aa</span>
+          </div>
+          <div class="mono" style="color: var(--olive); margin-top: 18px;">Manrope · 300 to 700 · default body 17px / 1.55</div>
+          <p style="font-size:14px; color: var(--muted); margin-top:12px;">Manrope sets the navigation, body, prices, captions, form labels. The rounded terminals carry the warmth the brand needs without going full editorial.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Display &amp; accent · Fraunces</span>
+          <div style="font-family: 'Fraunces', serif; font-size: 96px; line-height: 0.95; letter-spacing: -0.035em; font-variation-settings: 'SOFT' 100, 'opsz' 144;">
+            Aa <em style="color: var(--honey)">Aa</em>
+          </div>
+          <div class="mono" style="color: var(--olive); margin-top: 18px;">Fraunces · variable · opsz 144 · weight 320 to 500 · SOFT 100</div>
+          <p style="font-size:14px; color: var(--muted); margin-top:12px;">Fraunces is for hero accent words, package names, pull quotes, testimonial blockquotes; never for body, never for buttons, never on dense screens.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">Type scale</span>
+        <h3>From caption to cover.</h3>
+        <div style="margin-top: 14px;">
+          <div class="specimen-row"><div class="meta">Display<br>Fraunces / 320<br>108px / -2.5%</div><div class="sample" style="font-family: 'Fraunces', serif; font-size: clamp(48px, 7vw, 96px); font-variation-settings: 'SOFT' 100, 'opsz' 144;">Parties they <em style="color: var(--honey); font-style: italic;">remember</em>.</div></div>
+          <div class="specimen-row"><div class="meta">H1<br>Manrope / 500<br>72px / -2.5%</div><div class="sample" style="font-family: 'Manrope'; font-size: clamp(36px, 5vw, 64px); font-weight: 500; letter-spacing: -0.025em;">A first birthday at home, set quietly.</div></div>
+          <div class="specimen-row"><div class="meta">H2<br>Manrope / 500<br>46px / -2%</div><div class="sample" style="font-family: 'Manrope'; font-size: 40px; font-weight: 500; letter-spacing: -0.02em;">The flatlay is the hero.</div></div>
+          <div class="specimen-row"><div class="meta">H3<br>Manrope / 600<br>21px</div><div class="sample" style="font-family: 'Manrope'; font-size: 21px; font-weight: 600;">What's in the Klub Signature.</div></div>
+          <div class="specimen-row"><div class="meta">Lede<br>Manrope / 400<br>19px</div><div class="sample" style="font-family: 'Manrope'; font-size: 19px; color: var(--muted)">Built mom to mom on Fridays in Doha; setup before guests arrive.</div></div>
+          <div class="specimen-row"><div class="meta">Body<br>Manrope / 400<br>17px</div><div class="sample" style="font-family: 'Manrope'; font-size: 17px;">Each setup is sanitised after every event; cover is QAR 1M public liability.</div></div>
+          <div class="specimen-row"><div class="meta">Small<br>Manrope / 400<br>14px</div><div class="sample" style="font-family: 'Manrope'; font-size: 14px; color: var(--muted)">Operated by Nadine personally; no CR, no LLC, no MOCI listing.</div></div>
+          <div class="specimen-row"><div class="meta">Eyebrow<br>Manrope / 600<br>11px / +18%</div><div class="sample" style="font-family: 'Manrope'; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--cinnamon); font-weight: 600;">Klub Signature · starting from QAR 3,800</div></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">Arabic specimen · 29LT Bukra</span>
+        <h3 style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 380; font-size: 30px; color: var(--cinnamon);">العربية، بصوت ندين.</h3>
+        <p style="color: var(--muted); font-size: 15px; max-width: 64ch;">Arabic is composed natively; same warmth, written first in Arabic. We never set Arabic in Tajawal; 29LT Bukra exclusively, with Noto Naskh Arabic as a graceful fallback until the licensed file ships.</p>
+
+        <div class="ar-block" dir="rtl" lang="ar">
+          <div class="ar display">حفلة يتذكرها طفلك، <span style="color: var(--honey)">وزاوية يلتقطها كل ضيف</span>.</div>
+          <p class="ar body" style="margin-top: 18px;">نحضّر كل زاوية بهدوء؛ سجادة بلون الكتّان، كرات بألوان دافئة، خشب طبيعي، ولمسة عسل. الصورة الأولى دائماً قبل وصول الأطفال.</p>
+          <p class="ar small" style="margin-top: 14px;">ندين · الدوحة · تأمين مسؤولية بقيمة مليون ريال قطري</p>
+        </div>
+
+        <p class="note" style="margin-top: 22px;">RTL is set on <span class="kbd">&lt;html dir="rtl" lang="ar"&gt;</span> at the page root; layout uses logical CSS properties (<span class="kbd">margin-inline-start</span>, <span class="kbd">padding-block-end</span>, <span class="kbd">border-inline-end</span>); never <span class="kbd">.rtl</span> class toggles, never per-component direction flips.</p>
+      </div>
+    </section>
+
+
+    <!-- ════════ 05 VOICE ════════ -->
+    <section class="s" id="voice">
+      <div class="section-head reveal">
+        <span class="num">05</span>
+        <h2>Voice &amp; <span class="it">tone</span>.</h2>
+        <p class="lede">Mom to mom; warm, exact, never cartoon. We write the way Nadine talks on WhatsApp; bottom line first, no marketing verbs, semicolons before dashes.</p>
+      </div>
+
+      <div class="voice-grid reveal">
+        <div class="voice-card pos">
+          <h4>We sound like</h4>
+          <ul>
+            <li>Warm, not effusive; specific, not generic</li>
+            <li>Bottom line up front; the price, the date, the thing</li>
+            <li>Plain nouns: "soft play", "ball pit", "rug"; not "experience"</li>
+            <li>Semicolons for rhythm; commas for breath; periods for stop</li>
+            <li>One promise per sentence; no stacked adjectives</li>
+            <li>Confident about the standard; quiet about the brand</li>
+          </ul>
+        </div>
+        <div class="voice-card neg">
+          <h4>We never sound like</h4>
+          <ul>
+            <li>"Elevate", "transform", "unleash", "magical", "amazing"</li>
+            <li>"Memories that last a lifetime"; "where dreams come true"</li>
+            <li>Em or en dashes anywhere; semicolons or full stops only</li>
+            <li>Cartoon copy: "wow", "epic", emoji bursts, exclamation runs</li>
+            <li>Auto-translated Arabic; we write each language natively</li>
+            <li>Claims of being a registered company, LLC, CR, MOCI</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">Examples · English · verbatim from the brand</span>
+        <h3>Three sentences, on brand.</h3>
+        <div class="grid-3" style="margin-top: 18px;">
+          <div class="example"><div class="label">Hero</div><p>Parties your child will remember. Setups your guests will photograph.</p></div>
+          <div class="example"><div class="label">Comparison row</div><p>Same premium soft-play. Your home. Your photos. No drive.</p></div>
+          <div class="example"><div class="label">Trust line</div><p>Setup before guests arrived; sanitised; collected the same evening.</p></div>
+        </div>
+      </div>
+
+      <div style="height: 22px;"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">أمثلة · العربية</span>
+        <h3 style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 360; color: var(--cinnamon);">ثلاث جمل، بنبرتنا.</h3>
+        <div class="grid-3" style="margin-top: 18px;">
+          <div class="example ar" dir="rtl" lang="ar"><div class="label" style="text-align:right">عنوان رئيسي</div><p>حفلة يتذكرها طفلك، وزاوية يلتقطها كل ضيف.</p></div>
+          <div class="example ar" dir="rtl" lang="ar"><div class="label" style="text-align:right">سطر المقارنة</div><p>نفس زاوية اللعب الفاخرة في منزلك؛ من دون قيادة، من دون ازدحام.</p></div>
+          <div class="example ar" dir="rtl" lang="ar"><div class="label" style="text-align:right">سطر الثقة</div><p>كل تجهيز يُعقّم بعد الحفلة مباشرة؛ ولدينا تأمين مسؤولية بقيمة مليون ريال قطري على كل حجز.</p></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">Banned words · 13</span>
+        <h3>Cut on sight.</h3>
+        <div class="pills" style="margin-top: 14px;">
+          <span class="pill"><span class="x">✕</span>elevate</span>
+          <span class="pill"><span class="x">✕</span>transform</span>
+          <span class="pill"><span class="x">✕</span>unleash</span>
+          <span class="pill"><span class="x">✕</span>magical</span>
+          <span class="pill"><span class="x">✕</span>amazing</span>
+          <span class="pill"><span class="x">✕</span>unforgettable</span>
+          <span class="pill"><span class="x">✕</span>memories that last</span>
+          <span class="pill"><span class="x">✕</span>experience</span>
+          <span class="pill"><span class="x">✕</span>journey</span>
+          <span class="pill"><span class="x">✕</span>epic</span>
+          <span class="pill"><span class="x">✕</span>wow factor</span>
+          <span class="pill"><span class="x">✕</span>premium experience</span>
+          <span class="pill"><span class="x">✕</span>where dreams come true</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════ 06 PHOTOGRAPHY ════════ -->
+    <section class="s tinted" id="photo">
+      <div class="section-head reveal">
+        <span class="num">06</span>
+        <h2>Photography <span class="it">direction</span>.</h2>
+        <p class="lede">The hero is always the overhead flatlay before any child arrives; everything else is supporting. Action shots are second tier; never a hero, never a banner.</p>
+      </div>
+
+      <div class="grid-3 reveal">
+        <div class="card">
+          <span class="eyebrow">Composition</span>
+          <h3>Camera straight down.</h3>
+          <p style="font-size:14px; color: var(--muted); margin-top:10px;">90 degrees overhead; lens centred over the rug; props arranged in a loose triangle, not a perfect grid.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Light</span>
+          <h3>Natural, soft, from one side.</h3>
+          <p style="font-size:14px; color: var(--muted); margin-top:10px;">Sunlight from camera-left at 10 o'clock; no flash, no fill, no warm filter. The Doha morning gives us the light we want.</p>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Crop</span>
+          <h3>Four-by-five, calm corners.</h3>
+          <p style="font-size:14px; color: var(--muted); margin-top:10px;">Always 4:5 or 1:1; bottom-left corner left quiet for the wordmark; never crop a prop in half at the edge.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">Do · three real flatlays</span>
+        <h3>The hero is the room.</h3>
+      </div>
+
+      <div class="grid-3 reveal" style="margin-top: 22px;">
+        <!-- DO 1 — uses the real attached photo -->
+        <div>
+          <div class="photo">
+            <span class="verdict yes">Do</span>
+            <img src="uploads/01-setup-overhead.jpeg" alt="KiddoKlub setup, foam blocks, picket fence, soft-play">
+            <div class="annot">Real KiddoKlub setup, March 2026; hero shot before guests arrive, soft-play composed, faces never the subject.</div>
+          </div>
+        </div>
+        <!-- DO 2 — warm flatlay placeholder -->
+        <div>
+          <div class="photo">
+            <span class="verdict yes">Do</span>
+            <div class="flat-warm">
+              <div class="props">
+                <div class="pp" style="left:18%; top:20%; width:40%; height:32%; background: radial-gradient(circle at 38% 32%, #FCFAF5 0%, #DDDCD9 70%, #C9B891 100%);"></div>
+                <div class="pp" style="left:62%; top:30%; width:14%; height:14%; background: #B7E2B9;"></div>
+                <div class="pa" style="left:14%; top:54%; width:44%; height:30%; background: linear-gradient(180deg, #D28A29, #AF8F55);"></div>
+                <div class="pp" style="left:64%; top:62%; width:12%; height:12%; background: #F0CFCB;"></div>
+                <div class="pr" style="left:78%; top:74%; width:14%; height:8%; background: #4A4F32;"></div>
+              </div>
+            </div>
+            <div class="annot">Real flatlay here, sunlight from camera-left, no faces; bone, sage cushion, honey wood arch, soft pink balloon cluster.</div>
+          </div>
+        </div>
+        <!-- DO 3 — warm flatlay placeholder, neutral nest -->
+        <div>
+          <div class="photo">
+            <span class="verdict yes">Do</span>
+            <div class="flat-warm" style="background: radial-gradient(ellipse 60% 50% at 30% 30%, rgba(255, 250, 235, .6), transparent 60%), linear-gradient(135deg, #F5E9D5 0%, #DDDCD9 70%, #C9B891 100%);">
+              <div class="props">
+                <div class="pa" style="left:30%; top:18%; width:32%; height:42%; background: linear-gradient(180deg, #DDDCD9, #FAF7F3);"></div>
+                <div class="pp" style="left:18%; top:64%; width:20%; height:22%; background: radial-gradient(circle at 35% 30%, #FAF7F3, #B7E2B9 75%);"></div>
+                <div class="pp" style="left:46%; top:64%; width:20%; height:22%; background: radial-gradient(circle at 35% 30%, #FAF7F3, #F0CFCB 75%);"></div>
+                <div class="pp" style="left:74%; top:60%; width:14%; height:14%; background: #968E70;"></div>
+              </div>
+            </div>
+            <div class="annot">Real flatlay here; Neutral Nest, dried pampas, cream balloon arch, sage and pink ball pit.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 32px;"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">Don't · three explicit fails</span>
+      </div>
+
+      <div class="grid-3 reveal" style="margin-top: 14px;">
+        <!-- DON'T 1 -->
+        <div>
+          <div class="photo">
+            <span class="verdict no">Don't</span>
+            <div class="flat-wrong-action"></div>
+            <div class="annot">Action shot as hero; child mid-jump, motion blur, eye line up. Reserve for second-tier, never a banner.</div>
+          </div>
+        </div>
+        <!-- DON'T 2 -->
+        <div>
+          <div class="photo">
+            <span class="verdict no">Don't</span>
+            <div class="flat-wrong-rainbow"></div>
+            <div class="annot">Saturated rainbow palette; primary red, primary blue, primary yellow. Color Pop stays soft; never theme-park.</div>
+          </div>
+        </div>
+        <!-- DON'T 3 -->
+        <div>
+          <div class="photo">
+            <span class="verdict no">Don't</span>
+            <div class="flat-wrong-cool"></div>
+            <div class="annot">Cool editorial gradient; ink and slate. KiddoKlub is warm; bone, sage, wood, honey. Never blue-cast.</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="note reveal" style="margin-top: 32px; max-width: 64ch;">Real photographs replace the gradient placeholders shown above; the geometry, light direction, and palette stay as illustrated. The single attached photo (March 2026) sits as Do · 1.</p>
+    </section>
+
+
+    <!-- ════════ 07 MOTION ════════ -->
+    <section class="s" id="motion">
+      <div class="section-head reveal">
+        <span class="num">07</span>
+        <h2>Motion &amp; <span class="it">interaction</span>.</h2>
+        <p class="lede">Movement is small, slow, skippable. The hero parallaxes a touch; sections fade in once; everything respects reduced motion.</p>
+      </div>
+
+      <div class="motion-demo reveal" id="motion-demo">
+        <div class="layer-bg" data-parallax="0.05" style="transform: translateY(-5%);"></div>
+        <div class="layer-fg" data-parallax="0.025" data-scale="1.04" style="transform: translateY(-2.5%) scale(1.04);"></div>
+        <div class="copy">Soft <em>play</em>, set with <em class="h">care</em>.</div>
+        <div class="meta">Hero parallax · 5% Y on bg · 1.04 scale on fg · scroll to test</div>
+      </div>
+
+      <div class="grid-3 reveal" style="margin-top: 32px;">
+        <div class="card">
+          <span class="eyebrow">Parallax</span>
+          <h3>Hero only.</h3>
+          <p style="font-size:14px; color: var(--muted); margin-top:10px;">Background translates 5 percent of viewport on Y; foreground scales to 1.04. Nothing else parallaxes; never a card, never a thumbnail.</p>
+          <div class="mono" style="margin-top: 12px; color: var(--olive);">--parallax-y: 5%<br>--parallax-scale: 1.04</div>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Reveal on scroll</span>
+          <h3>Once, gently.</h3>
+          <p style="font-size:14px; color: var(--muted); margin-top:10px;">8px translateY plus opacity; 350ms ease; fires once when 18 percent visible. No staggered cascades, no delays.</p>
+          <div class="mono" style="margin-top: 12px; color: var(--olive);">duration: 350ms<br>distance: 8px<br>threshold: 0.18</div>
+        </div>
+        <div class="card">
+          <span class="eyebrow">Reduced motion</span>
+          <h3>Respected, fully.</h3>
+          <p style="font-size:14px; color: var(--muted); margin-top:10px;">If prefers-reduced-motion is set, parallax stops, smooth-scroll stops, reveals jump to final state. No exceptions.</p>
+          <div class="mono" style="margin-top: 12px; color: var(--olive);">@media (prefers-reduced-motion: reduce)</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════ 08 UI ════════ -->
+    <section class="s tinted" id="ui">
+      <div class="section-head reveal">
+        <span class="num">08</span>
+        <h2>UI <span class="it">components</span>.</h2>
+        <p class="lede">A small kit; honey buttons, sage trust dots, deep-sage feature surface, three real testimonials, three package cards. Nothing more, until the brand earns the right to add.</p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="reveal">
+        <span class="eyebrow">Buttons</span>
+        <div class="row-flex" style="margin-top: 8px;">
+          <a class="btn btn-primary" href="#">Hold a Friday</a>
+          <a class="btn btn-secondary" href="#">See themes</a>
+          <a class="btn btn-ghost" href="#">WhatsApp Nadine →</a>
+          <a class="btn btn-primary btn-sm" href="#">Book</a>
+        </div>
+        <p class="note" style="margin-top: 18px;">Primary is honey on bone; secondary is stone-bordered, transparent; ghost is cinnamon, no fill, single arrow. Buttons never use Fraunces; never set in italic.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Trust badges + seals -->
+      <div class="reveal">
+        <span class="eyebrow">Trust badges &amp; seals</span>
+        <div class="row-flex" style="gap: 12px; margin-top: 10px;">
+          <span class="badge"><span class="dot"></span> QAR 1M public liability</span>
+          <span class="badge"><span class="dot honey"></span> Sanitised after every event</span>
+          <span class="badge"><span class="dot wood"></span> Same-day setup &amp; collection</span>
+          <span class="badge"><span class="dot"></span> Doha-trusted families</span>
+          <span class="badge"><span class="dot honey"></span> Bilingual EN · AR</span>
+        </div>
+        <div class="row-flex" style="gap: 22px; margin-top: 28px;">
+          <div class="seal honey">
+            <div>QAR<br>1M</div>
+            <div class="tiny">Public Liability</div>
+          </div>
+          <div class="seal sage">
+            <div>Sanitised<br><em>after every</em><br>event</div>
+            <div class="tiny">KiddoKlub Standard</div>
+          </div>
+          <div class="seal bone">
+            <div><em>Doha</em><br>trusted</div>
+            <div class="tiny">Pearl · Lusail · Dafna</div>
+          </div>
+          <div class="seal sage">
+            <div>Same<br><em>day</em><br>setup</div>
+            <div class="tiny">Setup &amp; Collect</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Testimonials -->
+      <div class="reveal">
+        <span class="eyebrow">Testimonial cards · three real, salvaged from the legacy site</span>
+        <div class="grid-3" style="margin-top: 14px;">
+          <div class="testi">
+            <div class="qmark">"</div>
+            <blockquote>Set up before guests arrived; sanitised; collected the same evening. The photos are still in our family chat.</blockquote>
+            <div class="who"><div class="ava"></div><div><strong>Sarah M.</strong><br>West Bay villa</div></div>
+          </div>
+          <div class="testi">
+            <div class="qmark">"</div>
+            <blockquote>Nadine answers WhatsApp like a friend. The pearl pink set was exactly the colour she promised.</blockquote>
+            <div class="who"><div class="ava" style="background: linear-gradient(135deg, var(--pink), var(--butter));"></div><div><strong>Fatima A.</strong><br>The Pearl</div></div>
+          </div>
+          <div class="testi">
+            <div class="qmark">"</div>
+            <blockquote>Booked twice, will book again. The neutral nest fits our home perfectly.</blockquote>
+            <div class="who"><div class="ava" style="background: linear-gradient(135deg, var(--sage), var(--cream));"></div><div><strong>Noura K.</strong><br>Al Dafna</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Packages -->
+      <div class="reveal">
+        <span class="eyebrow">Package cards · three tiers</span>
+        <div class="grid-3" style="margin-top: 14px;">
+          <div class="pkg">
+            <div class="from">starting from</div>
+            <div class="name">Klub <span class="it">Mini</span></div>
+            <div class="price"><span class="qar">QAR</span>1,800</div>
+            <ul>
+              <li>Soft mat plus ball pit; one theme</li>
+              <li>Setup before guests; collected the same evening</li>
+              <li>Flatlay photos before any child arrives</li>
+              <li>Doha villas and Pearl compounds</li>
+            </ul>
+            <a class="btn btn-secondary btn-sm" href="#" style="align-self: flex-start; margin-top: 4px;">Hold a date</a>
+          </div>
+          <div class="pkg feat">
+            <div class="from">starting from</div>
+            <div class="name">Klub <span class="it">Signature</span></div>
+            <div class="price"><span class="qar">QAR</span>3,800</div>
+            <ul>
+              <li>Full soft-play room; any of three themes</li>
+              <li>Setup, sanitisation, collection all included</li>
+              <li>Flatlay photo set delivered same week</li>
+              <li>QAR 1M public liability included</li>
+            </ul>
+            <a class="btn btn-primary btn-sm" href="#" style="align-self: flex-start; margin-top: 4px; background: var(--honey);">Hold a Friday</a>
+          </div>
+          <div class="pkg">
+            <div class="from">starting from</div>
+            <div class="name">Klub <span class="it">Atelier</span></div>
+            <div class="price"><span class="qar">QAR</span>6,200</div>
+            <ul>
+              <li>Bespoke theme; prop curation in person</li>
+              <li>Two-stage setup; styling, then play</li>
+              <li>Editorial photo set; ten edited frames</li>
+              <li>Lusail and West Bay only</li>
+            </ul>
+            <a class="btn btn-secondary btn-sm" href="#" style="align-self: flex-start; margin-top: 4px;">WhatsApp Nadine</a>
+          </div>
+        </div>
+        <p class="note" style="margin-top: 22px;">Public surfaces always show "starting from"; never a fixed Klub Signature figure, never with discounts crossed out. The QAR 3,800 floor is firm; the actual quote depends on date, theme, and compound.</p>
+      </div>
+    </section>
+
+
+    <!-- ════════ 09 THEMES ════════ -->
+    <section class="s" id="themes">
+      <div class="section-head reveal">
+        <span class="num">09</span>
+        <h2>Theme <span class="it">system</span>.</h2>
+        <p class="lede">Three themes, locked. Neutral Nest is the house style; White Wonderland is the editorial; Color Pop is the playful, with saturation kept dusty. We do not invent a fourth.</p>
+      </div>
+
+      <div class="grid-3">
+
+        <!-- Neutral Nest -->
+        <div class="theme-tile reveal">
+          <div class="moodboard" style="background: #DDDCD9;">
+            <div class="tile lg" style="background: linear-gradient(135deg, #FAF7F3 0%, #DDDCD9 100%);">
+              <div style="position: absolute; left: 22%; top: 18%; width: 24%; height: 56%; background: linear-gradient(180deg, #DDDCD9, #FAF7F3); border-radius: 50% 50% 8px 8px;"></div>
+              <div style="position: absolute; left: 54%; top: 22%; width: 20%; height: 50%; background: linear-gradient(180deg, #968E70, #DDDCD9); border-radius: 50% 50% 8px 8px;"></div>
+              <div style="position: absolute; left: 14%; top: 78%; width: 70%; height: 12%; background: #FAF7F3; border-radius: 6px;"></div>
+              <div style="position: absolute; left: 30%; top: 60%; width: 12%; height: 12%; background: #B7E2B9; border-radius: 50%;"></div>
+            </div>
+            <div class="tile" style="background: #B7E2B9;"></div>
+            <div class="tile" style="background: #AF8F55;"></div>
+          </div>
+          <div class="body">
+            <h3>Neutral <span class="it">Nest</span>.</h3>
+            <p style="margin: 0; font-size: 14px; color: var(--muted);">The house style; bone, sage, and wood; the safest yes for a first-birthday booking.</p>
+            <div class="palette-row">
+              <span style="background: #FAF7F3"></span>
+              <span style="background: #DDDCD9"></span>
+              <span style="background: #B7E2B9"></span>
+              <span style="background: #AF8F55"></span>
+              <span style="background: #4A4F32"></span>
+            </div>
+            <dl>
+              <dt>Props</dt><dd>Cream ball pit, sage cushions, oak teepee, dried pampas, wood arch</dd>
+              <dt>Floors</dt><dd>Cream foam tiles, sage runner, jute area rug</dd>
+              <dt>Texture</dt><dd>Linen, oak, raw cotton, ceramic, dried wheat</dd>
+              <dt>Use for</dt><dd>First birthdays; intimate gatherings; brand reference shoots</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- White Wonderland -->
+        <div class="theme-tile reveal">
+          <div class="moodboard" style="background: #DDDCD9;">
+            <div class="tile lg" style="background: linear-gradient(135deg, #FCFAF5 0%, #FAF7F3 100%);">
+              <div style="position: absolute; left: 18%; top: 18%; width: 28%; height: 50%; background: linear-gradient(180deg, #FFFFFF, #FAF7F3); border-radius: 50% 50% 8px 8px; box-shadow: 0 6px 18px -8px rgba(74, 79, 50, .2);"></div>
+              <div style="position: absolute; left: 54%; top: 24%; width: 28%; height: 44%; background: linear-gradient(180deg, #FFFFFF, #DDDCD9); border-radius: 50% 50% 8px 8px; box-shadow: 0 6px 18px -8px rgba(74, 79, 50, .2);"></div>
+              <div style="position: absolute; left: 14%; top: 76%; width: 72%; height: 14%; background: #FFFFFF; border-radius: 6px;"></div>
+            </div>
+            <div class="tile" style="background: #FCFAF5;"></div>
+            <div class="tile" style="background: #DDDCD9;"></div>
+          </div>
+          <div class="body">
+            <h3>White <span class="it">Wonderland</span>.</h3>
+            <p style="margin: 0; font-size: 14px; color: var(--muted);">The editorial; cream on cream, archways, gentle shadow, almost wedding.</p>
+            <div class="palette-row">
+              <span style="background: #FFFFFF"></span>
+              <span style="background: #FCFAF5"></span>
+              <span style="background: #FAF7F3"></span>
+              <span style="background: #DDDCD9"></span>
+              <span style="background: #B7E2B9"></span>
+            </div>
+            <dl>
+              <dt>Props</dt><dd>White ball pit, ivory archway, cream felt, paper-flower garlands, frosted balloons, white picket fence</dd>
+              <dt>Floors</dt><dd>White EVA tiles, cream area rug, white picket border</dd>
+              <dt>Texture</dt><dd>Boucle, paper, frosted acrylic, matte ceramic</dd>
+              <dt>Use for</dt><dd>Christenings; baby blessings; editorial campaign work; outdoor garden tea</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Color Pop -->
+        <div class="theme-tile reveal">
+          <div class="moodboard" style="background: #DDDCD9;">
+            <div class="tile lg" style="background: linear-gradient(135deg, #F4E4B0 0%, #F0CFCB 100%);">
+              <div style="position: absolute; left: 22%; top: 22%; width: 36%; height: 32%; background: radial-gradient(circle at 35% 30%, #FFFFFF, #F0CFCB 70%); border-radius: 50%;"></div>
+              <div style="position: absolute; left: 60%; top: 32%; width: 22%; height: 22%; background: #D28A29; border-radius: 50%;"></div>
+              <div style="position: absolute; left: 16%; top: 62%; width: 64%; height: 22%; background: #FAF7F3; border-radius: 8px;"></div>
+              <div style="position: absolute; left: 22%; top: 70%; width: 8%; height: 8%; background: #B7E2B9; border-radius: 50%;"></div>
+              <div style="position: absolute; left: 40%; top: 70%; width: 8%; height: 8%; background: #F4E4B0; border-radius: 50%;"></div>
+            </div>
+            <div class="tile" style="background: #F0CFCB;"></div>
+            <div class="tile" style="background: #F4E4B0;"></div>
+          </div>
+          <div class="body">
+            <h3>Color <span class="it">Pop</span>.</h3>
+            <p style="margin: 0; font-size: 14px; color: var(--muted);">The playful one; pink, butter, sage on bone, with honey punctuating. Saturation stays dusty; never primary.</p>
+            <div class="palette-row">
+              <span style="background: #FAF7F3"></span>
+              <span style="background: #F0CFCB"></span>
+              <span style="background: #F4E4B0"></span>
+              <span style="background: #B7E2B9"></span>
+              <span style="background: #D28A29"></span>
+            </div>
+            <dl>
+              <dt>Props</dt><dd>Dusty-pink ball pit, butter cushions, honey balloon arch, sage ribbons, mixed pastel balloons</dd>
+              <dt>Floors</dt><dd>Pink and bone foam mix, butter runners, jute</dd>
+              <dt>Texture</dt><dd>Crepe paper, satin ribbon, soft felt, vintage ceramic</dd>
+              <dt>Use for</dt><dd>Second and third birthdays; sibling parties; garden afternoons</dd>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="note reveal" style="margin-top: 28px; max-width: 60ch;">These three names are locked. If a client wants something specific, it lives inside one of these as a sub-direction (Klub Atelier), never as a fourth theme.</p>
+    </section>
+
+
+    <!-- ════════ 10 TRUST ════════ -->
+    <section class="s tinted" id="trust">
+      <div class="section-head reveal">
+        <span class="num">10</span>
+        <h2>Trust &amp; <span class="it">compliance</span>.</h2>
+        <p class="lede">Mothers in Doha buy on trust before they buy on aesthetics; the brand surfaces both, in that order, on every quote and every page.</p>
+      </div>
+
+      <div class="grid-2 reveal">
+        <div>
+          <span class="eyebrow">Surfaces</span>
+          <h3>Four lines, on every quote.</h3>
+          <ol style="font-size: 15px; color: var(--text); padding-inline-start: 20px; margin: 12px 0 0; line-height: 1.55;">
+            <li style="margin-bottom: 10px;">QAR 1M public liability cover; named on the quote with the policy reference</li>
+            <li style="margin-bottom: 10px;">Sanitisation protocol; "all soft-play and props sanitised after every event"</li>
+            <li style="margin-bottom: 10px;">Same-day setup and collection; the room resets the evening of the event</li>
+            <li style="margin-bottom: 10px;">Compound list; signalling operational radius and confirming the brand serves villas at the address</li>
+          </ol>
+        </div>
+        <div>
+          <span class="eyebrow">Compounds served</span>
+          <ul class="compounds">
+            <li><span>The Pearl, Qanat Quartier</span><span class="area">DOH</span></li>
+            <li><span>The Pearl, Porto Arabia</span><span class="area">DOH</span></li>
+            <li><span>The Pearl, Viva Bahriya</span><span class="area">DOH</span></li>
+            <li><span>Lusail, Marina District</span><span class="area">LUS</span></li>
+            <li><span>Lusail, Fox Hills</span><span class="area">LUS</span></li>
+            <li><span>Lusail, Erkyah</span><span class="area">LUS</span></li>
+            <li><span>West Bay villas</span><span class="area">WB</span></li>
+            <li><span>Al Dafna compounds</span><span class="area">DAF</span></li>
+            <li><span>Al Waab villas</span><span class="area">DOH</span></li>
+            <li><span>Abu Hamour compounds</span><span class="area">DOH</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">Honest scope · the no-CR line</span>
+        <h3>What the brand is not.</h3>
+        <div class="grid-2" style="margin-top: 14px;">
+          <div class="card" style="border-inline-start: 3px solid var(--honey);">
+            <p style="margin: 0; font-size: 15px; line-height: 1.55;">KiddoKlub is operated informally; under Nadine personally. There is no CR (commercial registration), no LLC, no MOCI listing; the brand never claims any of these on a public surface.</p>
+          </div>
+          <div class="card" style="border-inline-start: 3px solid var(--honey);">
+            <p style="margin: 0; font-size: 15px; line-height: 1.55;">Bookings are quoted, agreed, paid, and followed up in one WhatsApp thread with Nadine; that informality is the brand promise, not a gap to obscure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════ 11 BILINGUAL ════════ -->
+    <section class="s" id="bilingual">
+      <div class="section-head reveal">
+        <span class="num">11</span>
+        <h2>Bilingual &amp; <span class="it">RTL</span>.</h2>
+        <p class="lede">English and Arabic both lead; neither is a translation of the other. The site flips wholesale, not piece by piece.</p>
+      </div>
+
+      <div class="grid-2 reveal">
+        <div class="card">
+          <span class="eyebrow">Engineering rules</span>
+          <ul style="font-size: 15px; padding-inline-start: 0; list-style: none; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+            <li><strong>Direction at the root.</strong> <span class="kbd">dir="rtl" lang="ar"</span> sits on the html element; never toggled per component.</li>
+            <li><strong>Logical CSS only.</strong> All spacing uses inline-start, inline-end, block-start, block-end; no left or right anywhere in production CSS.</li>
+            <li><strong>One typeface per language.</strong> 29LT Bukra for Arabic only; never Tajawal, never any system Arabic.</li>
+            <li><strong>Numerals.</strong> Western numerals across both languages for prices and dates; consistency over local convention.</li>
+            <li><strong>Punctuation.</strong> Arabic uses "،" and "؛"; Latin uses "," and ";". Em and en dashes banned in both.</li>
+          </ul>
+        </div>
+        <div class="card" dir="rtl" lang="ar" style="background: var(--bone);">
+          <span class="eyebrow" style="text-align: right; display: block;">قواعد ثنائية اللغة</span>
+          <ul class="ar body" style="padding-inline-start: 0; list-style: none; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 16px;">
+            <li><strong>كتابة أصيلة في كل لغة.</strong> النص العربي يُكتب بالعربية مباشرة؛ لا يُترجم آلياً.</li>
+            <li><strong>خط واحد لكل لغة.</strong> 29LT Bukra للعربية فقط؛ نتجنّب تماماً خط تجوال.</li>
+            <li><strong>الاتجاه.</strong> يُضبط dir="rtl" على عنصر html، وليس على كل مكوّن.</li>
+            <li><strong>الأرقام.</strong> أرقام لاتينية للأسعار والتواريخ في اللغتين.</li>
+            <li><strong>الترقيم.</strong> الفاصلة العربية "،" والفاصلة المنقوطة "؛"؛ ممنوع استخدام الشَّرطة الطويلة.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="reveal">
+        <span class="eyebrow">Side by side</span>
+        <h3>Same brand, two voices.</h3>
+        <div class="grid-2" style="margin-top: 18px;">
+          <div class="card">
+            <div class="mono" style="color: var(--olive); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;">EN · LTR</div>
+            <h3 style="font-family: 'Fraunces', serif; font-weight: 320; font-size: 32px; margin-bottom: 14px; line-height: 1.1; letter-spacing: -0.02em; font-variation-settings: 'SOFT' 100, 'opsz' 144;">Parties they <em style="color: var(--honey); font-style: italic;">remember</em>.</h3>
+            <p style="font-size: 15px; color: var(--muted); margin: 0;">Built mom to mom on Fridays in Doha; Klub Signature starts from QAR 3,800.</p>
+          </div>
+          <div class="card" dir="rtl" lang="ar">
+            <div class="mono" style="color: var(--olive); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; text-align: right;">AR · RTL</div>
+            <h3 class="ar display" style="font-size: 30px; margin-bottom: 14px; line-height: 1.4;">حفلة <span style="color: var(--honey)">يتذكرها</span> طفلك.</h3>
+            <p class="ar body" style="font-size: 16px; color: var(--muted); margin: 0;">من أمّ، لأمّهات الدوحة؛ تبدأ "كلوب سيغنتشر" من 3,800 ريال قطري.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════ 12 DON'T ════════ -->
+    <section class="s tinted" id="dont">
+      <div class="section-head reveal">
+        <span class="num">12</span>
+        <h2>The <span class="it">don't</span> list.</h2>
+        <p class="lede">The fastest way to look off-brand. Each line below is a hard stop; no exceptions, no "just this once".</p>
+      </div>
+
+      <div class="dont-list reveal">
+        <div class="row"><div class="x">✕</div><div><p>Use any em (—) or en (–) dash anywhere in the system.</p><span class="why">It is the surest tell of auto-generated copy; we use semicolons, commas, and periods only.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Run an action shot of children as the hero image.</p><span class="why">The hero is always the overhead flatlay before guests arrive; action shots are second tier.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Auto-translate Arabic from English, or vice versa.</p><span class="why">Every Arabic surface is composed natively, by an Arabic-first writer.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Set Arabic in Tajawal, IBM Plex Arabic, or any system Arabic.</p><span class="why">29LT Bukra exclusively; the licence sits in Nadine's name.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Claim KiddoKlub is an LLC, a CR-registered company, or a MOCI-listed brand.</p><span class="why">The operation is informal under Nadine personally; the brand never implies more.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Reference any other business the founder is involved in, anywhere on a KiddoKlub surface.</p><span class="why">The brand is operationally and visually independent.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Quote Klub Signature pricing as a fixed figure on a public surface; always "starting from QAR 3,800".</p><span class="why">The figure is the floor; bookings are quoted on date, theme, and compound.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Use cartoon vocabulary: "magical", "amazing", "wow", "epic", "transform", "elevate", "unleash".</p><span class="why">It belongs to other brands at the inflatables-and-foam end of the market.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Saturate the palette into primary red, primary blue, primary yellow.</p><span class="why">Color Pop stays dusty; pink is dusty pink, yellow is butter, never neon.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Stamp the wordmark over a busy zone of a flatlay; or burst a row of emoji into copy.</p><span class="why">Wordmark sits in a quiet corner; emoji at most one, only where it earns its place.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Toggle direction with a "rtl" CSS class on individual elements.</p><span class="why">Direction is set at the html root; layout uses logical properties only.</span></div></div>
+        <div class="row"><div class="x">✕</div><div><p>Invent a fourth theme; "Boho Garden", "Safari", "Princess", "Jungle".</p><span class="why">Three themes, locked: Neutral Nest, White Wonderland, Color Pop.</span></div></div>
+      </div>
+    </section>
+
+
+    <!-- ════════ FOOTER ════════ -->
+    <footer class="foot">
+      <div class="row">
+        <div>
+          <div class="mark">Kiddo<span class="it">Klub</span></div>
+          <p class="meta" style="margin-top: 18px;"><strong>Parties your child will remember.</strong><br>Doha, Qatar; operated by Nadine personally.<br>QAR 1M public liability; sanitised after every event.<br>No CR; no LLC; no MOCI listing.</p>
+        </div>
+        <div class="meta" style="text-align: end;">
+          <div class="mono" style="color: rgba(250, 247, 243, .6);">Brand Guidelines · v2.0 · 2026</div>
+          <div style="margin-top: 8px;">Maintained by Nadine.<br>Last review · April 2026.</div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  // Reveal-on-scroll
+  (function() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els = document.querySelectorAll('.reveal');
+    if (reduce) { els.forEach(el => el.classList.add('in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => io.observe(el));
+  })();
+
+  // Hero parallax + motion demo
+  (function() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    const heroFlat = document.getElementById('hero-flat');
+    const demo = document.getElementById('motion-demo');
+    function onScroll() {
+      const y = window.scrollY;
+      if (heroFlat) {
+        const t = Math.max(-40, Math.min(40, y * 0.05));
+        heroFlat.style.transform = 'translateY(' + (-t) + 'px) scale(' + (1 + Math.min(0.04, y / 12000)) + ')';
+      }
+      if (demo) {
+        const r = demo.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const center = (r.top + r.height / 2) - vh / 2;
+        const norm = Math.max(-1, Math.min(1, -center / vh));
+        const bg = demo.querySelector('.layer-bg');
+        const fg = demo.querySelector('.layer-fg');
+        if (bg) bg.style.transform = 'translateY(' + (norm * 5) + '%)';
+        if (fg) fg.style.transform = 'translateY(' + (norm * 2.5) + '%) scale(' + (1 + Math.abs(norm) * 0.04) + ')';
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+
+  // Active rail link
+  (function() {
+    const links = document.querySelectorAll('#rail-nav a');
+    const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const map = new Map();
+    links.forEach((a, i) => { if (sections[i]) map.set(sections[i], a); });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          links.forEach(a => a.classList.remove('active'));
+          const link = map.get(e.target);
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { threshold: 0, rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => io.observe(s));
+  })();
+</script>
+
+
+
+</body></html>

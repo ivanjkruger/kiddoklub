@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const t = THEME_BY_SLUG[slug];
   if (!t) return {};
   return {
-    title: `${t.name} — KiddoKlub`,
+    title: `${t.name}; KiddoKlub`,
     description: t.tagline,
     openGraph: {
       title: `${t.name} · KiddoKlub`,

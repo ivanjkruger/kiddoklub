@@ -63,11 +63,11 @@ const PACKAGES: Pkg[] = [
 export function Packages() {
   return (
     <section id="packages" className="px-6 py-20 md:py-28 max-w-6xl mx-auto">
-      <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3 text-center">
+      <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3 text-center font-semibold">
         Pick your day
       </p>
-      <h2 className="text-3xl md:text-5xl text-center mb-12">
-        Three setups, <span className="italic-display text-[var(--color-terracotta)]">one perfect day</span>
+      <h2 className="text-3xl md:text-5xl text-center mb-12 font-display">
+        Three setups, <span className="accent-mint">one perfect day</span> 🌈
       </h2>
       <div className="grid md:grid-cols-3 gap-6">
         {PACKAGES.map((p) => (
@@ -81,8 +81,8 @@ export function Packages() {
             }
           >
             {p.highlight && (
-              <span className="inline-block text-xs uppercase tracking-widest mb-3 text-[var(--color-butter)]">
-                Most booked
+              <span className="inline-block text-xs uppercase tracking-widest mb-3 text-[var(--color-mint)] font-semibold">
+                Most booked 🌈
               </span>
             )}
             <h3
@@ -113,7 +113,7 @@ export function Packages() {
             <ul className="space-y-2 text-sm mb-6">
               {p.inclusions.map((inc, i) => (
                 <li key={i} className="flex gap-2">
-                  <span className="text-[var(--color-terracotta)] flex-none">✓</span>
+                  <span className="text-[var(--color-mint-deep)] flex-none font-bold">✓</span>
                   <span className={p.highlight ? "" : "text-[var(--color-muted)]"}>{inc}</span>
                 </li>
               ))}
@@ -123,7 +123,7 @@ export function Packages() {
                 href="https://wa.me/97450318434?text=Hi%20Nadine%2C%20I%27d%20love%20to%20chat%20about%20Klub%20Signature."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center rounded-full bg-[var(--color-terracotta)] text-white px-6 py-3 font-medium hover:scale-[1.02] transition-transform"
+                className="block text-center rounded-full bg-[var(--color-mint-deep)] text-white px-6 py-3 font-semibold hover:scale-[1.02] transition-transform"
               >
                 WhatsApp Nadine
               </a>
@@ -131,10 +131,10 @@ export function Packages() {
               <Link
                 href={`/book?package=${p.id}` as never}
                 className={
-                  "block text-center rounded-full px-6 py-3 font-medium transition-transform hover:scale-[1.02] " +
+                  "block text-center rounded-full px-6 py-3 font-semibold transition-transform hover:scale-[1.02] " +
                   (p.highlight
-                    ? "bg-[var(--color-butter)] text-[var(--color-ink)]"
-                    : "bg-[var(--color-ink)] text-[var(--color-bone)]")
+                    ? "bg-[var(--color-mint)] text-[var(--color-ink)]"
+                    : "bg-[var(--color-mint-deep)] text-white")
                 }
               >
                 Pick a date

@@ -9,7 +9,7 @@ import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 import { THEMES } from "@/content/themes";
 
 export const metadata = {
-  title: "Packages and themes — KiddoKlub",
+  title: "Packages and themes · KiddoKlub",
   description:
     "Three sizes (Mini, Classic, Signature). Six themes (Neutral Nest, White Wonderland, Color Pop, Boho, Arabic Heritage, Eid Family). Quote in 90 seconds.",
 };
@@ -29,7 +29,7 @@ export default function PackagesPage() {
       <Packages />
       <TrustStrip />
 
-      {/* Theme catalog — Council 2026-04-25 priority */}
+      {/* Theme catalog; Council 2026-04-25 priority */}
       <section className="px-6 py-20 md:py-28 max-w-6xl mx-auto">
         <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3 text-center">
           Themes

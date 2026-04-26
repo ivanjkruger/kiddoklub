@@ -91,7 +91,7 @@ export function QuoteBuilder() {
     if (!isSignature) lines.push(`Base: QAR ${fmt(sizeRow.basePrice)}`);
     if (addonLines.length) lines.push("", "Add-ons:", ...addonLines);
     if (!isSignature) lines.push("", `Total: QAR ${fmt(total)}`);
-    else lines.push("", "Klub Signature — let's chat about the day.");
+    else lines.push("", "Klub Signature; let's chat about the day.");
     lines.push("", `Name: ${name}`, `Phone: ${phone}`);
     if (email)    lines.push(`Email: ${email}`);
     if (date)     lines.push(`Preferred date: ${date}`);
@@ -128,14 +128,14 @@ export function QuoteBuilder() {
       <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3">
         Build your party
       </p>
-      <h2 className="text-3xl md:text-4xl mb-2">
-        Three steps. <span className="italic-display text-[var(--color-terracotta)]">Instant quote.</span>
+      <h2 className="text-3xl md:text-4xl mb-2 font-display">
+        Three steps. <span className="accent-mint">Instant quote.</span> 🌈
       </h2>
-      <p className="text-[var(--color-muted)] mb-10">
+      <p className="text-[var(--color-ink-soft)] mb-10">
         Pick a theme, pick a size, add what you want. We&apos;ll WhatsApp you back within 30 minutes.
       </p>
 
-      {/* Step 1 — Theme */}
+      {/* Step 1; Theme */}
       <div className="mb-10">
         <p className="font-medium mb-3 text-sm uppercase tracking-wider text-[var(--color-muted)]">
           1 · Pick a theme
@@ -151,8 +151,8 @@ export function QuoteBuilder() {
                 className={
                   "rounded-2xl border p-4 text-start transition-all " +
                   (sel
-                    ? "bg-[var(--color-ink)] text-[var(--color-bone)] border-[var(--color-ink)]"
-                    : "bg-white border-black/10 hover:border-[var(--color-terracotta)]")
+                    ? "bg-[var(--color-ink)] text-[var(--color-cream)] border-[var(--color-ink)]"
+                    : "bg-white border-black/10 hover:border-[var(--color-mint-deep)]")
                 }
               >
                 <div className="font-medium">{t.label}</div>
@@ -165,7 +165,7 @@ export function QuoteBuilder() {
         </div>
       </div>
 
-      {/* Step 2 — Size */}
+      {/* Step 2; Size */}
       <div className="mb-10">
         <p className="font-medium mb-3 text-sm uppercase tracking-wider text-[var(--color-muted)]">
           2 · Pick a size
@@ -181,15 +181,15 @@ export function QuoteBuilder() {
                 className={
                   "rounded-2xl border p-4 text-start transition-all " +
                   (sel
-                    ? "bg-[var(--color-ink)] text-[var(--color-bone)] border-[var(--color-ink)]"
-                    : "bg-white border-black/10 hover:border-[var(--color-terracotta)]")
+                    ? "bg-[var(--color-ink)] text-[var(--color-cream)] border-[var(--color-ink)]"
+                    : "bg-white border-black/10 hover:border-[var(--color-mint-deep)]")
                 }
               >
                 <div className="font-medium">{s.label}</div>
                 <div className={"text-xs mt-1 " + (sel ? "opacity-80" : "text-[var(--color-muted)]")}>
                   {s.capacity} · {s.size}
                 </div>
-                <div className={"text-sm mt-2 font-serif " + (sel ? "" : "text-[var(--color-terracotta)]")}>
+                <div className={"text-sm mt-2 font-display font-semibold " + (sel ? "" : "text-[var(--color-mint-deep)]")}>
                   {s.tier === "signature" ? "from QAR 3,800" : `QAR ${fmt(s.basePrice)}`}
                 </div>
               </button>
@@ -198,7 +198,7 @@ export function QuoteBuilder() {
         </div>
       </div>
 
-      {/* Step 3 — Add-ons */}
+      {/* Step 3; Add-ons */}
       <div className="mb-10">
         <p className="font-medium mb-3 text-sm uppercase tracking-wider text-[var(--color-muted)]">
           3 · Add to your party
@@ -214,20 +214,20 @@ export function QuoteBuilder() {
                 className={
                   "w-full flex items-center justify-between rounded-xl border p-4 text-start transition-all " +
                   (on
-                    ? "bg-[var(--color-sand)]/60 border-[var(--color-terracotta)]"
-                    : "bg-white border-black/10 hover:border-[var(--color-terracotta)]/50")
+                    ? "bg-[var(--color-soft)] border-[var(--color-mint-deep)]"
+                    : "bg-white border-black/10 hover:border-[var(--color-mint-deep)]/60")
                 }
               >
                 <div>
                   <div className="font-medium">{a.label}</div>
                   {a.founding && (
-                    <div className="text-xs text-[var(--color-terracotta)] mt-0.5">
-                      Founding-family slot: included free
+                    <div className="text-xs text-[var(--color-mint-deep)] mt-0.5 font-semibold">
+                      🌈 Founding 10 Families: included free
                     </div>
                   )}
                 </div>
-                <div className="font-serif text-[var(--color-ink)]">
-                  {a.founding ? <span className="text-[var(--color-terracotta)]">FREE</span> : `+QAR ${fmt(a.price)}`}
+                <div className="font-display font-semibold text-[var(--color-ink)]">
+                  {a.founding ? <span className="text-[var(--color-mint-deep)]">FREE</span> : `+QAR ${fmt(a.price)}`}
                 </div>
               </button>
             );
@@ -236,13 +236,13 @@ export function QuoteBuilder() {
       </div>
 
       {/* Contact + total */}
-      <div className="rounded-2xl bg-[var(--color-ink)] text-[var(--color-bone)] p-6 md:p-8">
+      <div className="rounded-2xl bg-[var(--color-ink)] text-[var(--color-cream)] p-6 md:p-8">
         <div className="grid md:grid-cols-2 gap-3 mb-5">
-          <input className="rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-butter)]" placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} />
-          <input className="rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-butter)]" placeholder="WhatsApp number (+974…)" value={phone} onChange={(e) => setPhone(e.target.value)} />
-          <input className="rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-butter)]" placeholder="Email (optional)" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <input type="date" min={minDate} className="rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-butter)] [color-scheme:dark]" value={date} onChange={(e) => setDate(e.target.value)} />
-          <input className="md:col-span-2 rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-butter)]" placeholder="Compound or area (e.g. The Pearl, Lusail)" value={compound} onChange={(e) => setCompound(e.target.value)} />
+          <input className="rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-mint)]" placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} />
+          <input className="rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-mint)]" placeholder="WhatsApp number (+974…)" value={phone} onChange={(e) => setPhone(e.target.value)} />
+          <input className="rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-mint)]" placeholder="Email (optional)" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="date" min={minDate} className="rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-mint)] [color-scheme:dark]" value={date} onChange={(e) => setDate(e.target.value)} />
+          <input className="md:col-span-2 rounded-lg bg-white/10 border border-white/15 px-4 py-3 placeholder-white/50 focus:outline-none focus:border-[var(--color-mint)]" placeholder="Compound or area (e.g. The Pearl, Lusail)" value={compound} onChange={(e) => setCompound(e.target.value)} />
         </div>
 
         <div className="flex items-end justify-between flex-wrap gap-4 pt-2 border-t border-white/10">
@@ -250,13 +250,13 @@ export function QuoteBuilder() {
             <div className="text-xs uppercase tracking-widest opacity-70 mb-1">
               {isSignature ? "Klub Signature" : "Your total"}
             </div>
-            <div className="font-serif text-4xl font-semibold">
+            <div className="font-display text-4xl font-bold">
               {isSignature ? (
-                <span className="italic-display text-[var(--color-butter)]">Let&apos;s chat</span>
+                <span className="text-[var(--color-butter)]">Let&apos;s chat</span>
               ) : total > 0 ? (
                 <bdi>QAR {fmt(total)}</bdi>
               ) : (
-                <span className="opacity-50">QAR —</span>
+                <span className="opacity-50">QAR ;</span>
               )}
             </div>
           </div>
@@ -265,9 +265,9 @@ export function QuoteBuilder() {
             onClick={submit}
             disabled={!ready || submitting}
             className={
-              "rounded-full px-7 py-4 font-medium transition-transform " +
+              "rounded-full px-7 py-4 font-semibold transition-transform " +
               (ready && !submitting
-                ? "bg-[var(--color-terracotta)] text-white hover:scale-[1.02]"
+                ? "bg-[var(--color-mint-deep)] text-white hover:scale-[1.02]"
                 : "bg-white/15 text-white/50 cursor-not-allowed")
             }
           >

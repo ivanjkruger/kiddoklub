@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Links — KiddoKlub",
+  title: "Links · KiddoKlub",
   description: "Book on WhatsApp · Build a quote · See gallery · Refer a friend.",
   robots: { index: false, follow: true }, // bio link page doesn't need to compete in search
 };

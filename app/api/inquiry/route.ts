@@ -1,6 +1,6 @@
 // Lead-capture endpoint for the Quote Builder + any future booking-form variant.
 // Server-side: post to Resend (email to hello@kiddoklub.com) + Telegram (@Ivan_james_bot).
-// Stays alive even when Supabase/Skipcash secrets aren't seeded yet — degrades cleanly to logging.
+// Stays alive even when Supabase/Skipcash secrets aren't seeded yet; degrades cleanly to logging.
 
 import { NextRequest, NextResponse } from "next/server";
 

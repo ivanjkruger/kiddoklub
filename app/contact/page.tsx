@@ -2,7 +2,7 @@ import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 
 export const metadata = {
-  title: "Contact — KiddoKlub",
+  title: "Contact · KiddoKlub",
   description: "WhatsApp Nadine. Or email hello@kiddoklub.com. We reply within 30 minutes during the day.",
 };
 

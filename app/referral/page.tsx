@@ -3,7 +3,7 @@ import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 
 export const metadata = {
-  title: "Refer a friend, save QAR 200 — KiddoKlub",
+  title: "Refer a friend, save QAR 200 · KiddoKlub",
   description:
     "Send this page to a Doha mom. They book, you both save QAR 200 on your next setup.",
 };

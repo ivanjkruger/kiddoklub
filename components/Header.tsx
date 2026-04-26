@@ -19,7 +19,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur-md bg-[var(--color-bone)]/85 border-b border-black/5">
+    <header className="sticky top-0 z-40 backdrop-blur-md bg-[var(--color-cream)]/90 border-b border-black/5">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
         <Logo />
 
@@ -31,8 +31,8 @@ export function Header() {
               className={
                 "text-sm transition-colors " +
                 (pathname === n.href
-                  ? "text-[var(--color-terracotta)]"
-                  : "text-[var(--color-muted)] hover:text-[var(--color-ink)]")
+                  ? "text-[var(--color-mint-deep)]"
+                  : "text-[var(--color-ink-soft)] hover:text-[var(--color-ink)]")
               }
             >
               {n.label}
@@ -43,7 +43,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             href={LANG_TOGGLE.href as never}
-            className="hidden md:inline-flex text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]"
+            className="hidden md:inline-flex text-sm text-[var(--color-ink-soft)] hover:text-[var(--color-ink)]"
             style={{ fontFamily: "'IBM Plex Sans Arabic', 'Tajawal', system-ui" }}
           >
             {LANG_TOGGLE.label}
@@ -52,7 +52,7 @@ export function Header() {
             href="https://wa.me/97450318434"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center rounded-full bg-[var(--color-terracotta)] text-white px-5 py-2 text-sm font-medium hover:scale-[1.02] transition-transform"
+            className="hidden md:inline-flex items-center rounded-full bg-[var(--color-mint-deep)] text-white px-5 py-2 text-sm font-medium hover:scale-[1.02] transition-transform"
           >
             WhatsApp
           </a>
@@ -70,7 +70,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="md:hidden border-t border-black/5 bg-[var(--color-bone)] px-6 py-5">
+        <nav className="md:hidden border-t border-black/5 bg-[var(--color-cream)] px-6 py-5">
           <ul className="space-y-3">
             {NAV.map((n) => (
               <li key={n.href}>
@@ -80,7 +80,7 @@ export function Header() {
                   className={
                     "block text-base " +
                     (pathname === n.href
-                      ? "text-[var(--color-terracotta)] font-medium"
+                      ? "text-[var(--color-mint-deep)] font-medium"
                       : "text-[var(--color-ink)]")
                   }
                 >
@@ -93,7 +93,7 @@ export function Header() {
                 href="https://wa.me/97450318434"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-2 rounded-full bg-[var(--color-terracotta)] text-white px-5 py-2 text-sm font-medium"
+                className="inline-block mt-2 rounded-full bg-[var(--color-mint-deep)] text-white px-5 py-2 text-sm font-medium"
               >
                 WhatsApp Nadine
               </a>

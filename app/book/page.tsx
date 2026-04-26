@@ -3,7 +3,7 @@ import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 
 export const metadata = {
-  title: "Build a quote — KiddoKlub",
+  title: "Build a quote · KiddoKlub",
   description:
     "Pick your theme, pick your size, add what you want. Instant WhatsApp quote with Nadine, reply within 30 minutes during the day.",
 };

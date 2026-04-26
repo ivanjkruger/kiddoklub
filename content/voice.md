@@ -31,10 +31,16 @@ Use periods, commas, semicolons, parentheses instead.
 - Any line that starts with "🎉" or three emojis
 
 ## What to do instead
+- "Creating smiles with play and party magic 🌈"
 - "We bring the play, you take the photos."
 - "Set up by 8am, packed down before bedtime."
-- "Bone-and-sage palette, no neon. We promise."
+- "Pastel rainbow palette, real Doha mums, real photos."
 - "Your villa garden becomes the venue."
+
+## Emoji rules (canonical, per Drive/.../Ops/_BRAND-RECONCILIATION-Session-B-2026-04-25.md)
+- 🌈 on hooks (one per line max). 🤍 on sign-offs. 🎈 on add-ons. 🥳 on milestone celebrations.
+- Never stack emojis. Never start a line with "🎉" or three emojis.
+- Sign-off: "Nadine 🤍" or "Nadine 🌈". Never "— Nadine".
 
 ## Bilingual rule
 EN and AR are written in **parallel** by a native Arabic speaker (or Ivan with Mohammed's review). Auto-translation is banned — Doha Arab moms spot it instantly. AR uses حفلة (informal "party"), not حفل (formal "event"). Use TheMix Arabic or 29LT Bukra typography, never default Tajawal.

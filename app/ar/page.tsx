@@ -25,7 +25,9 @@ export default function ArHome() {
       {/* Header (AR-aware, sticky) */}
       <header className="sticky top-0 z-40 backdrop-blur-md bg-[var(--color-bone)]/85 border-b border-black/5">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/ar" className="font-serif italic-display text-2xl">كيدو كلب</Link>
+          <Link href="/ar" className="inline-flex items-center" aria-label="كيدو كلب الرئيسية">
+            <Image src="/brand/logo.svg" alt="كيدو كلب" width={150} height={56} className="h-10 w-auto" priority />
+          </Link>
           <div className="flex items-center gap-4">
             <Link href="/" className="text-sm text-[var(--color-muted)] hover:text-[var(--color-ink)]">EN</Link>
             <a
@@ -53,10 +55,10 @@ export default function ArHome() {
           <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3">
             أجمل ألعاب الأطفال في الدوحة
           </p>
-          <h1 className="text-4xl md:text-6xl leading-[1.1] mb-5">
-            حفلة طفلك يتذكّرها،
+          <h1 className="text-4xl md:text-6xl leading-[1.1] mb-5 font-display">
+            نرسم <span className="accent-mint">ابتسامة</span> لطفلك،
             <br />
-            <span className="italic-display text-[var(--color-terracotta)]">وضيوفك يصوّرونها.</span>
+            <span className="accent-pink">وزاوية</span> يلتقطها كل ضيف. 🌈
           </h1>
           <p className="text-lg text-[var(--color-muted)] mb-7 max-w-xl">
             سوفت بلاي مخصّص، حفر كرات، وتنسيق للحفلة. نوصّل، نركّب، نعقّم، ونرفع كل شيء. أنتي ضيوفك بس.
@@ -85,8 +87,8 @@ export default function ArHome() {
         <div className="md:col-span-5 mt-8 md:mt-0">
           <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-black/5 relative">
             <Image
-              src="/photos/setups/setup-01.jpeg"
-              alt="ترتيب كيدو كلب قبل وصول الضيوف"
+              src="/photos/setups/setup-04.jpeg"
+              alt="ترتيب كيدو كلب جاهز للحفلة"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 45vw"

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Quicksand, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 
-const fraunces = Fraunces({
+const quicksand = Quicksand({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-quicksand",
   display: "swap",
-  axes: ["opsz", "SOFT"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const inter = Inter({
@@ -19,15 +19,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://kiddoklub.com"),
   title: {
-    default: "KiddoKlub — Doha's softest play setups",
+    default: "KiddoKlub · Doha's softest play setups",
     template: "%s · KiddoKlub",
   },
   description:
-    "Premium soft-play parties for kids 1-5 in Doha. Delivered, set up, sanitized, and collected. Cleared for The Pearl, Lusail, West Bay, Al Waab, Abu Hamour, Education City.",
+    "Creating smiles with play and party magic 🌈 Premium soft-play parties for kids 1-5 in Doha; delivered, set up, sanitised, and collected. Cleared for The Pearl, Lusail, West Bay, Al Waab, Abu Hamour, Education City.",
   openGraph: {
-    title: "KiddoKlub — Doha's softest play setups",
+    title: "KiddoKlub · Doha's friendliest soft-play parties",
     description:
-      "Parties your child will remember. Setups your guests will photograph.",
+      "Creating smiles with play and party magic 🌈 Premium soft-play, ball pits, and themed setups for Doha kids 1-5.",
     url: "https://kiddoklub.com",
     siteName: "KiddoKlub",
     locale: "en_QA",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F5EFE6" },
-    { media: "(prefers-color-scheme: dark)", color: "#1F2421" },
+    { media: "(prefers-color-scheme: light)", color: "#FFF9F0" },
+    { media: "(prefers-color-scheme: dark)", color: "#2A2520" },
   ],
   formatDetection: { telephone: true },
 };
@@ -48,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${quicksand.variable} ${inter.variable}`}>
       <body>
         <Header />
         {children}

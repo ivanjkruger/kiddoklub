@@ -4,7 +4,7 @@ import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 
 export const metadata = {
-  title: "Meet Nadine — KiddoKlub",
+  title: "Meet Nadine · KiddoKlub",
   description:
     "Doha mom, founder of KiddoKlub. Started this when I couldn't find what I wanted for my own kids' parties.",
 };
@@ -41,7 +41,7 @@ export default function AboutPage() {
             before bedtime.
           </p>
           <p>
-            So we built it. Premium soft-play sets, ball pits, themed styling — delivered to your
+            So we built it. Premium soft-play sets, ball pits, themed styling; delivered to your
             villa, your majlis, your garden. We arrive 90 minutes early, set everything up while
             your kids nap or get ready, and leave once the last guest goes home.
           </p>

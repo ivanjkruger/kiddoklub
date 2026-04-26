@@ -1,36 +1,65 @@
 @import "tailwindcss";
 
 @theme {
-  /* KiddoKlub palette — muted, premium, Doha-mom-aesthetic */
-  --color-bone:        #F5EFE6;
-  --color-sand:        #E8DCC4;
-  --color-sage:        #A8B5A0;
-  --color-terracotta:  #C97D60;
-  --color-pink:        #E4B4B4;
-  --color-butter:      #F0DC9C;
-  --color-ink:         #1F2421;
-  --color-muted:       #6B6F6A;
+  /* KiddoKlub canonical palette — sampled from Brand/KiddoKlub-Logo.svg
+     and live setup photography. Bright, warm, saturated.
+     Authority: Drive/.../Ops/_BRAND-RECONCILIATION-Session-B-2026-04-25.md */
+  --color-cream:       #FFF9F0;   /* primary surface, the warm "white" */
+  --color-soft:        #FCF1E8;   /* secondary surface, callouts, panels */
+  --color-mint:        #A8D5BA;   /* outer rainbow arc, accent 1 */
+  --color-mint-deep:   #7FB89A;   /* primary CTA, focus ring */
+  --color-pink:        #E8B4B8;   /* middle rainbow arc, accent 2 */
+  --color-pink-deep:   #D08488;   /* secondary CTA, deny states */
+  --color-butter:      #F0D78C;   /* inner rainbow arc, smile accent */
+  --color-butter-deep: #DDB85A;
+  --color-sage:        #C0D080;   /* wordmark green, trust seal */
+  --color-sage-deep:   #98AC50;   /* approve states, success */
+  --color-peach:       #F0C48C;   /* warm wordmark accent */
+  --color-ink:         #2A2520;   /* body type; warm-tinted, never pure black */
+  --color-ink-soft:    #5C544A;   /* secondary body */
+  --color-muted:       #8B8278;   /* captions, eyebrows */
 
-  /* Typography */
-  --font-serif: 'Fraunces', Georgia, ui-serif, serif;
-  --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
-  --font-arabic: '29LT Bukra', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  /* Legacy alias map — old code still references --color-bone / --color-terracotta etc.
+     until the recolor sweep finishes; aliases prevent breakage during the transition. */
+  --color-bone:        var(--color-cream);
+  --color-sand:        var(--color-soft);
+  --color-terracotta:  var(--color-mint-deep);
 
-  /* Spacing scale uses defaults */
+  /* Typography
+     Quicksand display (rounded sans, matches the kiddoklub wordmark)
+     Inter body, IBM Plex Sans Arabic for Arabic surfaces. */
+  --font-display: 'Quicksand', 'Nunito', system-ui, -apple-system, sans-serif;
+  --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-arabic:  '29LT Bukra', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  /* Legacy alias — old components reference --font-serif */
+  --font-serif:   var(--font-display);
 }
 
 @layer base {
   html { scroll-behavior: smooth; }
   body {
-    background: var(--color-bone);
+    background: var(--color-cream);
     color: var(--color-ink);
     font-family: var(--font-sans);
-    font-size: 17px;        /* per Council 2026-04-25: 17px not 16 — Doha mom on iPhone in dim bedroom */
+    font-size: 17px;        /* per Council 2026-04-25: 17px not 16; Doha mom on iPhone in dim bedroom */
     line-height: 1.55;
   }
-  h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; }
-  /* Italic Fraunces for accents */
-  .italic-display { font-style: italic; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.005em; }
+
+  /* Italic-display class kept for backward compat; canonical brand drops italic accent
+     in favour of the rainbow three-colour treatment. Components that still reference it
+     get a soft warm-pink emphasis until they are refactored. */
+  .italic-display {
+    font-style: normal;
+    color: var(--color-mint-deep);
+    font-weight: 700;
+  }
+
+  /* Rainbow-accent helpers for hero + display surfaces */
+  .accent-mint   { color: var(--color-mint-deep); }
+  .accent-pink   { color: var(--color-pink-deep); }
+  .accent-butter { color: var(--color-butter-deep); }
+  .accent-sage   { color: var(--color-sage-deep); }
 
   /* Number locale: Western digits even on AR routes */
   bdi { unicode-bidi: isolate; }
@@ -40,7 +69,7 @@
 
   /* Accessibility: visible focus ring on every interactive element */
   *:focus-visible {
-    outline: 2px solid var(--color-terracotta);
+    outline: 2px solid var(--color-mint-deep);
     outline-offset: 3px;
     border-radius: 4px;
   }

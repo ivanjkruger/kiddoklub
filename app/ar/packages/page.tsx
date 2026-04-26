@@ -3,7 +3,7 @@ import Link from "next/link";
 import { THEMES } from "@/content/themes";
 
 export const metadata = {
-  title: "الباقات والثيمات — كيدو كلب",
+  title: "الباقات والثيمات · كيدو كلب",
   description: "ثلاث باقات (ميني، كلاسيك، سيجنتشر) وست ثيمات. اختاري الباقة المناسبة وواتساب نادين.",
 };
 

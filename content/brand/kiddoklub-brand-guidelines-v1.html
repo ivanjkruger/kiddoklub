@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KiddoKlub Brand Guidelines v1</title>
+<meta name="description" content="The visual, verbal, and behavioural system behind KiddoKlub; Doha's premium soft-play party brand." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bone:#F5F0E8;
+  --sand:#E8DDC8;
+  --sage:#A8B89C;
+  --terracotta:#C97B5A;
+  --ink:#1F1B16;
+  --muted:#6B5E54;
+  --pink:#E8C4B8;
+  --butter:#F2DFA4;
+  --hairline: rgba(31,27,22,.08);
+  --hairline-strong: rgba(31,27,22,.16);
+  --maxw: 1180px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:var(--terracotta);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+@media (max-width:640px){.container{padding:0 20px}}
+
+/* Typography ----------------------------------------- */
+.display{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;line-height:1.05}
+.italic-display{font-family:'Fraunces',serif;font-style:italic;font-weight:500}
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:0.22em;
+  font-size:11px;
+  color:var(--muted);
+  font-weight:500;
+}
+.lede{font-size:19px;color:var(--muted);max-width:60ch}
+.ar{font-family:'IBM Plex Sans Arabic','29LT Bukra',system-ui,sans-serif;direction:rtl;text-align:right}
+
+h1.display{font-size:clamp(40px,7vw,84px)}
+h2.display{font-size:clamp(32px,4.5vw,56px);margin:0 0 12px}
+h3.display{font-size:clamp(22px,2.4vw,30px);margin:0 0 10px}
+
+/* Header ---------------------------------------------- */
+header.site{
+  position:sticky;top:0;z-index:30;
+  background:rgba(245,240,232,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--hairline);
+}
+header.site .row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 0;
+}
+.brandmark{
+  font-family:'Fraunces',serif;font-weight:500;
+  letter-spacing:-0.02em;font-size:22px;
+}
+.brandmark em{font-style:italic;color:var(--terracotta);font-weight:500}
+nav.toc{display:flex;flex-wrap:wrap;gap:18px}
+nav.toc a{color:var(--muted);font-size:13px}
+nav.toc a:hover{color:var(--ink);text-decoration:none}
+@media (max-width:860px){nav.toc{display:none}}
+
+/* Hero ------------------------------------------------ */
+section.hero{padding:96px 0 80px;border-bottom:1px solid var(--hairline)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+.hero h1 .accent{display:block}
+.hero .meta{display:flex;gap:24px;margin-top:28px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+.hero .meta span{display:inline-flex;align-items:center;gap:8px}
+.hero .meta span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--terracotta)}
+
+/* Flatlay placeholder --------------------------------- */
+.flatlay{
+  aspect-ratio:4/5;border-radius:20px;overflow:hidden;
+  position:relative;
+  background:
+    radial-gradient(120% 80% at 30% 20%, rgba(255,255,255,.6), transparent 60%),
+    linear-gradient(160deg, var(--sand) 0%, var(--bone) 50%, var(--pink) 100%);
+  border:1px solid var(--hairline);
+}
+.flatlay::after{
+  content:"flatlay hero · sunlight from camera-left · props arranged · no faces";
+  position:absolute;inset:auto 16px 16px 16px;
+  font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);
+}
+.flatlay .dot{position:absolute;border-radius:50%;opacity:.85}
+.flatlay .d1{width:30%;aspect-ratio:1;background:var(--sage);left:8%;top:14%}
+.flatlay .d2{width:18%;aspect-ratio:1;background:var(--terracotta);right:12%;top:32%}
+.flatlay .d3{width:24%;aspect-ratio:1;background:var(--butter);left:22%;bottom:20%}
+.flatlay .d4{width:14%;aspect-ratio:1;background:var(--ink);right:24%;bottom:14%;opacity:.4}
+
+/* Section structure ----------------------------------- */
+section.s{padding:96px 0;border-bottom:1px solid var(--hairline)}
+section.s:last-of-type{border-bottom:0}
+.section-head{display:grid;grid-template-columns:120px 1fr;gap:40px;margin-bottom:56px;align-items:start}
+.section-num{
+  font-family:'Fraunces',serif;font-style:italic;
+  font-size:48px;color:var(--terracotta);line-height:1;
+  font-weight:500;
+}
+.section-head .lede{margin-top:14px}
+@media (max-width:740px){.section-head{grid-template-columns:1fr;gap:8px}.section-num{font-size:36px}}
+
+/* Color system ---------------------------------------- */
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:900px){.swatches{grid-template-columns:repeat(2,1fr)}}
+.sw{border-radius:14px;border:1px solid var(--hairline);overflow:hidden;background:#fff}
+.sw .chip{height:140px}
+.sw .meta{padding:14px 16px}
+.sw .name{font-weight:500;font-size:14px}
+.sw .hex{font-family:'Inter',monospace;font-size:12px;color:var(--muted);margin-top:2px}
+.sw .role{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.45}
+.contrast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+@media (max-width:860px){.contrast-grid{grid-template-columns:1fr}}
+.contrast{padding:18px;border-radius:12px;font-size:13px;border:1px solid var(--hairline)}
+.contrast .ratio{font-family:'Inter',monospace;font-size:11px;letter-spacing:.05em}
+.usage-bar{height:14px;border-radius:8px;display:flex;overflow:hidden;margin-top:12px;border:1px solid var(--hairline)}
+.usage-bar > div{height:100%}
+
+/* Type specimens -------------------------------------- */
+.specimen{padding:32px 0;border-top:1px dashed var(--hairline)}
+.specimen:first-of-type{border-top:0;padding-top:0}
+.specimen .label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.scale-row{display:flex;align-items:baseline;gap:24px;flex-wrap:wrap}
+.scale-row .px{font-family:'Inter',monospace;font-size:11px;color:var(--muted);min-width:80px}
+
+/* Voice ----------------------------------------------- */
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:740px){.voice-grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--hairline);border-radius:16px;padding:24px}
+.card h4{margin:0 0 12px;font-family:'Fraunces',serif;font-weight:500;font-size:18px}
+.card ul{margin:0;padding:0;list-style:none}
+.card ul li{padding:8px 0;border-bottom:1px solid var(--hairline);font-size:14px;display:flex;gap:10px;align-items:flex-start}
+.card ul li:last-child{border-bottom:0}
+.card .tick{color:var(--sage);font-weight:600}
+.card .cross{color:var(--terracotta);font-weight:600}
+.example{padding:18px 22px;border-radius:14px;background:var(--bone);border:1px solid var(--hairline);margin-top:14px}
+.example .who{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.example p{margin:0;font-size:15px}
+.banned{
+  display:inline-block;background:rgba(201,123,90,.08);
+  color:var(--terracotta);
+  padding:4px 10px;border-radius:999px;font-size:12px;
+  margin:4px 6px 0 0;border:1px solid rgba(201,123,90,.2);
+  text-decoration:line-through;
+}
+
+/* Photography ----------------------------------------- */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){.photo-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.photo-grid{grid-template-columns:1fr}}
+.shot{border-radius:14px;overflow:hidden;border:1px solid var(--hairline);position:relative}
+.shot .frame{aspect-ratio:4/5;position:relative}
+.shot .meta{padding:12px 14px;background:#fff}
+.shot .verdict{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.shot.do .verdict{color:var(--sage)}
+.shot.dont .verdict{color:var(--terracotta)}
+.shot .desc{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.4}
+.f1{background:linear-gradient(160deg,var(--sand) 0%,var(--bone) 60%,var(--pink) 100%)}
+.f2{background:linear-gradient(180deg,#fff 0%,var(--bone) 100%)}
+.f3{background:linear-gradient(200deg,var(--butter) 0%,var(--bone) 70%,var(--sage) 100%)}
+.f4{background:repeating-linear-gradient(45deg,#FF4A4A 0 14px,#FFD400 14px 28px,#3FB1FF 28px 42px)}
+.f5{background:radial-gradient(circle at 50% 50%,var(--ink) 0%,var(--ink) 30%,var(--bone) 60%);filter:blur(2px)}
+.f6{background:linear-gradient(0deg,var(--ink) 0%,var(--muted) 100%)}
+.shot .frame::after{content:attr(data-tag);position:absolute;left:14px;bottom:14px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(31,27,22,.7);background:rgba(245,240,232,.85);padding:6px 10px;border-radius:6px}
+
+/* UI components --------------------------------------- */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:500;font-size:15px;cursor:pointer;border:1px solid transparent;transition:transform .15s ease}
+.btn:hover{transform:scale(1.02);text-decoration:none}
+.btn-primary{background:var(--terracotta);color:#fff}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--hairline-strong)}
+.btn-ghost{background:transparent;color:var(--muted);border:0;padding:12px 14px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--hairline);font-size:12px;color:var(--muted)}
+.badge .b-dot{width:6px;height:6px;border-radius:50%;background:var(--sage)}
+.testimonial{background:#fff;border:1px solid var(--hairline);border-radius:18px;padding:26px}
+.testimonial blockquote{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:20px;line-height:1.4;margin:0 0 16px;color:var(--ink)}
+.testimonial .who{font-size:13px;color:var(--muted)}
+.pkg-card{
+  background:#fff;border:1px solid var(--hairline);border-radius:18px;padding:26px;
+  display:flex;flex-direction:column;gap:14px;height:100%;
+}
+.pkg-card .price{font-family:'Fraunces',serif;font-size:32px;font-weight:500}
+.pkg-card .price small{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:4px}
+.pkg-card.signature{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.pkg-card.signature .price small{color:rgba(245,240,232,.7)}
+
+/* Theme system ---------------------------------------- */
+.theme{
+  border-radius:18px;padding:32px;border:1px solid var(--hairline);
+  display:grid;grid-template-columns:1fr 1.2fr;gap:32px;align-items:center;
+  margin-bottom:24px;
+}
+@media (max-width:860px){.theme{grid-template-columns:1fr}}
+.theme h3{margin:0 0 6px}
+.theme .palette-row{display:flex;gap:8px;margin-top:18px}
+.theme .pchip{width:34px;height:34px;border-radius:8px;border:1px solid var(--hairline)}
+.theme .props{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.6}
+.theme.neutral{background:linear-gradient(160deg,var(--sand),var(--bone))}
+.theme.white{background:linear-gradient(160deg,#fff,var(--bone))}
+.theme.color{background:linear-gradient(160deg,var(--butter),var(--pink))}
+.theme .mood{aspect-ratio:4/3;border-radius:14px;position:relative;overflow:hidden;border:1px solid var(--hairline)}
+.theme.neutral .mood{background:linear-gradient(180deg,var(--sand),var(--bone) 60%,var(--pink))}
+.theme.white .mood{background:linear-gradient(180deg,#fff,var(--bone))}
+.theme.color .mood{background:linear-gradient(180deg,var(--pink),var(--butter),var(--sage))}
+
+/* Trust ----------------------------------------------- */
+.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:900px){.trust-row{grid-template-columns:repeat(2,1fr)}}
+.trust{padding:24px;background:#fff;border:1px solid var(--hairline);border-radius:14px;text-align:center}
+.trust .seal{width:54px;height:54px;border-radius:50%;background:var(--sand);margin:0 auto 12px;display:grid;place-items:center;color:var(--ink);font-family:'Fraunces',serif;font-style:italic;font-size:22px}
+.trust h4{margin:0 0 6px;font-size:14px;font-weight:600}
+.trust p{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
+
+/* Donts ----------------------------------------------- */
+.donts{background:var(--ink);color:var(--bone);border-radius:20px;padding:48px}
+.donts h2.display{color:var(--bone)}
+.donts ul{margin:24px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px}
+@media (max-width:740px){.donts ul{grid-template-columns:1fr}}
+.donts ul li{padding:14px 0;border-top:1px solid rgba(245,240,232,.12);font-size:14px;display:flex;gap:10px}
+.donts ul li::before{content:"✕";color:var(--terracotta);font-weight:600}
+
+/* Footer ---------------------------------------------- */
+footer.site{padding:60px 0;color:var(--muted);font-size:13px}
+footer.site .row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+
+/* Utility --------------------------------------------- */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:740px){.grid-2{grid-template-columns:1fr}}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media (max-width:860px){.grid-3{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.grid-3{grid-template-columns:1fr}}
+hr.rule{border:0;height:1px;background:var(--hairline);margin:48px 0}
+
+@media (prefers-reduced-motion:reduce){
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container row">
+    <div class="brandmark">Kiddo<em>Klub</em></div>
+    <nav class="toc">
+      <a href="#essence">01 Essence</a>
+      <a href="#logo">02 Logo</a>
+      <a href="#color">03 Color</a>
+      <a href="#type">04 Type</a>
+      <a href="#voice">05 Voice</a>
+      <a href="#photo">06 Photo</a>
+      <a href="#motion">07 Motion</a>
+      <a href="#ui">08 UI</a>
+      <a href="#themes">09 Themes</a>
+      <a href="#trust">10 Trust</a>
+      <a href="#bilingual">11 Bilingual</a>
+      <a href="#donts">12 Don't</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Brand Guidelines · v1 · 2026</p>
+      <h1 class="display">
+        The look, the words,
+        <span class="accent italic-display" style="color:var(--terracotta)">the feeling we leave behind.</span>
+      </h1>
+      <p class="lede" style="margin-top:24px">
+        KiddoKlub is Doha's premium soft-play party brand; a parent-to-parent operation owned and run by Nadine. This document is the system that keeps every surface; site, WhatsApp, Instagram, on-site styling; recognisably us.
+      </p>
+      <div class="meta">
+        <span>Owned by Nadine personally</span>
+        <span>Doha, Qatar</span>
+        <span>v1 · 2026-04-26</span>
+      </div>
+    </div>
+    <div class="flatlay" aria-hidden="true">
+      <div class="dot d1"></div><div class="dot d2"></div><div class="dot d3"></div><div class="dot d4"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 ESSENCE -->
+<section class="s" id="essence">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">01</div>
+      <div>
+        <p class="eyebrow">Brand Essence</p>
+        <h2 class="display">Parties your child will remember; setups your guests will photograph.</h2>
+        <p class="lede">We are not a kids' party shop. We are a styling service for the most photographed hour of a mother's year. Everything we do, from font to fence to flatlay, is built to make that hour effortless for her and unforgettable for her child.</p>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h4>Who we serve</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">Mothers in Doha villas and the Pearl, Lusail, West Bay, Al Dafna compounds, planning a 1st through 5th birthday, a baby shower, or a milestone playdate.</p>
+      </div>
+      <div class="card">
+        <h4>What we sell</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">Premium soft-play, themed styling, and quiet logistics; delivered, set up, sanitized, and collected. The product is the photograph that comes after.</p>
+      </div>
+      <div class="card">
+        <h4>Why we win</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">Same premium soft-play a venue gives you, in your own home, on your own time, with no driving, no crowd, and the photo set already arranged.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 LOGO -->
+<section class="s" id="logo">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">02</div>
+      <div>
+        <p class="eyebrow">Logo System</p>
+        <h2 class="display">A serif wordmark, set with confidence.</h2>
+        <p class="lede">The mark is typographic, not iconographic. It carries warmth from the italic, premium from the serif, and trust from the proportion. No mascots, no balloons, no fonts pretending to be handwritten.</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card" style="display:grid;place-items:center;min-height:280px;background:var(--bone)">
+        <div class="brandmark" style="font-size:64px">Kiddo<em>Klub</em></div>
+      </div>
+      <div class="card" style="display:grid;place-items:center;min-height:280px;background:var(--ink)">
+        <div class="brandmark" style="font-size:64px;color:var(--bone)">Kiddo<em style="color:var(--butter)">Klub</em></div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-top:24px">
+      <div class="card">
+        <h4>Clear-space</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">A full lower-case "k" of clear space on every side. Never let other elements; nav links, photo edges, badges; touch the wordmark.</p>
+      </div>
+      <div class="card">
+        <h4>Minimum size</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">22px on screen, 14mm in print. Below this, the italic loses its grace and the kerning collapses.</p>
+      </div>
+      <div class="card">
+        <h4>Mono variants</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">Ink on Bone (default). Bone on Ink (dark surfaces). Single-colour Terracotta only on white photography overlays where Ink would compete with the image.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 COLOR -->
+<section class="s" id="color">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">03</div>
+      <div>
+        <p class="eyebrow">Color System</p>
+        <h2 class="display">A muted, photographable palette; never a primary-colour kids' palette.</h2>
+        <p class="lede">Bone and Sand carry every surface. Sage and Terracotta carry every accent. Ink carries every word. Pink and Butter are seasonal accents, never structural.</p>
+      </div>
+    </div>
+
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:var(--bone)"></div><div class="meta"><div class="name">Bone</div><div class="hex">#F5F0E8</div><div class="role">Primary surface. Body background. The "white" of this brand.</div></div></div>
+      <div class="sw"><div class="chip" style="background:var(--sand)"></div><div class="meta"><div class="name">Sand</div><div class="hex">#E8DDC8</div><div class="role">Section dividers, soft callouts, photography wash.</div></div></div>
+      <div class="sw"><div class="chip" style="background:var(--sage)"></div><div class="meta"><div class="name">Sage</div><div class="hex">#A8B89C</div><div class="role">Sanitation seal, "yes" ticks, calm trust mark.</div></div></div>
+      <div class="sw"><div class="chip" style="background:var(--terracotta)"></div><div class="meta"><div class="name">Terracotta</div><div class="hex">#C97B5A</div><div class="role">Primary accent. CTA pill. Italic display highlight.</div></div></div>
+      <div class="sw"><div class="chip" style="background:var(--ink)"></div><div class="meta"><div class="name">Ink</div><div class="hex">#1F1B16</div><div class="role">All body type. Signature dark surface. Never pure black.</div></div></div>
+      <div class="sw"><div class="chip" style="background:var(--muted)"></div><div class="meta"><div class="name">Muted</div><div class="hex">#6B5E54</div><div class="role">Secondary type, captions, eyebrows, meta.</div></div></div>
+      <div class="sw"><div class="chip" style="background:var(--pink)"></div><div class="meta"><div class="name">Dusty Pink</div><div class="hex">#E8C4B8</div><div class="role">Seasonal accent. Color Pop theme. Birthday styling.</div></div></div>
+      <div class="sw"><div class="chip" style="background:var(--butter)"></div><div class="meta"><div class="name">Butter Yellow</div><div class="hex">#F2DFA4</div><div class="role">Seasonal accent. Eid family events. Sunlit warmth.</div></div></div>
+    </div>
+
+    <hr class="rule" />
+
+    <div class="grid-2">
+      <div>
+        <p class="eyebrow">Usage ratios</p>
+        <h3 class="display" style="margin-top:8px">60 / 25 / 10 / 5</h3>
+        <p style="font-size:14px;color:var(--muted);max-width:46ch">Bone leads (60). Sand carries structure (25). Terracotta lights the eye (10). Sage and Ink work the trust mark and type (5 combined). Pink and Butter only appear in theme contexts.</p>
+        <div class="usage-bar">
+          <div style="background:var(--bone);width:60%;border-right:1px solid var(--hairline)"></div>
+          <div style="background:var(--sand);width:25%"></div>
+          <div style="background:var(--terracotta);width:10%"></div>
+          <div style="background:var(--sage);width:3%"></div>
+          <div style="background:var(--ink);width:2%"></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="eyebrow">Contrast (WCAG AA)</p>
+        <div class="contrast-grid" style="margin-top:14px;grid-template-columns:1fr">
+          <div class="contrast" style="background:var(--bone);color:var(--ink)">Ink on Bone <span class="ratio" style="float:right">12.4 : 1 · AAA</span></div>
+          <div class="contrast" style="background:var(--bone);color:var(--muted)">Muted on Bone <span class="ratio" style="float:right">5.1 : 1 · AA</span></div>
+          <div class="contrast" style="background:var(--terracotta);color:#fff">White on Terracotta <span class="ratio" style="float:right">3.6 : 1 · AA Large</span></div>
+          <div class="contrast" style="background:var(--ink);color:var(--bone)">Bone on Ink <span class="ratio" style="float:right">12.4 : 1 · AAA</span></div>
+        </div>
+        <p style="font-size:12px;color:var(--muted);margin-top:12px">Terracotta is reserved for buttons, links, and italic display accents (large type only). Never set body copy in Terracotta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 TYPE -->
+<section class="s" id="type">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">04</div>
+      <div>
+        <p class="eyebrow">Typography</p>
+        <h2 class="display">Fraunces speaks. Inter explains. Bukra carries Arabic.</h2>
+        <p class="lede">Fraunces is the voice of the brand; warm, lived-in, with an italic that does the emotional work. Inter handles every functional surface. 29LT Bukra is the only acceptable Arabic face; Tajawal is banned.</p>
+      </div>
+    </div>
+
+    <div class="specimen">
+      <div class="label">Display · Fraunces</div>
+      <div class="scale-row">
+        <div class="px">84 / 1.05</div>
+        <div class="display" style="font-size:84px">Soft, sun-warmed, <span class="italic-display" style="color:var(--terracotta)">already photographed.</span></div>
+      </div>
+      <div class="scale-row" style="margin-top:18px">
+        <div class="px">56 / 1.1</div>
+        <div class="display" style="font-size:56px">A morning made for them.</div>
+      </div>
+      <div class="scale-row" style="margin-top:18px">
+        <div class="px">30 / 1.2</div>
+        <div class="display" style="font-size:30px">Setups your guests will remember.</div>
+      </div>
+    </div>
+
+    <div class="specimen">
+      <div class="label">Body · Inter</div>
+      <div class="scale-row">
+        <div class="px">19 / 1.55</div>
+        <div style="font-size:19px;max-width:60ch">Lede paragraphs and quote leads use Inter at 19px. Tone is parent-to-parent, BLUF, calm. Sentences end in full stops; line breaks carry rhythm; semicolons connect related thoughts.</div>
+      </div>
+      <div class="scale-row" style="margin-top:18px">
+        <div class="px">16 / 1.55</div>
+        <div style="font-size:16px;max-width:60ch">Body. Default reading size. Used for package descriptions, FAQ answers, and most marketing copy.</div>
+      </div>
+      <div class="scale-row" style="margin-top:18px">
+        <div class="px">13 / 1.5</div>
+        <div style="font-size:13px;color:var(--muted);max-width:60ch">Caption, meta, eyebrow lead-in. Always Muted on Bone for legibility.</div>
+      </div>
+    </div>
+
+    <div class="specimen">
+      <div class="label">Arabic · 29LT Bukra (web fallback: IBM Plex Sans Arabic)</div>
+      <div class="ar" style="font-size:42px;line-height:1.2">حفلة أطفالك التي ستذكرها العائلة، <span style="color:var(--terracotta);font-weight:500">والصور التي ستعيد مشاركتها كل عام.</span></div>
+      <div class="ar" style="font-size:18px;color:var(--muted);margin-top:18px;max-width:60ch;line-height:1.7">نصمم زاوية لعب ناعمة، بألوان هادئة، تليق بمنزلك وبألبوم العائلة. التوصيل والتركيب والتعقيم ضمن السعر.</div>
+    </div>
+
+    <div class="specimen">
+      <div class="label">Pairing & RTL rules</div>
+      <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--muted);max-width:64ch;line-height:1.8">
+        <li>Display always Fraunces; body always Inter; never the reverse.</li>
+        <li>Italic Fraunces is the accent voice; never set entire paragraphs in italic.</li>
+        <li>Arabic uses CSS logical properties (margin-inline, padding-inline) and <code>dir="rtl"</code> on a route-level layout; never a class toggle (it breaks Framer Motion x-axis).</li>
+        <li>Arabic copy is written natively by a native speaker; never machine-translated from English.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 VOICE -->
+<section class="s" id="voice">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">05</div>
+      <div>
+        <p class="eyebrow">Voice</p>
+        <h2 class="display">Warm, parent-to-parent; <span class="italic-display" style="color:var(--terracotta)">never cartoonish.</span></h2>
+        <p class="lede">Nadine talks to mothers. She is one. Tone is calm, specific, and slightly understated; the opposite of the exclamation-heavy, emoji-loaded language most party services lean on.</p>
+      </div>
+    </div>
+
+    <div class="voice-grid">
+      <div class="card">
+        <h4>Use</h4>
+        <ul>
+          <li><span class="tick">✓</span><span>Specific nouns: "white fencing", "ball-pit cushion", "balloon arch"; never "magical setup".</span></li>
+          <li><span class="tick">✓</span><span>BLUF: lead with the answer, then the texture.</span></li>
+          <li><span class="tick">✓</span><span>Semicolons to connect related thoughts.</span></li>
+          <li><span class="tick">✓</span><span>"We" when speaking as the brand. "I" when speaking as Nadine in WhatsApp.</span></li>
+          <li><span class="tick">✓</span><span>One quiet exclamation mark per testimonial; zero in body copy.</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Never</h4>
+        <ul>
+          <li><span class="cross">✕</span><span>Em or en dashes (— or –). Always the #1 AI tell. Use a semicolon or a full stop.</span></li>
+          <li><span class="cross">✕</span><span>Marketing verbs: elevate, transform, unleash, ignite, curate, amplify.</span></li>
+          <li><span class="cross">✕</span><span>"Magical", "amazing", "the best", "out of this world".</span></li>
+          <li><span class="cross">✕</span><span>Multiple emoji in a row. One, occasionally, at the end of a WhatsApp message.</span></li>
+          <li><span class="cross">✕</span><span>Auto-translated Arabic. Better to send English than broken Arabic.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:24px">
+      <div>
+        <p class="eyebrow">Six worked examples · English</p>
+        <div class="example"><div class="who">Hero</div><p>Parties your child will remember. Setups your guests will photograph.</p></div>
+        <div class="example"><div class="who">Package card · Klub Classic</div><p>Soft-play, ball pit, themed styling, and a balloon arch; delivered, set up, sanitized, and collected.</p></div>
+        <div class="example"><div class="who">WhatsApp first reply</div><p>Hi Sarah, lovely to hear from you. Saturday afternoons book up first; would morning work too if Saturday's gone?</p></div>
+      </div>
+      <div>
+        <p class="eyebrow">Six worked examples · العربية</p>
+        <div class="example"><div class="who ar">عنوان رئيسي</div><p class="ar">حفلة يتذكرها طفلك، وزاوية يلتقطها كل ضيف.</p></div>
+        <div class="example"><div class="who ar">باقة كلاسيك</div><p class="ar">زاوية لعب ناعمة وحوض كرات وقوس بالونات؛ التوصيل والتركيب والتعقيم ضمن السعر.</p></div>
+        <div class="example"><div class="who ar">رد واتساب أول</div><p class="ar">أهلاً سارة، صباح السبت أسرع حجزاً عادةً؛ هل يناسبك أيضاً صباح الجمعة لو امتلأ السبت؟</p></div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px">
+      <p class="eyebrow">Banned words and patterns</p>
+      <div style="margin-top:10px">
+        <span class="banned">elevate</span><span class="banned">transform</span><span class="banned">unleash</span><span class="banned">curate</span><span class="banned">magical</span><span class="banned">amazing</span><span class="banned">the best</span><span class="banned">delve</span><span class="banned">in the realm of</span><span class="banned">unlock</span><span class="banned">— em dash</span><span class="banned">– en dash</span><span class="banned">multiple !!!</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PHOTO -->
+<section class="s" id="photo">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">06</div>
+      <div>
+        <p class="eyebrow">Photography</p>
+        <h2 class="display">The hero is always the room <span class="italic-display" style="color:var(--terracotta)">before the children arrive.</span></h2>
+        <p class="lede">Overhead, even light, no faces, props arranged. Action shots earn their place in the second-tier grid; never as the headline image. This rule is what keeps the brand from looking like every other party rental.</p>
+      </div>
+    </div>
+
+    <div class="photo-grid">
+      <div class="shot do">
+        <div class="frame f1" data-tag="DO"></div>
+        <div class="meta"><div class="verdict">Do · flatlay hero</div><div class="desc">Overhead. Sunlight from camera-left. Soft-play arranged in the final shape; cushions plumped; balloon arch fully inflated. No people.</div></div>
+      </div>
+      <div class="shot do">
+        <div class="frame f2" data-tag="DO"></div>
+        <div class="meta"><div class="verdict">Do · neutral nest</div><div class="desc">White-on-bone palette. Negative space carries the frame. The eye finds the ball pit before anything else.</div></div>
+      </div>
+      <div class="shot do">
+        <div class="frame f3" data-tag="DO"></div>
+        <div class="meta"><div class="verdict">Do · color pop in context</div><div class="desc">Pink, butter, and sage in seasonal proportion; ground stays bone. Color carries the joy without screaming.</div></div>
+      </div>
+      <div class="shot dont">
+        <div class="frame f4" data-tag="DON'T"></div>
+        <div class="meta"><div class="verdict">Don't · primary-colour clash</div><div class="desc">Red, blue, yellow at full saturation. Photographs as a kids' party shop. Never our look.</div></div>
+      </div>
+      <div class="shot dont">
+        <div class="frame f5" data-tag="DON'T"></div>
+        <div class="meta"><div class="verdict">Don't · action as hero</div><div class="desc">Mid-jump, motion blur, faces in shot. This is a second-tier image; it tells the story but it doesn't sell the booking.</div></div>
+      </div>
+      <div class="shot dont">
+        <div class="frame f6" data-tag="DON'T"></div>
+        <div class="meta"><div class="verdict">Don't · low light, dark room</div><div class="desc">Setup before the curtains opened. Soft play looks heavy. No invitation to sit on the floor.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 MOTION -->
+<section class="s" id="motion">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">07</div>
+      <div>
+        <p class="eyebrow">Motion & interaction</p>
+        <h2 class="display">Subtle, on-scroll, never decorative.</h2>
+        <p class="lede">Motion in KiddoKlub is breath, not performance. Hero parallax, reveal-on-scroll for storytelling beats, and full respect for prefers-reduced-motion.</p>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h4>Hero parallax</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">5% Y travel and 1.04 scale across the first viewport scroll. Driven by Framer Motion <code>useScroll</code>; never CSS-only because the curve must ease.</p>
+      </div>
+      <div class="card">
+        <h4>Reveal-on-scroll</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">Comparison rows, package cards, theme tiles fade in (8px Y, 0.35s) with a 40ms stagger. <code>once: true</code>; never animate twice.</p>
+      </div>
+      <div class="card">
+        <h4>Reduced-motion</h4>
+        <p style="margin:0;font-size:14px;color:var(--muted)">All non-essential motion stops at <code>@media (prefers-reduced-motion: reduce)</code>. Hero parallax disables; reveals snap in. Functionality never depends on motion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 UI -->
+<section class="s" id="ui">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">08</div>
+      <div>
+        <p class="eyebrow">UI components</p>
+        <h2 class="display">A small kit, used the same way everywhere.</h2>
+        <p class="lede">Buttons, cards, badges, testimonials, package cards. That is the entire kit. New components require a written reason.</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h4>Buttons</h4>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+          <a class="btn btn-primary" href="#">WhatsApp Nadine</a>
+          <a class="btn btn-secondary" href="#">Browse packages</a>
+          <a class="btn btn-ghost" href="#">Read FAQ</a>
+        </div>
+        <p style="margin-top:14px;font-size:13px;color:var(--muted)">Primary is Terracotta pill, white text, 13px x 22px padding. Secondary is outlined in Hairline-Strong. Ghost is no border, Muted text. Never more than one Primary on a viewport.</p>
+      </div>
+      <div class="card">
+        <h4>Trust badges</h4>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+          <span class="badge"><span class="b-dot"></span>QAR 1M public liability</span>
+          <span class="badge"><span class="b-dot"></span>Sanitized after every event</span>
+          <span class="badge"><span class="b-dot"></span>Same-day setup</span>
+          <span class="badge"><span class="b-dot"></span>Doha-trusted families</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:24px">
+      <div class="testimonial">
+        <blockquote>"Set up before guests arrived; sanitised; collected the same evening. The photos are still in our family chat."</blockquote>
+        <div class="who">Sarah M · Birthday party · West Bay</div>
+      </div>
+      <div class="testimonial">
+        <blockquote>"Nadine answers WhatsApp like a friend. The pearl pink set was exactly the colour she promised."</blockquote>
+        <div class="who">Fatima A · Playdate · The Pearl</div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-top:24px">
+      <div class="pkg-card">
+        <p class="eyebrow">Klub Mini</p>
+        <div class="price">QAR 1,400<small>up to 8 children · 2 hours · home setup</small></div>
+        <p style="font-size:14px;color:var(--muted);margin:0">Soft-play core set; bone palette; same-day setup and collection.</p>
+        <a class="btn btn-secondary" href="#" style="align-self:flex-start">View Mini</a>
+      </div>
+      <div class="pkg-card" style="border-color:var(--terracotta);box-shadow:0 1px 0 var(--terracotta) inset">
+        <p class="eyebrow" style="color:var(--terracotta)">Most chosen · Klub Classic</p>
+        <div class="price">QAR 2,200<small>up to 16 children · 3 hours · soft-play + bouncy castle</small></div>
+        <p style="font-size:14px;color:var(--muted);margin:0">Soft-play, ball pit, themed styling, and a balloon arch; delivered, set up, sanitized, collected.</p>
+        <a class="btn btn-primary" href="#" style="align-self:flex-start">Book Classic</a>
+      </div>
+      <div class="pkg-card signature">
+        <p class="eyebrow" style="color:rgba(245,240,232,.7)">Klub Signature</p>
+        <div class="price">starting from<small style="color:rgba(245,240,232,.7)">QAR 3,800 · request a quote on WhatsApp</small></div>
+        <p style="font-size:14px;color:rgba(245,240,232,.75);margin:0">Themed end-to-end styling, photographer included, gift bags. Quote on WhatsApp; we never publish the exact base.</p>
+        <a class="btn" style="background:var(--bone);color:var(--ink);align-self:flex-start" href="#">WhatsApp Nadine</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 THEMES -->
+<section class="s" id="themes">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">09</div>
+      <div>
+        <p class="eyebrow">Theme system</p>
+        <h2 class="display">Three themes; locked.</h2>
+        <p class="lede">Neutral Nest, White Wonderland, Color Pop. New themes require a strategic reason and Council sign-off; never invented in a marketing brief.</p>
+      </div>
+    </div>
+
+    <div class="theme neutral">
+      <div>
+        <p class="eyebrow">Theme · 01</p>
+        <h3 class="display">Neutral Nest</h3>
+        <p style="font-size:15px;color:var(--ink);margin:0;max-width:46ch">Bone, Sand, dusty Sage. The default look. Reads premium on every villa floor; carries a baby's first birthday and a quiet baby shower without rework.</p>
+        <div class="palette-row">
+          <div class="pchip" style="background:var(--bone)"></div>
+          <div class="pchip" style="background:var(--sand)"></div>
+          <div class="pchip" style="background:var(--sage)"></div>
+          <div class="pchip" style="background:#D9CDB7"></div>
+          <div class="pchip" style="background:#BFB196"></div>
+        </div>
+        <div class="props">Props: rattan crates, linen banners, dried pampas, wooden ABC blocks, cream balloon arch, white fencing.</div>
+      </div>
+      <div class="mood"></div>
+    </div>
+
+    <div class="theme white">
+      <div>
+        <p class="eyebrow">Theme · 02</p>
+        <h3 class="display">White Wonderland</h3>
+        <p style="font-size:15px;color:var(--ink);margin:0;max-width:46ch">Pure white core; subtle pearl, ivory, and silver accents. The "photographs like a magazine" look. Best in light-filled villas with high ceilings.</p>
+        <div class="palette-row">
+          <div class="pchip" style="background:#FFFFFF"></div>
+          <div class="pchip" style="background:#F4F1ED"></div>
+          <div class="pchip" style="background:#EDE3D2"></div>
+          <div class="pchip" style="background:#E4D9C6"></div>
+          <div class="pchip" style="background:#CFC4B0"></div>
+        </div>
+        <div class="props">Props: pearl-finish soft-play, white fencing, white ball pit with cream balls, silver foil number, ivory gauze ceiling drape.</div>
+      </div>
+      <div class="mood"></div>
+    </div>
+
+    <div class="theme color">
+      <div>
+        <p class="eyebrow">Theme · 03</p>
+        <h3 class="display">Color Pop</h3>
+        <p style="font-size:15px;color:var(--ink);margin:0;max-width:46ch">Dusty Pink, Butter Yellow, Sage; never primary red, blue, yellow. The "joyful but tasteful" look; ideal for second and third birthdays.</p>
+        <div class="palette-row">
+          <div class="pchip" style="background:var(--pink)"></div>
+          <div class="pchip" style="background:var(--butter)"></div>
+          <div class="pchip" style="background:var(--sage)"></div>
+          <div class="pchip" style="background:#E2A48A"></div>
+          <div class="pchip" style="background:#C9B98A"></div>
+        </div>
+        <div class="props">Props: pastel ball pit (pink/butter/sage mix), rainbow balloon arch in seasonal palette, gingham picnic cushion, paper rosettes.</div>
+      </div>
+      <div class="mood"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 TRUST -->
+<section class="s" id="trust">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">10</div>
+      <div>
+        <p class="eyebrow">Trust & compliance surfaces</p>
+        <h2 class="display">Quiet badges, in the right places.</h2>
+        <p class="lede">Doha mothers vet vendors. The brand earns trust by surfacing the four signals that matter, in a single trust strip below the hero and on every package card.</p>
+      </div>
+    </div>
+
+    <div class="trust-row">
+      <div class="trust"><div class="seal">QAR 1M</div><h4>Public liability</h4><p>Insurance held in Nadine's name; certificate available on request for compounds that require COI.</p></div>
+      <div class="trust"><div class="seal">✦</div><h4>Sanitized every event</h4><p>Antibacterial wipe-down of every soft-play piece between bookings; documented in our internal log.</p></div>
+      <div class="trust"><div class="seal">✿</div><h4>Doha-trusted</h4><p>Pearl, Lusail, West Bay, Al Dafna, Bayt Al Dar; we know the gates, the parking, the lift access.</p></div>
+      <div class="trust"><div class="seal">⏱</div><h4>Same-day setup</h4><p>Setup window 90 minutes before guests; collection window same evening or the next morning.</p></div>
+    </div>
+
+    <p style="font-size:13px;color:var(--muted);margin-top:24px;max-width:64ch">No CR number, no LLC, no MOCI registration appears on any KiddoKlub surface. This is an informal operation under Nadine personally; we do not imply otherwise.</p>
+  </div>
+</section>
+
+<!-- 11 BILINGUAL -->
+<section class="s" id="bilingual">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-num">11</div>
+      <div>
+        <p class="eyebrow">Bilingual & RTL</p>
+        <h2 class="display">EN and AR are equals; <span class="italic-display" style="color:var(--terracotta)">never one through the other.</span></h2>
+        <p class="lede">Arabic is written natively, by a native speaker. Layout flips via Next.js layout-level <code>dir="rtl"</code> and CSS logical properties; never via class toggles, which break Framer Motion x-axis animation.</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h4>Engineering rules</h4>
+        <ul>
+          <li><span class="tick">✓</span><span>Two routes: <code>/</code> and <code>/ar</code>. Each has its own layout with the right <code>lang</code> and <code>dir</code>.</span></li>
+          <li><span class="tick">✓</span><span>Spacing uses <code>margin-inline-start</code>, <code>padding-inline-end</code>; never <code>margin-left</code>.</span></li>
+          <li><span class="tick">✓</span><span>Numbers, prices, phone numbers stay LTR inside RTL paragraphs (use <code>&lt;bdi&gt;</code> when needed).</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Copy rules</h4>
+        <ul>
+          <li><span class="cross">✕</span><span>Never auto-translate. Better to send English than broken Arabic.</span></li>
+          <li><span class="tick">✓</span><span>Arabic uses 29LT Bukra (web fallback IBM Plex Sans Arabic); never Tajawal.</span></li>
+          <li><span class="tick">✓</span><span>Voice in Arabic mirrors voice in English: warm, BLUF, no exclamation marks in body.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 DON'TS -->
+<section class="s" id="donts">
+  <div class="container">
+    <div class="donts">
+      <p class="eyebrow" style="color:rgba(245,240,232,.7)">12 · The hard list</p>
+      <h2 class="display">Don't.</h2>
+      <ul>
+        <li>No em dash (—). No en dash (–). Use a semicolon or a full stop.</li>
+        <li>No "elevate", "transform", "unleash", "magical", "amazing".</li>
+        <li>No primary-colour palette. No clown red, royal blue, school-bus yellow.</li>
+        <li>No action shot as hero. The hero is the room before the children arrive.</li>
+        <li>No exact Klub Signature price on a public surface. Always "starting from"; quote on WhatsApp.</li>
+        <li>No Equipt branding. No Equipt invoicing. No Equipt logo on a customer surface.</li>
+        <li>No CR number, no LLC, no MOCI; the operation is informal under Nadine personally.</li>
+        <li>No machine-translated Arabic. Never.</li>
+        <li>No Tajawal. Use 29LT Bukra (or Plex Arabic on web).</li>
+        <li>No multi-emoji strings. One quiet emoji, only at the end of a WhatsApp.</li>
+        <li>No invented theme. Three themes only: Neutral Nest, White Wonderland, Color Pop.</li>
+        <li>No mascot, balloon-shaped logo, or hand-lettered font pretending to be playful.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container row">
+    <div>KiddoKlub Brand Guidelines · v1 · 2026-04-26</div>
+    <div>Owned and operated by Nadine personally · Doha, Qatar</div>
+  </div>
+</footer>
+
+</body>
+</html>

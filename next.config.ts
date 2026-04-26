@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/wa", destination: "https://wa.me/97450318434", permanent: false },
+      { source: "/brand", destination: "/brand/index.html", permanent: false },
     ];
   },
 };

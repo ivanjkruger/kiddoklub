@@ -29,13 +29,13 @@ export default function Home() {
       <TrustStrip />
 
       {/* Recently in your compound */}
-      <section className="px-6 py-20 bg-[var(--color-sand)]/40">
+      <section className="px-6 py-20 bg-[var(--color-soft)]">
         <div className="max-w-6xl mx-auto">
-          <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3">
+          <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3 font-semibold">
             Recently
           </p>
-          <h2 className="text-3xl md:text-4xl mb-8">
-            In <span className="italic-display text-[var(--color-terracotta)]">your compound</span> this month
+          <h2 className="text-3xl md:text-4xl mb-8 font-display">
+            In <span className="accent-mint">your compound</span> this month 🌈
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {SETUP_TILES.map((p, i) => (
@@ -59,7 +59,7 @@ export default function Home() {
           <div className="mt-8 text-center">
             <Link
               href="/gallery"
-              className="text-[var(--color-terracotta)] font-medium underline-offset-4 hover:underline"
+              className="text-[var(--color-mint-deep)] font-semibold underline-offset-4 hover:underline"
             >
               Browse the full gallery →
             </Link>
@@ -71,11 +71,11 @@ export default function Home() {
 
       {/* Theme catalog teaser */}
       <section className="px-6 py-20 max-w-6xl mx-auto">
-        <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3 text-center">
+        <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3 text-center font-semibold">
           Themes
         </p>
-        <h2 className="text-3xl md:text-4xl text-center mb-10">
-          Six themes, <span className="italic-display text-[var(--color-terracotta)]">one perfect day</span>
+        <h2 className="text-3xl md:text-4xl text-center mb-10 font-display">
+          Six themes, <span className="accent-pink">one perfect day</span> 🤍
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {THEMES.slice(0, 6).map((t) => (
@@ -113,15 +113,17 @@ export default function Home() {
         <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3">
           A note from our founder
         </p>
-        <h2 className="text-3xl md:text-4xl mb-6 italic-display">
-          I started KiddoKlub when I couldn&apos;t find what I wanted for my own kids&apos; parties.
+        <h2 className="text-3xl md:text-4xl mb-6 font-display">
+          I started KiddoKlub when I couldn&apos;t find what I wanted for my own kids&apos; parties. 🤍
         </h2>
-        <p className="text-[var(--color-muted)] mb-6 leading-relaxed">
-          Every set is sanitized between events. Every party is private. We arrive 90 minutes early, leave 30 minutes after the last guest, and ask before we post any photos. — Nadine
+        <p className="text-[var(--color-ink-soft)] mb-6 leading-relaxed">
+          Every set is sanitised between events. Every party is private. We arrive 90 minutes early, leave 30 minutes after the last guest, and ask before we post any photos.
+          <br /><br />
+          <span className="font-semibold">Nadine 🤍</span>
         </p>
         <Link
           href="/about"
-          className="inline-block rounded-full border border-[var(--color-ink)]/15 px-6 py-3 font-medium hover:bg-[var(--color-sand)]/40 transition-colors"
+          className="inline-block rounded-full border border-[var(--color-ink)]/15 px-6 py-3 font-semibold hover:bg-[var(--color-soft)] transition-colors"
         >
           Meet Nadine
         </Link>

@@ -7,7 +7,7 @@ import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 
 export const metadata = {
-  title: "Availability — KiddoKlub",
+  title: "Availability · KiddoKlub",
   description: "See which weekend slots are open. Doha-tz. Updated weekly.",
 };
 
@@ -34,9 +34,9 @@ function nextWeekend(weeks: number): Day[] {
 }
 
 const STATUS = {
-  open:    { dot: "var(--color-sage)",       pill: "bg-[#E8F4EE] text-[#3A6F4D]",    label: "Available" },
+  open:    { dot: "var(--color-mint)",       pill: "bg-[#E8F4EE] text-[#3F6B57]",    label: "Available" },
   limited: { dot: "var(--color-butter)",     pill: "bg-[#FBF1D6] text-[#8C6E2E]",    label: "1 slot left" },
-  booked:  { dot: "var(--color-terracotta)", pill: "bg-[#F8E1D8] text-[#A14B36]",    label: "Booked" },
+  booked:  { dot: "var(--color-pink-deep)",  pill: "bg-[#F8E1E3] text-[#9B484C]",    label: "Booked" },
 };
 
 export default function AvailabilityPage() {
@@ -47,10 +47,10 @@ export default function AvailabilityPage() {
       <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3 text-center">
         Availability
       </p>
-      <h1 className="text-4xl md:text-5xl text-center mb-3">
-        See what&apos;s <span className="italic-display text-[var(--color-terracotta)]">still open</span>
+      <h1 className="text-4xl md:text-5xl text-center mb-3 font-display">
+        See what&apos;s <span className="accent-mint">still open</span> 🌈
       </h1>
-      <p className="text-center text-[var(--color-muted)] mb-10">
+      <p className="text-center text-[var(--color-ink-soft)] mb-10">
         Friday and Saturday weekend slots, Doha time. Updated daily. Inside-7-day rush is +15%.
       </p>
 
@@ -85,7 +85,7 @@ export default function AvailabilityPage() {
           href="https://wa.me/97450318434?text=Hi%20Nadine!%20I%27d%20like%20to%20check%20availability%20for%20a%20setup."
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-[var(--color-terracotta)] text-white px-7 py-3 font-medium"
+          className="rounded-full bg-[var(--color-mint-deep)] text-white px-7 py-3 font-semibold"
         >
           WhatsApp Nadine
         </a>

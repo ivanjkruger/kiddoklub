@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "KiddoKlub — soft-play parties in Doha",
+    name: "KiddoKlub · soft-play parties in Doha",
     short_name: "KiddoKlub",
     description:
       "Premium soft-play party rentals delivered, set up, and collected anywhere in Doha. For kids 1-5.",

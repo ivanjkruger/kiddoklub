@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "كيدو كلب — حفلات سوفت بلاي في الدوحة",
+  title: "كيدو كلب · حفلات سوفت بلاي في الدوحة",
   description:
     "حفلات سوفت بلاي ممتازة للأطفال من سنة لخمس سنوات في الدوحة. نوصّل، نركّب، نعقّم، ونرفع. واتساب نادين خلال ٣٠ دقيقة.",
   alternates: { canonical: "https://kiddoklub.com/ar" },
