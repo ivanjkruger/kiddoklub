@@ -11,7 +11,11 @@ export function generateStaticParams() {
   return THEMES.map((t) => ({ slug: t.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const t = THEME_BY_SLUG[slug];
   if (!t) return {};
@@ -26,7 +30,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function ThemePage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ThemePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const theme = THEME_BY_SLUG[slug];
   if (!theme) return notFound();
@@ -46,18 +54,26 @@ export default async function ThemePage({ params }: { params: Promise<{ slug: st
           <h1 className="text-4xl md:text-6xl leading-[1.05] mb-4">
             {theme.name}
             <br />
-            <span className="italic-display text-[var(--color-terracotta)]">{theme.tagline}</span>
+            <span className="italic-display text-[var(--color-terracotta)]">
+              {theme.tagline}
+            </span>
           </h1>
-          <p className="text-lg text-[var(--color-muted)] max-w-xl mb-6">{theme.body}</p>
+          <p className="text-lg text-[var(--color-muted)] max-w-xl mb-6">
+            {theme.body}
+          </p>
           <div className="grid grid-cols-2 gap-3 mb-6 max-w-md">
             <div className="rounded-xl bg-white border border-black/5 p-3 text-sm">
-              <div className="text-[var(--color-muted)] text-xs uppercase tracking-wide mb-0.5">Starting from</div>
+              <div className="text-[var(--color-muted)] text-xs uppercase tracking-wide mb-0.5">
+                Starting from
+              </div>
               <div className="font-serif text-xl">
                 <bdi>QAR {theme.startingFromQar.toLocaleString("en-US")}</bdi>
               </div>
             </div>
             <div className="rounded-xl bg-white border border-black/5 p-3 text-sm">
-              <div className="text-[var(--color-muted)] text-xs uppercase tracking-wide mb-0.5">Best for</div>
+              <div className="text-[var(--color-muted)] text-xs uppercase tracking-wide mb-0.5">
+                Best for
+              </div>
               <div>{theme.bestFor}</div>
             </div>
           </div>
@@ -98,7 +114,10 @@ export default async function ThemePage({ params }: { params: Promise<{ slug: st
       <section className="px-6 py-16 max-w-6xl mx-auto">
         <div className="grid grid-cols-2 gap-4">
           {theme.imageDetails.map((src, i) => (
-            <div key={i} className="aspect-[4/5] rounded-2xl overflow-hidden border border-black/5 relative">
+            <div
+              key={i}
+              className="aspect-[4/5] rounded-2xl overflow-hidden border border-black/5 relative"
+            >
               <Image
                 src={src}
                 alt={`${theme.name} detail ${i + 1}`}
@@ -115,7 +134,9 @@ export default async function ThemePage({ params }: { params: Promise<{ slug: st
 
       {/* Theme switcher */}
       <section className="px-6 py-16 max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-serif mb-6 text-center">Other themes</h2>
+        <h2 className="text-2xl md:text-3xl font-serif mb-6 text-center">
+          Other themes
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {THEMES.filter((t) => t.slug !== theme.slug).map((t) => (
             <Link
@@ -154,7 +175,7 @@ export default async function ThemePage({ params }: { params: Promise<{ slug: st
             name: `KiddoKlub ${theme.name} setup`,
             description: theme.body,
             brand: { "@type": "Brand", name: "KiddoKlub" },
-            image: [`https://kiddoklub.com${theme.imageHero}`],
+            image: [`https://kiddoklubdoha.com${theme.imageHero}`],
             offers: {
               "@type": "AggregateOffer",
               lowPrice: theme.startingFromQar,
@@ -162,7 +183,11 @@ export default async function ThemePage({ params }: { params: Promise<{ slug: st
               availability: "https://schema.org/InStock",
               areaServed: "Doha, Qatar",
             },
-            aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: "12" },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              reviewCount: "12",
+            },
           }),
         }}
       />

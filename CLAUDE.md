@@ -67,12 +67,12 @@ SKIP: TikTok paid (until 50+ deliveries), bought lists, Google LSA (not in Qatar
 
 | Layer | Tool | Notes |
 |---|---|---|
-| Domain | kiddoklub.com (Ivan-owned, Day 1) | Confirm receipt; sanity-check the brand name on the cert |
+| Domain | kiddoklubdoha.com (Ivan-owned, Day 1) | Confirm receipt; sanity-check the brand name on the cert |
 | Hosting | Vercel (Next 16 + Tailwind v4 + Framer Motion 12) | Free hobby tier OK for Phase 1 |
 | Booking | Cal.com | Reuse Ivan's existing account |
 | Payments | Skipcash (Nadine's name + Nadine's IBAN) | 2.49% local cards, WA invoice-link UX |
 | Messaging | WhatsApp Business App (free) Phase 1 → Wati API at Day 30 (after CR) | 256-contact ceiling on free tier |
-| Email | Resend + Google Workspace hello@kiddoklub.com (Nadine-owned) |
+| Email | Resend + Google Workspace hello@kiddoklubdoha.com (Nadine-owned) |
 | CRM | Supabase (NOT Odoo — overkill at this scale) | Single source for site + dashboard + James |
 | Content | Higgs Field Seedance 2.0 (15 skills installed) + CapCut Pro | Existing Ivan stack |
 | Voice | Real Nadine + UGC | ElevenLabs voice-clone deferred to Phase 3 contingency |

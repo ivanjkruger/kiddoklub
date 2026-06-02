@@ -11,7 +11,7 @@ Hi mamas! Hope you don't mind me sharing this here. I run KiddoKlub — we rent 
 
 We have 3 gorgeous themes (Neutral Nest, White Wonderland, and Color Pop) and we handle everything — delivery, full setup, and pickup. You literally don't have to do anything except enjoy watching the kids play.
 
-Right now we have a special: book any package and get a FREE Jumping Castle add-on (normally QAR 650).
+Right now we have a special: book any package and get a FREE Jumping Castle add-on (normally QAR 400).
 
 If anyone's got a birthday or event coming up, happy to chat! Just message me on WhatsApp: +974 5031 8434
 
@@ -25,7 +25,7 @@ Or check us out on Instagram: @kiddoklub
 
 عندنا 3 ثيمات حلوة ونتكفل بكل شي — التوصيل والتركيب والاستلام.
 
-حاليا عندنا عرض: احجزي اي باكج واحصلي على نطيطة مجانا (قيمتها 650 ريال).
+حاليا عندنا عرض: احجزي اي باكج واحصلي على نطيطة مجانا (قيمتها 400 ريال).
 
 لأي استفسار راسلوني واتساب: 50318434
 
@@ -41,12 +41,12 @@ I'm [Name] from KiddoKlub. We rent premium soft play sets — think ball pits, f
 
 **What makes us different:**
 - 3 beautiful themes to match any party aesthetic
-- Sizes for 6-15 kids (starting from QAR 1,200 for 4 hours)
+- Sizes for 6-15 kids (starting from QAR 1,400 for 4 hours)
 - We deliver, set up in 90 mins, and pick up after — you don't lift a finger
 - Optional white fencing to keep the little ones safe
 - Add-ons like jumping castles, balloon houses, and ball pit slides
 
-**Current offer:** Book any package and get a FREE Jumping Castle (worth QAR 650). Limited availability!
+**Current offer:** Book any package and get a FREE Jumping Castle (worth QAR 400). Limited availability!
 
 Check us out on Instagram @kiddoklub or WhatsApp us at +974 5031 8434.
 
@@ -106,7 +106,7 @@ I run KiddoKlub, and we specialize in soft play set rentals for kids' parties an
 **Here's what I'm thinking:**
 
 - You focus on decor, catering, the overall party — we handle the kids' entertainment
-- We can offer a **10% referral fee** (or QAR 100-200 per booking) for any client you send our way
+- We can offer a **QAR 150 referral fee** per booking for any client you send our way
 - Or we can create **bundle packages** together that you can offer as a complete party solution
 - We deliver, set up, and pick up everything — zero work on your end
 

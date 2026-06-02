@@ -7,7 +7,7 @@ mode: full
 risk_tier: high
 stack: [typescript, nextjs-16, react-19, tailwind-v4, framer-motion-12, supabase-postgres, cal.com, skipcash, wati]
 deploy: vercel
-success_criteria: 10 paid Klub Classic bookings on kiddoklub.com inside the founding-family window (expires 2026-06-30) with zero Equipt-brand entanglement and Nadine-name-only money flow.
+success_criteria: 10 paid Klub Classic bookings on kiddoklubdoha.com inside the founding-family window (expires 2026-06-30) with zero Equipt-brand entanglement and Nadine-name-only money flow.
 references:
   - ~/.claude/plans/eventual-growing-hopcroft.md
   - ~/Projects/kiddoklub/docs/COUNCIL_2026_04_25.md
@@ -20,7 +20,7 @@ references:
 # Discovery — kiddoklub
 
 ## What
-Premium soft-play party rentals for kids 1-5 in Doha, trading under Nadine's name as a standalone consumer brand. The build is a bilingual (EN/AR, RTL-correct) Next.js 16 booking site at kiddoklub.com that runs three Cal.com event types (Klub Mini decoy / Klub Classic 90% picker / Klub Signature WhatsApp-only), takes Skipcash deposits in Nadine's name, syncs every booking + client + payment into Supabase, and pushes operational triggers (deposit paid, T-48h prep, T+24h testimonial chase, Dream-100 reply) into Telegram via James.
+Premium soft-play party rentals for kids 1-5 in Doha, trading under Nadine's name as a standalone consumer brand. The build is a bilingual (EN/AR, RTL-correct) Next.js 16 booking site at kiddoklubdoha.com that runs three Cal.com event types (Klub Mini decoy / Klub Classic 90% picker / Klub Signature WhatsApp-only), takes Skipcash deposits in Nadine's name, syncs every booking + client + payment into Supabase, and pushes operational triggers (deposit paid, T-48h prep, T+24h testimonial chase, Dream-100 reply) into Telegram via James.
 
 Behind the site sits a parallel automation surface: 8 KiddoKlub Claude Code skills (voice audit, booking intake, quote, outreach draft, reactivation, post-party follow-up, content engine, weekend prep), 6 launchd cron jobs, and a Supabase schema with state-machine booking transitions, advisory slot locks, idempotency keys, and an audit outbox. Goal: Nadine is the customer voice + delivery face, James drafts everything, Ivan caps personal time at ~30 min/day so this never eats the Q2 Dubai pipeline.
 
@@ -46,7 +46,7 @@ Doha-based parents of kids 1-5 hosting birthday parties at home or villa compoun
 - Any Equipt cross-promotion
 
 ## Open questions
-- [ ] Confirm domain: kiddoklub.com vs voice-typo "KirillClub.com" (verify receipt)
+- [ ] Confirm domain: kiddoklubdoha.com vs voice-typo "KirillClub.com" (verify receipt)
 - [ ] Mohammed conversation re: Nadine's CR / freelance permit status
 - [ ] Public liability insurance in Nadine's name (provider + policy #)
 - [ ] Skipcash signup in Nadine's name complete? (IBAN + KYC)

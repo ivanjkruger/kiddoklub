@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// Canonical mark: rainbow arc + "kiddoklub" rounded script wordmark
-// from Drive/Business/KiddoKlub/Brand/KiddoKlub-Logo.svg.
-// One file, one variant, one source of truth.
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <Link
@@ -12,11 +9,11 @@ export function Logo({ className = "" }: { className?: string }) {
       className={`inline-flex items-center ${className}`}
     >
       <Image
-        src="/brand/logo.svg"
+        src="/brand/logo-header.png"
         alt="KiddoKlub"
-        width={170}
-        height={62}
-        className="h-10 w-auto md:h-12"
+        width={400}
+        height={216}
+        className="h-10 w-auto md:h-14"
         priority
       />
     </Link>

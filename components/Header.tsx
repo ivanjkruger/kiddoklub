@@ -44,7 +44,9 @@ export function Header() {
           <Link
             href={LANG_TOGGLE.href as never}
             className="hidden md:inline-flex text-sm text-[var(--color-ink-soft)] hover:text-[var(--color-ink)]"
-            style={{ fontFamily: "'IBM Plex Sans Arabic', 'Tajawal', system-ui" }}
+            style={{
+              fontFamily: "'IBM Plex Sans Arabic', 'Tajawal', system-ui",
+            }}
           >
             {LANG_TOGGLE.label}
           </Link>
@@ -95,7 +97,7 @@ export function Header() {
                 rel="noopener noreferrer"
                 className="inline-block mt-2 rounded-full bg-[var(--color-mint-deep)] text-white px-5 py-2 text-sm font-medium"
               >
-                WhatsApp Nadine
+                WhatsApp us
               </a>
             </li>
           </ul>

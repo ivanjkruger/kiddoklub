@@ -3,7 +3,8 @@ import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 
 export const metadata = {
   title: "Contact · KiddoKlub",
-  description: "WhatsApp Nadine. Or email hello@kiddoklub.com. We reply within 30 minutes during the day.",
+  description:
+    "WhatsApp Nadine. Or email hello@kiddoklubdoha.com. We reply within 30 minutes during the day.",
 };
 
 export default function ContactPage() {
@@ -14,10 +15,14 @@ export default function ContactPage() {
           Talk to Nadine
         </p>
         <h1 className="text-4xl md:text-5xl mb-6">
-          The fastest way is <span className="italic-display text-[var(--color-terracotta)]">WhatsApp</span>
+          The fastest way is{" "}
+          <span className="italic-display text-[var(--color-terracotta)]">
+            WhatsApp
+          </span>
         </h1>
         <p className="text-[var(--color-muted)] max-w-xl mx-auto mb-10">
-          We reply within 30 minutes during the day, slower in the evening once the kids are down.
+          We reply within 30 minutes during the day, slower in the evening once
+          the kids are down.
         </p>
 
         <div className="flex flex-wrap gap-3 justify-center mb-14">
@@ -30,10 +35,10 @@ export default function ContactPage() {
             WhatsApp +974 5031 8434
           </a>
           <a
-            href="mailto:hello@kiddoklub.com"
+            href="mailto:hello@kiddoklubdoha.com"
             className="rounded-full border border-[var(--color-ink)]/15 px-7 py-3 font-medium hover:bg-[var(--color-sand)]/40 transition-colors"
           >
-            hello@kiddoklub.com
+            hello@kiddoklubdoha.com
           </a>
         </div>
 
@@ -41,19 +46,22 @@ export default function ContactPage() {
           <div className="rounded-2xl bg-white p-6 border border-black/5">
             <p className="font-medium mb-1">Service area</p>
             <p className="text-[var(--color-muted)]">
-              The Pearl · Lusail · West Bay · Al Waab · Abu Hamour · Education City. Other Doha areas on request.
+              The Pearl · Lusail · West Bay · Al Waab · Abu Hamour · Education
+              City. Other Doha areas on request.
             </p>
           </div>
           <div className="rounded-2xl bg-white p-6 border border-black/5">
             <p className="font-medium mb-1">Response time</p>
             <p className="text-[var(--color-muted)]">
-              Within 30 min in working hours. By 9am next day if you message late.
+              Within 30 min in working hours. By 9am next day if you message
+              late.
             </p>
           </div>
           <div className="rounded-2xl bg-white p-6 border border-black/5">
             <p className="font-medium mb-1">Lead time</p>
             <p className="text-[var(--color-muted)]">
-              7+ days preferred. Inside 7 days = a 15% rush surcharge plus inventory check.
+              7+ days preferred. Inside 7 days = a 15% rush surcharge plus
+              inventory check.
             </p>
           </div>
         </div>

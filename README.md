@@ -17,7 +17,7 @@ Premium soft-play party rentals in Doha, for kids 1-5. Trades under Nadine's nam
 - **Booking:** Cal.com (3 separate event types: mini · classic · signature)
 - **Payments:** Skipcash (Nadine's name + Nadine's IBAN); MyFatoorah Plan B
 - **Messaging:** WhatsApp Business App (Phase 1) → Wati API (Day 30+ after CR)
-- **Email:** Resend → hello@kiddoklub.com (Google Workspace)
+- **Email:** Resend → hello@kiddoklubdoha.com (Google Workspace)
 - **Notifications:** Telegram @Ivan_james_bot (KiddoKlub triggers in James world)
 - **Content:** Higgs Field Seedance 2.0 (15 skills installed) + CapCut Pro
 

@@ -12,7 +12,7 @@ KiddoKlub 🎪 Doha's Premium Soft Play Rentals
 🏠 We deliver, set up & collect
 🎁 FREE Jumping Castle with every booking
 👇 Build your quote in 60 seconds
-[link to kiddoklub.com or GitHub Pages]
+[link to kiddoklubdoha.com or GitHub Pages]
 ```
 
 ---

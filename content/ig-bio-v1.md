@@ -36,15 +36,15 @@ Set up by 8am, packed before bedtime.
 
 ## Link-in-bio destination (one tap)
 
-If we use Linktree-equivalent, single page at kiddoklub.com/links with these in this order:
+If we use Linktree-equivalent, single page at kiddoklubdoha.com/links with these in this order:
 
 1. **WhatsApp Nadine** → wa.me/97450318434
-2. **See packages** → kiddoklub.com/packages
-3. **Recent parties** → kiddoklub.com/gallery
-4. **Founding-family offer** (free bouncy castle + photographer) → kiddoklub.com/packages#classic
-5. **Meet Nadine** → kiddoklub.com/about
+2. **See packages** → kiddoklubdoha.com/packages
+3. **Recent parties** → kiddoklubdoha.com/gallery
+4. **Founding-family offer** (free bouncy castle + photographer) → kiddoklubdoha.com/packages#classic
+5. **Meet Nadine** → kiddoklubdoha.com/about
 
-If we route everything through the homepage, just pin `kiddoklub.com` in the IG bio and let the sticky WhatsApp button do the conversion work.
+If we route everything through the homepage, just pin `kiddoklubdoha.com` in the IG bio and let the sticky WhatsApp button do the conversion work.
 
 ---
 

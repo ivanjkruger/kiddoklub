@@ -10,7 +10,7 @@ While Claude / James / Session B handle build, scaffold, content, and Drive — 
 ## P0 · This week (do first)
 
 ### 0.1 — ✅ Confirm domain (DONE 2026-04-25)
-- **Domain:** kiddoklub.com (confirmed by Ivan).
+- **Domain:** kiddoklubdoha.com (confirmed by Ivan).
 - **Now needed:** point DNS + claim Workspace mailbox + connect Vercel project (handled in 0.5 + 1.4).
 
 ### 0.2 — ❌ DROPPED (Ivan correction 2026-04-25)
@@ -62,9 +62,9 @@ KiddoKlub is NOT a registered company. No Mohammed conversation. No CR. No freel
 - **Time:** 30 minutes
 - **Unblocks:** every cron job, the whole CRM, the dashboard, all skill data reads/writes.
 
-### 1.4 — Vercel + DNS for kiddoklub.com
+### 1.4 — Vercel + DNS for kiddoklubdoha.com
 - **Who:** Ivan
-- **What:** Connect kiddoklub.com domain to Vercel project once Next.js scaffold pushes (Session A delivers it). Configure A + CNAME records at registrar. SSL via Let's Encrypt automatic. Subdomain `dashboard.kiddoklub.com` for the revenue dashboard (basic-auth Ivan-only).
+- **What:** Connect kiddoklubdoha.com domain to Vercel project once Next.js scaffold pushes (Session A delivers it). Configure A + CNAME records at registrar. SSL via Let's Encrypt automatic. Subdomain `dashboard.kiddoklubdoha.com` for the revenue dashboard (basic-auth Ivan-only).
 - **Time:** 30 minutes (mostly DNS propagation wait)
 - **Unblocks:** site goes live, Cal.com webhook callbacks have a real URL, Skipcash callbacks have a real URL.
 
@@ -123,7 +123,7 @@ WhatsApp Business API requires a registered business; we don't have one and aren
 
 Tick as each lands:
 
-- [x] 0.1 Domain confirmed — **kiddoklub.com** (2026-04-25)
+- [x] 0.1 Domain confirmed — **kiddoklubdoha.com** (2026-04-25)
 - [x] 0.2 ❌ DROPPED — no CR, no Mohammed conversation (Ivan correction 2026-04-25)
 - [ ] 0.3 Public liability insurance bound
 - [ ] 0.4 Payment rail picked (Skipcash individual / MyFatoorah individual / personal IBAN + Apple Pay)
@@ -132,7 +132,7 @@ Tick as each lands:
 - [ ] 1.1 WA Business App live on +974 5031 8434
 - [ ] 1.2 Cal.com 3 event types created
 - [ ] 1.3 Supabase project + migrations applied + secrets seeded
-- [ ] 1.4 Vercel + DNS pointing kiddoklub.com
+- [ ] 1.4 Vercel + DNS pointing kiddoklubdoha.com
 - [ ] 1.5 Nadine voice-note reactivation soft launch
 - [x] 2.1 ❌ DROPPED — Wati needs CR; staying on free WhatsApp Business App + manual send
 - [ ] 2.2 Photographer retainer locked

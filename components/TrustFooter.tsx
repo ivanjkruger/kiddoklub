@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function TrustFooter() {
@@ -5,9 +6,16 @@ export function TrustFooter() {
     <footer className="bg-[var(--color-ink)] text-[var(--color-cream)] mt-12">
       <div className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-4 gap-10">
         <div>
-          <p className="font-display text-2xl font-bold mb-3">KiddoKlub 🌈</p>
+          <Image
+            src="/brand/logo-header.png"
+            alt="KiddoKlub"
+            width={400}
+            height={216}
+            className="h-10 w-auto mb-3 brightness-[1.8] contrast-[0.9]"
+          />
           <p className="text-sm opacity-85">
-            Creating smiles with play and party magic. Doha&apos;s friendliest soft-play parties for kids 1 to 5.
+            Creating smiles with play and party magic. Doha&apos;s friendliest
+            soft-play parties for kids 1 to 5.
           </p>
         </div>
         <div>
@@ -23,17 +31,30 @@ export function TrustFooter() {
           </ul>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-widest opacity-70 mb-3">Trust</p>
+          <p className="text-xs uppercase tracking-widest opacity-70 mb-3">
+            Trust
+          </p>
           <ul className="space-y-1 text-sm opacity-90">
             <li>QAR 1M public liability</li>
             <li>EN71 / BPA-free certified</li>
             <li>Sanitised after every event</li>
             <li>Same-day setup, 90 min before guests</li>
-            <li><a href="/brand/index.html" className="opacity-90 hover:opacity-100 underline-offset-4 hover:underline">Brand guidelines</a></li>
+            <li>
+              <a
+                href="https://www.instagram.com/kiddoklub/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-90 hover:opacity-100 underline-offset-4 hover:underline"
+              >
+                Instagram @kiddoklub
+              </a>
+            </li>
           </ul>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-widest opacity-70 mb-3">Talk</p>
+          <p className="text-xs uppercase tracking-widest opacity-70 mb-3">
+            Talk
+          </p>
           <ul className="space-y-2 text-sm">
             <li>
               <a
@@ -48,9 +69,9 @@ export function TrustFooter() {
             <li>
               <a
                 className="opacity-90 hover:opacity-100 underline-offset-4 hover:underline"
-                href="mailto:hello@kiddoklub.com"
+                href="mailto:hello@kiddoklubdoha.com"
               >
-                hello@kiddoklub.com
+                hello@kiddoklubdoha.com
               </a>
             </li>
             <li>
@@ -58,7 +79,7 @@ export function TrustFooter() {
                 href="/about"
                 className="opacity-90 hover:opacity-100 underline-offset-4 hover:underline"
               >
-                Meet Nadine
+                About us
               </Link>
             </li>
           </ul>
@@ -68,7 +89,10 @@ export function TrustFooter() {
       {/* Payment provider row; Qatar trust ritual per Council 2026-04-25 */}
       <div className="border-t border-white/10 px-6 py-5">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 text-xs opacity-70">
-          <p>© {new Date().getFullYear()} KiddoKlub · Trades in Nadine Kruger&apos;s name · Doha, Qatar 🌈</p>
+          <p>
+            © {new Date().getFullYear()} KiddoKlub · Trades in Nadine
+            Kruger&apos;s name · Doha, Qatar 🌈
+          </p>
           <p className="flex items-center gap-3 flex-wrap">
             <span>Skipcash</span>
             <span aria-hidden>·</span>

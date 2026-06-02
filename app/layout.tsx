@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kiddoklub.com"),
+  metadataBase: new URL("https://kiddoklubdoha.com"),
   title: {
     default: "KiddoKlub · Doha's softest play setups",
     template: "%s · KiddoKlub",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "KiddoKlub · Doha's friendliest soft-play parties",
     description:
       "Creating smiles with play and party magic 🌈 Premium soft-play, ball pits, and themed setups for Doha kids 1-5.",
-    url: "https://kiddoklub.com",
+    url: "https://kiddoklubdoha.com",
     siteName: "KiddoKlub",
     locale: "en_QA",
     type: "website",
@@ -58,13 +58,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://kiddoklub.com/#business",
+              "@id": "https://kiddoklubdoha.com/#business",
               name: "KiddoKlub",
               description:
                 "Premium soft-play party rentals delivered, set up, and collected anywhere in Doha. Birthday parties, playdates and events for kids 1-5.",
-              url: "https://kiddoklub.com",
+              url: "https://kiddoklubdoha.com",
               telephone: "+97450318434",
-              email: "hello@kiddoklub.com",
+              email: "hello@kiddoklubdoha.com",
               priceRange: "QAR 1,400 - QAR 5,500",
               address: {
                 "@type": "PostalAddress",
@@ -80,13 +80,13 @@ export default function RootLayout({
                 "Education City, Doha",
                 "Al Gharrafa, Doha",
               ],
-              image: "https://kiddoklub.com/photos/setups/setup-01.jpeg",
+              image: "https://kiddoklubdoha.com/photos/setups/setup-01.jpeg",
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "5.0",
                 reviewCount: "12",
               },
-              sameAs: ["https://instagram.com/kiddoklub"],
+              sameAs: ["https://www.instagram.com/kiddoklub/"],
             }),
           }}
         />
