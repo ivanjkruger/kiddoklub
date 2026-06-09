@@ -40,11 +40,11 @@ Premium soft-play party rentals for kids 1-5 in Doha. Nadine is the founder + br
 - Yazan is NOT involved in KiddoKlub ops. Don't CC.
 - Cap public availability at 10 setups/month. Constraint = marketing.
 
-### Brand
-- Palette: bone #F5EFE6, sand #E8DCC4, sage #A8B5A0, terracotta #C97D60, dusty pink #E4B4B4, butter #F0DC9C. NEVER primary red/blue/green.
-- Typography: Fraunces (serif, italic for accents) + Inter (body) + 29LT Bukra (Arabic).
+### Brand (canonical short ref: `content/brand/BRAND.md`)
+- Palette: cream #FFF9F0, soft #FCF1E8, mint #A8D5BA, pink #E8B4B8, butter #F0D78C, sage #C0D080, peach #F0C48C, ink #2A2520. NEVER primary red/blue/green, never pure black. (Matches `app/globals.css`.)
+- Typography: Quicksand (rounded display, matches wordmark) + Inter (body) + 29LT Bukra / IBM Plex Sans Arabic (Arabic). NOT Fraunces; NOT a serif display.
 - Hero shot is **overhead flatlay BEFORE kids arrive**. Action shots go to stories/reels, never the home page hero.
-- IG grid: 3-column rhythm — overhead setup → kid candid → detail close-up.
+- IG grid: 3-column rhythm; overhead setup, kid candid, detail close-up.
 
 ### Outreach rules (applies to Dream-100 + reactivation + cold DM)
 - Tier B confirm-before-write on every send. James drafts, Ivan or Nadine approves, only then send.
@@ -97,7 +97,7 @@ In `~/.claude/skills/kiddoklub-*`:
 - `~/.claude/projects/-Users-ivankruger/memory/feedback_writing_style.md` — Ivan voice rules
 - `~/.claude/projects/-Users-ivankruger/memory/feedback_outbound_voice_v2.md` — first-message relationship rule
 - `~/.claude/projects/-Users-ivankruger/memory/feedback_auto_dash_audit.md` — dash audit gate
-- `~/Projects/kiddoklub/content/voice.md` — Nadine voice EN + AR
+- `content/voice.md` — index to the 3-doc Nadine voice (Van Clief Constraint 05): `content/voice-tone.md` (directional) + `content/format-patterns.md` (structure) + `content/constraints.md` (canonical banned lists)
 
 ## Qatar trust signals (every page must surface these)
 - **Footer:** MOCI CR number ("CR: XXXXXX"), insurance icon ("QAR 1M public liability"), payment provider row (Skipcash · QNB · CBQ · Apple Pay · Google Pay · Visa · Mastercard), compound coverage list ("Cleared for The Pearl · Lusail · West Bay · Al Waab · Abu Hamour · Education City")
