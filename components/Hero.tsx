@@ -21,8 +21,8 @@ export function Hero() {
       {/* Full-bleed enhanced setup as the hero background */}
       <motion.div style={{ y: heroY, scale: heroScale }} className="absolute inset-0">
         <Image
-          src="/photos/setups/setup-01-enhanced.jpg"
-          alt="A KiddoKlub pastel soft-play setup in a sunny Doha garden"
+          src="/photos/setups/hero-neutral.jpg"
+          alt="A KiddoKlub neutral soft-play setup on a Doha beachfront"
           fill
           priority
           fetchPriority="high"
