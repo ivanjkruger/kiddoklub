@@ -20,13 +20,13 @@ export default function AboutPage() {
           Hi, I&apos;m <span className="italic-display text-[var(--color-terracotta)]">Nadine</span>.
         </h1>
 
-        {/* Setup hero in lieu of founder portrait until Nadine picks one */}
-        <div className="aspect-[4/5] rounded-2xl border border-black/5 mb-10 relative overflow-hidden">
+        {/* Founder portrait: Nadine + family */}
+        <div className="aspect-square max-w-md mx-auto rounded-2xl border border-black/5 mb-10 relative overflow-hidden">
           <Image
-            src="/photos/setups/setup-08.jpeg"
-            alt="A KiddoKlub setup, before guests arrive"
+            src="/photos/founder/nadine-family.jpg"
+            alt="Nadine, founder of KiddoKlub, with her family"
             fill
-            sizes="(max-width: 768px) 100vw, 768px"
+            sizes="(max-width: 768px) 100vw, 448px"
             className="object-cover"
           />
         </div>
