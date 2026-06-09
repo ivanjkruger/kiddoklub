@@ -6,6 +6,7 @@ import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 import { TrustStrip } from "@/components/TrustStrip";
 import { Testimonials } from "@/components/Testimonials";
+import { Carousel } from "@/components/Carousel";
 
 export function generateStaticParams() {
   return THEMES.map((t) => ({ slug: t.slug }));
@@ -95,40 +96,14 @@ export default async function ThemePage({
           </div>
         </div>
         <div className="md:col-span-5 mt-8 md:mt-0">
-          <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-black/5 relative">
-            <Image
-              src={theme.imageHero}
-              alt={`${theme.name} setup`}
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 45vw"
-              className="object-cover"
-            />
-          </div>
+          <Carousel
+            images={[theme.imageHero, ...theme.imageDetails]}
+            alt={`${theme.name} setup`}
+          />
         </div>
       </section>
 
       <TrustStrip />
-
-      {/* Detail strip */}
-      <section className="px-6 py-16 max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 gap-4">
-          {theme.imageDetails.map((src, i) => (
-            <div
-              key={i}
-              className="aspect-[4/5] rounded-2xl overflow-hidden border border-black/5 relative"
-            >
-              <Image
-                src={src}
-                alt={`${theme.name} detail ${i + 1}`}
-                fill
-                sizes="(max-width: 768px) 50vw, 30vw"
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
 
       <Testimonials />
 

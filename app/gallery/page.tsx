@@ -4,30 +4,30 @@ import { useState } from "react";
 import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 
-// 12 Mar 2026 setups (full rights, no faces). Compound/venue/pkg/theme are
-// internal taxonomy; Session B refines as the real metadata lands.
+// Real KiddoKlub setups (full rights, no faces), fal-enhanced. Theme labels match
+// what each photo actually shows; each image is used once.
 const ITEMS = [
-  { src: "/photos/setups/setup-01.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "classic",   theme: "color_pop" },
-  { src: "/photos/setups/setup-02.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "classic",   theme: "neutral_nest" },
-  { src: "/photos/setups/setup-03.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "mini",      theme: "color_pop" },
-  { src: "/photos/setups/setup-04.jpeg", compound: "Doha", venue: "majlis",              pkg: "classic",   theme: "neutral_nest" },
-  { src: "/photos/setups/setup-05.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "signature", theme: "color_pop" },
-  { src: "/photos/setups/setup-06.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "classic",   theme: "white_wonderland" },
-  { src: "/photos/setups/setup-07.jpeg", compound: "Doha", venue: "apartment",           pkg: "mini",      theme: "color_pop" },
-  { src: "/photos/setups/setup-08.jpeg", compound: "Doha", venue: "compound_clubhouse",  pkg: "classic",   theme: "neutral_nest" },
-  { src: "/photos/setups/setup-09.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "signature", theme: "white_wonderland" },
-  { src: "/photos/setups/setup-10.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "classic",   theme: "neutral_nest" },
-  { src: "/photos/setups/setup-11.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "mini",      theme: "white_wonderland" },
-  { src: "/photos/setups/setup-12.jpeg", compound: "Doha", venue: "majlis",              pkg: "signature", theme: "neutral_nest" },
+  { src: "/photos/setups/setup-09-enhanced.jpg", venue: "beachfront",   pkg: "signature", theme: "neutral_nest" },
+  { src: "/photos/setups/setup-03-enhanced.jpg", venue: "villa_garden", pkg: "classic",   theme: "white_wonderland" },
+  { src: "/photos/setups/setup-01-enhanced.jpg", venue: "villa_garden", pkg: "classic",   theme: "color_pop" },
+  { src: "/photos/setups/setup-11-enhanced.jpg", venue: "beachfront",   pkg: "signature", theme: "neutral_nest" },
+  { src: "/photos/setups/setup-10-enhanced.jpg", venue: "villa_garden", pkg: "signature", theme: "white_wonderland" },
+  { src: "/photos/setups/setup-02-enhanced.jpg", venue: "villa_indoor", pkg: "classic",   theme: "neutral_nest" },
+  { src: "/photos/setups/setup-07-enhanced.jpg", venue: "majlis",       pkg: "classic",   theme: "color_pop" },
+  { src: "/photos/setups/setup-12-enhanced.jpg", venue: "beachfront",   pkg: "signature", theme: "neutral_nest" },
+  { src: "/photos/setups/setup-05-enhanced.jpg", venue: "villa_indoor", pkg: "mini",      theme: "white_wonderland" },
+  { src: "/photos/setups/setup-08-enhanced.jpg", venue: "majlis",       pkg: "classic",   theme: "color_pop" },
+  { src: "/photos/setups/setup-06-enhanced.jpg", venue: "villa_garden", pkg: "classic",   theme: "white_wonderland" },
+  { src: "/photos/setups/setup-13-enhanced.jpg", venue: "villa_indoor", pkg: "mini",      theme: "white_wonderland" },
+  { src: "/photos/setups/setup-04-enhanced.jpg", venue: "villa_indoor", pkg: "mini",      theme: "white_wonderland" },
 ];
 
 const VENUES = [
   { id: "all", label: "All" },
   { id: "villa_garden", label: "Villa garden" },
   { id: "villa_indoor", label: "Villa indoor" },
-  { id: "apartment", label: "Apartment" },
+  { id: "beachfront", label: "Beachfront" },
   { id: "majlis", label: "Majlis" },
-  { id: "compound_clubhouse", label: "Compound clubhouse" },
 ];
 
 const PACKAGES = [
@@ -124,7 +124,7 @@ export default function GalleryPage() {
           ))}
         </div>
         <p className="text-sm text-[var(--color-muted)] text-center mt-8 italic">
-          12 of 12 setups shown · compound + venue tagging refines as Session B catalogs the originals
+          Real KiddoKlub setups across Doha. WhatsApp Nadine to see what suits your space.
         </p>
       </section>
 

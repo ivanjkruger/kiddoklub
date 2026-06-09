@@ -14,12 +14,12 @@ import { ArchBackdrop } from "@/components/ArchBackdrop";
 import { THEMES } from "@/content/themes";
 
 const SETUP_TILES = [
-  { src: "/photos/setups/setup-02.jpeg", label: "Klub Classic · Neutral Nest · The Pearl" },
-  { src: "/photos/setups/setup-05.jpeg", label: "Klub Signature · Color Pop · Lusail" },
-  { src: "/photos/setups/setup-04.jpeg", label: "Klub Classic · White Wonderland · Al Waab" },
-  { src: "/photos/setups/setup-07.jpeg", label: "Klub Mini · Color Pop · Compound clubhouse" },
-  { src: "/photos/setups/setup-09.jpeg", label: "Klub Signature · Color Pop · Doha" },
-  { src: "/photos/setups/setup-06.jpeg", label: "Klub Classic · White Wonderland · West Bay" },
+  { src: "/photos/setups/setup-09-enhanced.jpg", label: "Neutral Nest · Klub Signature" },
+  { src: "/photos/setups/setup-03-enhanced.jpg", label: "White Wonderland · Klub Classic" },
+  { src: "/photos/setups/setup-01-enhanced.jpg", label: "Color Pop · Klub Classic" },
+  { src: "/photos/setups/setup-11-enhanced.jpg", label: "Neutral Nest · Klub Signature" },
+  { src: "/photos/setups/setup-10-enhanced.jpg", label: "White Wonderland · Klub Signature" },
+  { src: "/photos/setups/setup-07-enhanced.jpg", label: "Color Pop · Klub Classic" },
 ];
 
 export default function Home() {
@@ -33,10 +33,10 @@ export default function Home() {
       <section className="px-6 py-20 bg-[var(--color-soft)]">
         <div className="max-w-6xl mx-auto">
           <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3 font-semibold">
-            Recently
+            Recent setups
           </p>
           <h2 className="text-3xl md:text-4xl mb-8 font-display">
-            In <span className="accent-mint">your compound</span> this month
+            Real parties, <span className="accent-mint">across Doha</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {SETUP_TILES.map((p, i) => (
