@@ -48,7 +48,7 @@ export default function AvailabilityPage() {
         Availability
       </p>
       <h1 className="text-4xl md:text-5xl text-center mb-3 font-display">
-        See what&apos;s <span className="accent-mint">still open</span> 🌈
+        See what&apos;s <span className="accent-mint">still open</span>
       </h1>
       <p className="text-center text-[var(--color-ink-soft)] mb-10">
         Friday and Saturday weekend slots, Doha time. Updated daily. Inside-7-day rush is +15%.

@@ -45,7 +45,7 @@ export function Hero() {
             <br />
             with <span className="accent-pink">play</span> and{" "}
             <span className="accent-butter">party</span>{" "}
-            <span className="accent-sage">magic</span>. 🌈
+            <span className="accent-sage">magic</span>.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -93,7 +93,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-[var(--color-ink-soft)]"
           >
-            <span>🌈 Trusted by Doha families</span>
+            <span> Trusted by Doha families</span>
             <span aria-hidden>·</span>
             <span>We ask before we post photos</span>
             <span aria-hidden>·</span>

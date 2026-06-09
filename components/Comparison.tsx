@@ -23,7 +23,7 @@ export function Comparison() {
         </p>
         <h2 className="text-3xl md:text-5xl text-center mb-3 font-display">
           Everything a play centre offers,<br />
-          <span className="accent-mint">without the downsides</span> 🌈
+          <span className="accent-mint">without the downsides</span>
         </h2>
         <p className="text-center text-[var(--color-ink-soft)] mb-12">
           The same premium soft-play, in your own home.

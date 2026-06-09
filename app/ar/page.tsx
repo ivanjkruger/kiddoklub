@@ -58,7 +58,7 @@ export default function ArHome() {
           <h1 className="text-4xl md:text-6xl leading-[1.1] mb-5 font-display">
             نرسم <span className="accent-mint">ابتسامة</span> لطفلك،
             <br />
-            <span className="accent-pink">وزاوية</span> يلتقطها كل ضيف. 🌈
+            <span className="accent-pink">وزاوية</span> يلتقطها كل ضيف.
           </h1>
           <p className="text-lg text-[var(--color-muted)] mb-7 max-w-xl">
             سوفت بلاي مخصّص، حفر كرات، وتنسيق للحفلة. نوصّل، نركّب، نعقّم، ونرفع كل شيء. أنتي ضيوفك بس.

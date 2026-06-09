@@ -1,7 +1,6 @@
 // Theme catalog — source of truth for /packages/[slug] routes + IG link-in-bio pages.
 // Council 2026-04-25 priority: each theme gets its own URL for paid social + IG bio rotation.
-// "Neutral Nest", "White Wonderland", "Color Pop" are tested legacy theme names; the rest are
-// Council additions that reflect Doha-specific demand (Arabic Heritage, Eid Family).
+// Only the three real, deliverable themes are listed (Neutral Nest, White Wonderland, Color Pop).
 
 export type Theme = {
   slug: string;
@@ -59,48 +58,6 @@ export const THEMES: Theme[] = [
     imageHero: "/photos/setups/setup-07.jpeg",
     imageDetails: ["/photos/setups/setup-08.jpeg", "/photos/setups/setup-09.jpeg"],
     startingFromQar: 1400,
-  },
-  {
-    slug: "boho",
-    name: "Boho",
-    nameAr: "بوهو",
-    tagline: "Terracotta and dried palm.",
-    taglineAr: "أحمر طيني وسعف نخل مجفف.",
-    body:
-      "Terracotta soft-play set, dried-palm leaves in the corner, woven detail on the ball pit, brass-finished balloon arch. The Pinterest mom's dream. Looks particularly stunning in a Pearl villa garden.",
-    palette: "terracotta · cream · brass · sage",
-    bestFor: "Pearl / Lusail garden · 2-3 yo · golden-hour",
-    imageHero: "/photos/setups/setup-02.jpeg",
-    imageDetails: ["/photos/setups/setup-10.jpeg", "/photos/setups/setup-11.jpeg"],
-    startingFromQar: 1400,
-  },
-  {
-    slug: "arabic-heritage",
-    name: "Arabic Heritage",
-    nameAr: "تراث عربي",
-    tagline: "For majlis-style hosting.",
-    taglineAr: "للحفلات على الطراز العربي.",
-    body:
-      "Soft-play in heritage palette, woven rugs, brass lanterns, traditional sweets cart. Designed to fit a majlis without overwhelming it. Hijab-aware photography on request. Fully bilingual setup team.",
-    palette: "deep red · gold · cream · forest green",
-    bestFor: "Majlis · ladies-only · multi-generational",
-    imageHero: "/photos/setups/setup-04.jpeg",
-    imageDetails: ["/photos/setups/setup-12.jpeg", "/photos/setups/setup-09.jpeg"],
-    startingFromQar: 2200,
-  },
-  {
-    slug: "eid-family",
-    name: "Eid Family Klub",
-    nameAr: "كلب العيد العائلي",
-    tagline: "Eid, but for the kids.",
-    taglineAr: "العيد، لكن للأطفال.",
-    body:
-      "Eid-themed setup with traditional sweets, gold balloon arch, branded gift bags for every child. Pre-sell only — book 4 weeks ahead of Eid Al Fitr or Eid Al Adha. Capped at 8 events per Eid week.",
-    palette: "ivory · gold · sage · soft pink",
-    bestFor: "Eid Al Fitr · Eid Al Adha · multi-family",
-    imageHero: "/photos/setups/setup-09.jpeg",
-    imageDetails: ["/photos/setups/setup-04.jpeg", "/photos/setups/setup-12.jpeg"],
-    startingFromQar: 2200,
   },
 ];
 

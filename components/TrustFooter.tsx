@@ -91,7 +91,7 @@ export function TrustFooter() {
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 text-xs opacity-70">
           <p>
             © {new Date().getFullYear()} KiddoKlub · Trades in Nadine
-            Kruger&apos;s name · Doha, Qatar 🌈
+            Kruger&apos;s name · Doha, Qatar
           </p>
           <p className="flex items-center gap-3 flex-wrap">
             <span>Skipcash</span>

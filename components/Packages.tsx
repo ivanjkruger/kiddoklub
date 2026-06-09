@@ -52,7 +52,7 @@ const PACKAGES: Pkg[] = [
     priceLabel: "Starting from QAR 3,800",
     inclusions: [
       "Grand soft play with sensory zone",
-      "Themed decor (Boho · Jungle · Princess · Pastel · Arabic Heritage · Eid)",
+      "Themed decor (Neutral Nest · White Wonderland · Color Pop)",
       "90-min photographer",
       "Branded thank-you gift bags",
       "Delivery, setup, sanitization, pickup",
@@ -67,7 +67,7 @@ export function Packages() {
         Pick your day
       </p>
       <h2 className="text-3xl md:text-5xl text-center mb-12 font-display">
-        Three setups, <span className="accent-mint">one perfect day</span> 🌈
+        Three setups, <span className="accent-mint">one perfect day</span>
       </h2>
       <div className="grid md:grid-cols-3 gap-6">
         {PACKAGES.map((p) => (
@@ -82,7 +82,7 @@ export function Packages() {
           >
             {p.highlight && (
               <span className="inline-block text-xs uppercase tracking-widest mb-3 text-[var(--color-mint)] font-semibold">
-                Most booked 🌈
+                Most booked
               </span>
             )}
             <h3

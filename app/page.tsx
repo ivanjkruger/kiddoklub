@@ -14,11 +14,11 @@ import { ArchBackdrop } from "@/components/ArchBackdrop";
 import { THEMES } from "@/content/themes";
 
 const SETUP_TILES = [
-  { src: "/photos/setups/setup-02.jpeg", label: "Klub Classic · Boho · The Pearl" },
+  { src: "/photos/setups/setup-02.jpeg", label: "Klub Classic · Neutral Nest · The Pearl" },
   { src: "/photos/setups/setup-05.jpeg", label: "Klub Signature · Color Pop · Lusail" },
-  { src: "/photos/setups/setup-04.jpeg", label: "Klub Classic · Arabic Heritage · Al Waab" },
+  { src: "/photos/setups/setup-04.jpeg", label: "Klub Classic · White Wonderland · Al Waab" },
   { src: "/photos/setups/setup-07.jpeg", label: "Klub Mini · Color Pop · Compound clubhouse" },
-  { src: "/photos/setups/setup-09.jpeg", label: "Klub Signature · Eid Family · Doha" },
+  { src: "/photos/setups/setup-09.jpeg", label: "Klub Signature · Color Pop · Doha" },
   { src: "/photos/setups/setup-06.jpeg", label: "Klub Classic · White Wonderland · West Bay" },
 ];
 
@@ -36,7 +36,7 @@ export default function Home() {
             Recently
           </p>
           <h2 className="text-3xl md:text-4xl mb-8 font-display">
-            In <span className="accent-mint">your compound</span> this month 🌈
+            In <span className="accent-mint">your compound</span> this month
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {SETUP_TILES.map((p, i) => (
@@ -76,10 +76,10 @@ export default function Home() {
           Themes
         </p>
         <h2 className="text-3xl md:text-4xl text-center mb-10 font-display">
-          Six themes, <span className="accent-pink">one perfect day</span> 🤍
+          Three themes, <span className="accent-pink">one perfect day</span> 🤍
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {THEMES.slice(0, 6).map((t) => (
+          {THEMES.map((t) => (
             <Link
               key={t.slug}
               href={`/packages/${t.slug}` as never}

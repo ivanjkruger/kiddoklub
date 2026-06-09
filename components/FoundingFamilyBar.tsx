@@ -9,7 +9,7 @@ export function FoundingFamilyBar() {
   if (REMAINING === 0) return null;
   return (
     <div className="bg-[var(--color-ink)] text-[var(--color-cream)] text-center text-sm py-2.5 px-4">
-      <span className="opacity-90">🌈 Founding 10 Families · </span>
+      <span className="opacity-90"> Founding 10 Families · </span>
       <span className="font-semibold">
         QAR 1,400 in extras free with Klub Classic
       </span>

@@ -12,7 +12,7 @@ import { THEMES } from "@/content/themes";
 export const metadata = {
   title: "Packages and themes · KiddoKlub",
   description:
-    "Three sizes (Mini, Classic, Signature). Six themes (Neutral Nest, White Wonderland, Color Pop, Boho, Arabic Heritage, Eid Family). Quote in 90 seconds.",
+    "Three sizes (Mini, Classic, Signature). Three themes (Neutral Nest, White Wonderland, Color Pop). Quote in 90 seconds.",
 };
 
 export default function PackagesPage() {
@@ -24,7 +24,7 @@ export default function PackagesPage() {
           Packages and themes
         </p>
         <h1 className="text-4xl md:text-5xl">
-          Three sizes, <span className="italic-display text-[var(--color-terracotta)]">six themes</span>, one perfect day
+          Three sizes, <span className="italic-display text-[var(--color-terracotta)]">three themes</span>, one perfect day
         </h1>
       </section>
 

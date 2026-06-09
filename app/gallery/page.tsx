@@ -7,18 +7,18 @@ import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 // 12 Mar 2026 setups (full rights, no faces). Compound/venue/pkg/theme are
 // internal taxonomy; Session B refines as the real metadata lands.
 const ITEMS = [
-  { src: "/photos/setups/setup-01.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "classic",   theme: "pastel_rainbow" },
-  { src: "/photos/setups/setup-02.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "classic",   theme: "boho" },
-  { src: "/photos/setups/setup-03.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "mini",      theme: "pastel_rainbow" },
-  { src: "/photos/setups/setup-04.jpeg", compound: "Doha", venue: "majlis",              pkg: "classic",   theme: "arabic_heritage" },
-  { src: "/photos/setups/setup-05.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "signature", theme: "jungle" },
-  { src: "/photos/setups/setup-06.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "classic",   theme: "princess" },
-  { src: "/photos/setups/setup-07.jpeg", compound: "Doha", venue: "apartment",           pkg: "mini",      theme: "pastel_rainbow" },
-  { src: "/photos/setups/setup-08.jpeg", compound: "Doha", venue: "compound_clubhouse",  pkg: "classic",   theme: "boho" },
-  { src: "/photos/setups/setup-09.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "signature", theme: "eid" },
-  { src: "/photos/setups/setup-10.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "classic",   theme: "boho" },
-  { src: "/photos/setups/setup-11.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "mini",      theme: "princess" },
-  { src: "/photos/setups/setup-12.jpeg", compound: "Doha", venue: "majlis",              pkg: "signature", theme: "arabic_heritage" },
+  { src: "/photos/setups/setup-01.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "classic",   theme: "color_pop" },
+  { src: "/photos/setups/setup-02.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "classic",   theme: "neutral_nest" },
+  { src: "/photos/setups/setup-03.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "mini",      theme: "color_pop" },
+  { src: "/photos/setups/setup-04.jpeg", compound: "Doha", venue: "majlis",              pkg: "classic",   theme: "neutral_nest" },
+  { src: "/photos/setups/setup-05.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "signature", theme: "color_pop" },
+  { src: "/photos/setups/setup-06.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "classic",   theme: "white_wonderland" },
+  { src: "/photos/setups/setup-07.jpeg", compound: "Doha", venue: "apartment",           pkg: "mini",      theme: "color_pop" },
+  { src: "/photos/setups/setup-08.jpeg", compound: "Doha", venue: "compound_clubhouse",  pkg: "classic",   theme: "neutral_nest" },
+  { src: "/photos/setups/setup-09.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "signature", theme: "white_wonderland" },
+  { src: "/photos/setups/setup-10.jpeg", compound: "Doha", venue: "villa_garden",        pkg: "classic",   theme: "neutral_nest" },
+  { src: "/photos/setups/setup-11.jpeg", compound: "Doha", venue: "villa_indoor",        pkg: "mini",      theme: "white_wonderland" },
+  { src: "/photos/setups/setup-12.jpeg", compound: "Doha", venue: "majlis",              pkg: "signature", theme: "neutral_nest" },
 ];
 
 const VENUES = [

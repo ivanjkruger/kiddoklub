@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     template: "%s · KiddoKlub",
   },
   description:
-    "Creating smiles with play and party magic 🌈 Premium soft-play parties for kids 1-5 in Doha; delivered, set up, sanitised, and collected. Cleared for The Pearl, Lusail, West Bay, Al Waab, Abu Hamour, Education City.",
+    "Creating smiles with play and party magic Premium soft-play parties for kids 1-5 in Doha; delivered, set up, sanitised, and collected. Cleared for The Pearl, Lusail, West Bay, Al Waab, Abu Hamour, Education City.",
   openGraph: {
     title: "KiddoKlub · Doha's friendliest soft-play parties",
     description:
-      "Creating smiles with play and party magic 🌈 Premium soft-play, ball pits, and themed setups for Doha kids 1-5.",
+      "Creating smiles with play and party magic Premium soft-play, ball pits, and themed setups for Doha kids 1-5.",
     url: "https://kiddoklubdoha.com",
     siteName: "KiddoKlub",
     locale: "en_QA",

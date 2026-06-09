@@ -6,16 +6,13 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 
-type ThemeId = "neutral_nest" | "white_wonderland" | "color_pop" | "boho" | "arabic_heritage" | "eid_family";
+type ThemeId = "neutral_nest" | "white_wonderland" | "color_pop";
 type SizeId = "mini" | "small" | "classic" | "signature";
 
 const THEMES: { id: ThemeId; label: string; sub: string }[] = [
   { id: "neutral_nest",     label: "Neutral Nest",     sub: "Bone & sage · matches every villa" },
   { id: "white_wonderland", label: "White Wonderland", sub: "All-white · timeless on camera" },
   { id: "color_pop",        label: "Color Pop",        sub: "Pastel rainbow · kids' favourite" },
-  { id: "boho",             label: "Boho",             sub: "Terracotta & dried palm" },
-  { id: "arabic_heritage",  label: "Arabic Heritage",  sub: "For majlis-style hosting" },
-  { id: "eid_family",       label: "Eid Family Klub",  sub: "Seasonal · pre-sell only" },
 ];
 
 const SIZES: { id: SizeId; label: string; capacity: string; size: string; basePrice: number; tier: "mini" | "classic" | "signature" }[] = [
@@ -129,7 +126,7 @@ export function QuoteBuilder() {
         Build your party
       </p>
       <h2 className="text-3xl md:text-4xl mb-2 font-display">
-        Three steps. <span className="accent-mint">Instant quote.</span> 🌈
+        Three steps. <span className="accent-mint">Instant quote.</span>
       </h2>
       <p className="text-[var(--color-ink-soft)] mb-10">
         Pick a theme, pick a size, add what you want. We&apos;ll WhatsApp you back within 30 minutes.
@@ -222,7 +219,7 @@ export function QuoteBuilder() {
                   <div className="font-medium">{a.label}</div>
                   {a.founding && (
                     <div className="text-xs text-[var(--color-mint-deep)] mt-0.5 font-semibold">
-                      🌈 Founding 10 Families: included free
+                      Founding 10 Families: included free
                     </div>
                   )}
                 </div>
