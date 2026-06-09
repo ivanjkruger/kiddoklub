@@ -10,6 +10,7 @@ import { FinalCTA } from "@/components/FinalCTA";
 import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
 import { FoundingFamilyBar } from "@/components/FoundingFamilyBar";
+import { ArchBackdrop } from "@/components/ArchBackdrop";
 import { THEMES } from "@/content/themes";
 
 const SETUP_TILES = [
@@ -108,8 +109,10 @@ export default function Home() {
       {/* Founder card */}
       <section
         id="founder"
-        className="px-6 py-20 md:py-28 max-w-3xl mx-auto text-center"
+        className="px-6 py-20 md:py-28 relative overflow-hidden"
       >
+        <ArchBackdrop corner="bottom-right" opacity={0.12} />
+        <div className="max-w-3xl mx-auto text-center relative">
         <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3">
           A note from our founder
         </p>
@@ -127,6 +130,7 @@ export default function Home() {
         >
           Meet Nadine
         </Link>
+        </div>
       </section>
 
       <ReferralCard />

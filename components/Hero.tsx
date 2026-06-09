@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { ArchBackdrop } from "./ArchBackdrop";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -22,7 +23,8 @@ export function Hero() {
           "radial-gradient(80% 60% at 80% 0%, rgba(168,213,186,.18), transparent 70%), radial-gradient(60% 50% at 0% 100%, rgba(232,180,184,.18), transparent 70%), var(--color-cream)",
       }}
     >
-      <div className="px-6 pt-12 pb-16 md:pt-20 md:pb-24 max-w-6xl mx-auto md:grid md:grid-cols-12 md:gap-10 md:items-center">
+      <ArchBackdrop corner="bottom-left" opacity={0.14} />
+      <div className="px-6 pt-12 pb-16 md:pt-20 md:pb-24 max-w-6xl mx-auto md:grid md:grid-cols-12 md:gap-10 md:items-center relative">
         <div className="md:col-span-7">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
