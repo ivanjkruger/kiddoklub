@@ -6,6 +6,7 @@ import { TrustStrip } from "@/components/TrustStrip";
 import { Testimonials } from "@/components/Testimonials";
 import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
+import { FoundingFamilyBar } from "@/components/FoundingFamilyBar";
 import { THEMES } from "@/content/themes";
 
 export const metadata = {
@@ -17,6 +18,7 @@ export const metadata = {
 export default function PackagesPage() {
   return (
     <main className="min-h-screen">
+      <FoundingFamilyBar />
       <section className="px-6 pt-16 pb-4 max-w-3xl mx-auto text-center">
         <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3">
           Packages and themes

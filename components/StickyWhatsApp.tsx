@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export function StickyWhatsApp() {
   return (
     <a
-      href="https://wa.me/97450318434"
+      href="https://wa.me/97450318434?text=Hi%20Nadine!%20I%27d%20love%20to%20chat%20about%20a%20KiddoKlub%20party%20for%20my%20little%20one."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp Nadine"
