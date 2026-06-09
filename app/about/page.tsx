@@ -46,8 +46,8 @@ export default function AboutPage() {
             your kids nap or get ready, and leave once the last guest goes home.
           </p>
           <p>
-            We ask before we post any photos. We carry QAR 1M public liability cover. And every set
-            is wiped + UV-treated between events.
+            We ask before we post any photos. And every set is cleaned and wiped down
+            between events.
           </p>
           <p className="italic-display text-2xl text-[var(--color-terracotta)] pt-4">
             We bring the play. You take the photos.

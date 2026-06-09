@@ -18,7 +18,7 @@ const FAQS: { q: string; a: string }[] = [
   { q: "How clean is the equipment?",
     a: "Every piece is wiped down with hospital-grade disinfectant + UV-treated between every single rental. Photo evidence on request. Quarterly steam clean. Equipment retired and replaced every 18 months." },
   { q: "Are you insured?",
-    a: "Yes. QAR 1M public liability cover. Most premium compounds (Pearl, Lusail) ask for the certificate before we enter; we send the COI directly to your compound office." },
+    a: "We're finalising our public liability cover now. If your compound (Pearl, Lusail, and similar) needs paperwork before we enter, message Nadine on WhatsApp and she'll sort it with your gate office ahead of your date." },
   { q: "How far in advance should I book?",
     a: "Minimum 7 days for the founding-family promo and weekend slots. Last-minute (under 7 days) is sometimes possible at a 15% rush surcharge; message Nadine on WhatsApp." },
   { q: "What if I need to cancel or reschedule?",

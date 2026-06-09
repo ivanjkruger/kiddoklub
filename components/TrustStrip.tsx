@@ -1,11 +1,11 @@
 // Salvaged from legacy index.html: 4-icon trust row.
-// Updated for 2026 brand: "5-star rated" → "QAR 1M public liability" (Council 2026-04-25 trust signal).
+// 2026-06-09: insurance claim removed (cover not yet bound); replaced with the photo-permission promise (true + on-brand).
 
 const ITEMS = [
   { title: "Delivery & setup included", body: "We arrive 90 minutes early. You don't lift a finger." },
-  { title: "Sanitized between every event", body: "Hospital-grade disinfectant. Photo evidence on request." },
+  { title: "Sanitised between every event", body: "Cleaned and wiped down before it reaches your home." },
   { title: "Anywhere in Doha", body: "Pearl, Lusail, West Bay, Al Waab, Abu Hamour, Education City." },
-  { title: "QAR 1M public liability", body: "Compound COI sent to your gate before we arrive." },
+  { title: "Your photos stay yours", body: "We always ask before we post; the gallery is yours to keep." },
 ];
 
 export function TrustStrip() {

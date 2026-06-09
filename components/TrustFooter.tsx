@@ -35,8 +35,8 @@ export function TrustFooter() {
             Trust
           </p>
           <ul className="space-y-1 text-sm opacity-90">
-            <li>QAR 1M public liability</li>
-            <li>EN71 / BPA-free certified</li>
+            <li>We ask before we post your photos</li>
+            <li>Delivery, setup &amp; pickup included</li>
             <li>Sanitised after every event</li>
             <li>Same-day setup, 90 min before guests</li>
             <li>

@@ -93,7 +93,7 @@ export function Hero() {
           >
             <span>🌈 Trusted by Doha families</span>
             <span aria-hidden>·</span>
-            <span>QAR 1M public liability</span>
+            <span>We ask before we post photos</span>
             <span aria-hidden>·</span>
             <span>Same-day setup</span>
           </motion.div>
