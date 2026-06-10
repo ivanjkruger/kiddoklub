@@ -10,6 +10,6 @@ if ! kk_gate; then
   exit 0
 fi
 
-kk_claude "Invoke the kiddoklub-outreach-draft skill with batch_size=10. Pull from Supabase dream100 table (status='not_contacted' or 'following'), prioritize warmest 10 by signal strength, segment-rotated. Generate relationship-first openers per content/voice.md first-touch rule. Run kiddoklub-voice-audit on every draft. Post 10 separate Tier B approval cards to @Ivan_james_bot."
+kk_claude "Invoke the kiddoklub-outreach-draft skill with batch_size=10. Pull from Supabase dream100 table (status='not_contacted' or 'following'), prioritize warmest 10 by signal strength, segment-rotated. Generate relationship-first openers per ~/ivan/companies/kiddoklub/brain/voice/voice.md first-touch rule. Run kiddoklub-voice-audit on every draft. Post 10 separate Tier B approval cards to @Ivan_james_bot."
 
 kk_log INFO "monday_dream100 complete"
