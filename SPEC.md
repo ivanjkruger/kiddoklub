@@ -20,7 +20,7 @@
 **What "shipped" means for v1:**
 - Real parent books a real party on the site
 - Skipcash deposit clears
-- Wati / WhatsApp confirmation lands
+- WhatsApp confirmation lands (manual send via WA Business App off the Telegram card — Wati is dropped per root CLAUDE.md)
 - James pings @Ivan_james_bot
 - Setup team executes
 - Post-event testimonial + Google review request fires automatically

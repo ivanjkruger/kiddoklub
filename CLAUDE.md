@@ -24,14 +24,10 @@ Premium soft-play party rentals for kids 1-5 in Doha. Nadine is the founder + br
 - **Banned moves on first touch:** never lead with "Ivan from Equipt; Pulse distributor". Never sign with "— Ivan". Never product-pitch in opener — first message is 100% relationship, 0% pitch.
 - Specific observation > generic compliment. Curious question > sales question.
 
-### Pricing (source-of-truth: content/packages.yaml)
-- Klub Mini QAR 1,400 (decoy)
-- Klub Classic QAR 2,200 (90% pick this)
-- Klub Signature "starting from QAR 3,800 — request a quote" (NEVER publish exact number on top tier; forces WhatsApp conversation; conversion 3-5x)
-- Add-ons: bouncy castle 400, balloon arch 350, soft-serve cart 500, photographer 600, extra hour 250
-- Target AOV: QAR 2,200 → 2,800 with one upsell
-- Weekday discount 20% (Sun-Thu); rush premium +15% inside 7 days
-- Deposit: 30% non-refundable inside 14 days, 50% credit toward future booking outside 14 days
+### Pricing (source-of-truth: content/packages.yaml — EVERY figure lives there, never here)
+- All package prices, add-ons, weekday discount, rush premium, and deposit terms: read `content/packages.yaml` (it also drives the site, Cal.com, Supabase seed, kiddoklub-quote, Skipcash). Never restate a number in this file — a June restatement here drifted from the yaml and poisoned content docs.
+- Strategy (not figures): Mini is the decoy; Classic is the default pick; Signature NEVER publishes its exact price ("starting from — request a quote" forces the WhatsApp conversation).
+- Target: lift AOV via one upsell per booking.
 - No cash, ever. Skipcash + bank transfer only.
 
 ### Inventory + ops
@@ -71,7 +67,7 @@ SKIP: TikTok paid (until 50+ deliveries), bought lists, Google LSA (not in Qatar
 | Hosting | Vercel (Next 16 + Tailwind v4 + Framer Motion 12) | Free hobby tier OK for Phase 1 |
 | Booking | Cal.com | Reuse Ivan's existing account |
 | Payments | Skipcash (Nadine's name + Nadine's IBAN) | 2.49% local cards, WA invoice-link UX |
-| Messaging | WhatsApp Business App (free) Phase 1 → Wati API at Day 30 (after CR) | 256-contact ceiling on free tier |
+| Messaging | WhatsApp Business App (free) — Wati re-adoption is a gated FUTURE decision (Ivan's call; dropped per root CLAUDE.md) | 256-contact ceiling on free tier |
 | Email | Resend + Google Workspace hello@kiddoklubdoha.com (Nadine-owned) |
 | CRM | Supabase (NOT Odoo — overkill at this scale) | Single source for site + dashboard + James |
 | Content | Higgs Field Seedance 2.0 (15 skills installed) + CapCut Pro | Existing Ivan stack |
