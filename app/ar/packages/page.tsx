@@ -4,7 +4,11 @@ import { THEMES } from "@/content/themes";
 
 export const metadata = {
   title: "الباقات والثيمات · كيدو كلب",
-  description: "ثلاث باقات (ميني، كلاسيك، سيجنتشر) وست ثيمات. اختاري الباقة المناسبة وواتساب نادين.",
+  description: "ثلاث باقات (ميني، كلاسيك، سيجنتشر) وثلاث ثيمات. اختاري الباقة المناسبة وواتساب نادين.",
+  alternates: {
+    canonical: "/ar/packages",
+    languages: { en: "/packages", ar: "/ar/packages" },
+  },
 };
 
 export default function ArPackages() {

@@ -1,4 +1,11 @@
 import Image from "next/image";
+
+export const metadata = {
+  alternates: {
+    canonical: "/ar",
+    languages: { en: "/", ar: "/ar" },
+  },
+};
 import Link from "next/link";
 
 const TILES = [

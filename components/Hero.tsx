@@ -1,7 +1,8 @@
-"use client";
+// Server component. The entrance uses CSS-only, transform-only animation (see .rise in
+// globals.css) so the LCP text paints immediately instead of waiting for hydration —
+// the old framer opacity-0 entrance was costing ~1.5s of LCP on throttled mobile.
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export function Hero() {
   return (
@@ -10,19 +11,11 @@ export function Hero() {
         {/* Text */}
         <div className="px-6 py-14 md:py-20 md:pe-12 flex items-center">
           <div className="max-w-xl">
-            <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="uppercase tracking-[0.2em] text-xs text-[var(--color-ink-soft)] mb-3 font-semibold"
+            <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-ink-soft)] mb-3 font-semibold rise"
             >
               Doha&apos;s friendliest soft-play parties
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-              className="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight mb-5"
+            </p>
+            <h1 className="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight mb-5 rise rise-1"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Creating <span className="accent-mint">smiles</span>
@@ -30,22 +23,14 @@ export function Hero() {
               with <span className="accent-pink">play</span> and{" "}
               <span className="accent-butter">party</span>{" "}
               <span className="accent-sage">magic</span>.
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              className="text-lg text-[var(--color-ink-soft)] max-w-md mb-7"
+            </h1>
+            <p className="text-lg text-[var(--color-ink-soft)] max-w-md mb-7 rise"
             >
               Bespoke soft-play, ball pits, balloon arches, and themed styling;
               delivered, set up, sanitised, and collected. We bring the play, you
               take the photos.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.25 }}
-              className="flex flex-wrap gap-3"
+            </p>
+            <div className="flex flex-wrap gap-3 rise rise-2"
             >
               <a
                 href="https://wa.me/97450318434?text=Hi%20Nadine!%20I%27d%20love%20to%20chat%20about%20a%20KiddoKlub%20party%20for%20my%20little%20one."
@@ -64,20 +49,16 @@ export function Hero() {
               >
                 Browse packages
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-[var(--color-ink-soft)]"
+            <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-[var(--color-ink-soft)] rise rise-3"
             >
               <span>Trusted by Doha families</span>
               <span aria-hidden>·</span>
               <span>We ask before we post photos</span>
               <span aria-hidden>·</span>
               <span>Same-day setup</span>
-            </motion.div>
+            </div>
           </div>
         </div>
 

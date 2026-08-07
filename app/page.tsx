@@ -13,6 +13,13 @@ import { CapacityBar } from "@/components/CapacityBar";
 import { ArchBackdrop } from "@/components/ArchBackdrop";
 import { THEMES } from "@/content/themes";
 
+export const metadata = {
+  alternates: {
+    canonical: "/",
+    languages: { en: "/", ar: "/ar" },
+  },
+};
+
 const SETUP_TILES = [
   { src: "/photos/setups/setup-09-enhanced.jpg", label: "Neutral Nest · Klub Signature" },
   { src: "/photos/setups/setup-03-enhanced.jpg", label: "White Wonderland · Klub Classic" },

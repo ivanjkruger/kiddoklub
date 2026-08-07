@@ -13,6 +13,10 @@ export const metadata = {
   title: "Packages and themes · KiddoKlub",
   description:
     "Three sizes (Mini, Classic, Signature). Three themes (Neutral Nest, White Wonderland, Color Pop). Quote in 90 seconds.",
+  alternates: {
+    canonical: "/packages",
+    languages: { en: "/packages", ar: "/ar/packages" },
+  },
 };
 
 export default function PackagesPage() {

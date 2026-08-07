@@ -83,3 +83,18 @@
     }
   }
 }
+
+/* Above-the-fold entrance. Transform-only so the LCP element paints at full
+   opacity on first frame (no hydration wait, no opacity-0 LCP penalty). */
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: kk-rise 0.5s ease-out both;
+  }
+  .rise-1 { animation-delay: 0.06s; }
+  .rise-2 { animation-delay: 0.12s; }
+  .rise-3 { animation-delay: 0.2s; }
+}
+@keyframes kk-rise {
+  from { transform: translateY(10px); }
+  to { transform: translateY(0); }
+}
