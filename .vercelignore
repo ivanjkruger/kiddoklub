@@ -3,7 +3,7 @@ legacy/
 content/proof-pack/
 docs/
 ops/
-scripts/
+scripts/seed_clients.py
 supabase/
 automations/
 dashboard/
