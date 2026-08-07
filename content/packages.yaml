@@ -50,6 +50,7 @@ packages:
     name_ar: كلب سيجنتشر
     public_price: null
     public_price_label: "Starting from QAR 3,800"
+    public_price_label_ar: "يبدأ من 3,800 ريال قطري"
     show_price_publicly: false
     duration_hours: 4
     capacity_kids: 15

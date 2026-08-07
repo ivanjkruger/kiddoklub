@@ -6,6 +6,10 @@ export const metadata = {
   title: "FAQ · KiddoKlub",
   description:
     "Prices, delivery zones, deposit policy, sanitization, ages, and everything else Doha parents ask before booking.",
+  alternates: {
+    canonical: "/faq",
+    languages: { en: "/faq", ar: "/ar/faq" },
+  },
 };
 
 // Every figure below comes from packages.yaml via the generated PRICING module; never hardcode one here.

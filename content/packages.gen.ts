@@ -10,8 +10,10 @@ export const PRICING = {
       "nameAr": "كلب ميني",
       "publicPrice": 1400,
       "priceLabel": null,
+      "priceLabelAr": null,
       "showPrice": true,
       "durationHours": 4,
+      "capacityKids": 6,
       "capacityLabel": "Up to 6 kids",
       "footprint": "3 × 3m",
       "inclusions": [
@@ -27,8 +29,10 @@ export const PRICING = {
       "nameAr": "كلب كلاسيك",
       "publicPrice": 2200,
       "priceLabel": null,
+      "priceLabelAr": null,
       "showPrice": true,
       "durationHours": 4,
+      "capacityKids": 10,
       "capacityLabel": "Up to 10 kids",
       "footprint": "4 × 5m",
       "inclusions": [
@@ -45,8 +49,10 @@ export const PRICING = {
       "nameAr": "كلب سيجنتشر",
       "publicPrice": null,
       "priceLabel": "Starting from QAR 3,800",
+      "priceLabelAr": "يبدأ من 3,800 ريال قطري",
       "showPrice": false,
       "durationHours": 4,
+      "capacityKids": 15,
       "capacityLabel": "15+ kids",
       "footprint": "5 × 6m",
       "inclusions": [

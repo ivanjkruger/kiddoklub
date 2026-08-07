@@ -1,6 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { THEMES } from "@/content/themes";
+import { PRICING } from "@/content/packages.gen";
+
+const fmtEn = (n: number) => n.toLocaleString("en-US");
+const PKGS_AR = PRICING.packages.map((p) => ({
+  name: p.nameAr,
+  cap: p.id === "klub_signature" ? `أكثر من ${p.capacityKids} طفل` : `حتى ${p.capacityKids} أطفال`,
+  size: p.footprint.replace("m", "م"),
+  price: p.publicPrice != null ? fmtEn(p.publicPrice) : p.priceLabelAr!.replace(" ريال قطري", ""),
+  featured: p.id === "klub_classic",
+}));
 
 export const metadata = {
   title: "الباقات والثيمات · كيدو كلب",
@@ -29,17 +39,13 @@ export default function ArPackages() {
       <section className="px-6 pt-14 pb-8 max-w-3xl mx-auto text-center">
         <p className="uppercase tracking-[0.2em] text-xs text-[var(--color-muted)] mb-3">الباقات والثيمات</p>
         <h1 className="text-4xl md:text-5xl">
-          ثلاث باقات، <span className="italic-display text-[var(--color-terracotta)]">ست ثيمات</span>
+          ثلاث باقات، <span className="italic-display text-[var(--color-terracotta)]">ثلاث ثيمات</span>
         </h1>
       </section>
 
       <section className="px-6 py-12 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {[
-            { name: "كلب ميني",  cap: "حتى ٦ أطفال",   size: "٣ × ٣م", price: "١,٤٠٠" },
-            { name: "كلب كلاسيك", cap: "حتى ١٠ أطفال", size: "٤ × ٥م", price: "٢,٢٠٠", featured: true },
-            { name: "كلب سيجنتشر", cap: "أكثر من ١٥ طفل", size: "٥ × ٦م", price: "ابتداء من ٣,٨٠٠" },
-          ].map((p, i) => (
+          {PKGS_AR.map((p, i) => (
             <article
               key={i}
               className={
@@ -75,7 +81,7 @@ export default function ArPackages() {
               <div className="absolute inset-x-0 bottom-0 p-5 text-white">
                 <h3 className="text-2xl font-serif font-semibold mb-1">{t.nameAr}</h3>
                 <p className="text-sm opacity-90">{t.taglineAr}</p>
-                <p className="text-xs opacity-80 mt-2">ابتداء من <bdi>{t.startingFromQar.toLocaleString("ar-EG")} ر.ق</bdi></p>
+                <p className="text-xs opacity-80 mt-2">ابتداء من <bdi>{t.startingFromQar.toLocaleString("en-US")} ر.ق</bdi></p>
               </div>
             </Link>
           ))}
@@ -83,7 +89,7 @@ export default function ArPackages() {
       </section>
 
       <footer className="bg-[var(--color-ink)] text-[var(--color-bone)] py-10 px-6 text-center text-sm opacity-80 border-t border-white/10">
-        <p>© {new Date().getFullYear()} كيدو كلب · الدوحة، قطر · واتساب +٩٧٤ ٥٠٣١ ٨٤٣٤</p>
+        <p>© {new Date().getFullYear()} كيدو كلب · الدوحة، قطر · واتساب +974 5031 8434</p>
       </footer>
     </main>
   );

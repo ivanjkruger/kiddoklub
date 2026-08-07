@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/availability",
     "/ar",
     "/ar/packages",
+    "/ar/faq",
   ];
   const themes = THEMES.map((t) => `/packages/${t.slug}`);
   const paths = [...top, ...themes];

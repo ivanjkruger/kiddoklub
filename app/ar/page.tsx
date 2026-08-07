@@ -7,6 +7,17 @@ export const metadata = {
   },
 };
 import Link from "next/link";
+import { PRICING } from "@/content/packages.gen";
+
+// Package cards read the pricing SSOT; AR display strings assembled here.
+const fmtEn = (n: number) => n.toLocaleString("en-US");
+const PKGS_AR = PRICING.packages.map((p) => ({
+  name: p.nameAr,
+  cap: p.id === "klub_signature" ? `أكثر من ${p.capacityKids} طفل` : `حتى ${p.capacityKids} أطفال`,
+  size: p.footprint.replace("m", "م"),
+  price: p.publicPrice != null ? fmtEn(p.publicPrice) : p.priceLabelAr!.replace(" ريال قطري", ""),
+  featured: p.id === "klub_classic",
+}));
 
 const TILES = [
   { src: "/photos/setups/setup-02.jpeg", label: "كلب كلاسيك · بوهو" },
@@ -19,11 +30,11 @@ const TILES = [
 
 const FAQS = [
   { q: "ما الأعمار المناسبة؟", a: "من سنة لخمس سنوات. كل القطع مبطنة وآمنة للأطفال الصغار، والإخوة الأكبر مرحب بهم كذلك." },
-  { q: "كم مساحة أحتاج؟", a: "كلب ميني يحتاج ٣×٣م. كلاسيك ٤×٥م. سيجنتشر ٥×٦م. نقيس مساحتك أولاً ونختار الحجم المناسب." },
+  { q: "كم مساحة أحتاج؟", a: "كلب ميني يحتاج 3×3م. كلاسيك 4×5م. سيجنتشر 5×6م. نقيس مساحتك أولاً ونختار الحجم المناسب." },
   { q: "وين توصلون؟", a: "اللؤلؤة، لوسيل، الخليج الغربي، الوعب، أبو هامور، المدينة التعليمية، الغرافة. مناطق ثانية حسب الطلب." },
-  { q: "كيف يتم التعقيم؟", a: "كل قطعة تُمسح بمعقم طبي وتُعالج بالأشعة فوق البنفسجية بعد كل حفلة. صور للتأكيد عند الطلب." },
-  { q: "هل عندكم تأمين؟", a: "نعم. تأمين مسؤولية عامة بقيمة مليون ريال قطري. نرسل الشهادة لإدارة المجمع قبل وصولنا." },
-  { q: "السعر الكامل لكلب سيجنتشر؟", a: "يبدأ من ٣,٨٠٠ ريال قطري. السعر النهائي يعتمد على الثيم وعدد الضيوف والإضافات. واتسبي نادين ونعطيك عرض كامل." },
+  { q: "كيف يتم التعقيم؟", a: "كل قطعة تُنظف وتُعقم بعد كل حفلة، قبل ما توصل بيتك. نرسل صوراً للتأكيد عند الطلب." },
+  { q: "هل عندكم تأمين؟", a: "نحن بصدد إنهاء تأمين المسؤولية العامة حالياً. إذا كان مجمعك يطلب أوراقاً قبل الدخول، واتسبي نادين وهي تنسق مع إدارة البوابة قبل موعدك." },
+  { q: "السعر الكامل لكلب سيجنتشر؟", a: `${PRICING.packages.find((p) => p.id === "klub_signature")!.priceLabelAr}. السعر النهائي يعتمد على الثيم وعدد الضيوف والإضافات. واتسبي نادين ونعطيك عرض كامل.` },
 ];
 
 export default function ArHome() {
@@ -92,7 +103,7 @@ export default function ArHome() {
           <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-[var(--color-muted)]">
             <span>عوائل دوحاوية تثق فينا</span>
             <span aria-hidden>·</span>
-            <span>تأمين مليون ريال قطري</span>
+            <span>نستأذنك قبل نشر أي صورة</span>
             <span aria-hidden>·</span>
             <span>تركيب في نفس اليوم</span>
           </div>
@@ -115,10 +126,10 @@ export default function ArHome() {
       <section className="px-6 py-12 border-y border-black/5">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
           {[
-            { t: "توصيل وتركيب", b: "نوصل قبل الحفلة بـ ٩٠ دقيقة" },
-            { t: "تعقيم بعد كل حفلة", b: "بمعقم طبي، صور عند الطلب" },
+            { t: "في الموعد، كل مرة", b: "نوصل قبل الحفلة بـ 90 دقيقة" },
+            { t: "تعقيم بعد كل حفلة", b: "قبل ما توصل بيتك، صور عند الطلب" },
             { t: "كل الدوحة", b: "اللؤلؤة · لوسيل · الخليج · الوعب · أبو هامور" },
-            { t: "تأمين مليون ريال", b: "نرسل الشهادة لإدارة المجمع" },
+            { t: "صورك تبقى لك", b: "نستأذن دائماً قبل النشر" },
           ].map((it, i) => (
             <div key={i} className="text-center md:text-start">
               <p className="font-medium mb-1">{it.t}</p>
@@ -137,11 +148,7 @@ export default function ArHome() {
           ثلاث باقات، <span className="italic-display text-[var(--color-terracotta)]">يوم مثالي</span>
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {[
-            { name: "كلب ميني", cap: "حتى ٦ أطفال", size: "٣ × ٣م", price: "١,٤٠٠" },
-            { name: "كلب كلاسيك", cap: "حتى ١٠ أطفال", size: "٤ × ٥م", price: "٢,٢٠٠", featured: true },
-            { name: "كلب سيجنتشر", cap: "أكثر من ١٥ طفل", size: "٥ × ٦م", price: "ابتداء من ٣,٨٠٠" },
-          ].map((p, i) => (
+          {PKGS_AR.map((p, i) => (
             <article
               key={i}
               className={
@@ -222,7 +229,7 @@ export default function ArHome() {
         <h2 className="text-3xl md:text-4xl mb-4">
           جاهزة لحفلة <span className="italic-display text-[var(--color-butter)]">ما يتذكّرها أحد إلا للأبد</span>؟
         </h2>
-        <p className="opacity-80 mb-8">واتسبي نادين، نختار سوياً الباقة المناسبة. نرد خلال ٣٠ دقيقة.</p>
+        <p className="opacity-80 mb-8">واتسبي نادين، نختار سوياً الباقة المناسبة. نرد خلال 30 دقيقة.</p>
         <a
           href="https://wa.me/97450318434"
           target="_blank"
@@ -235,9 +242,9 @@ export default function ArHome() {
 
       {/* Footer minimal AR */}
       <footer className="bg-[var(--color-ink)] text-[var(--color-bone)] py-10 px-6 text-center text-sm opacity-80 border-t border-white/10">
-        <p>© {new Date().getFullYear()} كيدو كلب · الدوحة، قطر · واتساب +٩٧٤ ٥٠٣١ ٨٤٣٤</p>
+        <p>© {new Date().getFullYear()} كيدو كلب · الدوحة، قطر · واتساب +974 5031 8434</p>
         <p className="mt-2 opacity-70">
-          نسأل قبل ما ننشر أي صورة. تغطية تأمين مسؤولية ١ مليون ريال قطري.
+          نسأل قبل ما ننشر أي صورة. تغطية تأمين مسؤولية 1 مليون ريال قطري.
         </p>
       </footer>
 
