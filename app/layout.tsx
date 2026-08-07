@@ -3,6 +3,8 @@ import { Quicksand, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { PRICING } from "@/content/packages.gen";
+import { Analytics } from "@vercel/analytics/next";
+import { WaClickTracker } from "@/components/WaClickTracker";
 
 const minPrice = Math.min(
   ...PRICING.packages.filter((p) => p.showPrice && p.publicPrice != null).map((p) => p.publicPrice as number),
@@ -28,11 +30,11 @@ export const metadata: Metadata = {
     template: "%s · KiddoKlub",
   },
   description:
-    "Creating smiles with play and party magic Premium soft-play parties for kids 1-5 in Doha; delivered, set up, sanitised, and collected. Cleared for The Pearl, Lusail, West Bay, Al Waab, Abu Hamour, Education City.",
+    "Premium soft-play parties for kids 1-5 in Doha; delivered, set up, sanitised, and collected. Cleared for The Pearl, Lusail, West Bay, Al Waab, Abu Hamour, Education City.",
   openGraph: {
     title: "KiddoKlub · Doha's friendliest soft-play parties",
     description:
-      "Creating smiles with play and party magic Premium soft-play, ball pits, and themed setups for Doha kids 1-5.",
+      "Premium soft-play, ball pits, and themed setups for Doha kids 1-5; delivered, set up, sanitised, and collected.",
     url: "https://kiddoklubdoha.com",
     siteName: "KiddoKlub",
     locale: "en_QA",
@@ -90,6 +92,8 @@ export default function RootLayout({
             }),
           }}
         />
+        <Analytics />
+        <WaClickTracker />
       </body>
     </html>
   );

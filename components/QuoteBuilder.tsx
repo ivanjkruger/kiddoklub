@@ -5,6 +5,8 @@
 
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { track } from "@vercel/analytics";
 import { PRICING } from "@/content/packages.gen";
 
 type ThemeId = "neutral_nest" | "white_wonderland" | "color_pop";
@@ -30,6 +32,12 @@ type SizeId = (typeof SIZES)[number]["id"];
 
 const ADDONS = PRICING.addons.filter((a) => !a.perKid);
 
+// Marketing sub-lines (copy only; every price comes from the SSOT above).
+const ADDON_SUBS: Record<string, string> = {
+  photographer_90: "Be in the photos instead of taking them",
+  bouncy_castle: "The one the kids remember",
+};
+
 function fmt(n: number) {
   return n.toLocaleString("en-US");
 }
@@ -37,6 +45,14 @@ function fmt(n: number) {
 export function QuoteBuilder() {
   const [theme, setTheme] = useState<ThemeId | null>(null);
   const [size, setSize] = useState<SizeId | null>(null);
+  const searchParams = useSearchParams();
+
+  // Preselect the size when arriving from a package card (/book?package=classic).
+  // Set in an effect so the static prerender and first client render match.
+  useEffect(() => {
+    const p = searchParams.get("package");
+    if (p && SIZES.some((s) => s.id === p)) setSize(p as SizeId);
+  }, [searchParams]);
   const [addons, setAddons] = useState<string[]>([]);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -113,6 +129,12 @@ export function QuoteBuilder() {
         keepalive: true,
       });
     } catch { /* never block CTA */ }
+
+    track("quote_submitted", {
+      size: sizeRow.id,
+      addons: addons.join(",") || "none",
+      total: isSignature ? "signature_enquiry" : total,
+    });
 
     const url = `https://wa.me/97450318434?text=${encodeURIComponent(message)}`;
     setDone(true);
@@ -217,6 +239,11 @@ export function QuoteBuilder() {
               >
                 <div>
                   <div className="font-medium">{a.name}</div>
+                  {ADDON_SUBS[a.id] && (
+                    <div className={"text-xs mt-0.5 " + (on ? "text-[var(--color-ink-soft)]" : "text-[var(--color-muted)]")}>
+                      {ADDON_SUBS[a.id]}
+                    </div>
+                  )}
                 </div>
                 <div className="font-display font-semibold text-[var(--color-ink)]">
                   +QAR {fmt(a.price)}

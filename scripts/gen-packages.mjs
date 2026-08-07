@@ -38,6 +38,10 @@ const out = {
     multiplier: src.modifiers.weekday_discount.multiplier,
     label: src.modifiers.weekday_discount.label,
   },
+  rushPremium: {
+    multiplier: src.modifiers.rush_premium.multiplier,
+    thresholdDays: src.modifiers.rush_premium.threshold_days,
+  },
   deposit: {
     pct: src.deposit.pct,
     refundableOutsideDays: src.deposit.refundable_outside_days,

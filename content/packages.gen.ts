@@ -107,6 +107,10 @@ export const PRICING = {
     "multiplier": 0.8,
     "label": "Weekday Klub - 20% off Sun-Thu"
   },
+  "rushPremium": {
+    "multiplier": 1.15,
+    "thresholdDays": 7
+  },
   "deposit": {
     "pct": 30,
     "refundableOutsideDays": 14,

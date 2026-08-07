@@ -2,7 +2,7 @@
 // 2026-06-09: insurance claim removed (cover not yet bound); replaced with the photo-permission promise (true + on-brand).
 
 const ITEMS = [
-  { title: "Delivery & setup included", body: "We arrive 90 minutes early. You don't lift a finger." },
+  { title: "On time, every time", body: "Set up and ready 90 minutes before party time. You don't lift a finger." },
   { title: "Sanitised between every event", body: "Cleaned and wiped down before it reaches your home." },
   { title: "Anywhere in Doha", body: "Pearl, Lusail, West Bay, Al Waab, Abu Hamour, Education City." },
   { title: "Your photos stay yours", body: "We always ask before we post; the gallery is yours to keep." },
