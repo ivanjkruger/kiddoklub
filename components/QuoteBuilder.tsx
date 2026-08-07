@@ -5,9 +5,9 @@
 
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { PRICING } from "@/content/packages.gen";
 
 type ThemeId = "neutral_nest" | "white_wonderland" | "color_pop";
-type SizeId = "mini" | "small" | "classic" | "signature";
 
 const THEMES: { id: ThemeId; label: string; sub: string }[] = [
   { id: "neutral_nest",     label: "Neutral Nest",     sub: "Bone & sage · matches every villa" },
@@ -15,20 +15,20 @@ const THEMES: { id: ThemeId; label: string; sub: string }[] = [
   { id: "color_pop",        label: "Color Pop",        sub: "Pastel rainbow · kids' favourite" },
 ];
 
-const SIZES: { id: SizeId; label: string; capacity: string; size: string; basePrice: number; tier: "mini" | "classic" | "signature" }[] = [
-  { id: "mini",      label: "Klub Mini",      capacity: "Up to 6 kids",  size: "3 × 3m", basePrice: 1400, tier: "mini" },
-  { id: "small",     label: "Klub Small",     capacity: "Up to 8 kids",  size: "4 × 4m", basePrice: 1800, tier: "mini" },
-  { id: "classic",   label: "Klub Classic",   capacity: "Up to 10 kids", size: "4 × 5m", basePrice: 2200, tier: "classic" },
-  { id: "signature", label: "Klub Signature", capacity: "15+ kids",      size: "5 × 6m", basePrice: 3800, tier: "signature" },
-];
+// Sizes and add-ons come from the pricing SSOT (packages.yaml via codegen).
+// Per-kid add-ons stay out of the fixed-total builder; Nadine quotes them in chat.
+const SIZES = PRICING.packages.map((p) => ({
+  id: p.shortId,
+  label: p.name,
+  capacity: p.capacityLabel,
+  size: p.footprint,
+  basePrice: p.publicPrice,
+  priceLabel: p.priceLabel,
+  showPrice: p.showPrice,
+}));
+type SizeId = (typeof SIZES)[number]["id"];
 
-const ADDONS = [
-  { id: "bouncy_castle",   label: "Bouncy castle",          price: 400, founding: true },
-  { id: "balloon_arch",    label: "Balloon arch",           price: 350 },
-  { id: "soft_serve_cart", label: "Soft-serve / popcorn cart", price: 500 },
-  { id: "photographer",    label: "90-min photographer",    price: 600, founding: true },
-  { id: "extra_hour",      label: "Extra rental hour",      price: 250 },
-];
+const ADDONS = PRICING.addons.filter((a) => !a.perKid);
 
 function fmt(n: number) {
   return n.toLocaleString("en-US");
@@ -52,12 +52,12 @@ export function QuoteBuilder() {
   const themeRow = THEMES.find((t) => t.id === theme);
 
   // Signature is enquire-only (Council rule: never publish exact base on top tier)
-  const isSignature = sizeRow?.tier === "signature";
+  const isSignature = !sizeRow?.showPrice;
 
   const total = useMemo(() => {
     if (!sizeRow) return 0;
-    if (isSignature) return 0; // not shown
-    let sum = sizeRow.basePrice;
+    if (isSignature || sizeRow.basePrice == null) return 0; // not shown
+    let sum: number = sizeRow.basePrice;
     addons.forEach((id) => {
       const a = ADDONS.find((x) => x.id === id);
       if (a) sum += a.price;
@@ -77,7 +77,7 @@ export function QuoteBuilder() {
     const addonLines = addons
       .map((id) => ADDONS.find((a) => a.id === id))
       .filter(Boolean)
-      .map((a) => `• ${a!.label}${a!.founding ? " (FOUNDING-FAMILY: included)" : ` (+QAR ${fmt(a!.price)})`}`);
+      .map((a) => `• ${a!.name} (+QAR ${fmt(a!.price)})`);
 
     const lines = [
       "Hi Nadine! I'd like to book a setup.",
@@ -85,7 +85,7 @@ export function QuoteBuilder() {
       `Theme: ${themeRow.label}`,
       `Size: ${sizeRow.label} (${sizeRow.capacity}, ${sizeRow.size})`,
     ];
-    if (!isSignature) lines.push(`Base: QAR ${fmt(sizeRow.basePrice)}`);
+    if (!isSignature && sizeRow.basePrice != null) lines.push(`Base: QAR ${fmt(sizeRow.basePrice)}`);
     if (addonLines.length) lines.push("", "Add-ons:", ...addonLines);
     if (!isSignature) lines.push("", `Total: QAR ${fmt(total)}`);
     else lines.push("", "Klub Signature; let's chat about the day.");
@@ -167,7 +167,7 @@ export function QuoteBuilder() {
         <p className="font-medium mb-3 text-sm uppercase tracking-wider text-[var(--color-muted)]">
           2 · Pick a size
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {SIZES.map((s) => {
             const sel = s.id === size;
             return (
@@ -187,7 +187,7 @@ export function QuoteBuilder() {
                   {s.capacity} · {s.size}
                 </div>
                 <div className={"text-sm mt-2 font-display font-semibold " + (sel ? "" : "text-[var(--color-mint-deep)]")}>
-                  {s.tier === "signature" ? "from QAR 3,800" : `QAR ${fmt(s.basePrice)}`}
+                  {s.showPrice && s.basePrice != null ? `QAR ${fmt(s.basePrice)}` : s.priceLabel}
                 </div>
               </button>
             );
@@ -216,15 +216,10 @@ export function QuoteBuilder() {
                 }
               >
                 <div>
-                  <div className="font-medium">{a.label}</div>
-                  {a.founding && (
-                    <div className="text-xs text-[var(--color-mint-deep)] mt-0.5 font-semibold">
-                      Founding 10 Families: included free
-                    </div>
-                  )}
+                  <div className="font-medium">{a.name}</div>
                 </div>
                 <div className="font-display font-semibold text-[var(--color-ink)]">
-                  {a.founding ? <span className="text-[var(--color-mint-deep)]">FREE</span> : `+QAR ${fmt(a.price)}`}
+                  +QAR {fmt(a.price)}
                 </div>
               </button>
             );

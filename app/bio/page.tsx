@@ -37,7 +37,7 @@ const LINKS: BioLink[] = [
   },
   {
     href: "/referral",
-    title: "Refer a friend → both save QAR 200",
+    title: "Refer a friend; you both save QAR 200",
     sub: "One share, two parties cheaper",
   },
   { href: "/about", title: "Meet Nadine", sub: "Why we started KiddoKlub" },
@@ -61,8 +61,7 @@ export default function BioPage() {
           Soft-play parties, in your home · Doha
         </p>
         <p className="text-xs text-[var(--color-terracotta)] mt-3 font-medium">
-          Founding-family slots: free bouncy castle + photographer on Klub
-          Classic
+          We take just 10 parties a month; message us to check your date
         </p>
       </div>
 

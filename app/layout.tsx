@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Quicksand, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { PRICING } from "@/content/packages.gen";
+
+const minPrice = Math.min(
+  ...PRICING.packages.filter((p) => p.showPrice && p.publicPrice != null).map((p) => p.publicPrice as number),
+);
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -65,7 +70,7 @@ export default function RootLayout({
               url: "https://kiddoklubdoha.com",
               telephone: "+97450318434",
               email: "hello@kiddoklubdoha.com",
-              priceRange: "QAR 1,400 - QAR 5,500",
+              priceRange: `From QAR ${minPrice.toLocaleString("en-US")}`,
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Doha",
@@ -81,11 +86,6 @@ export default function RootLayout({
                 "Al Gharrafa, Doha",
               ],
               image: "https://kiddoklubdoha.com/photos/setups/setup-01.jpeg",
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "5.0",
-                reviewCount: "12",
-              },
               sameAs: ["https://www.instagram.com/kiddoklub/"],
             }),
           }}

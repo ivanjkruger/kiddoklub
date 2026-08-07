@@ -158,11 +158,6 @@ export default async function ThemePage({
               availability: "https://schema.org/InStock",
               areaServed: "Doha, Qatar",
             },
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "5.0",
-              reviewCount: "12",
-            },
           }),
         }}
       />

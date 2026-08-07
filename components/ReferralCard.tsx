@@ -1,5 +1,8 @@
 // Salvaged + reframed from legacy referral-card.html.
-// QAR 200 off for both referrer and referee. Screenshot-shareable design.
+// Discount for both referrer and referee, sourced from packages.yaml. Screenshot-shareable design.
+import { PRICING } from "@/content/packages.gen";
+
+const REF = `QAR ${PRICING.referral.discountQar}`;
 
 export function ReferralCard() {
   return (
@@ -19,7 +22,7 @@ export function ReferralCard() {
               Refer a friend
             </p>
             <h2 className="text-3xl md:text-4xl mb-3 leading-tight font-display">
-              Share the fun, <span className="accent-mint">save QAR 200</span> 🤍
+              Share the fun, <span className="accent-mint">save {REF}</span> 🤍
             </h2>
             <p className="text-[var(--color-ink-soft)] mb-6">
               Know a Doha mom planning a birthday or playdate?<br />
@@ -27,12 +30,12 @@ export function ReferralCard() {
             </p>
             <div className="rounded-2xl border-2 border-dashed border-[var(--color-mint)] py-6 mb-6 bg-white/60">
               <div className="font-display text-5xl font-bold text-[var(--color-mint-deep)] leading-none">
-                <bdi>QAR 200 OFF</bdi>
+                <bdi>{REF} OFF</bdi>
               </div>
               <div className="text-sm text-[var(--color-ink-soft)] mt-2">for you AND your friend</div>
             </div>
             <ol className="grid grid-cols-3 gap-4 mb-6 text-xs">
-              {["Send this page to a friend", "They book and mention your name", "You both get QAR 200 off"].map((s, i) => (
+              {["Send this page to a friend", "They book and mention your name", `You both get ${REF} off`].map((s, i) => (
                 <li key={i}>
                   <div className="w-8 h-8 rounded-full bg-[var(--color-mint-deep)] text-white inline-flex items-center justify-center font-bold mb-2 text-sm">
                     {i + 1}

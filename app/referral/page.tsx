@@ -1,11 +1,13 @@
 import { ReferralCard } from "@/components/ReferralCard";
 import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
+import { PRICING } from "@/content/packages.gen";
+
+const REF = `QAR ${PRICING.referral.discountQar}`;
 
 export const metadata = {
-  title: "Refer a friend, save QAR 200 · KiddoKlub",
-  description:
-    "Send this page to a Doha mom. They book, you both save QAR 200 on your next setup.",
+  title: `Refer a friend, save ${REF} · KiddoKlub`,
+  description: `Send this page to a Doha mom. They book, you both save ${REF} on your next setup.`,
 };
 
 export default function ReferralPage() {
@@ -27,7 +29,7 @@ export default function ReferralPage() {
         <ol className="space-y-4 text-[var(--color-muted)] leading-relaxed">
           <li><span className="text-[var(--color-ink)] font-medium me-2">1.</span> Send any Doha mom this page or screenshot of the card above.</li>
           <li><span className="text-[var(--color-ink)] font-medium me-2">2.</span> When she WhatsApps Nadine and books, she mentions you by name.</li>
-          <li><span className="text-[var(--color-ink)] font-medium me-2">3.</span> She gets QAR 200 off her booking. We credit your next setup with QAR 200 off too.</li>
+          <li><span className="text-[var(--color-ink)] font-medium me-2">3.</span> She gets {REF} off her booking. We credit your next setup with {REF} off too.</li>
         </ol>
         <p className="text-sm text-[var(--color-muted)] mt-8 italic">
           Stackable across friends. No cash equivalent. We log credits in your client record on first booking.

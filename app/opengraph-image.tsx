@@ -57,7 +57,7 @@ export default async function OG() {
           kiddoklubdoha.com · WhatsApp +974 5031 8434
         </div>
         <div style={{ fontSize: 22, color: "#C97D60", letterSpacing: 2 }}>
-          Founding-family slots open
+          Just 10 parties a month
         </div>
       </div>
     </div>,

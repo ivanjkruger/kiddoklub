@@ -42,11 +42,17 @@ export default function ArHome() {
         </div>
       </header>
 
-      {/* Founding-family bar */}
+      {/* Capacity bar (true monthly cap; AR copy staged for Nadine's native review) */}
       <div className="bg-[var(--color-ink)] text-[var(--color-bone)] text-center text-sm py-2.5 px-4">
-        <span className="opacity-90">عرض العائلات الأولى مفتوح · </span>
-        <span className="font-medium">قلعة نطّاطة + مصوّر مجاناً مع كلب كلاسيك</span>
-        <span className="opacity-70 ms-2">(١٠ حجوزات · حتى ٣٠ يونيو)</span>
+        <span className="font-medium">نستقبل 10 حفلات فقط كل شهر، حتى نعتني بكل تفصيلة. </span>
+        <a
+          href="https://wa.me/97450318434?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%86%D8%A7%D8%AF%D9%8A%D9%86!%20%D9%87%D9%84%20%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%20%D8%AD%D9%81%D9%84%D8%AA%D9%86%D8%A7%20%D9%85%D8%AA%D8%A7%D8%AD%D8%9F"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 font-semibold"
+        >
+          تأكدي من تاريخك
+        </a>
       </div>
 
       {/* Hero */}

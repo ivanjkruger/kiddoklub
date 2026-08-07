@@ -76,15 +76,19 @@ SKIP: TikTok paid (until 50+ deliveries), bought lists, Google LSA (not in Qatar
 
 ## Specialist skills
 
-In `~/.claude/skills/kiddoklub-*`:
-- `kiddoklub-booking-intake` (Auto, on Cal.com webhook)
-- `kiddoklub-quote` (Tier B, on demand)
-- `kiddoklub-outreach-draft` (Tier B, Monday cron)
-- `kiddoklub-reactivation` (Tier B, Wednesday cron)
-- `kiddoklub-postparty-followup` (Auto, T+24h)
-- `kiddoklub-content-engine` (Tier B, Sunday cron)
-- `kiddoklub-weekend-prep` (Auto, Friday cron)
-- `kiddoklub-voice-audit` (validation gate, called by all outbound skills)
+**All 8 archived 2026-07-27** (no CR, Wati never wired, zero invocations). They are retrievable,
+not loaded: `~/.claude/skills/_archive/kiddoklub-*-no-cr-unused-2026-07-27/`. Restore by moving a
+folder back to `~/.claude/skills/` and stripping the suffix. Rationale + evidence:
+`~/.claude/skills/_archive/README.md`.
+
+- `kiddoklub-booking-intake` (was: Auto, on Cal.com webhook)
+- `kiddoklub-quote` (was: Tier B, on demand)
+- `kiddoklub-outreach-draft` (was: Tier B, Monday cron)
+- `kiddoklub-reactivation` (was: Tier B, Wednesday cron)
+- `kiddoklub-postparty-followup` (was: Auto, T+24h)
+- `kiddoklub-content-engine` (was: Tier B, Sunday cron)
+- `kiddoklub-weekend-prep` (was: Auto, Friday cron)
+- `kiddoklub-voice-audit` (was: validation gate for all outbound)
 
 ## Memory + dependencies (read these too)
 - `~/.claude/CLAUDE.md` — Ivan's global rules

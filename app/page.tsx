@@ -9,7 +9,7 @@ import { ReferralCard } from "@/components/ReferralCard";
 import { FinalCTA } from "@/components/FinalCTA";
 import { TrustFooter } from "@/components/TrustFooter";
 import { StickyWhatsApp } from "@/components/StickyWhatsApp";
-import { FoundingFamilyBar } from "@/components/FoundingFamilyBar";
+import { CapacityBar } from "@/components/CapacityBar";
 import { ArchBackdrop } from "@/components/ArchBackdrop";
 import { THEMES } from "@/content/themes";
 
@@ -25,7 +25,7 @@ const SETUP_TILES = [
 export default function Home() {
   return (
     <>
-      <FoundingFamilyBar />
+      <CapacityBar />
       <Hero />
       <TrustStrip />
 
