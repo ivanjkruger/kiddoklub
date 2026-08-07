@@ -244,7 +244,7 @@ export default function ArHome() {
       <footer className="bg-[var(--color-ink)] text-[var(--color-bone)] py-10 px-6 text-center text-sm opacity-80 border-t border-white/10">
         <p>© {new Date().getFullYear()} كيدو كلب · الدوحة، قطر · واتساب +974 5031 8434</p>
         <p className="mt-2 opacity-70">
-          نسأل قبل ما ننشر أي صورة. تغطية تأمين مسؤولية 1 مليون ريال قطري.
+          نسأل قبل ما ننشر أي صورة. صورك تبقى لك دائماً.
         </p>
       </footer>
 

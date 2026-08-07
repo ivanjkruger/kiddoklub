@@ -7,17 +7,21 @@
   --color-cream:       #FFF9F0;   /* primary surface, the warm "white" */
   --color-soft:        #FCF1E8;   /* secondary surface, callouts, panels */
   --color-mint:        #A8D5BA;   /* outer rainbow arc, accent 1 */
-  --color-mint-deep:   #7FB89A;   /* primary CTA, focus ring */
+  /* -deep tokens are the INTERACTIVE/TEXT tier and must hold >=4.5:1 on cream
+     (and white text >=4.5:1 on them). Verified 2026-08-07; the pastel tokens
+     above stay as decorative fills only. Old failing values: mint #7FB89A,
+     pink #D08488, butter #DDB85A, sage #98AC50 (2.2-2.7:1 on cream). */
+  --color-mint-deep:   #457459;   /* primary CTA, focus ring — 5.15:1 on cream */
   --color-pink:        #E8B4B8;   /* middle rainbow arc, accent 2 */
-  --color-pink-deep:   #D08488;   /* secondary CTA, deny states */
+  --color-pink-deep:   #A2565B;   /* secondary CTA, deny states — 4.99:1 */
   --color-butter:      #F0D78C;   /* inner rainbow arc, smile accent */
-  --color-butter-deep: #DDB85A;
+  --color-butter-deep: #8A6D26;   /* 4.67:1 */
   --color-sage:        #C0D080;   /* wordmark green, trust seal */
-  --color-sage-deep:   #98AC50;   /* approve states, success */
+  --color-sage-deep:   #687834;   /* approve states, success — 4.64:1 */
   --color-peach:       #F0C48C;   /* warm wordmark accent */
   --color-ink:         #2A2520;   /* body type; warm-tinted, never pure black */
   --color-ink-soft:    #5C544A;   /* secondary body */
-  --color-muted:       #8B8278;   /* captions, eyebrows */
+  --color-muted:       #6E6759;   /* captions, eyebrows — 5.35:1 on cream, 5.04:1 on soft (was #8B8278 at 3.58:1, a11y fail) */
 
   /* Legacy alias map — old code still references --color-bone / --color-terracotta etc.
      until the recolor sweep finishes; aliases prevent breakage during the transition. */

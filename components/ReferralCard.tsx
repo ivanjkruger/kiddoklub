@@ -48,7 +48,7 @@ export function ReferralCard() {
               href="https://wa.me/97450318434?text=Hi%20Nadine!%20I%20was%20referred%20by%20a%20friend%20and%20I%27d%20like%20to%20book%20a%20setup."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-7 py-3 font-semibold"
+              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] text-[var(--color-ink)] px-7 py-3 font-semibold"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                 <path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.413c-.003 6.557-5.337 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z" />

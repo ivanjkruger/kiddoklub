@@ -31,7 +31,7 @@ const SETUP_TILES = [
 
 export default function Home() {
   return (
-    <>
+    <main>
       <CapacityBar />
       <Hero />
       <TrustStrip />
@@ -145,6 +145,6 @@ export default function Home() {
 
       <TrustFooter />
       <StickyWhatsApp />
-    </>
+    </main>
   );
 }

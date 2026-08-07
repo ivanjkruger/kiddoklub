@@ -1,5 +1,5 @@
 // Server component. The entrance uses CSS-only, transform-only animation (see .rise in
-// globals.css) so the LCP text paints immediately instead of waiting for hydration —
+// globals.css) so the LCP text paints immediately instead of waiting for hydration;
 // the old framer opacity-0 entrance was costing ~1.5s of LCP on throttled mobile.
 import Link from "next/link";
 import Image from "next/image";
