@@ -1,5 +1,10 @@
 # packages.yaml changelog
 
+## v4 — 2026-08-07
+- Balloon arch: QAR 350 → 450 (market vet: DIY kits ~205, pro installs 500+; ours installs with the setup crew).
+- Soft-serve/popcorn cart: QAR 500 → 650 (market vet: machine-only rents at 500/day, +150 with supplies and operation).
+  Assumes the cart runs staffed with supplies; if Nadine runs it unstaffed, drop back to 500.
+
 ## v3 — 2026-08-07
 - 90-min photographer add-on: QAR 600 → 1,000 (Ivan's call; never free, now priced to its signal value).
   FAQ, quote builder, and llms.txt update automatically via the generated module.

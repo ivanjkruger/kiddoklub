@@ -77,14 +77,14 @@ export const PRICING = {
       "id": "balloon_arch",
       "name": "Balloon arch",
       "nameAr": "قوس بالونات",
-      "price": 350,
+      "price": 450,
       "perKid": false
     },
     {
       "id": "soft_serve_cart",
       "name": "Soft-serve / popcorn cart",
       "nameAr": "عربة آيس كريم / فشار",
-      "price": 500,
+      "price": 650,
       "perKid": false
     },
     {

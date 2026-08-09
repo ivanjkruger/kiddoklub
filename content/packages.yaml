@@ -3,7 +3,7 @@
 #          Cal.com event types, Supabase seed, kiddoklub-quote skill, Skipcash invoice generator
 # Update protocol: bump version, log change in ops/CHANGELOG.md, run node scripts/gen-packages.mjs
 
-version: 3
+version: 4
 currency: QAR
 updated: 2026-08-07
 
@@ -80,13 +80,13 @@ addons:
   - id: balloon_arch
     name: Balloon arch
     name_ar: قوس بالونات
-    price: 350
+    price: 450
     margin: high
     upsell_default: true
   - id: soft_serve_cart
     name: Soft-serve / popcorn cart
     name_ar: عربة آيس كريم / فشار
-    price: 500
+    price: 650
     margin: medium
   - id: photographer_90
     name: 90-min photographer
