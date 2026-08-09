@@ -1,5 +1,9 @@
 # packages.yaml changelog
 
+## v3 — 2026-08-07
+- 90-min photographer add-on: QAR 600 → 1,000 (Ivan's call; never free, now priced to its signal value).
+  FAQ, quote builder, and llms.txt update automatically via the generated module.
+
 ## v2 — 2026-08-07
 - Founding-family offer removed everywhere (expired 30 Jun; Ivan's call 2026-08-07: the photographer is never free).
   Killed: `modifiers.founding_family`, the FREE bouncy line in Klub Classic inclusions, FREE notes on bouncy/photographer add-ons.

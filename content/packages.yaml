@@ -3,7 +3,7 @@
 #          Cal.com event types, Supabase seed, kiddoklub-quote skill, Skipcash invoice generator
 # Update protocol: bump version, log change in ops/CHANGELOG.md, run node scripts/gen-packages.mjs
 
-version: 2
+version: 3
 currency: QAR
 updated: 2026-08-07
 
@@ -91,7 +91,7 @@ addons:
   - id: photographer_90
     name: 90-min photographer
     name_ar: مصوّر ٩٠ دقيقة
-    price: 600
+    price: 1000
     margin: medium
     notes: "Always charged (Ivan 2026-08-07; never bundle free). Costs ~QAR 300-400, signals QAR 1.5K+ value, produces UGC for content engine. Always offer."
   - id: extra_hour

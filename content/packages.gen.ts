@@ -91,7 +91,7 @@ export const PRICING = {
       "id": "photographer_90",
       "name": "90-min photographer",
       "nameAr": "مصوّر ٩٠ دقيقة",
-      "price": 600,
+      "price": 1000,
       "perKid": false
     },
     {
